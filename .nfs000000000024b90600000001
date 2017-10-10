@@ -13,15 +13,5 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading project hw3
-# Compile of ESC_interface.sv was successful.
-# Compile of ESC_test.sv failed with 2 errors.
-# Compile of PB_release.sv failed with 3 errors.
-# 3 compiles, 2 failed with 5 errors.
-# Compile of ESC_interface.sv was successful.
-# Compile of ESC_test.sv failed with 2 errors.
-# Compile of PB_release.sv failed with 1 errors.
-# 3 compiles, 2 failed with 3 errors.
-# Compile of ESC_interface.sv was successful.
-# Compile of ESC_test.sv failed with 2 errors.
-# Compile of PB_release.sv was successful.
-# 3 compiles, 1 failed with 2 errors.
+# reading /cae/apps/data/mentor-2017/questasim/v10.6_1/linux_x86_64/../modelsim.ini
+# Loading project project
