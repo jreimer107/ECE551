@@ -1,6 +1,6 @@
 module cnt4(en, rst_n, clk, cnt);
 input en, rst_n, clk;
-output [3:0] cnt;
+output reg [3:0] cnt;
 
 //If enabled, count up 1 each clock
 always_ff @(posedge clk, negedge rst_n) begin
