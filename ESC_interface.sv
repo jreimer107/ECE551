@@ -1,68 +1,45 @@
 module ESC_interface(clk, rst_n, SPEED, OFF, PWM);
-
-input clk;
-input rst_n;
+input clk, rst_n;
 input [10:0] SPEED;
 input [9:0] OFF;
 output reg PWM;
+wire [11:0] compensated_speed;
+wire [15:0] promoted_speed;
+wire [16:0] setting;
+reg  [19:0] counter;
+wire Rst, Set;
 
-wire [12:0] compensated_speed;
-wire [17:0] setting;
-
-// counter
-reg [20:0] counter;
-
-// set and rst
-reg set;
-reg rst;
-
-// combinational logic
+///Main Comb_logic path///
+//First adder block, compensated_speed = SPEED + OFF
 assign compensated_speed = SPEED + OFF;
-assign setting = (compensated_speed << 4) + 16'd5000;
+//Promote 4 bits, then Second adder, promoted_speed + 16'd50000;
+assign setting = {compensated_speed, 4'b0000} + 16'd50000;
+//Comparator block, calculate Rst
+assign Rst = (counter[16:0] >= setting) ? 1'b1 : 1'b0;
+//&all bits set, calculate Set
+assign Set = &counter ? 1'b1 : 1'b0;
 
-// counter
+//Counter FF
+//Accumulate counter every clock
 always_ff @(posedge clk, negedge rst_n) begin
-
-	if(!rst_n) begin
-		counter = 0; 
-	end
-	else begin
-		counter = counter + 1;
-	end
-	
-	// used blocking assignments above so this could be in the counter logic
-	if (&counter) begin
-		set = 1;
-	end
-	else begin
-		set = 0;
-	end
-	
-	if (counter[16:0] >= setting) begin
-		rst = 1;
-	end
-	else begin
-		rst = 0;
-	end
-		
+if (!rst_n)
+	counter <= 20'h00000;
+else
+	counter <= counter + 1'b1;
 end
 
-// PWM output
-always_ff @(posedge clk, negedge rst_n) begin
-
-	// output flop
-	if(!rst_n) begin
-		PWM <= 0; 
-	end
-	else if (rst) begin
-		PWM <= 0;
-	end
-	else if (set) begin
-		PWM <= 1;
-	end
-	// otherwise hold value
-	
-
+//Output FF
+//If Rst is 1, PWM is 0
+//If Set is 1, PWM is 1
+//Else maintain
+always_ff @(posedge clk, negedge rst_n) begin 
+if (!rst_n) 
+	PWM <= 1'b0;
+else if (Rst)
+	PWM <= 1'b0;
+else if (Set)
+	PWM <= 1'b1;	
 end
+	
 
 endmodule
