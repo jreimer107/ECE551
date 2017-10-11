@@ -35,10 +35,10 @@ end
 always_ff @(posedge clk, negedge rst_n) begin 
 if (!rst_n) 
 	PWM <= 1'b0;
-else if (Rst)
-	PWM <= 1'b0;
 else if (Set)
-	PWM <= 1'b1;	
+	PWM <= 1'b1;
+else if (Rst)
+	PWM <= 1'b0;	
 end
 	
 
