@@ -38,6 +38,7 @@ module ESC_test(clk,RST_n,inc,sel_speed,OFF,SPEED,PWM);
     ///////////////////////////////////////////////////////////////////////////
 	// Use assigns to create OFF and SPEED from output of your two counters //
 	/////////////////////////////////////////////////////////////////////////
+	
 	assign OFF = {1'b0, offcnt, 5'h00};
 	assign SPEED = {spdcnt, 7'h00};
 	
