@@ -120,7 +120,7 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	output reg [9:0]  pterm;
 	output reg signed [11:0] dterm;
 	
-	//Error queue
+	// Error queue
 	parameter D_QUEUE_DEPTH = 14; // delay for derivative term
 	parameter signed D_COEFF = 6'b00111;
 	reg signed [9:0]  prev_err[0:D_QUEUE_DEPTH-1];
@@ -136,25 +136,7 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	wire signed [9:0]  D_diff;
 	wire signed [5:0]  D_diff_sat;
 	
-	assign error = actual - desired;
-	
-	//Signed sat to 10 bits
-//	assign err_sat = !error[16] ? 
-//				//If raw_err is positive, [16] is 0:
-//				//If any bits 15:9 are 1, too positive, saturate to 01 1111 1111.
-//				(|error[15:9] ? 10'h1FF : error[9:0]) :
-//				//Else raw_err is negative
-//				//If any bits 15:9 are 0, too negative, saturate to 10 0000 0000.
-//				(&error[15:9] ? error[9:0] : 10'h200);
-				
-	assign err_sat = !error[16] && |error[16:9] != 0 ? 10'h1FF : // positive and needs sat
-					  error[16] && |error[16:9] == 0 ? 10'h200 : // negative and needs sat
-					  error[9:0]; // doesn't need saturation
-	
-	//Calculate 5/8 of raw_err_sat
-	assign pterm = (err_sat >>> 1) + (err_sat >>> 3);
-	
-	//D-Queue
+	// D-Queue
 	always_ff @(posedge clk, negedge rst_n) begin
 		if (!rst_n) begin
 			for (x = 0; x < D_QUEUE_DEPTH; x++) begin
@@ -168,27 +150,35 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 			prev_err[0] <= err_sat;
 		end
 	end
+	
+	
+	assign error = actual - desired;
+	
+	//Signed sat to 10 bits
+//	assign err_sat = !error[16] ? 
+//				//If raw_err is positive, [16] is 0:
+//				//If any bits 15:9 are 1, too positive, saturate to 01 1111 1111.
+//				(|error[15:9] ? 10'h1FF : error[9:0]) :
+//				//Else raw_err is negative
+//				//If any bits 15:9 are 0, too negative, saturate to 10 0000 0000.
+//				(&error[15:9] ? error[9:0] : 10'h200);
+				
+	assign err_sat = !error[16] &&  |error[16:9] ? 10'h1FF : // positive and needs sat
+					  error[16] && ~&error[16:9] ? 10'h200 : // negative and needs sat
+					  error[9:0]; // doesn't need saturation
+	
+	// Calculate 5/8 of raw_err_sat
+	assign pterm = (err_sat >>> 1) + (err_sat >>> 3);
 
 	
 	assign D_diff = err_sat - prev_err[D_QUEUE_DEPTH-1];			
-	assign D_diff_sat = !D_diff[9] && |D_diff[9:5] != 0 ? 6'h1F : // positive and needs sat
-						 D_diff[9] && |D_diff[9:5] == 0 ? 6'h20 : // negative and needs sat
+	assign D_diff_sat = !D_diff[9] &&  |D_diff[9:5] ? 6'h1F : // positive and needs sat
+						 D_diff[9] && ~&D_diff[9:5] ? 6'h20 : // negative and needs sat
 						 D_diff[5:0]; // doesn't need saturation
 						
 	
 	assign dterm = D_diff_sat * D_COEFF;
 endmodule 
-
-module get_spd (thrst, a_pterm, a_dterm, b_pterm, b_dterm, inertial_cal, spd);
-input [8:0] thrst;
-input [9:0] a_pterm, b_pterm;
-input [11:0] a_dterm, b_dterm;
-input inertial_cal;
-output [10:0] spd;
-
-endmodule
-
-
 
 
 
