@@ -43,14 +43,14 @@ end
 initial begin
 
 	// setup files and memory
-	f_stim = $fopen("/userspace/l/lafford/ece551/hw4/flght_cntrl_stim.hex");
-	f_resp = $fopen("/userspace/l/lafford/ece551/hw4/flght_cntrl_resp.hex");
+	//f_stim = $fopen("/userspace/l/lafford/ece551/hw4/flght_cntrl_stim.hex",r);
+	//f_resp = $fopen("/userspace/l/lafford/ece551/hw4/flght_cntrl_resp.hex",r);
 
- 	$readmemh(f_stim, stims);
-	$readmemh(f_resp, resps);
+ 	$readmemh("flght_cntrl_stim.hex", stims);
+	$readmemh("flght_cntrl_resp.hex", resps);
 
-	$fclose(f_stim);
-	$fclose(f_resp);
+	//$fclose(f_stim);
+	//$fclose(f_resp);
 
 	// wait a sec
 	clk = 0;
