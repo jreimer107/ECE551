@@ -42,3 +42,43 @@ run -all
 # ** Note: $stop    : /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv(94)
 #    Time: 10016 ns  Iteration: 0  Instance: /flght_cntrl_io_tb
 # Break in Module flght_cntrl_io_tb at /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv line 94
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 7 errors.
+# 4 compiles, 1 failed with 7 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 6 errors.
+# 4 compiles, 1 failed with 6 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 10 errors.
+# 4 compiles, 1 failed with 10 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 5 errors.
+# 4 compiles, 1 failed with 5 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 2 errors.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 7 errors.
+# 4 compiles, 1 failed with 7 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv failed with 2 errors.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of flght_cntrl.sv was successful.
+# Compile of flght_cntrl_dbg_tb.v was successful.
+# Compile of flght_cntrl_io_tb.sv was successful.
+# Compile of SPI_mstr16.sv was successful.
+# 4 compiles, 0 failed with no errors.

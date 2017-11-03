@@ -1,0 +1,23 @@
+/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module flght_cntrl_io_tb
+
+Top level modules:
+	flght_cntrl_io_tb
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module flght_cntrl
+-- Compiling module get_terms
+
+Top level modules:
+	flght_cntrl
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v {1 {vlog -work work -vopt -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module flght_cntrl_dbg_tb
+
+Top level modules:
+	flght_cntrl_dbg_tb
+
+} {} {}}
