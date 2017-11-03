@@ -1,0 +1,125 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/userspace/l/lafford/ece551/project/devin/hw4
+vflght_cntrl
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 I@9R2ahYhGXV_U3:QF<P?0
+IbmId]_NzW]k=A<YSlC8cj2
+Z2 !s105 flght_cntrl_sv_unit
+S1
+Z3 d/userspace/l/lafford/ece551/project/shared_wip
+Z4 w1509721927
+Z5 8/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv
+Z6 F/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv
+L0 1
+Z7 OL;L;10.6a;65
+Z8 !s108 1509724857.000000
+Z9 !s107 /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vflght_cntrl_dbg_tb
+Z13 !s110 1509724857
+!i10b 1
+!s100 4330`e_2370TZO<eI_1]J0
+IjgK]8OiHB_Ye_hdCR=1GA0
+R1
+R3
+w1509549368
+8/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v
+F/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R12
+vflght_cntrl_io_tb
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 2aKZo?hJ4a2Xez6o1^U9m2
+IG[]7cfEInzHke`cd4Tz=g0
+!s105 flght_cntrl_io_tb_sv_unit
+S1
+R3
+w1509722217
+8/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv
+F/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv
+L0 1
+R7
+R8
+!s107 /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv|
+!i113 0
+R11
+R12
+vget_terms
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 T0eB`V0llGEOPeZon8D<m2
+Il9gH15>o63Y:66:0TU]KE3
+R2
+S1
+R3
+R4
+R5
+R6
+L0 127
+R7
+R8
+R9
+R10
+!i113 0
+R11
+R12
+vSPI_mstr16
+R0
+R13
+!i10b 1
+!s100 f1OO`Vle4zgg8gSA=`U8h1
+IdQgS8hScd3@NX=X`ONF@43
+R1
+!s105 SPI_mstr16_sv_unit
+S1
+R3
+w1509723340
+8/userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16.sv
+F/userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 /userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16.sv|
+!i113 0
+R11
+R12
+n@s@p@i_mstr16
