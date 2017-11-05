@@ -63,7 +63,7 @@ always_comb begin
 
 		
 		FRT_PCH: 
-			if (smpl) nxt_state = ACTIVE;
+			if (shft) nxt_state = ACTIVE;
 			else nxt_state = FRT_PCH;
 			
 		ACTIVE: 
@@ -74,7 +74,7 @@ always_comb begin
 			else nxt_state = ACTIVE;
 		
 		BCK_PCH: 
-			if (smpl) begin
+			if (shft) begin
 				nxt_state = IDLE;
 				set_done = 1;
 			end
@@ -108,7 +108,7 @@ always_ff @(posedge clk, negedge rst_n) begin
 	end
 	
 	else if (wrt) begin
-		shft_reg <= cmd[15:0];
+		shft_reg <= cmd;
 	end
 	
 	else if (shft) begin

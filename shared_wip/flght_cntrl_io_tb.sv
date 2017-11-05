@@ -55,6 +55,12 @@ initial begin
 		stim = stims[i];
 		resp = resps[i]; 
 				
+		// check that stim and resp aren't x or z
+		if ((^stim === 1'bx) || (^resp === 1'bz)) begin
+			$display("stim[%x] has x or z in it. Check your input file.", i);
+			$stop();
+		end
+							
 		rst_n = stim[107];
 		vld = stim[106];
 		inertial_cal = stim[105];
@@ -69,23 +75,27 @@ initial begin
 		@(posedge clk);
 		#1;
 		
-		if (frnt_spd != resp[43:33]) begin
-			$display("frnt_spd incorrect at input set %x", i);
+		if (frnt_spd !== resp[43:33]) begin
+			$display("frnt_spd should be %x, is actually %x", resp[43:33], lft_spd);
+			$display("see error at index %i", i);
 			$stop();
 		end
 		
-		if (bck_spd != resp[32:22]) begin
-			$display("bck_spd incorrect at input set %x", i);
+		if (bck_spd !== resp[32:22]) begin
+			$display("bck_spd should be %x, is actually %x", resp[32:22], lft_spd);
+			$display("see error at index %i", i);
 			$stop();
 		end
 		
-		if (lft_spd != resp[21:11]) begin
+		if (lft_spd !== resp[21:11]) begin
 			$display("lft_spd should be %x, is actually %x", resp[21:11], lft_spd);
+			$display("see error at index %i", i);
 			$stop();
 		end
 		
-		if (rght_spd != resp[10:0]) begin
+		if (rght_spd !== resp[10:0]) begin
 			$display("rght_spd should be %x, is actually %x", resp[10:0], rght_spd);
+			$display("see error at index %i", i);
 			$stop();
 		end
 

@@ -5,13 +5,6 @@ QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
 Top level modules:
 	ADC128S
 
-} {} {}} /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_io_tb.sv
-QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
--- Compiling module flght_cntrl_io_tb
-
-Top level modules:
-	flght_cntrl_io_tb
-
 } {} {}} /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl.sv
 QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
 -- Compiling module flght_cntrl
@@ -27,12 +20,12 @@ QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
 Top level modules:
 	SPI_mstr16
 
-} {} {}} /userspace/l/lafford/ece551/project/shared_wip/SPI_ADC128S.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/SPI_ADC128S.sv
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16_tb.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/SPI_mstr16_tb.sv
 QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
--- Compiling module SPI_ADC128S
+-- Compiling module SPI_mstr16_tb
 
 Top level modules:
-	SPI_ADC128S
+	SPI_mstr16_tb
 
 } {} {}} /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v {1 {vlog -work work -vopt -stats=none /userspace/l/lafford/ece551/project/shared_wip/flght_cntrl_dbg_tb.v
 QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
@@ -40,5 +33,12 @@ QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
 
 Top level modules:
 	flght_cntrl_dbg_tb
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/SPI_ADC128S.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/SPI_ADC128S.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module SPI_ADC128S
+
+Top level modules:
+	SPI_ADC128S
 
 } {} {}}
