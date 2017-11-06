@@ -1,4 +1,5 @@
-module CommMaster(clk, rst_n, cmd, snd_cmd, data, resp, resp_rdy, TX, RX);
+module CommMaster(clk, rst_n, cmd, snd_cmd, data, TX, RX,
+	resp, resp_rdy); 
 
 input clk, rst_n;
 input snd_cmd;			//Signal to send command
@@ -24,14 +25,15 @@ reg [1:0] sel;
 // instantiate UART
 UART uart	(	.clk(clk), .rst_n(rst_n),
 				.trmt(trmt), .tx_data(tx_data), .tx_done(tx_done),
-				.TX(TX), .RX(RX), .rx_data(), .rx_rdy()
+				.TX(TX), .RX(RX), .rx_data(), .rx_rdy(), .clr_rx_rdy()
 			); // ignore rx_data and rx_rdy
 
 
 // mux to select what UART is transmitting
-assign tx_data =	sel[1] ? cmd : 
-					sel[0] ? data[15:8] : 
-					data[7:0]; 
+assign tx_data = sel[1] ? cmd : 
+				 sel[0] ? data[15:8] : 
+				 data[7:0];
+
 
 
 // state machine flops
@@ -47,14 +49,17 @@ always_comb begin
 	next_state = IDLE;
 	trmt = 0;
 	sel = 0;
+	set_done = 0;
+	clr_done = 0;
 	
 	case(state)
 	
 		IDLE: begin	
 			if (snd_cmd) begin
 				next_state = CMD;
-				sel = 0;
 				trmt = 1;
+				clr_done = 1;
+				sel = 2;
 			end
 		end
 		
@@ -62,42 +67,28 @@ always_comb begin
 		CMD: begin
 			if (tx_done) begin
 				next_state = DATA_HI;
-				sel = 1;
 				trmt = 1;
-			
+				sel = 1;
 			end
-			
-			else begin 
-				next_state = CMD;
-			end
+			else next_state = CMD;
 		end
 		
 		DATA_HI: begin
-		
 			if (tx_done) begin
 				next_state = DATA_LO;
-				sel = 2;
 				trmt = 1;
-			
 			end
-			
-			else begin 
-				next_state = DATA_HI;
-			end
+			else next_state = DATA_HI;
 		
 		end
 		
 		DATA_LO: begin
 			if (tx_done) begin
-				next_state = IDLE;		
+				next_state = IDLE;
+				set_done = 1;
 			end
-			
-			else begin 
-				next_state = DATA_LO;
-			end
+			else next_state = DATA_LO;
 		end
-	
-	
 	endcase
 	
 	

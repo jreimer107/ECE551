@@ -1,36 +1,36 @@
-I:/ece551/Project/shared_wip/UART/UART_tx.sv {1 {vlog -work work -sv -stats=none I:/ece551/Project/shared_wip/UART/UART_tx.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module UART_tx
-
-Top level modules:
-	UART_tx
-
-} {} {}} I:/ece551/Project/shared_wip/UART/CommMaster.sv {1 {vlog -work work -sv -stats=none I:/ece551/Project/shared_wip/UART/CommMaster.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module CommMaster
-
-Top level modules:
-	CommMaster
-
-} {} {}} I:/ece551/Project/shared_wip/UART/UART_wrapper.sv {1 {vlog -work work -sv -stats=none I:/ece551/Project/shared_wip/UART/UART_wrapper.sv
+{D:/School/ECE 551/Project/shared_wip/UART/UART_wrapper.sv} {1 {vlog -work work -sv -stats=none {D:/School/ECE 551/Project/shared_wip/UART/UART_wrapper.sv}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module UART_wrapper
 
 Top level modules:
 	UART_wrapper
 
-} {} {}} I:/ece551/Project/shared_wip/UART/UART_rx.sv {1 {vlog -work work -sv -stats=none I:/ece551/Project/shared_wip/UART/UART_rx.sv
+} {} {}} {D:/School/ECE 551/Project/shared_wip/UART/UART.v} {1 {vlog -work work -stats=none {D:/School/ECE 551/Project/shared_wip/UART/UART.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} {D:/School/ECE 551/Project/shared_wip/UART/UART_rx.sv} {1 {vlog -work work -sv -stats=none {D:/School/ECE 551/Project/shared_wip/UART/UART_rx.sv}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module UART_rx
 
 Top level modules:
 	UART_rx
 
-} {} {}} I:/ece551/Project/shared_wip/UART/UART.v {1 {vlog -work work -stats=none I:/ece551/Project/shared_wip/UART/UART.v
+} {} {}} {D:/School/ECE 551/Project/shared_wip/UART/CommTB.sv} {1 {vlog -work work -sv -stats=none {D:/School/ECE 551/Project/shared_wip/UART/CommTB.sv}
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module UART
+-- Compiling module CommTB
 
 Top level modules:
-	UART
+	CommTB
+
+} {} {}} {D:/School/ECE 551/Project/shared_wip/UART/UART_tx.sv} {1 {vlog -work work -sv -stats=none {D:/School/ECE 551/Project/shared_wip/UART/UART_tx.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module UART_tx
+
+Top level modules:
+	UART_tx
 
 } {} {}}

@@ -1,5 +1,7 @@
-module UART_wrapper(clk, rst_n, clr_cmd_rdy, cmd_rdy, snd_resp, resp_sent, cmd, data, 
-	resp, RX, TX);
+module UART_wrapper(clk, rst_n, clr_cmd_rdy, cmd_rdy, 
+	cmd, data, RX, TX,
+	resp, snd_resp, resp_sent);
+	
 // I/O Directly into UART //
 input snd_resp;
 input [7:0] resp;
@@ -19,9 +21,12 @@ reg set_cmd_rdy, clr_cmd_rdy_i;		//Output control signals
 typedef enum reg [1:0] {IDLE, CMD, DATA} state_t;
 state_t state, nxt_state;
 
-UART iUART(.clk(clk), .rst_n(rst_n), .rdy(rdy), .rx_data(data[7:0]), .clr_rdy(clr_rdy), 
+UART iUART(.clk(clk), .rst_n(rst_n), .rx_rdy(rdy), .rx_data(rx_data), .clr_rx_rdy(clr_rdy), 
 	.trmt(snd_resp), .tx_done(resp_sent), .tx_data(resp), .RX(RX), .TX(TX));
 
+assign data[7:0] = rx_data;
+	
+	
 //Command Byte FF/Mux
 always_ff @(posedge clk)
 	if (cmd_mux) cmd <= rx_data;
