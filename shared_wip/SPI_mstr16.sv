@@ -4,19 +4,16 @@ input [15:0] cmd;
 output reg done, SS_n, SCLK, MOSI;
 output reg [15:0] rd_data;
 
-reg [3:0] bitcnt;
+reg [4:0] bitcnt;
 reg [4:0] sclk_div;
 reg [15:0] shift_reg;
-reg rst_cnt, shift, smpl, MISO_smpl;
+reg rst_cnt, shft, smpl, MISO_smpl, set_done, clr_done;
 typedef enum reg [1:0] {IDLE, FRT_PCH, ACTIVE, BCK_PCH} state_t;
 state_t state, nxt_state;
 
-assign SCLK = sclk_div[4];
+assign SCLK = !SS_n ? sclk_div[4] : 1'b1;
 assign MOSI = shift_reg[15];
-//TODO: should these be part of the SM?
-//Do we care if they work when there isn't data?
-assign smpl = sclk_div == 5'b01111;
-assign shft = sclk_div == 5'b11111;
+assign rd_data = shift_reg;
 
 //SCLK counter
 always_ff @(posedge clk) begin
@@ -36,7 +33,7 @@ end
 always_ff@(posedge clk, negedge rst_n) begin
 	if (!rst_n) bitcnt <= 0;
 	else if (rst_cnt) bitcnt <= 0;
-	else if (shft) bitcnt <= bitcnt + 1;
+	else if (smpl) bitcnt <= bitcnt + 1;
 end
 
 //SM
@@ -47,8 +44,11 @@ end
 always_comb begin
 	nxt_state = IDLE;
 	rst_cnt = 0;
-	done = 0;
+	set_done = 0;
+	clr_done = 0;
 	SS_n = 0;
+	smpl = 0;
+	shft = 0;
 	
 	case(state)
 		IDLE: begin
@@ -56,26 +56,44 @@ always_comb begin
 			if (wrt) begin
 				nxt_state = FRT_PCH;
 				rst_cnt = 1;
+				clr_done = 1;
 			end
 		end
 		
-		FRT_PCH: if (smpl) nxt_state = ACTIVE;
-		else nxt_state = FRT_PCH;
+		FRT_PCH: 
+			if (sclk_div == 5'b01111) begin
+				nxt_state = ACTIVE;
+				smpl = 1;
+				end
+			else nxt_state = FRT_PCH;
 			
-		ACTIVE: if (&bitcnt) begin
-			nxt_state = BCK_PCH;
-			rst_cnt = 1;
+		ACTIVE: begin
+			if (bitcnt == 5'h10) begin
+				nxt_state = BCK_PCH;
+				
+			end
+			else nxt_state = ACTIVE;
+			
+			if (sclk_div == 5'b01111) smpl = 1;
+			if (sclk_div == 5'b11111) shft = 1;
 		end
-		else nxt_state = ACTIVE;
 		
-		BCK_PCH: if (smpl) begin
-			nxt_state = IDLE;
-			done = 1;
-		end
-		else nxt_state = BCK_PCH;
+		BCK_PCH:
+			if (sclk_div == 5'b11111) begin
+				nxt_state = IDLE;
+				set_done = 1;
+				shft = 1;
+				rst_cnt = 1;
+			end
+			else nxt_state = BCK_PCH;
 	endcase
 end
 
-endmodule
-			
-				
+//Done FF
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) done <= 1'b0;
+	else if (set_done) done <= 1'b1;
+	else if (clr_done) done <= 1'b0;
+end
+
+endmodule				
