@@ -1,0 +1,29 @@
+/userspace/l/lafford/ece551/project/shared_wip/UART/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/UART/UART_tx.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module UART_tx
+
+Top level modules:
+	UART_tx
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/UART/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/UART/UART_rx.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/UART/UART.v {1 {vlog -work work -vopt -stats=none /userspace/l/lafford/ece551/project/shared_wip/UART/UART.v
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} /userspace/l/lafford/ece551/project/shared_wip/UART/CommTB.sv {1 {vlog -work work -vopt -sv -stats=none /userspace/l/lafford/ece551/project/shared_wip/UART/CommTB.sv
+QuestaSim-64 vlog 10.6a Compiler 2017.03 Mar 16 2017
+-- Compiling module CommTB
+
+Top level modules:
+	CommTB
+
+} {} {}}

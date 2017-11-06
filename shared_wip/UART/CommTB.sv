@@ -1,4 +1,4 @@
-module CommTB()
+module CommTB();
 
 
 

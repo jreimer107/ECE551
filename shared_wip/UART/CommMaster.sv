@@ -16,22 +16,22 @@ reg [7:0] tx_data; // muxed signal into tx_data
 
 // state machine signals
 typedef enum {IDLE, CMD, DATA_HI, DATA_LO} state_t;
-state_t state;
-reg next_state;
+state_t state, next_state;
 reg trmt, tx_done, frm_snt, set_done, clr_done;
 reg [1:0] sel;
 
 
 // instantiate UART
 UART uart	(	.clk(clk), .rst_n(rst_n),
-				.trmt(trmt), .tx_data(tx_data) .tx_done(tx_done),
-			)
+				.trmt(trmt), .tx_data(tx_data), .tx_done(tx_done)
+				.TX(TX), .RX(RX)
+			); // ignore rx_data and rx_rdy
 
 
-// assign statements
+// mux to select what UART is transmitting
 assign tx_data =	sel[1] ? cmd : 
 					sel[0] ? data[15:8] : 
-					data[7:0]; // mux to select cmd and data
+					data[7:0]; 
 
 
 // state machine flops
@@ -104,12 +104,14 @@ always_comb begin
 		end
 	
 	
+	endcase
+	
 	
 	
 end
 
 // srff frm_snt signal
-always_ff @posedge clk, negedge rst_n) begin
+always_ff @(posedge clk, negedge rst_n) begin
 
 	if 		(!rst_n) frm_snt <= 0;
 	else if (clr_done) frm_snt <= 0;
