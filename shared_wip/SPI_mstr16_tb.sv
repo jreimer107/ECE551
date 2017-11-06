@@ -30,9 +30,10 @@ initial begin
 	@(negedge clk);
 	wrt = 0;
 	
-	repeat(16) @(posedge SCLK); // wait for transaction to end
+	@(posedge done); // wait for transaction to end
 	if(slave.iSPI.cmd != 0000) begin
 		$display("Slave received wrong command. Expected 0x0000, got 0x%x", slave.iSPI.cmd);
+		$stop();
 	end
 	
 	// send garbage and check received garbage
@@ -42,11 +43,13 @@ initial begin
 	@(negedge clk);
 	wrt = 0;
 	
-	repeat(16) @(posedge SCLK); // wait for transaction to end
+	@(posedge done); // wait for transaction to end
 	if(slave.iSPI.cmd != 16'hABCD) begin
 		$display("Slave received wrong command. Expected 0xABCD, got 0x%x", slave.iSPI.cmd);
+		$stop();
 	end
 
+	$display("Test passed.");
 	$stop();
 	
 	
