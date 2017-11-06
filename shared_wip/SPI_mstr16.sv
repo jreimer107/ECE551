@@ -85,7 +85,7 @@ always_comb begin
 end
 
 // sclk_div counter
-always_ff @(posedge clk) begin
+always_ff @(posedge clk, negedge rst_n) begin
 	if (rst_cnt) sclk_div <= 5'b10111; // this value front porches for 8 clocks
 	else sclk_div <= sclk_div + 1;
 end
