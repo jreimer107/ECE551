@@ -13,7 +13,7 @@ output reg SS_n;
 output SCLK, MOSI;
 
 // flops and counters
-reg [3:0] bitcnt;
+reg [4:0] bitcnt;
 reg [4:0] sclk_div;
 reg [15:0] shft_reg;
 
@@ -32,9 +32,9 @@ assign rd_data[15:0] = shft_reg[15:0];
 //Do we care if they work when there isn't data?
 //Devin: this might be clever - we will see when the tb is written
 
-// these signals were put here instead of in the state machine
-assign smpl = (sclk_div == 5'b01111);
-assign shft = (sclk_div == 5'b11111);
+//// these signals were put here instead of in the state machine
+//assign smpl = (sclk_div == 5'b01111);
+//assign shft = (sclk_div == 5'b11111);
 
 // state machine flops
 always_ff @(posedge clk, negedge rst_n) begin
@@ -48,37 +48,61 @@ always_comb begin
 	nxt_state = IDLE;
 	rst_cnt = 0;
 	SS_n = 0;
+	smpl = 0;
+	shft = 0;
 	clr_done = 0;
 	set_done = 0;
 	
 	case(state)
 		IDLE: begin
-			SS_n = 1;
 			if (wrt) begin
 				nxt_state = FRT_PCH;
 				rst_cnt = 1;
 				clr_done = 1;
 			end
+			else begin
+				SS_n = 1;
+			end
 		end
 
-		
-		FRT_PCH: 
-			if (shft) nxt_state = ACTIVE;
-			else nxt_state = FRT_PCH;
-			
-		ACTIVE: 
-			if (&bitcnt) begin
-				nxt_state = BCK_PCH;
-				rst_cnt = 1;
+		FRT_PCH: begin
+			if (sclk_div == 5'b11111) begin 
+				nxt_state = ACTIVE;
+			end		
+			else begin
+				nxt_state = FRT_PCH;
 			end
-			else nxt_state = ACTIVE;
-		
-		BCK_PCH: 
-			if (shft) begin
+		end
+
+		ACTIVE: begin
+			if (bitcnt == 5'b01111) begin
+				nxt_state = BCK_PCH;
+			end
+			else if (sclk_div == 5'b01111) begin
+				nxt_state = ACTIVE;
+				smpl = 1;
+			end
+			else if (sclk_div == 5'b11111) begin
+				nxt_state = ACTIVE;
+				shft = 1;
+			end
+			
+			
+			else begin
+				nxt_state = ACTIVE;
+			end
+		end
+
+		BCK_PCH: begin
+			SS_n = 1;
+			if (sclk_div == 5'b01111) begin
 				nxt_state = IDLE;
 				set_done = 1;
 			end
-			else nxt_state = BCK_PCH;
+			else begin
+				nxt_state = BCK_PCH;
+			end
+		end
 			
 	endcase
 	
@@ -87,6 +111,7 @@ end
 // sclk_div counter
 always_ff @(posedge clk, negedge rst_n) begin
 	if (rst_cnt) sclk_div <= 5'b10111; // this value front porches for 8 clocks
+	else if (state == IDLE) sclk_div <= sclk_div;
 	else sclk_div <= sclk_div + 1;
 end
 
@@ -121,7 +146,7 @@ end
 always_ff@(posedge clk, negedge rst_n) begin
 	if (!rst_n) bitcnt <= 0;
 	else if (rst_cnt) bitcnt <= 0;
-	else if (smpl) bitcnt <= bitcnt + 1;
+	else if (shft) bitcnt <= bitcnt + 1;
 end
 
 

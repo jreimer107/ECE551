@@ -31,10 +31,12 @@ initial begin
 	wrt = 0;
 	
 	@(posedge done); // wait for transaction to end
-	if(slave.iSPI.cmd != 0000) begin
+	if(slave.iSPI.cmd !== 16'h0000) begin
 		$display("Slave received wrong command. Expected 0x0000, got 0x%x", slave.iSPI.cmd);
 		$stop();
 	end
+	
+	repeat (200) @(negedge clk); // pause
 	
 	// send garbage and check that slave received the garbage
 	@(negedge clk);
@@ -48,16 +50,14 @@ initial begin
 		$display("Slave received wrong command. Expected 0xABCD, got 0x%x", slave.iSPI.cmd);
 		$stop();
 	end
-	
-	//DEBUG
-	force master.shft = 1;
-	#1 release master.shft;
-	
+		
 	// check what we received from reading channel 0
 	if(rd_data !== 16'h0C00) begin
 		$display("Expceted 0x0C00 from channel 0 read, received %x", rd_data);
 		$stop();		
 	end
+
+	repeat (200) @(negedge clk);
 
 	$display("Test passed.");
 	$stop();
