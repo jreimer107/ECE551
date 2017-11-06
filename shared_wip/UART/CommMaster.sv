@@ -1,21 +1,21 @@
 module CommMaster(clk, rst_n, cmd, snd_cmd, data, resp, resp_rdy, TX, RX);
 
 input clk, rst_n;
-input snd_cmd;
-input [7:0] cmd;
-input [15:0] data;
+input snd_cmd;			//Signal to send command
+input [7:0] cmd;		//First byte
+input [15:0] data;		//Second and third bytes
 
 output [7:0] resp;
 output resp_rdy;
 
-input RX;
+input RX;				//Communication signals
 output TX;
 
-reg [15:0] data_reg; // flops to hold data
-reg [7:0] tx_data; // muxed signal into tx_data
+reg [15:0] data_reg; 	//Flops to hold data
+reg [7:0] tx_data; 		//Muxed signal into tx_data
 
 // state machine signals
-typedef enum {IDLE, CMD, DATA_HI, DATA_LO} state_t;
+typedef enum reg [1:0] {IDLE, CMD, DATA_HI, DATA_LO} state_t;
 state_t state, next_state;
 reg trmt, tx_done, frm_snt, set_done, clr_done;
 reg [1:0] sel;
@@ -23,8 +23,8 @@ reg [1:0] sel;
 
 // instantiate UART
 UART uart	(	.clk(clk), .rst_n(rst_n),
-				.trmt(trmt), .tx_data(tx_data), .tx_done(tx_done)
-				.TX(TX), .RX(RX)
+				.trmt(trmt), .tx_data(tx_data), .tx_done(tx_done),
+				.TX(TX), .RX(RX), .rx_data(), .rx_rdy()
 			); // ignore rx_data and rx_rdy
 
 
@@ -36,19 +36,13 @@ assign tx_data =	sel[1] ? cmd :
 
 // state machine flops
 always_ff @(posedge clk, negedge rst_n) begin
-
-	if (!rst_n) begin
-		state <= IDLE;
-	end
-	
+	if (!rst_n) state <= IDLE;
 	else state <= next_state;
-
 end
 
 
 // state machine comb
 always_comb begin
-	
 	// default signals
 	next_state = IDLE;
 	trmt = 0;

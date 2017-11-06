@@ -1,3 +1,5 @@
+/*
+
 //module SPI_mstr16(clk, rst_n, wrt, cmd, MISO, rd_data, SS_n, SCLK, MOSI, done);
 
 //// internal signals
@@ -167,6 +169,8 @@
 //end
 
 //endmodule
+
+//*/
 
 module SPI_mstr16(clk, rst_n, wrt, cmd, MISO, rd_data, SS_n, SCLK, MOSI, done);
 input clk, rst_n, wrt, MISO;
