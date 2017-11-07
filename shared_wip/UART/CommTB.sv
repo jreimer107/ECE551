@@ -28,10 +28,10 @@ initial begin
 	rst_n = 0;
 	@(negedge clk) rst_n = 1;
 	
-	//Command and Data: AB CDEF
+	//Command and Data: AB CDCD
 	repeat(10) @(posedge clk);
 	cmd_in = 8'hAB;
-	data_in = 16'hCDEF;
+	data_in = 16'hCDCD;
 	snd_cmd = 1;
 	@(posedge clk) snd_cmd = 0;
 	
@@ -42,7 +42,7 @@ initial begin
 		$stop();
 	end
 	if (data_in != data_out) begin
-		$display("Expected data_out of 'CDEF', got %x", data_out);
+		$display("Expected data_out of 'CDCD', got %x", data_out);
 		$stop();
 	end
 	

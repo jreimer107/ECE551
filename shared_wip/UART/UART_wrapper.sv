@@ -68,7 +68,6 @@ always_comb begin
 	
 		//Have 2nd byte, put in 1st half of data.
 		DATA: if (rdy) begin
-			clr_rdy = 1;
 			set_cmd_rdy = 1;
 			nxt_state = IDLE;
 		end

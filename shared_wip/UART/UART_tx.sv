@@ -1,5 +1,3 @@
-/*
-
 module UART_tx(clk, rst_n, trmt, tx_data, TX, tx_done);
 input clk, rst_n, trmt;
 input [7:0] tx_data;
@@ -11,13 +9,27 @@ reg load, shift, transmitting;
 reg [8:0] tx_shift_reg;
 reg [11:0] baud_cnt;
 reg [3:0] bit_cnt;
-reg set_done, clr_done;
 
-
-assign TX = tx_shift_reg[0];
-assign shift = (baud_cnt == 2604) ? 1'b1 : 1'b0;
 typedef enum reg {IDLE, TRANSMIT} state_t;
 state_t state, nxt_state;
+
+assign TX = tx_shift_reg[0];
+assign shift = ~|baud_cnt;
+
+//Bit Counter
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) bit_cnt <= 0;
+	else if (load) bit_cnt <= 0;
+	else if (shift) bit_cnt <= bit_cnt + 1;
+end
+
+//Baud Counter
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) baud_cnt <= 2604;
+	else if (load || shift) baud_cnt <= 2604;
+	else if (transmitting) baud_cnt <= baud_cnt - 1;
+end
+	
 
 //Shift Register
 always_ff @(posedge clk, negedge rst_n) begin
@@ -26,171 +38,39 @@ always_ff @(posedge clk, negedge rst_n) begin
 	else if (shift) tx_shift_reg <= {1'b1, tx_shift_reg[8:1]};
 end
 
-//Baud Counter
-
-always_ff @(posedge clk) begin
-	if (load || shift) baud_cnt <= 0;
-	else if (transmitting) baud_cnt <= baud_cnt + 1;
-end
-	
-//Bit Counter
-always_ff @(posedge clk) begin
-if (load) bit_cnt <= 4'h0;
-else if (shift) bit_cnt <= bit_cnt + 1;
-end
-
-//FSM//
+//State Flop//
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n) state <= IDLE;
 	else state <= nxt_state;
 end
 
-always @(state, trmt, bit_cnt) begin
+//FSM//
+always_comb begin
 	nxt_state = IDLE;
 	load = 0;
 	transmitting = 0;
-	set_done = 0;
-	clr_done = 0;
 
-case(state)
-	IDLE: if (trmt) begin
-		nxt_state = TRANSMIT;
-		load = 1;
-		clr_done = 1;
-		end
-			
-	TRANSMIT: if (bit_cnt == 4'h9) begin
-		nxt_state = IDLE;
-		set_done = 1;
-		end
-		else begin
+	case(state)
+		IDLE: if (trmt) begin
 			nxt_state = TRANSMIT;
+			load = 1;
+		end
+		else nxt_state = IDLE;
+			
+		default: begin
+			if (bit_cnt == 10) nxt_state = IDLE;
+			else nxt_state = TRANSMIT;
 			transmitting = 1;
 		end
-endcase
+	endcase
 end
 
 //Done FF
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n) tx_done <= 1'b0;
-	else if (set_done) tx_done <= 1'b1;
-	else if (clr_done) tx_done <= 1'b0;
+	else if (bit_cnt == 10) tx_done <= 1'b1;
+	else if (trmt) tx_done <= 1'b0;
 end
-
-endmodule
-
-*/
-
-module UART_tx(clk,rst_n,TX,trmt,tx_data,tx_done);
-
-input clk,rst_n;		// clock and active low reset
-input trmt;			// trmt tells TX section to transmit tx_data
-input [7:0] tx_data;	// byte to transmit
-output TX, tx_done;		// tx_done asserted when transmission complete
-
-reg state,nxt_state;	// I can name that tune in two states
-reg [8:0] shift_reg;	// 1-bit wider to store start bit
-reg [3:0] bit_cnt;		// bit counter
-reg [11:0] baud_cnt;		// baud rate counter (50MHz/19200) = div of 2604
-reg tx_done;			// tx_done will be a set/reset flop
-
-reg load, trnsmttng;		// assigned in state machine
-
-wire shift;
-
-localparam IDLE = 1'b0;
-localparam TX_STATE = 1'b1;
-
-////////////////////////////
-// Infer state flop next //
-//////////////////////////
-always @(posedge clk or negedge rst_n)
-  if (!rst_n)
-    state <= IDLE;
-  else
-    state <= nxt_state;
-
-
-/////////////////////////
-// Infer bit_cnt next //
-///////////////////////
-always @(posedge clk or negedge rst_n)
-  if (!rst_n)
-    bit_cnt <= 4'b0000;
-  else if (load)
-    bit_cnt <= 4'b0000;
-  else if (shift)
-    bit_cnt <= bit_cnt+1;
-
-//////////////////////////
-// Infer baud_cnt next //
-////////////////////////
-always @(posedge clk or negedge rst_n)
-  if (!rst_n)
-    baud_cnt <= 2604;
-  else if (load || shift)
-    baud_cnt <= 2604;			// baud of 57600 with 50MHz clk
-  else if (trnsmttng)
-    baud_cnt <= baud_cnt-1;		// only burn power incrementing if tranmitting
-
-////////////////////////////////
-// Infer shift register next //
-//////////////////////////////
-always @(posedge clk or negedge rst_n)
-  if (!rst_n)
-    shift_reg <= 9'h1FF;		// reset to idle state being transmitted
-  else if (load)
-    shift_reg <= {tx_data,1'b0};	// start bit is loaded as well as data to TX
-  else if (shift)
-    shift_reg <= {1'b1,shift_reg[8:1]};	// LSB shifted out and idle state shifted in 
-
-///////////////////////////////////////////////
-// Easiest to make tx_done a set/reset flop //
-/////////////////////////////////////////////
-always @(posedge clk or negedge rst_n)
-  if (!rst_n)
-    tx_done <= 1'b0;
-  else if (trmt)
-    tx_done <= 1'b0;
-  else if (bit_cnt==4'b1010)
-    tx_done <= 1'b1;
-
-//////////////////////////////////////////////
-// Now for hard part...State machine logic //
-////////////////////////////////////////////
-always @(state,trmt,shift,bit_cnt)
-  begin
-    //////////////////////////////////////
-    // Default assign all output of SM //
-    ////////////////////////////////////
-    load         = 0;
-    trnsmttng = 0;
-    nxt_state    = IDLE;	// always a good idea to default to IDLE state
-    
-    case (state)
-      IDLE : begin
-        if (trmt)
-          begin
-            nxt_state = TX_STATE;
-            load = 1;
-          end
-        else nxt_state = IDLE;
-      end
-      default : begin		// this is TX state
-        if (bit_cnt==4'b1010)
-          nxt_state = IDLE;
-        else
-          nxt_state = TX_STATE;
-        trnsmttng = 1;
-      end
-    endcase
-  end
-
-////////////////////////////////////
-// Continuous assignement follow //
-//////////////////////////////////
-assign shift = ~|baud_cnt;
-assign TX = shift_reg[0];		// LSB of shift register is TX
 
 endmodule
 
