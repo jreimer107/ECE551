@@ -82,8 +82,9 @@ end
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n) cmd_rdy <= 0;
 	else if (clr_cmd_rdy) cmd_rdy <= 0;
-	else if (set_cmd_rdy) cmd_rdy <= 1;
 	else if (clr_cmd_rdy_i) cmd_rdy <= 0;
+	else if (set_cmd_rdy) cmd_rdy <= 1;
+
 end
 
 endmodule
