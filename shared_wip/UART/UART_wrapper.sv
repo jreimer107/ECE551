@@ -18,7 +18,7 @@ reg rdy, clr_rdy;			//When UART has finished sending a byte
 reg cmd_mux, data_mux;		//Selection for sending current byte to cmd or data
 reg [7:0] rx_data;			//Current byte
 reg set_cmd_rdy, clr_cmd_rdy_i;		//Output control signals
-typedef enum reg [1:0] {IDLE, CMD, DATA} state_t;
+typedef enum reg [1:0] {CMD, DATA_HI, DATA_LO} state_t;
 state_t state, nxt_state;
 
 UART iUART(.clk(clk), .rst_n(rst_n), .rx_rdy(rdy), .rx_data(rx_data), .clr_rx_rdy(clr_rdy), 
@@ -37,7 +37,7 @@ always_ff @(posedge clk)
 	
 //FSM
 always_ff @(posedge clk, negedge rst_n) begin
-	if (!rst_n) state <= IDLE;
+	if (!rst_n) state <= CMD;
 	else state <= nxt_state;
 end
 
@@ -47,42 +47,42 @@ always_comb begin
 	clr_rdy = 0;
 	set_cmd_rdy = 0;
 	clr_cmd_rdy_i = 0;
-	nxt_state = IDLE;
+	nxt_state = CMD;
 	
 	case(state)
 		//Waiting to send 3 bytes
-		IDLE: if (rdy) begin
+		CMD: if (rdy) begin
 			cmd_mux = 1;
 			clr_rdy = 1;
 			clr_cmd_rdy_i = 1;
-			nxt_state = CMD;
+			nxt_state = DATA_HI;
 		end
 		
 		//Have first byte, put in cmd.
-		CMD: if (rdy) begin
+		DATA_HI: if (rdy) begin
 			data_mux = 1;
 			clr_rdy = 1;
-			nxt_state = DATA;
+			nxt_state = DATA_LO;
 		end
-		else nxt_state = CMD;
+		else nxt_state = DATA_HI;
 	
 		//Have 2nd byte, put in 1st half of data.
-		DATA: if (rdy) begin
+		DATA_LO: if (rdy) begin
+			clr_rdy = 1;
 			set_cmd_rdy = 1;
-			nxt_state = IDLE;
+			nxt_state = CMD;
 		end
-		else nxt_state = DATA;
+		else nxt_state = DATA_LO;
 	
-		default: nxt_state = IDLE;
+		default: nxt_state = CMD;
 	endcase
 end
 
 //cmd_rdy FF
 always_ff @(posedge clk, negedge rst_n) begin
 	if (!rst_n) cmd_rdy <= 0;
-	else if (clr_cmd_rdy) cmd_rdy <= 0;
+	else if (clr_cmd_rdy || clr_cmd_rdy_i) cmd_rdy <= 0;
 	else if (set_cmd_rdy) cmd_rdy <= 1;
-	else if (clr_cmd_rdy_i) cmd_rdy <= 0;
 end
 
 endmodule

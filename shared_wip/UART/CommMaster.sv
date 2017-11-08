@@ -1,5 +1,5 @@
 module CommMaster(clk, rst_n, cmd, snd_cmd, data, TX, RX,
-	resp, resp_rdy); 
+	resp, resp_rdy, frm_snt); 
 
 input clk, rst_n;
 input snd_cmd;			//Signal to send command
@@ -8,6 +8,7 @@ input [15:0] data;		//Second and third bytes
 
 output [7:0] resp;
 output resp_rdy;
+output reg frm_snt;
 
 input RX;				//Communication signals
 output TX;
@@ -18,23 +19,21 @@ reg [7:0] tx_data; 		//Muxed signal into tx_data
 // state machine signals
 typedef enum reg [1:0] {IDLE, CMD, DATA_HI, DATA_LO} state_t;
 state_t state, next_state;
-reg trmt, tx_done, frm_snt, set_done, clr_done;
+reg trmt, tx_done, set_done, clr_done;
 reg [1:0] sel;
 
 
 // instantiate UART
 UART uart	(	.clk(clk), .rst_n(rst_n),
 				.trmt(trmt), .tx_data(tx_data), .tx_done(tx_done),
-				.TX(TX), .RX(RX), .rx_data(), .rx_rdy(), .clr_rx_rdy()
-			); // ignore rx_data and rx_rdy
+				.TX(TX), .RX(RX), .rx_data(resp), .rx_rdy(resp_rdy), .clr_rx_rdy()
+			);
 
 
 // mux to select what UART is transmitting
 assign tx_data = sel[1] ? cmd : 
 				 sel[0] ? data[15:8] : 
 				 data[7:0];
-
-
 
 // state machine flops
 always_ff @(posedge clk, negedge rst_n) begin
