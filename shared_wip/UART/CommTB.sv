@@ -17,7 +17,7 @@ always #5 clk = ~clk;
 
 
 initial begin
-	repeat (100000) @(posedge clk);
+	repeat (1000000) @(posedge clk);
 	$display("Timed out");
 	$stop();
 end
@@ -35,6 +35,27 @@ initial begin
 	snd_cmd = 1;
 	@(posedge clk) snd_cmd = 0;
 	
+	@(posedge cmd_rdy);
+	repeat(50) @(posedge clk);
+	if (cmd_in != cmd_out) begin
+		$display("Expected cmd_out of 'AB', got %x", cmd_out);
+		$stop();
+	end
+	if (data_in != data_out) begin
+		$display("Expected data_out of 'CDEF', got %x", data_out);
+		$stop();
+	end
+	
+	@(negedge clk); clr_cmd_rdy = 1;
+	@(negedge clk); clr_cmd_rdy = 0;
+		
+	//Command and Data: B0 0B1E5
+	repeat(10) @(posedge clk);
+	cmd_in = 8'hFE;
+	data_in = 16'hDCBA;
+	snd_cmd = 1;
+	@(posedge clk) snd_cmd = 0;
+
 	@(posedge cmd_rdy);
 	repeat(50) @(posedge clk);
 	if (cmd_in != cmd_out) begin
