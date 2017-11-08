@@ -19,9 +19,9 @@ reg [7:0] tx_data; 		//Muxed signal into tx_data
 // state machine signals
 typedef enum reg [1:0] {IDLE, CMD, DATA_HI, DATA_LO} state_t;
 state_t state, next_state;
-reg trmt, set_done, clr_done;	// sm output
-reg [1:0] sel; 					// sm output
-reg tx_done; 					// sm input
+reg trmt, tx_done, set_done, clr_done;
+reg [1:0] sel;
+
 
 // instantiate UART
 UART uart	(	.clk(clk), .rst_n(rst_n),
@@ -32,8 +32,8 @@ UART uart	(	.clk(clk), .rst_n(rst_n),
 
 // mux to select what UART is transmitting
 assign tx_data = sel[1] ? cmd : 
-				 sel[0] ? data_reg[15:8] : 
-				 data_reg[7:0];
+				 sel[0] ? data[15:8] : 
+				 data[7:0];
 
 // state machine flops
 always_ff @(posedge clk, negedge rst_n) begin
@@ -115,8 +115,3 @@ end
 
 
 endmodule
-
-
-
-
-
