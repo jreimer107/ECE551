@@ -36,25 +36,20 @@ initial begin
 		$stop();
 	end
 	
-	// send garbage and check that slave received the garbage
+	// request another reading of channel 0	
 	@(negedge clk);
-	cmd = 16'hABCD; 
 	wrt = 1;
 	@(negedge clk);
 	wrt = 0;
 	
 	@(posedge done); // wait for transaction to end
-	if(slave.iSPI.shft_reg_rx !== 16'hABCD) begin
-		$display("Slave received wrong command. Expected 0xABCD, got 0x%x", slave.iSPI.cmd);
-		$stop();
-	end
-		
 	// check what we received from reading channel 0
 	if(rd_data !== 16'h0C00) begin
 		$display("Expceted 0x0C00 from channel 0 read #1, received %x", rd_data);
 		$stop();		
 	end
 	
+	// request another reading of channel 0	
 	@(negedge clk);
 	wrt = 1;
 	@(negedge clk);
@@ -67,7 +62,7 @@ initial begin
 		$stop();		
 	end
 	
-
+	// request another reading of channel 0	
 	@(negedge clk);
 	wrt = 1;
 	@(negedge clk);
@@ -80,6 +75,7 @@ initial begin
 		$stop();		
 	end
 
+	// request another reading of channel 0	
 	@(negedge clk);
 	wrt = 1;
 	@(negedge clk);
@@ -92,6 +88,7 @@ initial begin
 		$stop();		
 	end
 	
+	// request another reading of channel 0	
 	@(negedge clk);
 	wrt = 1;
 	@(negedge clk);
@@ -104,7 +101,18 @@ initial begin
 		$stop();		
 	end
 
-
+	// send garbage and check that slave received the garbage
+	@(negedge clk);
+	cmd = 16'hABCD; 
+	wrt = 1;
+	@(negedge clk);
+	wrt = 0;
+	
+	@(posedge done); // wait for transaction to end
+	if(slave.iSPI.shft_reg_rx !== 16'hABCD) begin
+		$display("Slave received wrong command. Expected 0xABCD, got 0x%x", slave.iSPI.cmd);
+		$stop();
+	end
 
 	repeat (200) @(negedge clk);
 
