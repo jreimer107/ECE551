@@ -36,8 +36,6 @@ initial begin
 		$stop();
 	end
 	
-	repeat (200) @(negedge clk); // pause
-	
 	// send garbage and check that slave received the garbage
 	@(negedge clk);
 	cmd = 16'hABCD; 
@@ -53,9 +51,60 @@ initial begin
 		
 	// check what we received from reading channel 0
 	if(rd_data !== 16'h0C00) begin
-		$display("Expceted 0x0C00 from channel 0 read, received %x", rd_data);
+		$display("Expceted 0x0C00 from channel 0 read #1, received %x", rd_data);
 		$stop();		
 	end
+	
+	@(negedge clk);
+	wrt = 1;
+	@(negedge clk);
+	wrt = 0;
+
+	@(posedge done); // wait for transaction to end
+	// check what we received from reading channel 0 again
+	if(rd_data !== 16'h0C00) begin
+		$display("Expceted 0x0C00 from channel 0 read #2, received %x", rd_data);
+		$stop();		
+	end
+	
+
+	@(negedge clk);
+	wrt = 1;
+	@(negedge clk);
+	wrt = 0;
+	
+	@(posedge done); // wait for transaction to end
+	// check what we received from reading channel 0 again
+	if(rd_data !== 16'h0BF0) begin
+		$display("Expceted 0x0BF0 from channel 0 read #3, received %x", rd_data);
+		$stop();		
+	end
+
+	@(negedge clk);
+	wrt = 1;
+	@(negedge clk);
+	wrt = 0;
+	
+	@(posedge done); // wait for transaction to end
+	// check what we received from reading channel 0 again
+	if(rd_data !== 16'h0BF0) begin
+		$display("Expceted 0x0BF0 from channel 0 read #4, received %x", rd_data);
+		$stop();		
+	end
+	
+	@(negedge clk);
+	wrt = 1;
+	@(negedge clk);
+	wrt = 0;
+	
+	@(posedge done); // wait for transaction to end
+	// check what we received from reading channel 0 again
+	if(rd_data !== 16'h0BE0) begin
+		$display("Expceted 0x0BE0 from channel 0 read #5, received %x", rd_data);
+		$stop();		
+	end
+
+
 
 	repeat (200) @(negedge clk);
 
