@@ -1,0 +1,14 @@
+
+State Machine - |A2D_test|A2D_intf:iA2D|state
+Name state.SECOND state.WAIT state.FIRST state.IDLE 
+state.IDLE 0 0 0 0 
+state.FIRST 0 0 1 1 
+state.WAIT 0 1 0 1 
+state.SECOND 1 0 0 1 
+
+State Machine - |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI|state
+Name state.BCK_PCH state.ACTIVE state.FRT_PCH state.IDLE 
+state.IDLE 0 0 0 0 
+state.FRT_PCH 0 0 1 1 
+state.ACTIVE 0 1 0 1 
+state.BCK_PCH 1 0 0 1 
