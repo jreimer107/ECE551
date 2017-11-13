@@ -56,7 +56,7 @@ initial begin
 	
 	// wait for transaction to end
 	@(posedge cnv_cmplt); 
-	if (res != 12'hC00) begin
+	if (res !== 12'hC00) begin
 		$display("expected 0xC00, received %x", res);
 		$stop();
 	end
@@ -70,21 +70,7 @@ initial begin
 	
 	// wait for transaction to end
 	@(posedge cnv_cmplt); 
-	if (res != 12'hC00) begin
-		$display("expected 0xC00, received %x", res);
-		$stop();
-	end
-	
-	// request a reading of channel 0
-	@(negedge clk);
-	chnnl = 0;
-	strt_cnv = 1;
-	@(negedge clk);
-	strt_cnv = 0;
-	
-	// wait for transaction to end
-	@(posedge cnv_cmplt); 
-	if (res != 12'hBF0) begin
+	if (res !== 12'hBF0) begin
 		$display("expected 0xBF0, received %x", res);
 		$stop();
 	end
@@ -98,22 +84,36 @@ initial begin
 	
 	// wait for transaction to end
 	@(posedge cnv_cmplt); 
-	if (res != 12'hBF0) begin
-		$display("expected 0xBF0, received %x", res);
-		$stop();
-	end
-
-	// request a reading of channel 0
-	@(negedge clk);
-	chnnl = 0;
-	strt_cnv = 1;
-	@(negedge clk);
-	strt_cnv = 0;
-	
-	// wait for transaction to end
-	@(posedge cnv_cmplt); 
-	if (res != 12'hBE0) begin
+	if (res !== 12'hBE0) begin
 		$display("expected 0xBE0, received %x", res);
+		$stop();
+	end
+	
+	// request a reading of channel 0
+	@(negedge clk);
+	chnnl = 0;
+	strt_cnv = 1;
+	@(negedge clk);
+	strt_cnv = 0;
+	
+	// wait for transaction to end
+	@(posedge cnv_cmplt); 
+	if (res !== 12'hBD0) begin
+		$display("expected 0xBD0, received %x", res);
+		$stop();
+	end
+
+	// request a reading of channel 0
+	@(negedge clk);
+	chnnl = 0;
+	strt_cnv = 1;
+	@(negedge clk);
+	strt_cnv = 0;
+	
+	// wait for transaction to end
+	@(posedge cnv_cmplt); 
+	if (res !== 12'hBC0) begin
+		$display("expected 0xBC0, received %x", res);
 		$stop();
 	end
 
