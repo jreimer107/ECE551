@@ -1,5 +1,5 @@
 Analysis & Synthesis report for A2D_test
-Mon Nov 13 11:45:31 2017
+Mon Nov 13 11:56:13 2017
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -16,16 +16,15 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   8. State Machine - |A2D_test|A2D_intf:iA2D|state
   9. State Machine - |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI|state
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Port Connectivity Checks: "A2D_intf:iA2D|SPI_mstr16:iSPI"
- 16. Port Connectivity Checks: "A2D_intf:iA2D"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "A2D_intf:iA2D|SPI_mstr16:iSPI"
+ 15. Port Connectivity Checks: "A2D_intf:iA2D"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,15 +51,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 13 11:45:31 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 13 11:56:12 2017       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; A2D_test                                    ;
 ; Top-level Entity Name              ; A2D_test                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 39                                          ;
-;     Total combinational functions  ; 33                                          ;
-;     Dedicated logic registers      ; 27                                          ;
-; Total registers                    ; 27                                          ;
+; Total logic elements               ; 63                                          ;
+;     Total combinational functions  ; 57                                          ;
+;     Dedicated logic registers      ; 48                                          ;
+; Total registers                    ; 48                                          ;
 ; Total pins                         ; 14                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -184,20 +183,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 39        ;
+; Estimated Total logic elements              ; 63        ;
 ;                                             ;           ;
-; Total combinational functions               ; 33        ;
+; Total combinational functions               ; 57        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 13        ;
-;     -- 3 input functions                    ; 5         ;
-;     -- <=2 input functions                  ; 15        ;
+;     -- 4 input functions                    ; 28        ;
+;     -- 3 input functions                    ; 9         ;
+;     -- <=2 input functions                  ; 20        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 25        ;
+;     -- normal mode                          ; 49        ;
 ;     -- arithmetic mode                      ; 8         ;
 ;                                             ;           ;
-; Total registers                             ; 27        ;
-;     -- Dedicated logic registers            ; 27        ;
+; Total registers                             ; 48        ;
+;     -- Dedicated logic registers            ; 48        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 14        ;
@@ -205,9 +204,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 204       ;
-; Average fan-out                             ; 2.32      ;
+; Maximum fan-out                             ; 48        ;
+; Total fan-out                               ; 357       ;
+; Average fan-out                             ; 2.68      ;
 +---------------------------------------------+-----------+
 
 
@@ -216,9 +215,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-------------+--------------+
-; |A2D_test                  ; 33 (2)            ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |A2D_test                               ; A2D_test    ; work         ;
-;    |A2D_intf:iA2D|         ; 31 (5)            ; 20 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |A2D_test|A2D_intf:iA2D                 ; A2D_intf    ; work         ;
-;       |SPI_mstr16:iSPI|    ; 26 (26)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI ; SPI_mstr16  ; work         ;
+; |A2D_test                  ; 57 (6)            ; 48 (9)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |A2D_test                               ; A2D_test    ; work         ;
+;    |A2D_intf:iA2D|         ; 51 (6)            ; 37 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |A2D_test|A2D_intf:iA2D                 ; A2D_intf    ; work         ;
+;       |SPI_mstr16:iSPI|    ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI ; SPI_mstr16  ; work         ;
 ;    |reset_synch:iRS|       ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |A2D_test|reset_synch:iRS               ; reset_synch ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -250,51 +249,17 @@ Encoding Type:  One-Hot
 +---------------+---------------+--------------+---------------+------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+-------------------------------------------------+----------------------------------------+
-; Register name                                   ; Reason for Removal                     ;
-+-------------------------------------------------+----------------------------------------+
-; A2D_intf:iA2D|SPI_mstr16:iSPI|MISO_smpl         ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[0..4]   ; Stuck at GND due to stuck port data_in ;
-; LED[0]~reg0                                     ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[5,6]    ; Stuck at GND due to stuck port data_in ;
-; LED[2]~reg0                                     ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[7,8]    ; Stuck at GND due to stuck port data_in ;
-; LED[4]~reg0                                     ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[9,10]   ; Stuck at GND due to stuck port data_in ;
-; LED[6]~reg0                                     ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[11..15] ; Stuck at GND due to stuck port data_in ;
-; A2D_intf:iA2D|state~4                           ; Lost fanout                            ;
-; A2D_intf:iA2D|state~5                           ; Lost fanout                            ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|state~4           ; Lost fanout                            ;
-; A2D_intf:iA2D|SPI_mstr16:iSPI|state~5           ; Lost fanout                            ;
-; Total Number of Removed Registers = 25          ;                                        ;
-+-------------------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+-----------------------------------------+---------------------------+-----------------------------------------------------------+
-; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                    ;
-+-----------------------------------------+---------------------------+-----------------------------------------------------------+
-; A2D_intf:iA2D|SPI_mstr16:iSPI|MISO_smpl ; Stuck at GND              ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[0],               ;
-;                                         ; due to stuck port data_in ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[1],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[2],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[3],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[4], LED[0]~reg0,  ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[5],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[6], LED[2]~reg0,  ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[7],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[8], LED[4]~reg0,  ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[9],               ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[10], LED[6]~reg0, ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[11],              ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[12],              ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[13],              ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[14],              ;
-;                                         ;                           ; A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[15]               ;
-+-----------------------------------------+---------------------------+-----------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; A2D_intf:iA2D|state~4                 ; Lost fanout        ;
+; A2D_intf:iA2D|state~5                 ; Lost fanout        ;
+; A2D_intf:iA2D|SPI_mstr16:iSPI|state~4 ; Lost fanout        ;
+; A2D_intf:iA2D|SPI_mstr16:iSPI|state~5 ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -302,12 +267,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 48    ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 22    ;
+; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 29    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -325,13 +290,14 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI|bitcnt[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI|shift_reg[15] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI|bitcnt[4]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -351,7 +317,6 @@ Encoding Type:  One-Hot
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; chnnl     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; MISO      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; res[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -362,23 +327,25 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 27                          ;
+; cycloneiii_ff         ; 48                          ;
 ;     CLR               ; 13                          ;
-;     ENA CLR           ; 4                           ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 8                           ;
 ;     ENA CLR SCLR      ; 5                           ;
 ;     SLD               ; 5                           ;
-; cycloneiii_lcell_comb ; 38                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 62                          ;
 ;     arith             ; 8                           ;
 ;         2 data inputs ; 8                           ;
-;     normal            ; 30                          ;
+;     normal            ; 54                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 13                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.71                        ;
+; Average LUT depth     ; 1.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -397,7 +364,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Mon Nov 13 11:44:36 2017
+    Info: Processing started: Mon Nov 13 11:55:54 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off A2D_test -c A2D_test
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spi_mstr16.sv
@@ -411,31 +378,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file a2d_int
 Info (12127): Elaborating entity "A2D_test" for the top level hierarchy
 Info (12128): Elaborating entity "reset_synch" for hierarchy "reset_synch:iRS" File: I:/ece551/exercise18/A2D_test.sv Line: 15
 Info (12128): Elaborating entity "A2D_intf" for hierarchy "A2D_intf:iA2D" File: I:/ece551/exercise18/A2D_test.sv Line: 19
-Info (12128): Elaborating entity "SPI_mstr16" for hierarchy "A2D_intf:iA2D|SPI_mstr16:iSPI" File: I:/ece551/exercise18/A2D_intf.sv Line: 19
+Info (12128): Elaborating entity "SPI_mstr16" for hierarchy "A2D_intf:iA2D|SPI_mstr16:iSPI" File: I:/ece551/exercise18/A2D_intf.sv Line: 20
 Info (13000): Registers with preset signals will power-up high File: I:/ece551/exercise18/A2D_test.sv Line: 24
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MOSI" is stuck at GND File: I:/ece551/exercise18/A2D_test.sv Line: 4
-    Warning (13410): Pin "LED[0]" is stuck at GND File: I:/ece551/exercise18/A2D_test.sv Line: 24
-    Warning (13410): Pin "LED[2]" is stuck at GND File: I:/ece551/exercise18/A2D_test.sv Line: 24
-    Warning (13410): Pin "LED[4]" is stuck at GND File: I:/ece551/exercise18/A2D_test.sv Line: 24
-    Warning (13410): Pin "LED[6]" is stuck at GND File: I:/ece551/exercise18/A2D_test.sv Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file I:/ece551/exercise18/A2D_test.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MISO" File: I:/ece551/exercise18/A2D_test.sv Line: 3
-Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 860 megabytes
-    Info: Processing ended: Mon Nov 13 11:45:31 2017
-    Info: Elapsed time: 00:00:55
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Processing ended: Mon Nov 13 11:56:13 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

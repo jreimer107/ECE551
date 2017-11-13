@@ -8,7 +8,8 @@ output [11:0]res;
 //SPI_mstr16 interface
 reg [15:0] cmd, rd_data;
 reg wrt, done, set_cnv_cmplt;
-output SS_n, SCLK, MOSI, MISO;
+input MISO;
+output SS_n, SCLK, MOSI; 
 
 //State Regs
 typedef enum reg [1:0] {IDLE, FIRST, WAIT, SECOND} state_t;

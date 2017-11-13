@@ -49,7 +49,7 @@ res[11] <= SPI_mstr16:iSPI.rd_data
 SS_n <= SPI_mstr16:iSPI.SS_n
 SCLK <= SPI_mstr16:iSPI.SCLK
 MOSI <= SPI_mstr16:iSPI.MOSI
-MISO <= SPI_mstr16:iSPI.MISO
+MISO => MISO.IN1
 
 
 |A2D_test|A2D_intf:iA2D|SPI_mstr16:iSPI
