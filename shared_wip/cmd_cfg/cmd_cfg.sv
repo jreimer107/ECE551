@@ -1,3 +1,11 @@
+       /////////////////////////////////////////////////////
+	  // TEAM: vwls_n                                    //
+     //  MEMBERS:                                       //
+    //	 DVN LFFRD - Devin Lafford                     //
+   //	 JSPH KRD - Joseph Kardia                     //
+  //     MCKNLY SCNRS-HSN - McKinley Sconiers-Hasan  //
+ //	     JHN RMR - John Reimer                      //
+/////////////////////////////////////////////////////
 module cmd_cfg(clk, rst_n, cmd_rdy, cmd, data, clr_cmd_rdy, resp, send_resp, 
 	d_ptch, d_roll, d_yaw, thrst, batt, strt_cal, inertial_cal, cal_done, motors_off, strt_cnv, cnv_cmplt);
 
@@ -6,19 +14,19 @@ input cmd_rdy;		//New command walid from UART_wrapper
 input [7:0] cmd;	//Command opcode
 input [15:0] data;	//Data to accompany command
 input [7:0] batt; 	//Battery measurement. Essentially the upper 8 bits of the result from A2D_intf.
-input inertial_cal;	//To flght_ctrl units. Held high during duration of calibration (including motor spinup).
 input cal_done;		//From inertial_integrator. Indicates calibration is complete.
 input cnv_cmplt;	//Signal from A2D_Intf indicating conversion bomplete.
 
-output clr_cmd_rdy;	//Knocks down cmd_rdy after cmd_cfg has digested command
-output [7:0] resp;	//Respose back to remote. Typically pos_ack(0xA5) except when batt
-output send_resp; 	//Indicates UART_wrapper should send response.
-output [15:0] d_ptch, d_roll, d_yaw;	//Desired pitch, roll, yaw as 16-bit signed numbers
-output [8:0] thrst;	//9-bit unsigned thrust level. Goes to flght_ctrl.
-output strt_cal;	//Indicates to  to start calibration procedure. Only 1 clock wide pulse
+output logic clr_cmd_rdy;	//Knocks down cmd_rdy after cmd_cfg has digested command
+output logic [7:0] resp;	//Respose back to remote. Typically pos_ack(0xA5) except when batt
+output logic send_resp; 	//Indicates UART_wrapper should send response.
+output logic [15:0] d_ptch, d_roll, d_yaw;	//Desired pitch, roll, yaw as 16-bit signed numbers
+output logic [8:0] thrst;	//9-bit unsigned thrust level. Goes to flght_ctrl.
+output logic strt_cal;	//Indicates to  to start calibration procedure. Only 1 clock wide pulse
 						//at end of 1.34s motor spinup period
-output motors_off;	//Goes to flght_ctrl, shuts off motors.
-output strt_cnv;	//Signal to A2D_Intf to start conversion of battery voltage.
+output logic inertial_cal;	//To flght_ctrl units. Held high during duration of calibration (including motor spinup).
+output logic motors_off;	//Goes to flght_ctrl, shuts off motors.
+output logic strt_cnv;	//Signal to A2D_Intf to start conversion of battery voltage.
 
 reg wptch, wroll, wyaw, wthrst;
 reg mtrs_off, en_mtrs;
@@ -31,7 +39,7 @@ assign tmr_full = &mtr_ramp_tmr;
 
 
 //SM Flops
-typedef enum reg [1:0] {CMD_DSPTCH, SEND_BATT, POS_ACK, WAIT_TMR, WAIT_CAL} state_t;
+typedef enum reg [3:0] {CMD_DSPTCH, SEND_BATT, POS_ACK, WAIT_TMR, WAIT_CAL} state_t;
 state_t state, nxt_state;
 
 //Commands//
@@ -41,7 +49,6 @@ localparam SET_ROLL = 8'h03;
 localparam SET_YAW = 8'h04;
 localparam SET_THRST = 8'h05;
 localparam CALIBRATE = 8'h06;
-localparam EMER_LAND = 8'h07;
 localparam MTRS_OFF = 8'h08;
 
 //Pitch FF
@@ -86,6 +93,7 @@ always_comb begin
 	inertial_cal = 0;
 	send_resp = 0;
 	resp = 8'h00;
+	clr_cmd_rdy = 0;
 	nxt_state = CMD_DSPTCH;
 	
 	case(state)
@@ -123,7 +131,12 @@ always_comb begin
 						nxt_state = WAIT_TMR;
 					end
 					
-					EMER_LAND: begin
+					MTRS_OFF: begin
+						mtrs_off = 1;
+						nxt_state = POS_ACK;
+					end
+					
+					default: begin // Emergency land if garbage command
 						wptch = 1;
 						wroll = 1;
 						wyaw = 1;
@@ -131,10 +144,7 @@ always_comb begin
 						nxt_state = POS_ACK;
 					end
 					
-					MTRS_OFF: begin
-						mtrs_off = 1;
-						nxt_state = POS_ACK;
-					end
+					
 				endcase
 			end
 			
@@ -143,6 +153,7 @@ always_comb begin
 				resp = batt;
 				send_resp = 1;
 				clr_cmd_rdy = 1;
+			end
 			else nxt_state = SEND_BATT;
 			
 		POS_ACK: begin
@@ -163,6 +174,10 @@ always_comb begin
 			if (cal_done) nxt_state = POS_ACK;
 			else nxt_state = WAIT_CAL;
 		end
+		
+		default: nxt_state = CMD_DSPTCH;
+			
+		
 	endcase
 end
 
