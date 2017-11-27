@@ -13,7 +13,7 @@ wire vld, cal_done;
 wire [15:0] ptch, roll, yaw;
 
 // wires between inert_intf and CycloneIV
-wire INT, SS_n, SCLK, MOSI, MISO
+wire INT, SS_n, SCLK, MOSI, MISO;
 
 // wires between ESCs and CycloneIV
 wire frnt, bck, lft, rght;
@@ -61,10 +61,10 @@ initial begin
 	strt_cal = 1;
 	@(negedge clk);
 	strt_cal = 0;
-	repeat (100) @(negedge clk); // give it some time to do a calibration
+	@(posedge cal_done); // wait for calibration
 	
 
-	
+	$stop();
 	
 end
 
