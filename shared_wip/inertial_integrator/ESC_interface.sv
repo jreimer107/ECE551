@@ -1,4 +1,7 @@
 module ESC_interface(clk, rst_n, SPEED, OFF, PWM);
+
+localparam PERIOD_WIDTH = 20;
+
 input clk, rst_n;
 input [10:0] SPEED;
 input [9:0] OFF;
@@ -6,7 +9,7 @@ output reg PWM;
 wire [11:0] compensated_speed;
 wire [15:0] promoted_speed;
 wire [16:0] setting;
-reg  [19:0] counter;
+reg  [PERIOD_WIDTH-1:0] counter;
 wire Rst, Set;
 
 ///Main Comb_logic path///
