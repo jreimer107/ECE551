@@ -147,92 +147,104 @@ always_comb begin
 		end
 		
 		WAIT:
-			if (INT_ff2) nxt_state = PITCH_L;
+			if (INT_ff2) begin 
+				nxt_state = PITCH_L;
+				cmd = 16'hA2xx;
+				wrt = 1;				
+			end
 			else nxt_state = WAIT;
 		
 		PITCH_L: begin
-			cmd = 16'hA2xx;
 			if (done) begin
 				CPL = 1;
 				nxt_state = PITCH_H;
+				cmd = 16'hA3xx;
+				wrt = 1;
 			end
 			else nxt_state = PITCH_L;
 		end
 		
 		PITCH_H: begin
-			cmd = 16'hA3xx;
 			if (done) begin
 				CPH = 1;
 				nxt_state = ROLL_L;
+				cmd = 16'hA4xx;
+				wrt = 1;
 			end
 			else nxt_state = PITCH_H;
 		end
 		
 		ROLL_L: begin
-			cmd = 16'hA4xx;
 			if (done) begin
 				CRL = 1;
 				nxt_state = ROLL_H;
+				cmd = 16'hA5xx;
+				wrt = 1;
 			end
 			else nxt_state = ROLL_L;
 		end
 		
 		ROLL_H: begin
-			cmd = 16'hA5xx;
 			if (done) begin
 				CRH = 1;
 				nxt_state = YAW_L;
+				cmd = 16'hA6xx;
+				wrt = 1;				
 			end
 			else nxt_state = ROLL_H;
 		end
 			
 		YAW_L: begin
-			cmd = 16'hA6xx;
 			if (done) begin
 				CYL = 1;
 				nxt_state = YAW_H;
+				cmd = 16'hA7xx;
+				wrt = 1;
 			end
 			else nxt_state = YAW_L;
 		end
 				
 		YAW_H: begin
-			cmd = 16'hA7xx;
 			if (done) begin
 				CYH = 1;
 				nxt_state = AX_L;
+				cmd = 16'hA8xx;
+				wrt = 1;
 			end
 			else nxt_state = YAW_H;
 		end	
 		
 		AX_L: begin
-			cmd = 16'hA8xx;
 			if (done) begin
 				CAXL = 1;
 				nxt_state = AX_H;
+				cmd = 16'hA9xx;
+				wrt = 1;
 			end
 			else nxt_state = AX_L;
 		end
 		
 		AX_H: begin
-			cmd = 16'hA9xx;
 			if (done) begin
 				CAXH = 1;
 				nxt_state = AY_L;
+				cmd = 16'hAAxx;
+				wrt = 1;
 			end
 			else nxt_state = AX_H;
 		end
 		
 		AY_L: begin
-			cmd = 16'hAAxx;
 			if (done) begin
 				CAYL = 1;
 				nxt_state = AY_H;
+				cmd = 16'hABxx;
+				wrt = 1;
 			end
 			else nxt_state = AY_L;
 		end
 		
 		AY_H: begin
-			cmd = 16'hABxx;
 			if (done) begin
 				vld = 1; //Separate state?
 				CAYH = 1;

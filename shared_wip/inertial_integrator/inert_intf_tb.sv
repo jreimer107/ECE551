@@ -43,7 +43,7 @@ end
 //time out 
 initial begin
 
-	repeat (1000000) @(negedge clk);
+	repeat (1000000000) @(negedge clk);
 	$display("Timed out.");
 	$stop();
 
