@@ -1,13 +1,18 @@
 module inert_intf(clk, rst_n, SS_n, SCLK, MOSI, MISO, INT, strt_cal, ptch, roll, yaw, cal_done, vld);
 input clk, rst_n;
 
+parameter COUNT_WIDTH = 11;
+
 //SPI interface
 input MISO;
 output SS_n, SCLK, MOSI; 
+wire [15:0] rd_data_all;
 wire [7:0] rd_data;
 wire done;
 reg wrt;
 reg [15:0] cmd;
+
+assign rd_data = rd_data_all[7:0];
 
 //Integrator interface
 output [15:0] ptch, roll, yaw;
@@ -27,10 +32,12 @@ state_t state, nxt_state;
 reg [15:0] timer;
 
 //Instantiations//
-SPI_mstr16 iSPI(.clk(clk), .rst_n(rst_n), .wrt(wrt), .cmd(cmd), .MISO(MISO),
-	.rd_data(rd_data), .SS_n(SS_n), .MOSI(MOSI), .done(done));
+SPI_mstr16 iSPI(	.clk(clk), .rst_n(rst_n), 
+					.wrt(wrt), .done(done),
+					.cmd(cmd), .rd_data(rd_data_all), 
+					.SS_n(SS_n), .MISO(MISO), .MOSI(MOSI), .SCLK(SCLK));
 
-inertial_integrator iII(.clk(clk), .rst_n(rst_n), .strt_cal(strt_cal), .vld(vld),
+inertial_integrator #(COUNT_WIDTH) iII(.clk(clk), .rst_n(rst_n), .strt_cal(strt_cal), .vld(vld),
 	.ptch_rt(ptch_rt), .roll_rt(roll_rt), .yaw_rt(yaw_rt), .ax(ax), .ay(ay),
 	.cal_done(cal_done), .ptch(ptch), .roll(roll), .yaw(yaw));
 	

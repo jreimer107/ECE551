@@ -1,17 +1,17 @@
 module ESCs(clk, rst_n, frnt_spd, bck_spd, lft_spd, rght_spd, motors_off, frnt, bck, lft, rght);
 
-localparam FRNT_OFF = 0;
-localparam BCK_OFF = 0;
-localparam LFT_OFF = 0;
-localparam RGHT_OFF = 0;
+localparam FRNT_OFF = 9'h0;
+localparam BCK_OFF = 9'h0;
+localparam LFT_OFF = 9'h0;
+localparam RGHT_OFF = 9'h0;
 
 input clk, rst_n;
 input [10:0] frnt_spd, bck_spd, lft_spd, rght_spd; 
 input motors_off;
 output frnt, bck, rght, lft;
 
-wire frnt_SPEED, bck_SPEED, lft_SPEED, rght_SPEED;
-wire frnt_OFF, bck_OFF, lft_OFF, rght_OFF;
+wire [10:0] frnt_SPEED, bck_SPEED, lft_SPEED, rght_SPEED;
+wire [9:0] frnt_OFF, bck_OFF, lft_OFF, rght_OFF;
 
 // instantiate four ESCs
 ESC_interface frnt_ESC( .clk(clk), .rst_n(rst_n), 
