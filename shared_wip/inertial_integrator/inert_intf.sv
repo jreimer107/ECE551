@@ -121,7 +121,7 @@ always_comb begin
 		
 		INIT2: begin
 			cmd = 16'h1062;
-			if (&timer) begin
+			if (done) begin
 				wrt = 1;
 				nxt_state = INIT3;
 			end
@@ -130,7 +130,7 @@ always_comb begin
 		
 		INIT3: begin
 			cmd = 16'h1162;
-			if (&timer) begin
+			if (done) begin
 				wrt = 1;
 				nxt_state = INIT4;
 			end
@@ -139,7 +139,7 @@ always_comb begin
 		
 		INIT4: begin
 			cmd = 16'h1460;
-			if (&timer) begin
+			if (done) begin
 				wrt = 1;
 				nxt_state = WAIT;
 			end
@@ -149,11 +149,12 @@ always_comb begin
 		WAIT:
 			if (INT_ff2) begin 
 				nxt_state = PITCH_L;
-				cmd = 16'hA2xx;
+				cmd = 16'hA2xx; //Request pitch_L
 				wrt = 1;				
 			end
 			else nxt_state = WAIT;
 		
+		//These wait for their requested data and request the next state's data
 		PITCH_L: begin
 			if (done) begin
 				CPL = 1;
