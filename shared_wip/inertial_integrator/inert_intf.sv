@@ -57,7 +57,7 @@ always_ff @(posedge clk, negedge rst_n)
 //TODO: idk about this timer. Devin was the one listening
 always_ff @(posedge clk, negedge rst_n)
 	if (!rst_n) timer <= 16'h0000;
-	else timer <= timer + 1;
+	else if (state == INIT1) timer <= timer + 1;
 	
 //REGISTERS//
 //PDF had 10 8bit registers with the halves combined in assign statements at the end.
