@@ -54,19 +54,6 @@ get_terms get_roll(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(roll), .desired(
 get_terms get_yaw(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(yaw), .desired(d_yaw),
 	.pterm(yaw_pterm), .dterm(yaw_dterm));
 
-/*
-//Use p and dterms to get speeds
-get_spd get_frnt(.inertial_cal(inertial_cal), .thrst(thrst), .a_pterm(ptch_pterm),
-	.a_dterm(ptch_dterm), .b_pterm(yaw_pterm), .b_dterm(yaw_dterm), .spd(frnt_spd));
-get_spd get_bck(.inertial_cal(inertial_cal), .thrst(thrst), .a_pterm(-ptch_pterm),
-	.a_dterm(-ptch_dterm), .b_pterm(yaw_pterm), .b_dterm(yaw_dterm), .spd(bck_spd));
-get_spd get_lft(.inertial_cal(inertial_cal), .thrst(thrst), .a_pterm(ptch_pterm),
-	.a_dterm(ptch_dterm), .b_pterm(yaw_pterm), .b_dterm(yaw_dterm), .spd(lft_spd));
-get_spd get_rght(.inertial_cal(inertial_cal), .thrst(thrst), .a_pterm(ptch_pterm),
-	.a_dterm(ptch_dterm), .b_pterm(yaw_pterm), .b_dterm(yaw_dterm), .spd(rght_spd));	
-//*/	
-
-//*
 //THE BIG SIGMAS// TODO fix these, signs are incorrect
 assign frnt_sum = MIN_RUN_SPEED 
 + {4'b0000, thrst} 
@@ -176,34 +163,3 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	
 	assign dterm = D_diff_sat * D_COEFF;
 endmodule 
-
-/*
-module get_spd(inertial_cal, thrst, a_pterm, a_dterm, b_pterm, b_dterm, spd);
-	input inertial_cal;	
-	input  [8:0]  thrst;
-	input  [9:0]  a_pterm, b_pterm;
-	input  [11:0] a_dterm, b_dterm;
-	output [10:0] spd;
-
-	reg signed [12:0] sum;
-	reg signed [10:0] sum_sat;
-
-	localparam CAL_SPEED = 11'h1B0;	
-	localparam MIN_RUN_SPEED = 13'h200;
-
-	assign sum = MIN_RUN_SPEED 
-	+ {thrst} 
-	- {{3{a_pterm[9]}}, a_pterm} 
-	- {{1{a_dterm[11]}}, a_dterm} 
-	- {{3{b_pterm[9]}}, b_pterm} 
-	- {{1{b_dterm[11]}}, b_dterm};
-
-	assign sum_sat = sum[12] ? 11'h000 : 
-					  |sum[12:11] ? 11'h7FF : 
-					  sum[10:0];
-					  
-	assign spd = inertial_cal ? CAL_SPEED : sum_sat;
-
-endmodule
-//*/
-
