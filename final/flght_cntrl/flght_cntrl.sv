@@ -54,37 +54,8 @@ get_terms get_roll(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(roll), .desired(
 get_terms get_yaw(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(yaw), .desired(d_yaw),
 	.pterm(yaw_pterm), .dterm(yaw_dterm));
 
-//THE BIG SIGMAS//
-//assign frnt_sum = MIN_RUN_SPEED 
-//+ {4'b0000, thrst} 
-//- {{3{ptch_pterm[9]}}, ptch_pterm} 
-//- {{1{ptch_dterm[11]}}, ptch_dterm} 
-//- {{3{yaw_pterm[9]}}, yaw_pterm} 
-//- {{1{yaw_dterm[11]}}, yaw_dterm};
-
-//assign bck_sum = MIN_RUN_SPEED 
-//+ {4'b0000, thrst}  
-//+ {{3{ptch_pterm[9]}}, ptch_pterm} 
-//+ {{1{ptch_dterm[11]}}, ptch_dterm} 
-//- {{3{yaw_pterm[9]}}, yaw_pterm} 
-//- {{1{yaw_dterm[11]}}, yaw_dterm};
-
-//assign lft_sum = MIN_RUN_SPEED 
-//+ {4'b0000, thrst}  
-//- {{3{roll_pterm[9]}}, roll_pterm} 
-//- {{1{roll_dterm[11]}}, roll_dterm} 
-//+ {{3{yaw_pterm[9]}}, yaw_pterm} 
-//+ {{1{yaw_dterm[11]}}, yaw_dterm};
-
-//assign rght_sum = MIN_RUN_SPEED 
-//+ {4'b0000, thrst}  
-//+ {{3{roll_pterm[9]}}, roll_pterm} 
-//+ {{1{roll_dterm[11]}}, roll_dterm} 
-//+ {{3{yaw_pterm[9]}}, yaw_pterm} 
-//+ {{1{yaw_dterm[11]}}, yaw_dterm};
-
 always_ff @(posedge clk) begin
-	frnt_sum = MIN_RUN_SPEED 
+	frnt_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst} 
 	- {{3{ptch_pterm[9]}}, ptch_pterm} 
 	- {{1{ptch_dterm[11]}}, ptch_dterm} 
@@ -93,7 +64,7 @@ always_ff @(posedge clk) begin
 end
 
 always_ff @(posedge clk) begin
-	bck_sum = MIN_RUN_SPEED 
+	bck_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst}  
 	+ {{3{ptch_pterm[9]}}, ptch_pterm} 
 	+ {{1{ptch_dterm[11]}}, ptch_dterm} 
@@ -102,7 +73,7 @@ always_ff @(posedge clk) begin
 end
 
 always_ff @(posedge clk) begin
-	lft_sum = MIN_RUN_SPEED 
+	lft_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst}  
 	- {{3{ptch_pterm[9]}}, ptch_pterm} 
 	- {{1{ptch_dterm[11]}}, ptch_dterm} 
@@ -111,7 +82,7 @@ always_ff @(posedge clk) begin
 end
 
 always_ff @(posedge clk) begin
-	rght_sum = MIN_RUN_SPEED 
+	rght_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst}  
 	+ {{3{ptch_pterm[9]}}, ptch_pterm} 
 	+ {{1{ptch_dterm[11]}}, ptch_dterm} 
@@ -185,9 +156,12 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 					  
 	//Pipelined err_sat
 	always_ff @(posedge clk) begin
-		if (!error[16] &&  |error[16:9]) err_sat <= 10'h1FF; // positive and needs sat
-		else if (error[16] && ~&error[16:9]) err_sat <= 10'h200; // negative and needs sat
-		else err_sat <= error[9:0]; // doesn't need saturation
+		if (!error[16] &&  |error[16:9]) 
+			err_sat <= 10'h1FF; // positive and needs sat
+		else if (error[16] && ~&error[16:9]) 
+			err_sat <= 10'h200; // negative and needs sat
+		else 
+			err_sat <= error[9:0]; // doesn't need saturation
 	end
 
 	
