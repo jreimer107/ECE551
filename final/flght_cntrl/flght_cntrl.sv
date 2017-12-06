@@ -54,35 +54,70 @@ get_terms get_roll(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(roll), .desired(
 get_terms get_yaw(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(yaw), .desired(d_yaw),
 	.pterm(yaw_pterm), .dterm(yaw_dterm));
 
-//THE BIG SIGMAS// TODO fix these, signs are incorrect
-assign frnt_sum = MIN_RUN_SPEED 
-+ {4'b0000, thrst} 
-- {{3{ptch_pterm[9]}}, ptch_pterm} 
-- {{1{ptch_dterm[11]}}, ptch_dterm} 
-- {{3{yaw_pterm[9]}}, yaw_pterm} 
-- {{1{yaw_dterm[11]}}, yaw_dterm};
+//THE BIG SIGMAS//
+//assign frnt_sum = MIN_RUN_SPEED 
+//+ {4'b0000, thrst} 
+//- {{3{ptch_pterm[9]}}, ptch_pterm} 
+//- {{1{ptch_dterm[11]}}, ptch_dterm} 
+//- {{3{yaw_pterm[9]}}, yaw_pterm} 
+//- {{1{yaw_dterm[11]}}, yaw_dterm};
 
-assign bck_sum = MIN_RUN_SPEED 
-+ {4'b0000, thrst}  
-+ {{3{ptch_pterm[9]}}, ptch_pterm} 
-+ {{1{ptch_dterm[11]}}, ptch_dterm} 
-- {{3{yaw_pterm[9]}}, yaw_pterm} 
-- {{1{yaw_dterm[11]}}, yaw_dterm};
+//assign bck_sum = MIN_RUN_SPEED 
+//+ {4'b0000, thrst}  
+//+ {{3{ptch_pterm[9]}}, ptch_pterm} 
+//+ {{1{ptch_dterm[11]}}, ptch_dterm} 
+//- {{3{yaw_pterm[9]}}, yaw_pterm} 
+//- {{1{yaw_dterm[11]}}, yaw_dterm};
 
-assign lft_sum = MIN_RUN_SPEED 
-+ {4'b0000, thrst}  
-- {{3{roll_pterm[9]}}, roll_pterm} 
-- {{1{roll_dterm[11]}}, roll_dterm} 
-+ {{3{yaw_pterm[9]}}, yaw_pterm} 
-+ {{1{yaw_dterm[11]}}, yaw_dterm};
+//assign lft_sum = MIN_RUN_SPEED 
+//+ {4'b0000, thrst}  
+//- {{3{roll_pterm[9]}}, roll_pterm} 
+//- {{1{roll_dterm[11]}}, roll_dterm} 
+//+ {{3{yaw_pterm[9]}}, yaw_pterm} 
+//+ {{1{yaw_dterm[11]}}, yaw_dterm};
 
-assign rght_sum = MIN_RUN_SPEED 
-+ {4'b0000, thrst}  
-+ {{3{roll_pterm[9]}}, roll_pterm} 
-+ {{1{roll_dterm[11]}}, roll_dterm} 
-+ {{3{yaw_pterm[9]}}, yaw_pterm} 
-+ {{1{yaw_dterm[11]}}, yaw_dterm};
+//assign rght_sum = MIN_RUN_SPEED 
+//+ {4'b0000, thrst}  
+//+ {{3{roll_pterm[9]}}, roll_pterm} 
+//+ {{1{roll_dterm[11]}}, roll_dterm} 
+//+ {{3{yaw_pterm[9]}}, yaw_pterm} 
+//+ {{1{yaw_dterm[11]}}, yaw_dterm};
 
+always_ff @(posedge clk) begin
+	frnt_sum = MIN_RUN_SPEED 
+	+ {4'b0000, thrst} 
+	- {{3{ptch_pterm[9]}}, ptch_pterm} 
+	- {{1{ptch_dterm[11]}}, ptch_dterm} 
+	- {{3{yaw_pterm[9]}}, yaw_pterm} 
+	- {{1{yaw_dterm[11]}}, yaw_dterm};
+end
+
+always_ff @(posedge clk) begin
+	bck_sum = MIN_RUN_SPEED 
+	+ {4'b0000, thrst}  
+	+ {{3{ptch_pterm[9]}}, ptch_pterm} 
+	+ {{1{ptch_dterm[11]}}, ptch_dterm} 
+	- {{3{yaw_pterm[9]}}, yaw_pterm} 
+	- {{1{yaw_dterm[11]}}, yaw_dterm};
+end
+
+always_ff @(posedge clk) begin
+	lft_sum = MIN_RUN_SPEED 
+	+ {4'b0000, thrst}  
+	- {{3{ptch_pterm[9]}}, ptch_pterm} 
+	- {{1{ptch_dterm[11]}}, ptch_dterm} 
+	+ {{3{yaw_pterm[9]}}, yaw_pterm} 
+	+ {{1{yaw_dterm[11]}}, yaw_dterm};
+end
+
+always_ff @(posedge clk) begin
+	rght_sum = MIN_RUN_SPEED 
+	+ {4'b0000, thrst}  
+	+ {{3{ptch_pterm[9]}}, ptch_pterm} 
+	+ {{1{ptch_dterm[11]}}, ptch_dterm} 
+	+ {{3{yaw_pterm[9]}}, yaw_pterm} 
+	+ {{1{yaw_dterm[11]}}, yaw_dterm};
+end
 
 //Unsigned saturation
 //assign sum_sat = |sum[12:10] ? 11'h7FF : sum[10:0];
@@ -147,9 +182,14 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	
 	
 	assign error = actual - desired;
-	assign err_sat = !error[16] &&  |error[16:9] ? 10'h1FF : // positive and needs sat
-					  error[16] && ~&error[16:9] ? 10'h200 : // negative and needs sat
-					  error[9:0]; // doesn't need saturation
+					  
+	//Pipelined err_sat
+	always_ff @(posedge clk) begin
+		if (!error[16] &&  |error[16:9]) err_sat <= 10'h1FF; // positive and needs sat
+		else if (error[16] && ~&error[16:9]) err_sat <= 10'h200; // negative and needs sat
+		else err_sat <= error[9:0]; // doesn't need saturation
+	end
+
 	
 	// Calculate 5/8 of raw_err_sat
 	assign pterm = (err_sat >>> 1) + (err_sat >>> 3);
