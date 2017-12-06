@@ -1,0 +1,49 @@
+#Read in files
+read_file -format sverilog { ./A2D_intf.sv ./ADC128S.sv ./cmd_cfg.sv \
+	./ESC_interface.sv ./ESCs.sv ./flght_cntrl.sv ./inert_intf.sv \
+	./inertial_integrator.sv ./PB_release.sv ./QuadCopter.v ./reset_synch.v  \
+	./SPI_ADC128S.sv ./SPI_mstr16.sv ./UART.v ./UART_rx.sv ./UART_tx.sv \
+	./UART_wrapper.sv }
+
+#Set current design to top level
+set current_design QuadCopter
+
+#create and constrain clk
+create_clock -name "clk" -period 2.5 -waveform {0 1} {clk}
+set_dont_touch_network [find port clk]
+
+#set input timings
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+set_input_delay -clock clk 0.25 $prim_inputs
+
+#set input drives
+set_driving_cell -lib_cell ND2D2BWP -from_pin A1 -library tcbn40lpbwptc $prim_inputs
+set_drive 0.1 RST_n
+
+#Set output delays
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.1 [all_outputs]
+
+#Set wireload and transition time
+set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
+set_max_transition 0.1 [current_design]
+
+#Set uncertainty
+set_clock_uncertainty .15 [find port clk]
+
+#Fix hold times
+set_fix_hold
+
+#Smash the hierarchy
+ungroup -all -flatten
+
+check_design
+
+#Compile the design
+compile -map_effort medium
+
+#Write out verilog netlist and area reports
+report_area > QuadCopter_area.txt
+report_timing -delay min > Quad_min_delay.rpt
+report_timing -delay max > Quad_max_delay.rpt
+write -format verilog UART -output QuadCopter.vg
