@@ -54,7 +54,7 @@ get_terms get_roll(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(roll), .desired(
 get_terms get_yaw(.clk(clk), .rst_n(rst_n), .vld(vld), .actual(yaw), .desired(d_yaw),
 	.pterm(yaw_pterm), .dterm(yaw_dterm));
 
-//THE BIG SIGMAS// TODO fix these, signs are incorrect
+//THE BIG SIGMAS//
 assign frnt_sum = MIN_RUN_SPEED 
 + {4'b0000, thrst} 
 - {{3{ptch_pterm[9]}}, ptch_pterm} 
@@ -118,17 +118,17 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	output reg [9:0]  pterm;
 	output reg signed [11:0] dterm;
 	
+	wire signed [16:0] error;
+	reg signed [9:0]  err_sat;
+	wire signed [9:0]  D_diff;
+	wire signed [5:0]  D_diff_sat;
+	
+	integer x;
+	
 	// Error queue
 	parameter D_QUEUE_DEPTH = 14; // delay for derivative term
 	parameter signed D_COEFF = 6'b00111;
 	reg signed [9:0]  prev_err[0:D_QUEUE_DEPTH-1];
-	
-	integer x;
-	
-	wire signed [16:0] error;
-	wire signed [9:0]  err_sat;
-	wire signed [9:0]  D_diff;
-	wire signed [5:0]  D_diff_sat;
 	
 	// D-Queue
 	always_ff @(posedge clk, negedge rst_n) begin
@@ -145,11 +145,19 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 		end
 	end
 	
-	
 	assign error = actual - desired;
+	
+	/* Combinational non-pipelined err_sat
 	assign err_sat = !error[16] &&  |error[16:9] ? 10'h1FF : // positive and needs sat
 					  error[16] && ~&error[16:9] ? 10'h200 : // negative and needs sat
 					  error[9:0]; // doesn't need saturation
+	*/
+	
+	//Pipelined err_sat
+	always_ff @(posedge clk) 
+		if (!error[16] &&  |error[16:9]) err_sat <= 10'h1FF; // positive and needs sat
+		else if (error[16] && ~&error[16:9]) err_sat <= 10'h200; // negative and needs sat
+		else err_sat <= error[9:0]; // doesn't need saturation
 	
 	// Calculate 5/8 of raw_err_sat
 	assign pterm = (err_sat >>> 1) + (err_sat >>> 3);

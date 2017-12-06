@@ -31,8 +31,11 @@ set_max_transition 0.1 [current_design]
 #Set uncertainty
 set_clock_uncertainty .15 [find port clk]
 
+#Initial Compile
+compile -map_effort medium
+
 #Fix hold times
-set_fix_hold
+set_fix_hold clk
 
 #Smash the hierarchy
 ungroup -all -flatten
@@ -40,10 +43,10 @@ ungroup -all -flatten
 check_design
 
 #Compile the design
-compile -map_effort medium
+compile -map_effort high
 
 #Write out verilog netlist and area reports
 report_area > QuadCopter_area.txt
 report_timing -delay min > Quad_min_delay.rpt
 report_timing -delay max > Quad_max_delay.rpt
-write -format verilog UART -output QuadCopter.vg
+write -format verilog QuadCopter -output QuadCopter.vg
