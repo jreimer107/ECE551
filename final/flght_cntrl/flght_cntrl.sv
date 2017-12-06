@@ -16,14 +16,10 @@ output [10:0] lft_spd;						// 11-bit unsigned speed at which to left front moto
 output [10:0] rght_spd;						// 11-bit unsigned speed at which to right front motor
 
 
-
-
 //////////////////////////////////////////////////////
 // You will need a bunch of internal wires declared /
 // for intermediate math results...do that here   //
 ///////////////////////////////////////////////////
-
-
 reg signed [12:0] frnt_sum;
 reg signed [10:0] frnt_sum_sat;
 reg signed [12:0] bck_sum;
@@ -32,16 +28,12 @@ reg signed [12:0] lft_sum;
 reg signed [10:0] lft_sum_sat;
 reg signed [12:0] rght_sum;
 reg signed [10:0] rght_sum_sat;
-
 reg signed [9:0] ptch_pterm, roll_pterm, yaw_pterm;
 reg signed [11:0] ptch_dterm, roll_dterm, yaw_dterm;
-
-
 
 ///////////////////////////////////////////////////////////////
 // some Parameters to keep things more generic and flexible //
 /////////////////////////////////////////////////////////////
-
 localparam CAL_SPEED = 11'h1B0;		// speed to run motors at during inertial calibration
 localparam MIN_RUN_SPEED = 13'h200;	// minimum speed while running
 localparam D_COEFF = 6'b00111;			// D coefficient in PID control = +14
@@ -75,8 +67,8 @@ end
 always_ff @(posedge clk) begin
 	lft_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst}  
-	- {{3{ptch_pterm[9]}}, ptch_pterm} 
-	- {{1{ptch_dterm[11]}}, ptch_dterm} 
+	- {{3{roll_pterm[9]}}, roll_pterm} 
+	- {{1{roll_dterm[11]}}, roll_dterm} 
 	+ {{3{yaw_pterm[9]}}, yaw_pterm} 
 	+ {{1{yaw_dterm[11]}}, yaw_dterm};
 end
@@ -84,8 +76,8 @@ end
 always_ff @(posedge clk) begin
 	rght_sum <= MIN_RUN_SPEED 
 	+ {4'b0000, thrst}  
-	+ {{3{ptch_pterm[9]}}, ptch_pterm} 
-	+ {{1{ptch_dterm[11]}}, ptch_dterm} 
+	+ {{3{roll_pterm[9]}}, roll_pterm} 
+	+ {{1{roll_dterm[11]}}, roll_dterm} 
 	+ {{3{yaw_pterm[9]}}, yaw_pterm} 
 	+ {{1{yaw_dterm[11]}}, yaw_dterm};
 end
@@ -112,7 +104,7 @@ assign frnt_spd = inertial_cal ? CAL_SPEED : frnt_sum_sat;
 assign bck_spd = inertial_cal ? CAL_SPEED : bck_sum_sat;
 assign lft_spd = inertial_cal ? CAL_SPEED : lft_sum_sat;
 assign rght_spd = inertial_cal ? CAL_SPEED : rght_sum_sat;
-// */
+
 endmodule
 
 
@@ -124,17 +116,17 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	output reg [9:0]  pterm;
 	output reg signed [11:0] dterm;
 	
-	// Error queue
-	parameter D_QUEUE_DEPTH = 14; // delay for derivative term
-	parameter signed D_COEFF = 6'b00111;
-	reg signed [9:0]  prev_err[0:D_QUEUE_DEPTH-1];
-	
-	integer x;
-	
 	wire signed [16:0] error;
 	reg signed [9:0]  err_sat;
 	wire signed [9:0]  D_diff;
 	wire signed [5:0]  D_diff_sat;
+	
+	integer x;
+	
+	// Error queue
+	parameter D_QUEUE_DEPTH = 14; // delay for derivative term
+	parameter signed D_COEFF = 6'b00111;
+	reg signed [9:0]  prev_err[0:D_QUEUE_DEPTH-1];
 	
 	// D-Queue
 	always_ff @(posedge clk, negedge rst_n) begin

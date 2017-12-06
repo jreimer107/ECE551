@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : QuadCopter
+Version: M-2016.12
+Date   : Wed Dec  6 10:40:57 2017
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           25
+Number of nets:                          9283
+Number of cells:                         9096
+Number of combinational cells:           8063
+Number of sequential cells:              1033
+Number of macros/black boxes:               0
+Number of buf/inv:                       3148
+Number of references:                     328
+
+Combinational area:              12236.691743
+Buf/Inv area:                     2636.474447
+Noncombinational area:            5254.956086
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 17491.647829
+Total area:                 undefined
+1
