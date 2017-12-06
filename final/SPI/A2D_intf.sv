@@ -51,7 +51,7 @@ always_comb begin
 
 		SECOND:
 			if (done) set_cnv_cmplt = 1;
-			else nxt_state <= SECOND;
+			else nxt_state = SECOND;
 	endcase
 end
 

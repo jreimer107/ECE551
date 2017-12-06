@@ -132,7 +132,7 @@ module get_terms(clk, rst_n, vld, actual, desired, pterm, dterm);
 	integer x;
 	
 	wire signed [16:0] error;
-	wire signed [9:0]  err_sat;
+	reg signed [9:0]  err_sat;
 	wire signed [9:0]  D_diff;
 	wire signed [5:0]  D_diff_sat;
 	
