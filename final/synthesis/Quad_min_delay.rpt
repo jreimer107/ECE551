@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : QuadCopter
 Version: M-2016.12
-Date   : Fri Dec  8 01:20:08 2017
+Date   : Fri Dec  8 12:15:08 2017
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

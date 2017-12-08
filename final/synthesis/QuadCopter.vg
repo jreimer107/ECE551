@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : M-2016.12
-// Date      : Fri Dec  8 01:20:08 2017
+// Date      : Fri Dec  8 12:15:09 2017
 /////////////////////////////////////////////////////////////
 
 
@@ -614,9 +614,9 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
          n1578, n1579, n1580, n1581, n1582, n1583, n1584, n1585, n1586, n1587,
          n1588, n1589, n1590, n1591, n1592, n1595, n1596, n1599, n1600, n1601,
          n1602, n1603, n1604, n1605, n1608, n1609, n1610, n1611, n1613, n1614,
-         n1615, n1616, net43414, net43415, net43417, net43419, net43424,
-         net43510, net43542, net43546, net51308, net51318, net51322, net51379,
-         net51378, net51505, n1624, n1625, n1626, n1627, n1628, n1629, n1630,
+         n1615, n1616, net43416, net43417, net43419, net43421, net43426,
+         net43512, net43544, net43548, net51310, net51320, net51324, net51381,
+         net51380, net51507, n1624, n1625, n1626, n1627, n1628, n1629, n1630,
          n1631, n1632, n1633, n1634, n1635, n1636, n1637, n1638, n1639, n1640,
          n1641, n1642, n1643, n1644, n1645, n1646, n1647, n1648, n1649, n1650,
          n1651, n1652, n1653, n1654, n1655, n1656, n1657, n1658, n1659, n1660,
@@ -2024,9 +2024,9 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iNEMO/iII/mult_201/SUMB[14][6] ) );
   CKMUX2D0BWP \iNEMO/iII/roll_off_reg[1]/U4  ( .I0(\iNEMO/iII/roll_off [1]), 
         .I1(\iNEMO/iII/roll_int [12]), .S(n2628), .Z(n2497) );
-  CKMUX2D0BWP \iNEMO/iII/ay_avg_reg[1]/U4  ( .I0(net51379), .I1(
+  CKMUX2D0BWP \iNEMO/iII/ay_avg_reg[1]/U4  ( .I0(net51381), .I1(
         \iNEMO/iII/ay_accum [5]), .S(n2543), .Z(n2496) );
-  CKMUX2D0BWP \iNEMO/iII/ay_avg_reg[0]/U4  ( .I0(net51322), .I1(
+  CKMUX2D0BWP \iNEMO/iII/ay_avg_reg[0]/U4  ( .I0(net51324), .I1(
         \iNEMO/iII/ay_accum [4]), .S(n2543), .Z(n2495) );
   DFCND1BWP \iNEMO/iII/roll_int_reg[19]  ( .D(\iNEMO/iII/n163 ), .CP(clk), 
         .CDN(n2701), .Q(roll[6]), .QN(n3095) );
@@ -5654,11 +5654,11 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   ND2D3BWP U2703 ( .A1(n3606), .A2(n3645), .ZN(n2394) );
   OR3D4BWP U2704 ( .A1(n3575), .A2(n3574), .A3(n3484), .Z(n3606) );
   CKND2D1BWP U2705 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(\iNEMO/iII/ay_avg [0]), 
-        .ZN(net43510) );
+        .ZN(net43512) );
   XOR2D1BWP U2706 ( .A1(\iNEMO/iII/ay_avg [0]), .A2(\iNEMO/iII/ay_avg [2]), 
-        .Z(net43542) );
+        .Z(net43544) );
   CKND2D4BWP U2707 ( .A1(\iNEMO/iII/ay_avg [2]), .A2(\iNEMO/iII/ay_avg [0]), 
-        .ZN(net51505) );
+        .ZN(net51507) );
   CKND2BWP U2708 ( .I(n3267), .ZN(n3263) );
   AO31D2BWP U2709 ( .A1(n3319), .A2(n2633), .A3(n3318), .B(n3317), .Z(
         \iNEMO/iII/n162 ) );
@@ -5674,8 +5674,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   INVD2BWP U2716 ( .I(n3347), .ZN(n3351) );
   INVD3BWP U2717 ( .I(\iNEMO/iII/ay_avg [2]), .ZN(n2159) );
   CKND2D1BWP U2718 ( .A1(\iNEMO/iII/ay_avg [2]), .A2(\iNEMO/iII/ay_avg [1]), 
-        .ZN(net43417) );
-  CKND2D1BWP U2719 ( .A1(\iNEMO/iII/ay_avg [2]), .A2(net51378), .ZN(net43424)
+        .ZN(net43419) );
+  CKND2D1BWP U2719 ( .A1(\iNEMO/iII/ay_avg [2]), .A2(net51380), .ZN(net43426)
          );
   AN3XD1BWP U2720 ( .A1(n3883), .A2(n2079), .A3(n3882), .Z(n3886) );
   CKND2BWP U2721 ( .I(n3883), .ZN(n3885) );
@@ -5728,7 +5728,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   CKND2D2BWP U2761 ( .A1(n3384), .A2(n2202), .ZN(n3379) );
   AO31D2BWP U2762 ( .A1(n2195), .A2(n3775), .A3(n3790), .B(n2336), .Z(n2344)
          );
-  XOR3D2BWP U2763 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51318), .A3(n2269), .Z(
+  XOR3D2BWP U2763 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51320), .A3(n2269), .Z(
         n3428) );
   IOA22D4BWP U2764 ( .B1(n2642), .B2(n284), .A1(\iNEMO/iII/N38 ), .A2(n2641), 
         .ZN(\iNEMO/iII/roll_comp [4]) );
@@ -5787,7 +5787,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iNEMO/iII/ay_avg [9]), .ZN(n3477) );
   INVD3BWP U2805 ( .I(\ifly/roll_dterm [4]), .ZN(n514) );
   INVD2BWP U2806 ( .I(n3416), .ZN(n3424) );
-  INVD2BWP U2807 ( .I(n2156), .ZN(net43546) );
+  INVD2BWP U2807 ( .I(n2156), .ZN(net43548) );
   IOA21D4BWP U2808 ( .A1(n705), .A2(n2456), .B(n706), .ZN(n668) );
   AN2D2BWP U2809 ( .A1(n3566), .A2(n3565), .Z(n2442) );
   OAI21D2BWP U2810 ( .A1(n3631), .A2(n3589), .B(n3550), .ZN(n3565) );
@@ -5797,7 +5797,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   CKXOR2D4BWP U2814 ( .A1(\ifly/get_roll/mult_170/CARRYB[4][0] ), .A2(
         \ifly/get_roll/mult_170/SUMB[4][1] ), .Z(n676) );
   CKND2D1BWP U2815 ( .A1(\iNEMO/iII/ay_avg [0]), .A2(\iNEMO/iII/ay_avg [1]), 
-        .ZN(net43419) );
+        .ZN(net43421) );
   CKND2D4BWP U2816 ( .A1(n2334), .A2(n2849), .ZN(n2848) );
   OAI22D4BWP U2817 ( .A1(n3158), .A2(n3934), .B1(n2301), .B2(n3932), .ZN(n3178) );
   OAI21D4BWP U2818 ( .A1(n3015), .A2(n2171), .B(n2892), .ZN(n2900) );
@@ -5807,7 +5807,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   AN2XD1BWP U2821 ( .A1(\iNEMO/iII/ay_avg [6]), .A2(n3521), .Z(n3522) );
   OA21D2BWP U2822 ( .A1(n2412), .A2(n3157), .B(n3118), .Z(n2506) );
   ND2D3BWP U2823 ( .A1(n2412), .A2(n3157), .ZN(n3118) );
-  CKND1BWP U2824 ( .I(net51505), .ZN(net43414) );
+  CKND1BWP U2824 ( .I(net51507), .ZN(net43416) );
   OAI21D2BWP U2825 ( .A1(n3490), .A2(n3456), .B(n3429), .ZN(n3443) );
   XOR3D2BWP U2826 ( .A1(\iNEMO/iII/ay_avg [12]), .A2(n2086), .A3(n3470), .Z(
         n3471) );
@@ -5826,17 +5826,17 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   ND2D2BWP U2839 ( .A1(n2868), .A2(n2867), .ZN(n2977) );
   OAI21D0BWP U2840 ( .A1(n3512), .A2(n2157), .B(n3511), .ZN(n3513) );
   CKND2D0BWP U2841 ( .A1(n2159), .A2(n2157), .ZN(n3504) );
-  OAI211D2BWP U2842 ( .A1(n2157), .A2(n2147), .B(n3506), .C(net43424), .ZN(
+  OAI211D2BWP U2842 ( .A1(n2157), .A2(n2147), .B(n3506), .C(net43426), .ZN(
         n3446) );
-  CKND12BWP U2843 ( .I(n2157), .ZN(net51378) );
+  CKND12BWP U2843 ( .I(n2157), .ZN(net51380) );
   INVD4BWP U2844 ( .I(n2146), .ZN(n2157) );
-  OAI211D2BWP U2845 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51378), .B(n3446), 
+  OAI211D2BWP U2845 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51380), .B(n3446), 
         .C(n3504), .ZN(n3503) );
   CKND2BWP U2846 ( .I(n3459), .ZN(n3537) );
   CKND2D0BWP U2847 ( .A1(n2211), .A2(n2894), .ZN(n2895) );
   OAI211D2BWP U2848 ( .A1(n2878), .A2(n2977), .B(n2894), .C(n2211), .ZN(n2879)
          );
-  OAI21D2BWP U2849 ( .A1(net43510), .A2(n2149), .B(n2155), .ZN(n2154) );
+  OAI21D2BWP U2849 ( .A1(net43512), .A2(n2149), .B(n2155), .ZN(n2154) );
   ND2D8BWP U2850 ( .A1(n2838), .A2(n2837), .ZN(n2840) );
   IAO21D4BWP U2851 ( .A1(n2166), .A2(n2170), .B(n2272), .ZN(n2213) );
   CKND2D2BWP U2852 ( .A1(n2839), .A2(n2193), .ZN(n2913) );
@@ -5912,7 +5912,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   INVD1BWP U2915 ( .I(n2325), .ZN(n2884) );
   ND2D3BWP U2916 ( .A1(n2463), .A2(n2843), .ZN(n2844) );
   INVD3BWP U2917 ( .I(\iNEMO/iII/N409 ), .ZN(n2838) );
-  XNR2D1BWP U2918 ( .A1(net51379), .A2(net51318), .ZN(n3509) );
+  XNR2D1BWP U2918 ( .A1(net51381), .A2(net51320), .ZN(n3509) );
   ND2D1BWP U2919 ( .A1(\iNEMO/iII/ay_avg [1]), .A2(n2057), .ZN(n2155) );
   NR2XD0BWP U2920 ( .A1(\iNEMO/iII/ay_avg [1]), .A2(n2056), .ZN(n2149) );
   CKND3BWP U2921 ( .I(\iNEMO/iII/ax_avg [1]), .ZN(n2837) );
@@ -6050,7 +6050,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   OAI21D1BWP U3030 ( .A1(n3386), .A2(n3385), .B(n3384), .ZN(n2165) );
   INVD1BWP U3031 ( .I(n3383), .ZN(n3386) );
   AN3XD1BWP U3032 ( .A1(n2446), .A2(n2405), .A3(n3347), .Z(n3344) );
-  CKND2BWP U3033 ( .I(n2158), .ZN(net51379) );
+  CKND2BWP U3033 ( .I(n2158), .ZN(net51381) );
   ND2D1BWP U3034 ( .A1(n3801), .A2(n3800), .ZN(n3802) );
   CKND2D3BWP U3035 ( .A1(n320), .A2(\iNEMO/done ), .ZN(n827) );
   CKBD1BWP U3036 ( .I(n3791), .Z(n2313) );
@@ -6398,7 +6398,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   MUX2D1BWP U3320 ( .I0(n2416), .I1(n3312), .S(n2417), .Z(n3269) );
   CKND2BWP U3321 ( .I(n3417), .ZN(n3423) );
   ND2D4BWP U3322 ( .A1(n3106), .A2(n3105), .ZN(n3107) );
-  NR2D2BWP U3323 ( .A1(net51505), .A2(n2158), .ZN(n2143) );
+  NR2D2BWP U3323 ( .A1(net51507), .A2(n2158), .ZN(n2143) );
   AN2D4BWP U3324 ( .A1(n2991), .A2(n2990), .Z(n3006) );
   CKND2D4BWP U3325 ( .A1(n3234), .A2(n3233), .ZN(n2141) );
   IND2D1BWP U3326 ( .A1(n2504), .B1(n2182), .ZN(n2874) );
@@ -6493,7 +6493,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   CKND2D0BWP U3404 ( .A1(n3244), .A2(n3243), .ZN(n3249) );
   CKND2D4BWP U3405 ( .A1(n2238), .A2(n2249), .ZN(n3803) );
   ND2D3BWP U3406 ( .A1(n2296), .A2(n3023), .ZN(n3041) );
-  FCICOND1BWP U3407 ( .A(net43414), .B(net51378), .CI(net51379), .CON(n2172)
+  FCICOND1BWP U3407 ( .A(net43416), .B(net51380), .CI(net51381), .CON(n2172)
          );
   CKND2BWP U3408 ( .I(n2281), .ZN(n2173) );
   XOR3D2BWP U3409 ( .A1(\ifly/get_roll/sub_164/carry [9]), .A2(
@@ -6523,21 +6523,21 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   ND2D0BWP U3426 ( .A1(n2907), .A2(n2179), .ZN(n2903) );
   XOR2D0BWP U3427 ( .A1(n2840), .A2(\iNEMO/iII/ax_avg [2]), .Z(n2182) );
   XNR2D0BWP U3428 ( .A1(n3141), .A2(n2505), .ZN(n2302) );
-  INVD1BWP U3429 ( .I(n2071), .ZN(net51322) );
-  XOR3D1BWP U3430 ( .A1(net51379), .A2(n2057), .A3(net43510), .Z(n3450) );
+  INVD1BWP U3429 ( .I(n2071), .ZN(net51324) );
+  XOR3D1BWP U3430 ( .A1(net51381), .A2(n2057), .A3(net43512), .Z(n3450) );
   XOR3D1BWP U3431 ( .A1(n2183), .A2(n490), .A3(
         \ifly/add_1_root_sub_0_root_sub_59_2/carry [12]), .Z(\ifly/N107 ) );
   XNR2D1BWP U3432 ( .A1(n549), .A2(n2092), .ZN(n2183) );
-  CKND2BWP U3433 ( .I(n2159), .ZN(net51318) );
+  CKND2BWP U3433 ( .I(n2159), .ZN(net51320) );
   IOA21D2BWP U3434 ( .A1(n3445), .A2(\iNEMO/iII/ay_avg [7]), .B(n3426), .ZN(
         n3489) );
   INVD3BWP U3435 ( .I(n3427), .ZN(n3445) );
   AOI22D2BWP U3436 ( .A1(n3554), .A2(n3553), .B1(n3563), .B2(n3589), .ZN(n3555) );
   CKND6BWP U3437 ( .I(n3553), .ZN(n3563) );
   INVD2BWP U3438 ( .I(n3622), .ZN(n3618) );
-  INVD1BWP U3439 ( .I(net43415), .ZN(net51308) );
-  XOR4D1BWP U3440 ( .A1(\iNEMO/iII/ay_avg [6]), .A2(net51322), .A3(n2154), 
-        .A4(net51318), .Z(n3499) );
+  INVD1BWP U3439 ( .I(net43417), .ZN(net51310) );
+  XOR4D1BWP U3440 ( .A1(\iNEMO/iII/ay_avg [6]), .A2(net51324), .A3(n2154), 
+        .A4(net51320), .Z(n3499) );
   CKAN2D0BWP U3441 ( .A1(\ifly/get_ptch/mult_170/CARRYB[4][0] ), .A2(
         \ifly/get_ptch/mult_170/SUMB[4][1] ), .Z(n683) );
   XNR3D1BWP U3442 ( .A1(n3936), .A2(n2339), .A3(n2212), .ZN(n2184) );
@@ -6911,7 +6911,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   CKND2BWP U3748 ( .I(n3503), .ZN(n3447) );
   OAI21D0BWP U3749 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(n3514), .B(n3513), .ZN(
         n3515) );
-  XOR3D0BWP U3750 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51378), .A3(n3507), .Z(
+  XOR3D0BWP U3750 ( .A1(\iNEMO/iII/ay_avg [4]), .A2(net51380), .A3(n3507), .Z(
         n3517) );
   CKND2D0BWP U3751 ( .A1(n3599), .A2(n3598), .ZN(n3603) );
   CKXOR2D2BWP U3752 ( .A1(n3482), .A2(n2069), .Z(n3483) );
@@ -6927,7 +6927,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         n3528) );
   XNR3D2BWP U3762 ( .A1(\iNEMO/iII/ay_avg [9]), .A2(n3444), .A3(n3443), .ZN(
         n2472) );
-  XOR3D2BWP U3763 ( .A1(net51378), .A2(n2158), .A3(net51505), .Z(n2477) );
+  XOR3D2BWP U3763 ( .A1(net51380), .A2(n2158), .A3(net51507), .Z(n2477) );
   XNR2D2BWP U3764 ( .A1(\iNEMO/iII/ax_avg [4]), .A2(n2844), .ZN(n2923) );
   CKND1BWP U3765 ( .I(n3601), .ZN(n2333) );
   NR2XD1BWP U3766 ( .A1(n532), .A2(\ifly/get_roll/err_sat [0]), .ZN(n696) );
@@ -7082,11 +7082,11 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   FCICOND1BWP U3871 ( .A(n2362), .B(n2361), .CI(n3477), .CON(n2360) );
   FCICOND1BWP U3872 ( .A(n3624), .B(\iNEMO/iII/ay_avg [14]), .CI(n3472), .CON(
         n3473) );
-  MAOI222D1BWP U3873 ( .A(net43546), .B(n2057), .C(net51378), .ZN(n3415) );
+  MAOI222D1BWP U3873 ( .A(net43548), .B(n2057), .C(net51380), .ZN(n3415) );
   OAI21D2BWP U3874 ( .A1(\iNEMO/iII/ay_avg [7]), .A2(n3445), .B(n2477), .ZN(
         n3426) );
   XNR2D1BWP U3875 ( .A1(n3722), .A2(n3966), .ZN(n2365) );
-  MUX2D0BWP U3876 ( .I0(net51318), .I1(\iNEMO/iII/ay_accum [6]), .S(n2544), 
+  MUX2D0BWP U3876 ( .I0(net51320), .I1(\iNEMO/iII/ay_accum [6]), .S(n2544), 
         .Z(n2492) );
   OAI211D2BWP U3877 ( .A1(n2906), .A2(n2170), .B(n2903), .C(n2904), .ZN(n2888)
          );
@@ -7118,7 +7118,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   NR2D0BWP U3898 ( .A1(n1590), .A2(n650), .ZN(n2369) );
   NR2D0BWP U3899 ( .A1(\iA2D/iSPI/bitcnt [0]), .A2(n1588), .ZN(n2370) );
   OAI21D2BWP U3900 ( .A1(n626), .A2(n1591), .B(n628), .ZN(n1588) );
-  FCICOND2BWP U3901 ( .A(n2154), .B(\iNEMO/iII/ay_avg [6]), .CI(net43542), 
+  FCICOND2BWP U3901 ( .A(n2154), .B(\iNEMO/iII/ay_avg [6]), .CI(net43544), 
         .CON(n3427) );
   INVD1BWP U3902 ( .I(n3314), .ZN(n3315) );
   CKND2D2BWP U3903 ( .A1(n3366), .A2(n3265), .ZN(n3314) );
@@ -7388,7 +7388,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \ifly/add_0_root_sub_0_root_add_68_3/n1 ) );
   IND2D0BWP U4116 ( .A1(n666), .B1(n2194), .ZN(
         \ifly/sub_1_root_sub_0_root_sub_50_4/n1 ) );
-  CKND0BWP U4117 ( .I(net43417), .ZN(net43415) );
+  CKND0BWP U4117 ( .I(net43419), .ZN(net43417) );
   IND2D0BWP U4118 ( .A1(n3524), .B1(n3456), .ZN(n3532) );
   OAI22D0BWP U4119 ( .A1(n835), .A2(n294), .B1(n340), .B2(n313), .ZN(
         \iNEMO/n165 ) );
@@ -7440,7 +7440,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   OA31D0BWP U4152 ( .A1(\iNEMO/iII/state[0] ), .A2(n2391), .A3(n4001), .B(n882), .Z(n2468) );
   XNR3D0BWP U4153 ( .A1(\iNEMO/iII/ay_avg [6]), .A2(n3501), .A3(n3500), .ZN(
         n2466) );
-  OAI21D0BWP U4154 ( .A1(n3506), .A2(n3505), .B(net43424), .ZN(n3507) );
+  OAI21D0BWP U4154 ( .A1(n3506), .A2(n3505), .B(net43426), .ZN(n3507) );
   CKND0BWP U4155 ( .I(\iNEMO/roll_rt [8]), .ZN(n306) );
   OR4XD1BWP U4156 ( .A1(n1551), .A2(n475), .A3(n327), .A4(n476), .Z(n2400) );
   CKAN2D0BWP U4157 ( .A1(\ifly/get_ptch/err_sat [3]), .A2(
@@ -8355,7 +8355,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         n2120), .ZN(n3727) );
   INVD1BWP U4873 ( .I(\iNEMO/iII/ay_avg [7]), .ZN(n3519) );
   NR2D1BWP U4874 ( .A1(roll[4]), .A2(n3084), .ZN(n3085) );
-  XOR3D0BWP U4875 ( .A1(net51378), .A2(n2159), .A3(n3508), .Z(n2459) );
+  XOR3D0BWP U4875 ( .A1(net51380), .A2(n2159), .A3(n3508), .Z(n2459) );
   CKND1BWP U4876 ( .I(n2459), .ZN(n3514) );
   INVD1BWP U4877 ( .I(\iNEMO/ay [0]), .ZN(n309) );
   NR2XD0BWP U4878 ( .A1(\ifly/ptch_pterm [9]), .A2(n154), .ZN(\ifly/N92 ) );
@@ -9257,14 +9257,14 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   ND3D0BWP U5543 ( .A1(n3125), .A2(n2275), .A3(n3154), .ZN(n3128) );
   OAI31D2BWP U5544 ( .A1(n3151), .A2(n3153), .A3(n3064), .B(n3047), .ZN(n3048)
          );
-  OAI22D0BWP U5545 ( .A1(net43414), .A2(net43415), .B1(net51378), .B2(n3510), 
+  OAI22D0BWP U5545 ( .A1(net43416), .A2(net43417), .B1(net51380), .B2(n3510), 
         .ZN(n3511) );
   CKND2D0BWP U5546 ( .A1(n3781), .A2(n2313), .ZN(n3782) );
   CKND2D0BWP U5547 ( .A1(n3790), .A2(n2313), .ZN(n3777) );
   CKAN2D0BWP U5548 ( .A1(n3813), .A2(n3814), .Z(n3757) );
   XOR3D0BWP U5549 ( .A1(\iNEMO/iII/ay_avg [11]), .A2(\iNEMO/iII/ay_avg [9]), 
         .A3(n3476), .Z(n3441) );
-  XOR3D0BWP U5550 ( .A1(n2057), .A2(net51378), .A3(net43546), .Z(n3430) );
+  XOR3D0BWP U5550 ( .A1(n2057), .A2(net51380), .A3(net43548), .Z(n3430) );
   IND2D1BWP U5551 ( .A1(n3005), .B1(n3007), .ZN(n3010) );
   XOR3D0BWP U5552 ( .A1(n2439), .A2(n2972), .A3(n2971), .Z(n2962) );
   XOR3D0BWP U5553 ( .A1(n2439), .A2(n2983), .A3(n2979), .Z(n2970) );
@@ -9442,12 +9442,12 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   CKND2BWP U5692 ( .I(\iNEMO/iII/ay_avg [14]), .ZN(n3589) );
   OAI21D1BWP U5693 ( .A1(n3475), .A2(n3589), .B(n3439), .ZN(n3440) );
   ND2D1BWP U5694 ( .A1(n2115), .A2(n2472), .ZN(n3461) );
-  ND2D1BWP U5695 ( .A1(net43419), .A2(net43417), .ZN(n3508) );
+  ND2D1BWP U5695 ( .A1(net43421), .A2(net43419), .ZN(n3508) );
   ND2D1BWP U5696 ( .A1(n2057), .A2(n3448), .ZN(n3494) );
   ND2D1BWP U5697 ( .A1(n3450), .A2(n3449), .ZN(n3495) );
   CKND2BWP U5698 ( .I(n3473), .ZN(n3568) );
   ND2D1BWP U5699 ( .A1(n3494), .A2(n3493), .ZN(n3500) );
-  MUX2ND0BWP U5700 ( .I0(net51308), .I1(n3509), .S(net43419), .ZN(n3510) );
+  MUX2ND0BWP U5700 ( .I0(net51310), .I1(n3509), .S(net43421), .ZN(n3510) );
   OAI21D1BWP U5701 ( .A1(n2459), .A2(n2147), .B(n3515), .ZN(n3516) );
   OAI21D1BWP U5702 ( .A1(n2057), .A2(n3517), .B(n3516), .ZN(n3518) );
   ND2D1BWP U5703 ( .A1(n2432), .A2(\iNEMO/iII/ay_avg [14]), .ZN(n3552) );
