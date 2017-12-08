@@ -1,0 +1,1690 @@
+Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db'
+Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db'
+Loading db file '/cae/apps/data/synopsys-2017/common_2016-12/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2017/common_2016-12/libraries/syn/standard.sldb'
+  Loading link library 'tcbn40lpbwptc'
+  Loading link library 'tpfn45gsgv18tc'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv
+
+Statistics for case statements in always block at line 84 in file
+	'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           100            |    auto/auto     |
+|           103            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 55 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     d_ptch_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 60 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     d_roll_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 65 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      d_yaw_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 70 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      thrst_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 75 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  mtr_ramp_tmr_reg   | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 81 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 182 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   motors_off_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'cmd_cfg'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv
+
+Inferred memory devices in process
+	in routine ESC_interface line 18 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     setting_reg     | Flip-flop |  17   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ESC_interface line 29 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ESC_interface line 40 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       PWM_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'ESC_interface'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/ESCs.sv
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'ESCs'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:58: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:67: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:76: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:85: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:95: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:99: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:103: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:107: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:111: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:112: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:113: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:114: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine flght_cntrl line 57 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    frnt_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 66 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bck_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 75 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lft_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 84 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rght_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:159: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:162: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:164: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:169: signed to unsigned assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:173: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine get_terms line 140 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    prev_err_reg     | Flip-flop |  140  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine get_terms line 158 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     err_sat_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 2 designs.
+Current design is 'flght_cntrl'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv
+
+Statistics for case statements in always block at line 95 in file
+	'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           111            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inert_intf line 46 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     INT_ff2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     INT_ff1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 58 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      timer_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 65 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ptch_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 70 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     roll_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 75 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_rt_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 80 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ax_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 85 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ay_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 91 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'inert_intf'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:158: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:159: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:161: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:162: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:132: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:133: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:134: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:148: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:149: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:150: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:164: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:165: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:180: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:181: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:192: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:193: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:194: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:202: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:204: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:212: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:214: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            66            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 47 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 109 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cntr_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 117 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 137 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 156 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ay_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ax_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 168 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    avg_cntr_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 174 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ay_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ax_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'inertial_integrator'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/SPI/A2D_intf.sv
+
+Statistics for case statements in always block at line 30 in file
+	'/userspace/l/lafford/ece551/project/final/SPI/A2D_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 25 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 59 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnv_cmplt_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'A2D_intf'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv
+
+Statistics for case statements in always block at line 44 in file
+	'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 19 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sclk_div_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 25 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MISO_smpl_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 27 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 33 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bitcnt_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 40 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 93 in file
+		'/userspace/l/lafford/ece551/project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'SPI_mstr16'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART.v
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART_rx.sv
+
+Statistics for case statements in always block at line 59 in file
+	'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            65            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rx line 23 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rx_stable_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   rx_flopped_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 35 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 42 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 51 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 55 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 84 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART_rx'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART_tx.sv
+
+Statistics for case statements in always block at line 48 in file
+	'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_tx line 20 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 27 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 35 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  tx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 42 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 69 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART_tx'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv
+
+Statistics for case statements in always block at line 44 in file
+	'/userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 31 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cmd_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 35 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 39 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 82 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cmd_rdy_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART_wrapper'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/top_level/PB_release.sv
+
+Inferred memory devices in process
+	in routine PB_release line 8 in file
+		'/userspace/l/lafford/ece551/project/final/top_level/PB_release.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    released_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       f1_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       f2_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       f3_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'PB_release'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/top_level/QuadCopter.v
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'QuadCopter'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/top_level/reset_synch.v
+
+Inferred memory devices in process
+	in routine reset_synch line 7 in file
+		'/userspace/l/lafford/ece551/project/final/top_level/reset_synch.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rst_n_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    btwn_ffs_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'reset_synch'.
+Information: Building the design 'inertial_integrator' instantiated from design 'inert_intf' with
+	the parameters "11". (HDL-193)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:132: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:133: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:134: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:148: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:149: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:150: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:164: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:165: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:180: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:181: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:192: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:193: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:194: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:202: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:204: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:212: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:214: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            66            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 47 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 109 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cntr_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 117 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 137 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 156 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ay_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ax_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 168 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    avg_cntr_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator_SMPL_CNT_WIDTH11 line 174 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ay_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ax_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'QuadCopter'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 141 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'PVSS3DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2POC' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1DGZ' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP2ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PCLAMP1ANA' is unusable: unknown logic function.  (OPT-1022)
+Warning: Operating condition NCCOM set on design QuadCopter has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'reset_synch'
+Warning: The trip points for the library named tpfn45gsgv18tc differ from those in the library named tcbn40lpbwptc. (TIM-164)
+  Processing 'SPI_mstr16_0'
+  Processing 'A2D_intf'
+  Processing 'ESC_interface_0'
+  Processing 'ESCs'
+  Processing 'get_terms_0'
+  Processing 'flght_cntrl'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11'
+  Processing 'inert_intf'
+Information: The register 'state_reg[4]' is a constant and will be removed. (OPT-1206)
+  Processing 'cmd_cfg'
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+  Processing 'UART_wrapper'
+  Processing 'QuadCopter'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'SPI_mstr16_1_DW01_inc_0'
+  Processing 'SPI_mstr16_1_DW01_inc_1'
+  Processing 'ESC_interface_1_DW01_inc_0'
+  Processing 'ESC_interface_1_DW01_cmp2_0'
+  Processing 'ESC_interface_2_DW01_inc_0'
+  Processing 'ESC_interface_2_DW01_cmp2_0'
+  Processing 'ESC_interface_3_DW01_inc_0'
+  Processing 'ESC_interface_3_DW01_cmp2_0'
+  Processing 'ESC_interface_0_DW01_inc_0'
+  Processing 'ESC_interface_0_DW01_cmp2_0'
+  Processing 'flght_cntrl_DW01_add_0'
+  Processing 'flght_cntrl_DW01_add_1'
+  Processing 'flght_cntrl_DW01_add_2'
+  Processing 'get_terms_1_DW01_sub_0'
+  Processing 'get_terms_1_DW01_add_0'
+  Processing 'get_terms_1_DW01_sub_1'
+  Processing 'get_terms_2_DW01_sub_0'
+  Processing 'get_terms_2_DW01_sub_1'
+  Processing 'get_terms_0_DW01_sub_0'
+  Processing 'get_terms_0_DW01_add_0'
+  Processing 'get_terms_0_DW01_sub_1'
+  Processing 'inert_intf_DW01_inc_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_2'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_cmp2_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_cmp2_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_inc_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_2'
+  Processing 'SPI_mstr16_0_DW01_inc_0'
+  Processing 'SPI_mstr16_0_DW01_inc_1'
+  Processing 'cmd_cfg_DW01_inc_0'
+  Processing 'UART_rx_DW01_dec_0'
+  Processing 'UART_tx_DW01_dec_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_3'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_3'
+  Processing 'ESC_interface_3_DW01_add_0'
+  Processing 'ESC_interface_3_DW01_add_1'
+  Processing 'ESC_interface_0_DW01_add_0'
+  Processing 'ESC_interface_0_DW01_add_1'
+  Processing 'ESC_interface_2_DW01_add_0'
+  Processing 'ESC_interface_2_DW01_add_1'
+  Processing 'ESC_interface_1_DW01_add_0'
+  Processing 'ESC_interface_1_DW01_add_1'
+  Processing 'get_terms_1_DW02_mult_0'
+  Processing 'get_terms_1_DW01_add_1'
+  Processing 'get_terms_2_DW02_mult_0'
+  Processing 'get_terms_2_DW01_add_1'
+  Processing 'get_terms_0_DW02_mult_0'
+  Processing 'get_terms_0_DW01_add_1'
+  Processing 'flght_cntrl_DW01_sub_0'
+  Processing 'flght_cntrl_DW01_add_3'
+  Processing 'flght_cntrl_DW01_add_4'
+  Processing 'flght_cntrl_DW01_sub_1'
+  Processing 'flght_cntrl_DW01_add_5'
+  Processing 'flght_cntrl_DW01_sub_2'
+  Processing 'flght_cntrl_DW01_sub_3'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_5'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_6'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_8'
+  Processing 'flght_cntrl_DW01_sub_4'
+  Processing 'flght_cntrl_DW01_sub_5'
+  Processing 'flght_cntrl_DW01_sub_6'
+  Processing 'flght_cntrl_DW01_add_6'
+  Processing 'flght_cntrl_DW01_add_7'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+Information: The register 'iESC/bck_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   14216.4      0.64      17.4       9.8                          
+    0:00:15   14211.0      0.67      17.8       9.8                          
+    0:00:15   14211.0      0.67      17.8       9.8                          
+    0:00:15   14207.3      0.67      17.8       9.8                          
+    0:00:15   14207.3      0.67      17.8       9.8                          
+    0:00:17   11393.3      0.72      21.2       9.3                          
+    0:00:17   11375.7      0.66      20.2       9.3                          
+    0:00:17   11370.2      0.66      20.3       9.3                          
+    0:00:17   11377.6      0.64      19.9       9.3                          
+    0:00:18   11381.3      0.66      20.1       9.3                          
+    0:00:18   11387.9      0.63      19.4       9.2                          
+    0:00:18   11387.5      0.62      19.6       9.2                          
+    0:00:18   11401.4      0.60      18.9       9.2                          
+    0:00:18   11400.4      0.61      18.2       9.2                          
+    0:00:18   11404.3      0.59      18.1       9.2                          
+    0:00:19   11426.5      0.57      17.0       9.2                          
+    0:00:19   11444.0      0.53      16.6       9.2                          
+    0:00:19   11437.6      0.53      16.3       9.2                          
+    0:00:19   11442.9      0.51      15.9       9.2                          
+    0:00:19   11459.3      0.50      15.6       9.2                          
+    0:00:19   11470.9      0.50      15.3       9.2                          
+    0:00:19   11471.6      0.50      15.1       9.2                          
+    0:00:19   11471.6      0.50      15.1       9.2                          
+    0:00:19   11462.8      0.50      15.1       9.2                          
+    0:00:19   11462.8      0.50      15.1       9.2                          
+    0:00:19   11497.2      0.50      15.0       2.8                          
+    0:00:19   11509.4      0.50      15.0       0.6                          
+    0:00:19   11507.1      0.50      15.0       0.4                          
+    0:00:19   11507.1      0.50      15.0       0.4                          
+    0:00:19   11507.1      0.50      15.0       0.4                          
+    0:00:19   11507.1      0.50      15.0       0.4                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:19   11507.1      0.50      15.0       0.4                          
+    0:00:20   11534.1      0.41      13.2       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:20   11569.7      0.35      11.8       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:20   11570.3      0.35      11.5       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:20   11572.7      0.35      11.5       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:20   11580.1      0.34      11.4       0.5 iNEMO/iII/roll_int_reg[17]/D
+    0:00:20   11588.2      0.34      11.2       0.5 iNEMO/iII/roll_int_reg[26]/D
+    0:00:20   11598.3      0.33      11.1       0.5 iNEMO/iII/roll_int_reg[16]/D
+    0:00:21   11612.2      0.31      10.6       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11634.3      0.26       9.1       0.5 iNEMO/iII/roll_int_reg[26]/D
+    0:00:21   11644.2      0.26       8.9       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11645.0      0.25       8.6       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11665.3      0.24       8.2       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11665.5      0.24       8.1       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11681.7      0.23       7.8       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:21   11686.5      0.22       7.8       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11690.0      0.22       7.7       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11700.4      0.22       7.5       0.6 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:22   11720.2      0.20       7.0       0.6 iNEMO/iII/roll_int_reg[26]/D
+    0:00:22   11753.7      0.16       5.1       0.6 iNEMO/iII/roll_int_reg[24]/D
+    0:00:22   11757.1      0.15       4.8       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11759.9      0.15       4.7       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11769.8      0.14       4.6       0.6 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11800.6      0.13       3.5       0.7 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11807.9      0.11       3.0       0.6 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11803.6      0.11       2.7       0.7 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11805.4      0.10       2.7       0.7 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11805.4      0.10       2.6       0.7 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11813.0      0.09       2.5       0.6 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11827.3      0.09       2.1       0.6 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11847.2      0.06       1.5       0.6 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11860.4      0.05       1.1       0.7 iNEMO/iII/roll_int_reg[24]/D
+    0:00:24   11868.2      0.05       0.9       0.7 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:24   11889.7      0.04       0.6       0.7 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11896.2      0.04       0.6       0.7 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11923.4      0.03       0.5       0.8 ifly/bck_sum_reg[12]/D   
+    0:00:24   11935.8      0.02       0.3       0.8 iNEMO/iII/roll_int_reg[24]/D
+    0:00:25   11939.6      0.01       0.1       0.8 iNEMO/iII/roll_int_reg[22]/D
+    0:00:25   11949.9      0.01       0.1       0.8 iNEMO/iII/roll_int_reg[20]/D
+    0:00:25   11952.2      0.01       0.1       0.8 iNEMO/iII/roll_int_reg[17]/D
+    0:00:25   11955.3      0.01       0.0       0.8 iNEMO/iII/roll_int_reg[26]/D
+    0:00:25   11961.3      0.00       0.0       0.8                          
+    0:00:25   11952.3      0.00       0.0       0.8                          
+    0:00:25   11946.0      0.00       0.0       0.8                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:25   11946.0      0.00       0.0       0.8                          
+    0:00:26   11946.9      0.00       0.0       0.1 iNEMO/iII/mult_203/ab[11][8]
+    0:00:26   11950.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:26   11950.0      0.00       0.0       0.0                          
+    0:00:26   11950.0      0.00       0.0       0.0                          
+    0:00:26   11894.3      0.02       0.0       0.0                          
+    0:00:26   11881.1      0.02       0.0       0.0                          
+    0:00:26   11877.9      0.02       0.0       0.0                          
+    0:00:26   11875.8      0.02       0.1       0.0                          
+    0:00:26   11875.8      0.02       0.1       0.0                          
+    0:00:26   11875.8      0.02       0.1       0.0                          
+    0:00:26   11877.9      0.00       0.0       0.0                          
+    0:00:27   11878.2      0.00       0.0       0.0                          
+    0:00:27   11732.0      0.13       2.0       0.0                          
+    0:00:27   11689.5      0.13       2.1       0.0                          
+    0:00:27   11681.7      0.13       2.1       0.0                          
+    0:00:27   11681.6      0.13       2.1       0.0                          
+    0:00:27   11681.6      0.13       2.1       0.0                          
+    0:00:27   11681.6      0.13       2.1       0.0                          
+    0:00:27   11681.6      0.13       2.1       0.0                          
+    0:00:27   11681.6      0.13       2.1       0.0                          
+    0:00:27   11711.4      0.04       0.9       0.0 iNEMO/iII/yaw_int_reg[26]/D
+    0:00:27   11732.0      0.02       0.4       0.0 iNEMO/iII/roll_int_reg[24]/D
+    0:00:27   11748.8      0.01       0.1       0.0                          
+    0:00:28   11759.4      0.00       0.0       0.0                          
+    0:00:28   11707.0      0.00       0.0       0.0                          
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Updating graph... (UID-83)
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12
+Date:        Wed Dec  6 13:13:52 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Constant outputs (LINT-52)                                      8
+
+Nets                                                               45
+    Unloaded nets (LINT-2)                                         44
+    Undriven nets (LINT-3)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'QuadCopter', net 'iA2D/iSPI/rd_data[15]' driven by pin 'iA2D/iSPI/U13/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_yaw/n50' driven by pin 'ifly/get_yaw/U73/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_yaw/n59' driven by pin 'ifly/get_yaw/U72/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/mult_178/PRODUCT[1]' driven by pin 'ifly/get_roll/mult_178/C0/**logic_0**' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[8]' driven by pin 'ifly/get_roll/mult_178/U25/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[7]' driven by pin 'ifly/get_roll/mult_178/U22/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[6]' driven by pin 'ifly/get_roll/mult_178/U21/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[5]' driven by pin 'ifly/get_roll/mult_178/U7/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[4]' driven by pin 'ifly/get_roll/mult_178/S1_4_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[3]' driven by pin 'ifly/get_roll/mult_178/S1_3_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[2]' driven by pin 'ifly/get_roll/mult_178/S1_2_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[0]' driven by pin 'ifly/get_roll/mult_178/U15/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[11]' driven by pin 'ifly/get_roll/U45/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/dterm[9]' driven by pin 'ifly/get_roll/U46/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/n50' driven by pin 'ifly/get_roll/U66/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/n59' driven by pin 'ifly/get_roll/U65/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_ptch/net8756' driven by pin 'ifly/get_ptch/U73/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_ptch/n51' driven by pin 'ifly/get_ptch/U74/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/net10751' driven by pin 'ifly/U81/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/n7' driven by pin 'ifly/U82/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/PROD1[9]' driven by pin 'iNEMO/iII/mult_203/U149/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[10]' driven by pin 'iNEMO/iII/mult_203/U136/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[9]' driven by pin 'iNEMO/iII/mult_203/U134/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[8]' driven by pin 'iNEMO/iII/mult_203/U146/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[6]' driven by pin 'iNEMO/iII/mult_203/U22/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[5]' driven by pin 'iNEMO/iII/mult_203/U76/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[4]' driven by pin 'iNEMO/iII/mult_203/U4/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[3]' driven by pin 'iNEMO/iII/mult_203/S1_5_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[2]' driven by pin 'iNEMO/iII/mult_203/S1_4_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[1]' driven by pin 'iNEMO/iII/mult_203/S1_3_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_203/A1[0]' driven by pin 'iNEMO/iII/mult_203/S1_2_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/PROD1[9]' driven by pin 'iNEMO/iII/mult_201/U106/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[10]' driven by pin 'iNEMO/iII/mult_201/S1_12_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[9]' driven by pin 'iNEMO/iII/mult_201/U141/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[8]' driven by pin 'iNEMO/iII/mult_201/U144/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[6]' driven by pin 'iNEMO/iII/mult_201/U101/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[5]' driven by pin 'iNEMO/iII/mult_201/S1_7_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[4]' driven by pin 'iNEMO/iII/mult_201/S1_6_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[3]' driven by pin 'iNEMO/iII/mult_201/S1_5_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[2]' driven by pin 'iNEMO/iII/mult_201/S1_4_0/S' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[1]' driven by pin 'iNEMO/iII/mult_201/U62/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/mult_201/A1[0]' driven by pin 'iNEMO/iII/mult_201/U59/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iII/n873' driven by pin 'iNEMO/iII/U739/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'iNEMO/iSPI/rd_data[15]' driven by pin 'iNEMO/iSPI/U26/Z' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_roll/mult_178/PRODUCT[1]' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'QuadCopter', output port 'LED[7]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[4]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[3]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[0]' is connected directly to 'logic 1'. (LINT-52)
+
+Information: There are 53 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition NCCOM set on design QuadCopter has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'QuadCopter'
+Information: The register 'ifly/get_roll/prev_err_reg[13][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[9]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[8]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[7]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[6]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[5]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[4]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[3]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[2]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[1]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[13][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[12][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[11][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[10][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[9][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[8][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[7][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[6][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[5][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[4][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[3][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[2][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[1][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/prev_err_reg[0][0]' will be removed. (OPT-1207)
+Information: The register 'ifly/get_roll/err_sat_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[17]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[18]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[16]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[21]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[20]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[23]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[19]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[22]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_off_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[25]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[24]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[26]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[19]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[18]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[17]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[16]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_avg_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/ax_accum_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/iII/roll_int_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/ax_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iNEMO/roll_rt_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[1]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[2]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[3]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[4]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[5]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[6]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[7]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[8]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[9]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[10]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[11]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[12]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[13]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[14]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[15]' will be removed. (OPT-1207)
+Information: The register 'iCMD/d_roll_reg[0]' will be removed. (OPT-1207)
+Information: The register 'iUART/iUART/iTX/tx_done_reg' will be removed. (OPT-1207)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+  Mapping Optimization (Phase 6)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   11026.6      0.24       4.4      10.5                                0.00  
+    0:00:05   11020.6      0.23       4.4      10.5                                0.00  
+    0:00:05   11021.5      0.23       4.4      10.5                                0.00  
+    0:00:05   11021.5      0.23       4.4      10.5                                0.00  
+    0:00:05   11021.5      0.23       4.4      10.5                                0.00  
+    0:00:05   11021.5      0.23       4.4      10.5                                0.00  
+    0:00:06    8371.2      0.55      12.8       8.9                                0.00  
+    0:00:06    8358.0      0.48      11.2       8.9                                0.00  
+    0:00:07    8361.5      0.47      10.2       8.8                                0.00  
+    0:00:07    8364.0      0.48      10.1       8.8                                0.00  
+    0:00:07    8368.8      0.42       9.0       8.8                                0.00  
+    0:00:07    8371.4      0.40       8.8       8.8                                0.00  
+    0:00:07    8374.4      0.39       8.0       8.8                                0.00  
+    0:00:07    8374.2      0.38       8.5       8.8                                0.00  
+    0:00:07    8384.6      0.39       8.1       8.8                                0.00  
+    0:00:07    8377.8      0.38       8.5       8.8                                0.00  
+    0:00:07    8379.4      0.38       8.4       8.8                                0.00  
+    0:00:07    8379.9      0.38       8.3       8.8                                0.00  
+    0:00:07    8380.6      0.38       8.0       8.8                                0.00  
+    0:00:07    8382.0      0.37       7.7       8.8                                0.00  
+    0:00:08    8383.2      0.37       7.8       8.8                                0.00  
+    0:00:08    8391.2      0.37       7.5       8.8                                0.00  
+    0:00:08    8391.2      0.37       7.5       8.8                                0.00  
+    0:00:08    8391.2      0.37       7.5       8.8                                0.00  
+    0:00:08    8391.2      0.37       7.5       8.8                                0.00  
+    0:00:08    8445.5      0.37       7.5       0.2                                0.00  
+    0:00:08    8451.0      0.37       7.5       0.1                                0.00  
+    0:00:08    8456.1      0.39       7.8       0.0                                0.00  
+    0:00:08    8456.3      0.39       7.8       0.0                                0.00  
+    0:00:08    8455.7      0.40       7.9       0.0                                0.00  
+    0:00:08    8455.7      0.40       7.9       0.0                                0.00  
+    0:00:08    8455.7      0.40       7.9       0.0                                0.00  
+    0:00:08    8455.7      0.40       7.9       0.0                                0.00  
+    0:00:08    8492.1      0.31       6.6       0.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:08    8514.7      0.28       5.9       0.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:08    8553.3      0.26       5.2       0.3 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:09    8582.6      0.23       4.7       0.2 iNEMO/iII/ptch_int_reg[21]/D      0.00  
+    0:00:09    8595.4      0.21       4.2       0.2                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:09    8595.4      0.21       4.2       0.2                                0.00  
+    0:00:09    8614.8      0.21       3.9       0.2 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:09    8632.8      0.20       3.7       0.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:09    8641.1      0.19       3.6       0.3 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:09    8668.1      0.17       3.2       0.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:09    8672.4      0.17       3.1       0.3 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:09    8688.9      0.16       2.8       0.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8700.4      0.15       2.7       0.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8716.5      0.14       2.4       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8719.6      0.14       2.4       0.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:10    8724.2      0.13       2.3       0.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8727.6      0.13       2.2       0.3 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:10    8730.4      0.13       2.2       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8736.9      0.12       2.1       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8747.3      0.12       2.0       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:10    8761.8      0.11       1.7       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8750.5      0.11       1.6       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8757.6      0.10       1.5       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8761.6      0.09       1.4       0.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8764.1      0.09       1.4       0.5 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8773.8      0.09       1.3       0.5 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:11    8774.8      0.09       1.3       0.5 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:11    8780.0      0.08       1.1       0.6 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:11    8776.4      0.07       0.9       0.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:11    8787.7      0.06       0.8       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:12    8792.1      0.06       0.7       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:12    8793.4      0.06       0.7       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:12    8809.1      0.06       0.6       0.8 ifly/bck_sum_reg[12]/D         0.00  
+    0:00:12    8817.4      0.05       0.6       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:12    8819.3      0.05       0.6       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:12    8818.9      0.05       0.6       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:12    8817.5      0.05       0.6       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:12    8819.3      0.04       0.6       0.8 ifly/lft_sum_reg[12]/D         0.00  
+    0:00:12    8822.1      0.04       0.5       0.8 ifly/lft_sum_reg[12]/D         0.00  
+    0:00:12    8825.8      0.04       0.5       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:13    8824.6      0.04       0.5       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:13    8826.0      0.04       0.5       0.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:13    8829.2      0.04       0.5       0.7 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:13    8830.2      0.04       0.4       0.7 iNEMO/iII/ptch_int_reg[21]/D      0.00  
+    0:00:13    8832.5      0.03       0.4       0.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:13    8843.1      0.03       0.3       0.8 iNEMO/iII/ptch_int_reg[18]/D      0.00  
+    0:00:13    8855.5      0.03       0.2       0.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:13    8863.7      0.02       0.1       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:13    8862.2      0.02       0.1       0.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:13    8858.6      0.02       0.1       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:13    8857.0      0.02       0.1       0.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:14    8921.4      0.02       0.1       0.8                                0.00  
+    0:00:14    8935.0      0.00       0.0       0.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:14    8935.0      0.00       0.0       0.8                                0.00  
+    0:00:15    8932.5      0.00       0.0       0.8                                0.00  
+    0:00:15    8931.7      0.00       0.0       0.8                                0.00  
+    0:00:15    8931.7      0.00       0.0       0.8                                0.00  
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:15    8931.7      0.00       0.0       0.8                               -4.35  
+    0:00:16    8901.5      0.00       0.0       0.1 ifly/get_ptch/D_diff_sat[4]     -4.36  
+    0:00:16    8904.3      0.00       0.0       0.0                               -4.36  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:16    8904.3      0.00       0.0       0.0                               -4.36  
+    0:00:16    8904.3      0.00       0.0       0.0                               -4.36  
+    0:00:16    8840.3      0.04       0.2       0.0                               -4.36  
+    0:00:16    8834.8      0.04       0.2       0.0                               -4.36  
+    0:00:16    8834.1      0.04       0.2       0.0                               -4.36  
+    0:00:16    8834.1      0.04       0.2       0.0                               -4.36  
+    0:00:16    8834.1      0.04       0.2       0.0                               -4.36  
+    0:00:16    8840.3      0.00       0.0       0.0                               -4.36  
+    0:00:17    8690.3      0.13       1.4       0.0                               -4.19  
+    0:00:17    8643.1      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8626.0      0.13       1.3       0.0                               -4.19  
+    0:00:17    8675.4      0.05       0.4       0.0 ifly/rght_sum_reg[12]/D       -4.20  
+    0:00:17    8702.9      0.02       0.2       0.0 iNEMO/iII/ptch_int_reg[26]/D     -4.20  
+    0:00:17    8712.4      0.01       0.1       0.0                               -4.20  
+    0:00:17    8724.2      0.01       0.0       0.0                               -4.20  
+    0:00:18    8726.2      0.00       0.0       0.0 iNEMO/iII/ptch_int_reg[26]/D     -4.20  
+    0:00:18    8723.2      0.00       0.0       0.0 iNEMO/iII/ptch_int_reg[26]/D     -4.20  
+    0:00:18    8810.3      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[8][1]/D     -2.56  
+    0:00:18    8882.3      0.00       0.0       0.0 ifly/get_yaw/prev_err_reg[6][4]/D     -1.06  
+    0:00:18    8939.1      0.00       0.0       0.0                                0.00  
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+ 
+****************************************
+Report : area
+Design : QuadCopter
+Version: M-2016.12
+Date   : Wed Dec  6 13:14:12 2017
+****************************************
+
+Library(s) Used:
+
+    tcbn40lpbwptc (File: /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
+
+Number of ports:                           25
+Number of nets:                          4246
+Number of cells:                         3836
+Number of combinational cells:           2946
+Number of sequential cells:               890
+Number of macros/black boxes:               0
+Number of buf/inv:                       1114
+Number of references:                     234
+
+Combinational area:               4780.792807
+Buf/Inv area:                      861.537619
+Noncombinational area:            4158.277276
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  8939.070083
+Total area:                 undefined
+Writing verilog file '/userspace/l/lafford/ece551/project/final/synthesis/out_QuadCopter.vg'.
+1

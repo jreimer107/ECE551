@@ -7,7 +7,6 @@ input [10:0] SPEED;
 input [9:0] OFF;
 output reg PWM;
 wire [11:0] compensated_speed;
-wire [15:0] promoted_speed;
 reg [16:0] setting;
 reg  [PERIOD_WIDTH-1:0] counter;
 wire Rst, Set;
@@ -15,7 +14,7 @@ wire Rst, Set;
 ///Main Comb_logic path///
 //First adder block, compensated_speed = SPEED + OFF
 assign compensated_speed = SPEED + OFF;
-//Promote 4 bits, then Second adder, promoted_speed + 16'd50000;
+//Promote 4 bits, then Second adder, + 16'd50000;
 always_ff @(posedge clk) begin
 	setting <= {compensated_speed, 4'b0000} + 16'd50000;
 end

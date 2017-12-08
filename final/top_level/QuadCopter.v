@@ -110,4 +110,7 @@ module QuadCopter(clk,RST_n,SS_n,SCLK,MOSI,MISO,INT,RX,TX,LED,FRNT,BCK,LFT,RGHT,
   ///////////////////////////////////  
   reset_synch iRST(.clk(clk),.RST_n(RST_n),.rst_n(rst_n));
   
+  // Set LEDs to 10011001
+  assign LED = 8'b10011001;
+  
 endmodule
