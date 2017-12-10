@@ -15,9 +15,11 @@ wire Rst, Set;
 //First adder block, compensated_speed = SPEED + OFF
 assign compensated_speed = SPEED + OFF;
 //Promote 4 bits, then Second adder, + 16'd50000;
-always_ff @(posedge clk) begin
-	setting <= {compensated_speed, 4'b0000} + 16'd50000;
-end
+//always_ff @(posedge clk) begin
+//	setting <= {compensated_speed, 4'b0000} + 16'd50000;
+//end
+
+assign setting = {compensated_speed, 4'b0000} + 16'd50000; // non-pipelined
 
 //Comparator block, calculate Rst
 assign Rst = (counter[16:0] >= setting) ? 1'b1 : 1'b0;
