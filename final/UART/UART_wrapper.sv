@@ -1,9 +1,9 @@
 module UART_wrapper(clk, rst_n, clr_cmd_rdy, cmd_rdy, 
 	cmd, data, RX, TX,
-	resp, snd_resp, resp_sent);
+	resp, send_resp, resp_sent);
 	
 // I/O Directly into UART //
-input snd_resp;
+input send_resp;
 input [7:0] resp;
 output resp_sent;
 
@@ -22,7 +22,7 @@ typedef enum reg [1:0] {CMD, DATA_HI, DATA_LO} state_t;
 state_t state, nxt_state;
 
 UART iUART(.clk(clk), .rst_n(rst_n), .rx_rdy(rdy), .rx_data(rx_data), .clr_rx_rdy(clr_rdy), 
-	.trmt(snd_resp), .tx_done(resp_sent), .tx_data(resp), .RX(RX), .TX(TX));
+	.trmt(send_resp), .tx_done(resp_sent), .tx_data(resp), .RX(RX), .TX(TX));
 
 assign data[7:0] = rx_data;
 	
