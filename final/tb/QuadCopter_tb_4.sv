@@ -9,7 +9,7 @@
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_2();
+module QuadCopter_tb_5();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;

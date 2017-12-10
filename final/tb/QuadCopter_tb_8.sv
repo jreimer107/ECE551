@@ -1,15 +1,16 @@
 ///////////////////////////////////////////////////////////////////////////////////////
-//   ________  ______  __  _____________   _______________________
-//  /_  __/ / / / __ \/ / / / ___/_  __/  /_  __/ ____/ ___/_  __/
-//   / / / /_/ / /_/ / / / /\__ \ / /      / / / __/  \__ \ / /   
-//  / / / __  / _, _/ /_/ /___/ // /      / / / /___ ___/ // /    
-// /_/ /_/ /_/_/ |_|\____//____//_/      /_/ /_____//____//_/     
+//
+//	    __  _______  __________  ____  _____    ____  ____________   _______________________
+//	   /  |/  / __ \/_  __/ __ \/ __ \/ ___/   / __ \/ ____/ ____/  /_  __/ ____/ ___/_  __/
+//	  / /|_/ / / / / / / / / / / /_/ /\__ \   / / / / /_  / /_       / / / __/  \__ \ / /   
+//	 / /  / / /_/ / / / / /_/ / _, _/___/ /  / /_/ / __/ / __/      / / / /___ ___/ // /    
+//	/_/  /_/\____/ /_/  \____/_/ |_|/____/   \____/_/   /_/        /_/ /_____//____//_/ 
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_3();
+module QuadCopter_tb_8();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
@@ -51,15 +52,13 @@ QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MIS
 
 //// Instantiate Master UART (used to send commands to Copter) //////
 CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
-                 .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
+                 .cmd(cmd_to_copter), .data(data), .snd_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
 initial begin
     // get stuff going
-    init_task(clk,RST_n,send_cmd);
-
-    data = 16'hBEEF;  
-    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
+    init_task(clk, RST_n, send_cmd);
+    send_cmd_task(clk, 8'h08, send_cmd, cmd_to_copter);
 
     //wait for response
     fork : chk
@@ -73,16 +72,15 @@ initial begin
         begin
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 5 resp received");
+            $display("cmd 8 resp received");
             disable chk;
         end
     join
 
     check_posack_task(resp);
-    check_thrust_task(iDUT.ifly.thrst,data);
+    check_motors_off_task(clk, iDUT.iESC.motors_off);
 
-
-    $display("Thrust test passed");
+    $display("Motors off test passed");
     $stop;
  
 end

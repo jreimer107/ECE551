@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////
-//     ____  __________________  __   _______________________
-//    / __ \/  _/_  __/ ____/ / / /  /_  __/ ____/ ___/_  __/
-//   / /_/ // /  / / / /   / /_/ /    / / / __/  \__ \ / /   
-//  / ____// /  / / / /___/ __  /    / / / /___ ___/ // /    
-// /_/   /___/ /_/  \____/_/ /_/    /_/ /_____//____//_/     
-//                                                          
+//   ________  ______  __  _____________   _______________________
+//  /_  __/ / / / __ \/ / / / ___/_  __/  /_  __/ ____/ ___/_  __/
+//   / / / /_/ / /_/ / / / /\__ \ / /      / / / __/  \__ \ / /   
+//  / / / __  / _, _/ /_/ /___/ // /      / / / /___ ___/ // /    
+// /_/ /_/ /_/_/ |_|\____//____//_/      /_/ /_____//____//_/     
+//
 //////////////////////////////////////////////////////////////////////////////////////
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
@@ -51,21 +51,21 @@ QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MIS
 
 //// Instantiate Master UART (used to send commands to Copter) //////
 CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
-                 .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
+                 .cmd(cmd_to_copter), .data(data), .snd_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
 initial begin
     // get stuff going
     init_task(clk,RST_n,send_cmd);
 
-    data = 16'h0EAD;  
-    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+    data = 16'h00FF;  
+    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
 
     //wait for response
     fork : chk
         begin
             // Timeout check
-            #25000000
+            #3000000
             $display("%t : timeout", $time);
             $stop;
             disable chk;
@@ -73,17 +73,17 @@ initial begin
         begin
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 2 resp received");
+            $display("cmd 5 resp received");
             disable chk;
         end
     join
 
     check_posack_task(resp);
-    $display("PITCH");
-    check_pry_task(iDUT.iNEMO.iII.ptch, data);
+    check_thrust_task(iDUT.ifly.thrst,data);
 
+	#3000000 // let it get off the ground?
 
-    $display("Pitch test passed");
+    $display("Thrust test passed");
     $stop;
  
 end

@@ -1,15 +1,15 @@
 ///////////////////////////////////////////////////////////////////////////////////////
-//   ________  ______  __  _____________   _______________________
-//  /_  __/ / / / __ \/ / / / ___/_  __/  /_  __/ ____/ ___/_  __/
-//   / / / /_/ / /_/ / / / /\__ \ / /      / / / __/  \__ \ / /   
-//  / / / __  / _, _/ /_/ /___/ // /      / / / /___ ___/ // /    
-// /_/ /_/ /_/_/ |_|\____//____//_/      /_/ /_____//____//_/     
+//    _________    __    ________  ____  ___  ____________   _______________________
+//   / ____/   |  / /   /  _/ __ )/ __ \/   |/_  __/ ____/  /_  __/ ____/ ___/_  __/
+//  / /   / /| | / /    / // __  / /_/ / /| | / / / __/      / / / __/  \__ \ / /   
+// / /___/ ___ |/ /____/ // /_/ / _, _/ ___ |/ / / /___     / / / /___ ___/ // /    
+// \____/_/  |_/_____/___/_____/_/ |_/_/  |_/_/ /_____/    /_/ /_____//____//_/                                                                                     
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_3();
+module QuadCopter_tb_6();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
@@ -55,35 +55,55 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
 initial begin
-    // get stuff going
-    init_task(clk,RST_n,send_cmd);
+  // get stuff going
+  init_task(clk,RST_n,send_cmd);
+  // send calibrate command
+  send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
 
-    data = 16'hBEEF;  
-    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
-
-    //wait for response
-    fork : chk
+  //wait for response
+  fork : chk
         begin
             // Timeout check
-            #3000000
+            #25000000
             $display("%t : timeout", $time);
             $stop;
             disable chk;
         end
         begin
+            //check motor speeds
+            @(posedge iDUT.ifly.inertial_cal)
+            if(iDUT.ifly.frnt_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.frnt_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.bck_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.bck_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.lft_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.lft_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.rght_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.rght_spd );
+                $stop;
+            end
+            $display("Motor Speeds Good.");
+            
+
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 5 resp received");
+            $display("cmd 6 resp received");
             disable chk;
         end
     join
 
-    check_posack_task(resp);
-    check_thrust_task(iDUT.ifly.thrst,data);
+  check_posack_task(resp);
 
 
-    $display("Thrust test passed");
-    $stop;
+
+  $display("Calibration Test Passed.");
+  $stop;
  
 end
 
