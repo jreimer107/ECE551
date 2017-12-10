@@ -1,11 +1,22 @@
-module QuadCopter_tb();
+///////////////////////////////////////////////////////////////////////////////////////
+//     ____  __________________  __   _______________________
+//    / __ \/  _/_  __/ ____/ / / /  /_  __/ ____/ ___/_  __/
+//   / /_/ // /  / / / /   / /_/ /    / / / __/  \__ \ / /   
+//  / ____// /  / / / /___/ __  /    / / / /___ ___/ // /    
+// /_/   /___/ /_/  \____/_/ /_/    /_/ /_____//____//_/     
+//                                                          
+//////////////////////////////////////////////////////////////////////////////////////
+
+`include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
+
+module QuadCopter_tb_5();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
 wire SS_A2D_n,SCLK_A2D,MOSI_A2D,MISO_A2D;
 wire RX,TX;
 wire [7:0] resp;				// response from DUT
-wire cmd_sent,resp_rdy;
+wire cmd_sent, resp_rdy;
 wire frnt_ESC, back_ESC, left_ESC, rght_ESC;
 
 ////// Stimulus is declared as type reg ///////
@@ -41,22 +52,43 @@ QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MIS
 //// Instantiate Master UART (used to send commands to Copter) //////
 CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
                  .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
-			     .cmd_sent(cmd_sent), .resp_rdy(resp_rdy),
-				 .resp(resp), .clr_resp_rdy(clr_resp_rdy));
+			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
 initial begin
+    // get stuff going
+    init_task(clk,RST_n,send_cmd);
 
-  This is where you do the real work.
-  This section could be done as a bunch of calls to testing sub tasks contained in a separate file.
-  
-  You might want to consider having several versions of this file that test several different
-  smaller things instead of having one huge test that runs forever.
+    data = 16'h0EAD;  
+    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+
+    //wait for response
+    fork : chk
+        begin
+            // Timeout check
+            #25000000
+            $display("%t : timeout", $time);
+            $stop;
+            disable chk;
+        end
+        begin
+            // Wait on signal
+            @(posedge resp_rdy);
+            $display("cmd 2 resp received");
+            disable chk;
+        end
+    join
+
+    check_posack_task(resp);
+    $display("PITCH");
+    check_pry_task(iDUT.iNEMO.iII.ptch, data);
+
+
+    $display("Pitch test passed");
+    $stop;
  
 end
 
 always
   #10 clk = ~clk;
-
-`include "tb_tasks.v"	// maybe have a separate file with tasks to help with testing
 
 endmodule	
