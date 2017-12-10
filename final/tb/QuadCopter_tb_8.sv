@@ -52,7 +52,7 @@ QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MIS
 
 //// Instantiate Master UART (used to send commands to Copter) //////
 CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
-                 .cmd(cmd_to_copter), .data(data), .snd_cmd(send_cmd),
+                 .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
 initial begin
