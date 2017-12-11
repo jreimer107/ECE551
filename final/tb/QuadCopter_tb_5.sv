@@ -116,11 +116,10 @@ initial begin
             disable detect_air;
         end
     join
-    
-    end
-
+ 
     $display("Thrust test passed");
     $stop;
+
  
 end
 
