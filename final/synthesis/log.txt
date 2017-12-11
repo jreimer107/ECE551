@@ -1,51 +1,19 @@
-
-                           Design Compiler Graphical 
-                                 DC Ultra (TM)
-                                  DFTMAX (TM)
-                              Power Compiler (TM)
-                                 DesignWare (R)
-                                 DC Expert (TM)
-                               Design Vision (TM)
-                               HDL Compiler (TM)
-                               VHDL Compiler (TM)
-                                  DFT Compiler
-                               Design Compiler(R)
-
-                 Version M-2016.12 for linux64 - Nov 16, 2016 
-
-                    Copyright (c) 1988 - 2016 Synopsys, Inc.
-   This software and the associated documentation are proprietary to Synopsys,
- Inc. This software may only be used in accordance with the terms and conditions
- of a written license agreement with Synopsys, Inc. All other use, reproduction,
-            or distribution of this software is strictly prohibited.
-Initializing...
-Initializing gui preferences from file  /userspace/l/lafford/.synopsys_dv_prefs.tcl
-# Read in files
-# flght_cntrl
-read_file -format sverilog ../flght_cntrl/cmd_cfg.sv
-Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db'
-Loading db file '/cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db'
-Loading db file '/cae/apps/data/synopsys-2017/common_2016-12/libraries/syn/gtech.db'
-Loading db file '/cae/apps/data/synopsys-2017/common_2016-12/libraries/syn/standard.sldb'
-  Loading link library 'tcbn40lpbwptc'
-  Loading link library 'tpfn45gsgv18tc'
-  Loading link library 'gtech'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv
 
-Statistics for case statements in always block at line 84 in file
+Statistics for case statements in always block at line 85 in file
 	'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           100            |    auto/auto     |
-|           103            |    auto/auto     |
+|           101            |    auto/auto     |
+|           104            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 55 in file
+	in routine cmd_cfg line 56 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -54,7 +22,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 60 in file
+	in routine cmd_cfg line 61 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -63,7 +31,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 65 in file
+	in routine cmd_cfg line 66 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -72,7 +40,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 70 in file
+	in routine cmd_cfg line 71 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -81,7 +49,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 75 in file
+	in routine cmd_cfg line 76 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -90,7 +58,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 81 in file
+	in routine cmd_cfg line 82 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -99,7 +67,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine cmd_cfg line 182 in file
+	in routine cmd_cfg line 183 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -109,8 +77,6 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'cmd_cfg'.
-cmd_cfg
-read_file -format sverilog ../flght_cntrl/ESC_interface.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -126,16 +92,16 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine ESC_interface line 29 in file
+	in routine ESC_interface line 31 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|     counter_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     counter_reg     | Flip-flop |  18   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-	in routine ESC_interface line 40 in file
+	in routine ESC_interface line 39 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/ESC_interface.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -145,8 +111,6 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'ESC_interface'.
-ESC_interface
-read_file -format sverilog ../flght_cntrl/ESCs.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -154,27 +118,25 @@ Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/ESCs
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'ESCs'.
-ESCs
-read_file -format sverilog ../flght_cntrl/flght_cntrl.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Compiling source file /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:50: unsigned to signed assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:59: unsigned to signed assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:68: unsigned to signed assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:77: unsigned to signed assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:87: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:91: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:95: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:99: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:103: signed to unsigned conversion occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:104: signed to unsigned conversion occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:105: signed to unsigned conversion occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:106: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:89: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:98: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:107: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:117: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:121: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:125: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:129: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:133: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:134: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:135: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:136: signed to unsigned conversion occurs. (VER-318)
 
 Inferred memory devices in process
-	in routine flght_cntrl line 49 in file
+	in routine flght_cntrl line 79 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -183,7 +145,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine flght_cntrl line 58 in file
+	in routine flght_cntrl line 88 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -192,7 +154,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine flght_cntrl line 67 in file
+	in routine flght_cntrl line 97 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -201,21 +163,21 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine flght_cntrl line 76 in file
+	in routine flght_cntrl line 106 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |    rght_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:151: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:154: unsigned to signed assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:156: signed to unsigned part selection occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:161: signed to unsigned assignment occurs. (VER-318)
-Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:165: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:186: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:189: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:191: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:196: signed to unsigned assignment occurs. (VER-318)
+Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv:200: signed to unsigned part selection occurs. (VER-318)
 
 Inferred memory devices in process
-	in routine get_terms line 132 in file
+	in routine get_terms line 162 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -224,7 +186,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine get_terms line 150 in file
+	in routine get_terms line 185 in file
 		'/userspace/l/lafford/ece551/project/final/flght_cntrl/flght_cntrl.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -234,8 +196,6 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 2 designs.
 Current design is 'flght_cntrl'.
-flght_cntrl get_terms
-read_file -format sverilog ../flght_cntrl/inert_intf.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -322,10 +282,9 @@ Inferred memory devices in process
 |      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.db'. (DDB-24)
 Loaded 1 design.
 Current design is 'inert_intf'.
-inert_intf
-read_file -format sverilog ../flght_cntrl/inertial_integrator.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -429,11 +388,9 @@ Inferred memory devices in process
 |     ax_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.db'. (DDB-24)
 Loaded 1 design.
 Current design is 'inertial_integrator'.
-inertial_integrator
-# SPI
-read_file -format sverilog ../SPI/A2D_intf.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -467,8 +424,6 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'A2D_intf'.
-A2D_intf
-read_file -format sverilog ../SPI/SPI_mstr16.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -538,9 +493,6 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'SPI_mstr16'.
-SPI_mstr16
-# UART
-read_file -format sverilog ../UART/UART.v
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -548,8 +500,6 @@ Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART.v
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'UART'.
-UART
-read_file -format sverilog ../UART/UART_rx.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -619,10 +569,9 @@ Inferred memory devices in process
 |       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/l/lafford/ece551/project/final/UART/UART_rx.db'. (DDB-24)
 Loaded 1 design.
 Current design is 'UART_rx'.
-UART_rx
-read_file -format sverilog ../UART/UART_tx.sv
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -682,10 +631,141 @@ Inferred memory devices in process
 |     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/l/lafford/ece551/project/final/UART/UART_tx.db'. (DDB-24)
 Loaded 1 design.
 Current design is 'UART_tx'.
-UART_tx
-read_file -format sverilog ../UART/UART_wrapper.sv
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv
+
+Statistics for case statements in always block at line 94 in file
+	'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 26 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 35 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 46 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 60 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 67 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 79 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART_rx_KEY'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv
+
+Statistics for case statements in always block at line 78 in file
+	'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            87            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 24 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 34 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 45 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 56 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 67 in file
+		'/userspace/l/lafford/ece551/project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'UART_tx_KEY'.
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
@@ -737,23 +817,99 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Loaded 1 design.
 Current design is 'UART_wrapper'.
-UART_wrapper
-# top_level
-#read_file -format sverilog ../top_level/PB_release.sv
-read_file -format sverilog ../top_level/QuadCopter.v
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Compiling source file /userspace/l/lafford/ece551/project/final/top_level/QuadCopter.v
 Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/l/lafford/ece551/project/final/top_level/QuadCopter.db'. (DDB-24)
 Loaded 1 design.
 Current design is 'QuadCopter'.
-QuadCopter
-read_file -format sverilog ../top_level/reset_synch.v
-Detecting input file type automatically (-rtl or -netlist).
-Reading with Presto HDL Compiler (equivalent to -rtl option).
-Running PRESTO HDLC
-Compiling source file /userspace/l/lafford/ece551/project/final/top_level/reset_synch.v
+Information: Building the design 'inert_intf' instantiated from design 'QuadCopter' with
+	the parameters "11". (HDL-193)
+
+Statistics for case statements in always block at line 95 in file
+	'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           111            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 46 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     INT_ff2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     INT_ff1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 58 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      timer_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 65 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ptch_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 70 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     roll_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 75 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_rt_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 80 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ax_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 85 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ay_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf_COUNT_WIDTH11 line 91 in file
+		'/userspace/l/lafford/ece551/project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'reset_synch'. (HDL-193)
 
 Inferred memory devices in process
 	in routine reset_synch line 7 in file
@@ -765,18 +921,7 @@ Inferred memory devices in process
 |    btwn_ffs_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Loaded 1 design.
-Current design is 'reset_synch'.
-reset_synch
-# things that were being included that don't actually need to be
-# read_file -format sverilog ../models/ADC128S.sv
-# read_file -format sverilog ../models/SPI_ADC128S.sv
-# Set current design to top level
-set current_design QuadCopter
-QuadCopter
-# create and constrain clk
-create_clock -name "clk" -period 2.5 -waveform {0 1} {clk}
-Information: Building the design 'inertial_integrator' instantiated from design 'inert_intf' with
+Information: Building the design 'inertial_integrator' instantiated from design 'inert_intf_COUNT_WIDTH11' with
 	the parameters "11". (HDL-193)
 Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:132: signed to unsigned conversion occurs. (VER-318)
 Warning:  /userspace/l/lafford/ece551/project/final/flght_cntrl/inertial_integrator.sv:133: signed to unsigned conversion occurs. (VER-318)
@@ -873,16 +1018,6 @@ Inferred memory devices in process
 |     ax_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-1
-set_dont_touch_network [find port clk]
-1
-# set input timings
-set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
-{RST_n MISO INT RX MISO_A2D}
-set_input_delay -clock clk 0.25 $prim_inputs
-1
-# set input drives
-set_driving_cell -lib_cell ND2D2BWP -from_pin A1 -library tcbn40lpbwptc $prim_inputs
 Warning: Design rule attributes from the driving cell will be
 	set on the port. (UID-401)
 Warning: Design rule attributes from the driving cell will be
@@ -893,50 +1028,20 @@ Warning: Design rule attributes from the driving cell will be
 	set on the port. (UID-401)
 Warning: Design rule attributes from the driving cell will be
 	set on the port. (UID-401)
-1
-set_drive 0.1 RST_n
-1
-# Set output delays
-set_output_delay -clock clk 0.5 [all_outputs]
-1
-set_load 0.1 [all_outputs]
-1
-# Set wireload and transition time
-set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
-1
-set_max_transition 0.1 [current_design]
-1
-# Set uncertainty
-set_clock_uncertainty .15 [find port clk]
-1
-# Initial Compile
-compile -map_effort medium
+
+  Linking design 'QuadCopter'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  QuadCopter                  /userspace/l/lafford/ece551/project/final/top_level/QuadCopter.db
+  tcbn40lpbwptc (library)     /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db
+  tpfn45gsgv18tc (library)    /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db
+  * (18 designs)              /userspace/l/lafford/ece551/project/final/flght_cntrl/cmd_cfg.db, etc
+
 Warning: Setting attribute 'fix_multiple_port_nets' on design 'QuadCopter'. (UIO-59)
-Information: Evaluating DesignWare library utilization. (UISN-27)
-
-============================================================================
-| DesignWare Building Block Library  |         Version         | Available |
-============================================================================
-| Basic DW Building Blocks           | M-2016.12-DWBB_201612.3 |     *     |
-| Licensed DW Building Blocks        |                         |           |
-============================================================================
-
 
 Information: There are 119 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
-Warning: IO pad 'PVSS3DGZ' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVSS2DGZ' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVSS2ANA' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVSS1DGZ' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVSS1ANA' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVDD2POC' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVDD2DGZ' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVDD2ANA' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVDD1DGZ' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PVDD1ANA' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PCLAMP2ANA' is unusable: unknown logic function.  (OPT-1022)
-Warning: IO pad 'PCLAMP1ANA' is unusable: unknown logic function.  (OPT-1022)
 Warning: Operating condition NCCOM set on design QuadCopter has different process,
 voltage and temperatures parameters than the parameters at which target library 
 tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
@@ -944,7 +1049,6 @@ tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'reset_synch'
-Warning: The trip points for the library named tpfn45gsgv18tc differ from those in the library named tcbn40lpbwptc. (TIM-164)
   Processing 'SPI_mstr16_0'
   Processing 'A2D_intf'
   Processing 'ESC_interface_0'
@@ -952,13 +1056,12 @@ Warning: The trip points for the library named tpfn45gsgv18tc differ from those 
   Processing 'get_terms_0'
   Processing 'flght_cntrl'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11'
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-  Processing 'inert_intf'
+  Processing 'inert_intf_COUNT_WIDTH11'
 Information: The register 'state_reg[4]' is a constant and will be removed. (OPT-1206)
   Processing 'cmd_cfg'
 Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
-  Processing 'UART_rx'
-  Processing 'UART_tx'
+  Processing 'UART_rx_KEY'
+  Processing 'UART_tx_KEY'
   Processing 'UART'
   Processing 'UART_wrapper'
   Processing 'QuadCopter'
@@ -968,12 +1071,9 @@ Information: Updating design information... (UID-85)
 
   Beginning Implementation Selection
   ----------------------------------
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'SPI_mstr16_1_DW01_inc_0'
   Processing 'SPI_mstr16_1_DW01_inc_1'
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'ESC_interface_1_DW01_inc_0'
-Error:   Source file for 'DW01_CMP2' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'ESC_interface_1_DW01_cmp2_0'
   Processing 'ESC_interface_2_DW01_inc_0'
   Processing 'ESC_interface_2_DW01_cmp2_0'
@@ -981,13 +1081,9 @@ Error:   Source file for 'DW01_CMP2' was not analyzed by this release of the com
   Processing 'ESC_interface_3_DW01_cmp2_0'
   Processing 'ESC_interface_0_DW01_inc_0'
   Processing 'ESC_interface_0_DW01_cmp2_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'flght_cntrl_DW01_add_0'
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'get_terms_1_DW01_sub_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'get_terms_1_DW01_add_0'
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'get_terms_1_DW01_sub_1'
   Processing 'get_terms_2_DW01_sub_0'
   Processing 'get_terms_2_DW01_add_0'
@@ -995,56 +1091,27 @@ Error:   Source file for 'DW01_SUB' was not analyzed by this release of the comp
   Processing 'get_terms_0_DW01_sub_0'
   Processing 'get_terms_0_DW01_add_0'
   Processing 'get_terms_0_DW01_sub_1'
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-  Processing 'inert_intf_DW01_inc_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
+  Processing 'inert_intf_COUNT_WIDTH11_DW01_inc_0'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_0'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_1'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_2'
-Error:   Source file for 'DW01_CMP2' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_cmp2_0'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_cmp2_1'
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_inc_0'
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_0'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_1'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_2'
   Processing 'SPI_mstr16_0_DW01_inc_0'
   Processing 'SPI_mstr16_0_DW01_inc_1'
-Error:   Source file for 'DW01_INC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'cmd_cfg_DW01_inc_0'
-Error:   Source file for 'DW01_DEC' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-  Processing 'UART_rx_DW01_dec_0'
-  Processing 'UART_tx_DW01_dec_0'
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
+  Processing 'UART_rx_KEY_DW01_dec_0'
+  Processing 'UART_tx_KEY_DW01_dec_0'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_3'
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4'
   Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_3'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'ESC_interface_3_DW01_add_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'ESC_interface_3_DW01_add_1'
   Processing 'ESC_interface_0_DW01_add_0'
   Processing 'ESC_interface_0_DW01_add_1'
@@ -1052,17 +1119,13 @@ Error:   Source file for 'DW01_ADD' was not analyzed by this release of the comp
   Processing 'ESC_interface_2_DW01_add_1'
   Processing 'ESC_interface_1_DW01_add_0'
   Processing 'ESC_interface_1_DW01_add_1'
-Error:   Source file for 'DW02_MULT' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'get_terms_1_DW02_mult_0'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'get_terms_1_DW01_add_1'
   Processing 'get_terms_2_DW02_mult_0'
   Processing 'get_terms_2_DW01_add_1'
   Processing 'get_terms_0_DW02_mult_0'
   Processing 'get_terms_0_DW01_add_1'
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'flght_cntrl_DW01_add_1'
-Error:   Source file for 'DW01_SUB' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
   Processing 'flght_cntrl_DW01_sub_0'
   Processing 'flght_cntrl_DW01_add_2'
   Processing 'flght_cntrl_DW01_sub_1'
@@ -1085,15 +1148,11 @@ Error:   Source file for 'DW01_SUB' was not analyzed by this release of the comp
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-Error:   Source file for 'DW01_ADD' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
-  Mapping Optimization (Phase 1)
-  Mapping Optimization (Phase 2)
-  Mapping Optimization (Phase 3)
-  Mapping Optimization (Phase 4)
-  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 19)
+  Mapping Optimization (Phase 20)
+  Mapping Optimization (Phase 21)
+  Mapping Optimization (Phase 22)
+  Mapping Optimization (Phase 23)
 Information: The register 'iESC/bck_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
 Information: The register 'iESC/bck_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
 Information: The register 'iESC/bck_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
@@ -1115,38 +1174,38 @@ Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will 
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:14   14361.3      0.66      17.9       9.8                          
-    0:00:15   14357.4      0.69      18.3       9.8                          
-    0:00:15   14357.4      0.69      18.3       9.8                          
-    0:00:15   14357.5      0.66      17.9       9.8                          
-    0:00:15   14357.5      0.66      17.9       9.8                          
-    0:00:16   11559.7      0.74      22.0       9.2                          
-    0:00:17   11529.3      0.70      20.8       9.2                          
-    0:00:17   11525.3      0.68      20.3       9.2                          
-    0:00:17   11520.0      0.68      20.3       9.2                          
-    0:00:17   11517.3      0.68      20.1       9.2                          
-    0:00:17   11535.9      0.64      19.3       9.2                          
-    0:00:18   11532.7      0.62      19.0       9.2                          
-    0:00:18   11530.7      0.66      20.2       9.2                          
-    0:00:18   11537.6      0.62      18.7       9.2                          
-    0:00:18   11538.7      0.59      18.4       9.2                          
-    0:00:18   11539.9      0.58      18.1       9.2                          
-    0:00:18   11547.3      0.57      17.9       9.2                          
-    0:00:18   11557.0      0.53      16.4       9.2                          
-    0:00:18   11557.9      0.53      16.3       9.2                          
-    0:00:18   11563.7      0.53      16.2       9.2                          
-    0:00:19   11575.0      0.49      15.2       9.2                          
-    0:00:19   11579.1      0.49      14.9       9.2                          
-    0:00:19   11579.6      0.49      14.9       9.2                          
-    0:00:19   11579.6      0.49      14.9       9.2                          
-    0:00:19   11570.8      0.49      14.9       9.2                          
-    0:00:19   11570.8      0.49      14.9       9.2                          
-    0:00:19   11608.7      0.50      15.1       2.8                          
-    0:00:19   11620.9      0.50      15.1       0.6                          
-    0:00:19   11617.4      0.50      15.1       0.4                          
-    0:00:19   11617.4      0.50      15.1       0.4                          
-    0:00:19   11617.4      0.50      15.1       0.4                          
-    0:00:19   11617.4      0.50      15.1       0.4                          
+    0:00:15   14273.1      0.66      17.9       9.8                          
+    0:00:15   14269.2      0.69      18.3       9.8                          
+    0:00:15   14269.2      0.69      18.3       9.8                          
+    0:00:15   14269.3      0.66      17.9       9.8                          
+    0:00:15   14269.3      0.66      17.9       9.8                          
+    0:00:17   11497.0      0.74      22.0       9.2                          
+    0:00:17   11467.2      0.70      20.8       9.2                          
+    0:00:18   11463.2      0.68      20.3       9.2                          
+    0:00:18   11457.9      0.68      20.3       9.2                          
+    0:00:18   11455.2      0.68      20.1       9.2                          
+    0:00:18   11473.8      0.64      19.3       9.2                          
+    0:00:18   11470.6      0.62      19.0       9.2                          
+    0:00:18   11468.6      0.66      20.2       9.2                          
+    0:00:19   11475.5      0.62      18.7       9.2                          
+    0:00:19   11476.6      0.59      18.4       9.2                          
+    0:00:19   11477.8      0.58      18.1       9.2                          
+    0:00:19   11485.2      0.57      17.9       9.2                          
+    0:00:19   11494.9      0.53      16.4       9.2                          
+    0:00:19   11495.8      0.53      16.3       9.2                          
+    0:00:19   11501.6      0.53      16.2       9.2                          
+    0:00:19   11512.9      0.49      15.2       9.2                          
+    0:00:20   11517.0      0.49      14.9       9.2                          
+    0:00:20   11517.5      0.49      14.9       9.2                          
+    0:00:20   11517.5      0.49      14.9       9.2                          
+    0:00:20   11508.7      0.49      14.9       9.2                          
+    0:00:20   11508.7      0.49      14.9       9.2                          
+    0:00:20   11546.6      0.50      15.1       2.8                          
+    0:00:20   11558.8      0.50      15.1       0.6                          
+    0:00:20   11555.3      0.50      15.1       0.4                          
+    0:00:20   11555.3      0.50      15.1       0.4                          
+    0:00:20   11555.3      0.50      15.1       0.4                          
+    0:00:20   11555.3      0.50      15.1       0.4                          
 
 
 
@@ -1157,63 +1216,63 @@ Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will 
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:19   11617.4      0.50      15.1       0.4                          
-    0:00:19   11647.2      0.43      13.9       0.4 iNEMO/iII/roll_int_reg[24]/D
-    0:00:20   11653.2      0.43      13.7       0.4 iNEMO/iII/roll_int_reg[24]/D
-    0:00:20   11670.6      0.42      13.7       0.4 iNEMO/iII/roll_int_reg[15]/D
-    0:00:20   11687.6      0.42      13.4       0.4 iNEMO/iII/roll_int_reg[15]/D
-    0:00:20   11695.1      0.41      13.3       0.4 iNEMO/iII/roll_int_reg[15]/D
-    0:00:20   11699.6      0.41      13.2       0.4 iNEMO/iII/roll_int_reg[17]/D
-    0:00:20   11699.9      0.40      13.1       0.4 iNEMO/iII/roll_int_reg[24]/D
-    0:00:20   11705.2      0.39      12.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:20   11718.4      0.38      12.4       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11719.7      0.37      11.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11724.6      0.37      11.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11726.5      0.36      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11727.6      0.36      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11731.1      0.35      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:21   11739.6      0.34      11.0       0.4 iNEMO/iII/roll_int_reg[24]/D
-    0:00:21   11776.6      0.31      10.2       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11800.5      0.29       8.8       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11804.0      0.28       8.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11804.0      0.27       8.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11804.2      0.27       8.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11815.6      0.26       8.5       0.5 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11828.3      0.24       8.0       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:22   11838.6      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11845.3      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:22   11843.0      0.24       8.0       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:23   11857.3      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:23   11861.0      0.23       7.9       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:23   11865.9      0.23       7.7       0.5 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:23   11875.4      0.22       7.1       0.5 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:23   11874.4      0.19       6.7       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:23   11883.9      0.18       6.2       0.5 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:23   11901.9      0.16       5.2       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:23   11910.4      0.14       4.5       0.5 iNEMO/iII/roll_int_reg[24]/D
-    0:00:23   11919.5      0.13       4.2       0.6 iNEMO/iII/roll_int_reg[16]/D
-    0:00:23   11926.8      0.12       3.5       0.6 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:23   11929.8      0.10       2.7       0.8 ifly/frnt_sum_reg[12]/D  
-    0:00:23   11933.3      0.09       2.7       0.8 iNEMO/iII/roll_int_reg[24]/D
-    0:00:24   11950.9      0.09       2.3       0.9 iNEMO/iII/yaw_int_reg[26]/D
-    0:00:24   11962.2      0.08       2.0       0.9 ifly/frnt_sum_reg[12]/D  
-    0:00:24   11954.3      0.08       1.9       0.9 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:24   11957.5      0.07       1.9       0.8 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:24   11959.2      0.07       1.8       0.8 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:24   11966.1      0.07       1.8       0.8 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:24   11983.0      0.06       1.3       1.0 iNEMO/iII/roll_int_reg[26]/D
-    0:00:24   11988.0      0.05       0.9       0.9 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:24   11988.8      0.04       0.9       0.9 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:24   11990.1      0.04       0.8       0.9 iNEMO/iII/roll_int_reg[16]/D
-    0:00:24   11989.0      0.04       0.8       0.9 iNEMO/iII/ptch_int_reg[25]/D
-    0:00:24   11994.5      0.04       0.6       0.9 iNEMO/iII/roll_int_reg[16]/D
-    0:00:25   11998.6      0.03       0.5       0.9 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:25   12001.9      0.02       0.3       0.9 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:25   12004.2      0.02       0.3       0.9 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:25   12013.4      0.01       0.1       0.9 iNEMO/iII/ptch_int_reg[26]/D
-    0:00:26   12024.0      0.00       0.0       0.9                          
-    0:00:26   12016.9      0.00       0.0       0.9                          
-    0:00:26   12011.8      0.00       0.0       0.9                          
+    0:00:20   11555.3      0.50      15.1       0.4                          
+    0:00:20   11585.1      0.43      13.9       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:21   11591.1      0.43      13.7       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:21   11608.5      0.42      13.7       0.4 iNEMO/iII/roll_int_reg[15]/D
+    0:00:21   11625.5      0.42      13.4       0.4 iNEMO/iII/roll_int_reg[15]/D
+    0:00:21   11633.1      0.41      13.3       0.4 iNEMO/iII/roll_int_reg[15]/D
+    0:00:21   11637.5      0.41      13.2       0.4 iNEMO/iII/roll_int_reg[17]/D
+    0:00:21   11637.8      0.40      13.1       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:21   11643.1      0.39      12.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11656.3      0.38      12.4       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11657.6      0.37      11.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11662.5      0.37      11.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11664.5      0.36      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11665.5      0.36      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11669.0      0.35      11.5       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:22   11677.5      0.34      11.0       0.4 iNEMO/iII/roll_int_reg[24]/D
+    0:00:23   11714.5      0.31      10.2       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:23   11738.4      0.29       8.8       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:23   11741.9      0.28       8.7       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:23   11741.9      0.27       8.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:23   11742.1      0.27       8.6       0.4 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:23   11753.5      0.26       8.5       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11766.2      0.24       8.0       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:24   11776.5      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11783.2      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11780.9      0.24       8.0       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:24   11795.2      0.24       8.0       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11798.9      0.23       7.9       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:24   11803.8      0.23       7.7       0.5 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:24   11813.3      0.22       7.1       0.5 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:24   11812.3      0.19       6.7       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:25   11821.8      0.18       6.2       0.5 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:25   11839.8      0.16       5.2       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:25   11848.3      0.14       4.5       0.5 iNEMO/iII/roll_int_reg[24]/D
+    0:00:25   11857.4      0.13       4.2       0.6 iNEMO/iII/roll_int_reg[16]/D
+    0:00:25   11864.7      0.12       3.5       0.6 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:25   11867.7      0.10       2.7       0.8 ifly/frnt_sum_reg[12]/D  
+    0:00:25   11871.2      0.09       2.7       0.8 iNEMO/iII/roll_int_reg[24]/D
+    0:00:25   11888.8      0.09       2.3       0.9 iNEMO/iII/yaw_int_reg[26]/D
+    0:00:25   11900.1      0.08       2.0       0.9 ifly/frnt_sum_reg[12]/D  
+    0:00:25   11892.2      0.08       1.9       0.9 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:25   11895.4      0.07       1.9       0.8 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:26   11897.1      0.07       1.8       0.8 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:26   11904.0      0.07       1.8       0.8 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:26   11920.9      0.06       1.3       1.0 iNEMO/iII/roll_int_reg[26]/D
+    0:00:26   11925.9      0.05       0.9       0.9 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:26   11926.8      0.04       0.9       0.9 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:26   11928.0      0.04       0.8       0.9 iNEMO/iII/roll_int_reg[16]/D
+    0:00:26   11926.9      0.04       0.8       0.9 iNEMO/iII/ptch_int_reg[25]/D
+    0:00:26   11932.4      0.04       0.6       0.9 iNEMO/iII/roll_int_reg[16]/D
+    0:00:26   11936.5      0.03       0.5       0.9 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:26   11939.8      0.02       0.3       0.9 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:27   11942.1      0.02       0.3       0.9 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:27   11951.3      0.01       0.1       0.9 iNEMO/iII/ptch_int_reg[26]/D
+    0:00:28   11961.9      0.00       0.0       0.9                          
+    0:00:28   11954.8      0.00       0.0       0.9                          
+    0:00:28   11949.7      0.00       0.0       0.9                          
 
 
   Beginning Design Rule Fixing  (max_transition)
@@ -1223,8 +1282,8 @@ Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will 
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:26   12011.8      0.00       0.0       0.9                          
-    0:00:26   11992.7      0.00       0.0       0.0                          
+    0:00:28   11949.7      0.00       0.0       0.9                          
+    0:00:28   11930.6      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -1234,26 +1293,26 @@ Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will 
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:26   11992.7      0.00       0.0       0.0                          
-    0:00:26   11992.7      0.00       0.0       0.0                          
-    0:00:26   11931.3      0.01       0.1       0.0                          
-    0:00:27   11924.3      0.01       0.1       0.0                          
-    0:00:27   11921.6      0.01       0.1       0.0                          
-    0:00:27   11921.1      0.01       0.1       0.0                          
-    0:00:27   11921.1      0.01       0.1       0.0                          
-    0:00:27   11921.1      0.01       0.1       0.0                          
-    0:00:27   11926.6      0.00       0.0       0.0                          
-    0:00:27   11807.7      0.12       1.7       0.0                          
-    0:00:27   11781.8      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11774.9      0.12       1.6       0.0                          
-    0:00:27   11807.2      0.01       0.2       0.0 iNEMO/iII/roll_int_reg[20]/D
-    0:00:27   11822.3      0.00       0.0       0.0                          
-    0:00:27   11765.0      0.00       0.0       0.0                          
+    0:00:28   11930.6      0.00       0.0       0.0                          
+    0:00:28   11930.6      0.00       0.0       0.0                          
+    0:00:29   11869.3      0.01       0.1       0.0                          
+    0:00:29   11862.2      0.01       0.1       0.0                          
+    0:00:29   11859.5      0.01       0.1       0.0                          
+    0:00:29   11859.0      0.01       0.1       0.0                          
+    0:00:29   11859.0      0.01       0.1       0.0                          
+    0:00:29   11859.0      0.01       0.1       0.0                          
+    0:00:29   11864.5      0.00       0.0       0.0                          
+    0:00:29   11745.6      0.12       1.7       0.0                          
+    0:00:29   11719.7      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11712.8      0.12       1.6       0.0                          
+    0:00:29   11745.1      0.01       0.2       0.0 iNEMO/iII/roll_int_reg[20]/D
+    0:00:30   11760.2      0.00       0.0       0.0                          
+    0:00:30   11702.9      0.00       0.0       0.0                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -1262,21 +1321,13 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Optimization Complete
   ---------------------
 Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-1
-# Fix hold times
-set_fix_hold clk
-1
-# Smash the hierarchy
-ungroup -all -flatten
 Information: Updating graph... (UID-83)
 Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-1
-check_design
  
 ****************************************
 check_design summary:
 Version:     M-2016.12
-Date:        Fri Dec  8 10:19:43 2017
+Date:        Mon Dec 11 00:04:06 2017
 ****************************************
 
                    Name                                            Total
@@ -1292,7 +1343,7 @@ Warning: In design 'QuadCopter', net 'ifly/get_yaw/n51' driven by pin 'ifly/get_
 Warning: In design 'QuadCopter', net 'ifly/get_yaw/n60' driven by pin 'ifly/get_yaw/U66/ZN' has no loads. (LINT-2)
 Warning: In design 'QuadCopter', net 'ifly/get_roll/n52' driven by pin 'ifly/get_roll/U75/Z' has no loads. (LINT-2)
 Warning: In design 'QuadCopter', net 'ifly/get_roll/n61' driven by pin 'ifly/get_roll/U74/ZN' has no loads. (LINT-2)
-Warning: In design 'QuadCopter', net 'ifly/get_ptch/net8857' driven by pin 'ifly/get_ptch/U74/ZN' has no loads. (LINT-2)
+Warning: In design 'QuadCopter', net 'ifly/get_ptch/net8930' driven by pin 'ifly/get_ptch/U74/ZN' has no loads. (LINT-2)
 Warning: In design 'QuadCopter', net 'ifly/get_ptch/n52' driven by pin 'ifly/get_ptch/U75/Z' has no loads. (LINT-2)
 Warning: In design 'QuadCopter', net 'ifly/n9' driven by pin 'ifly/U72/Z' has no loads. (LINT-2)
 Warning: In design 'QuadCopter', net 'ifly/n10' driven by pin 'ifly/U71/ZN' has no loads. (LINT-2)
@@ -1328,9 +1379,6 @@ Warning: In design 'QuadCopter', output port 'LED[3]' is connected directly to '
 Warning: In design 'QuadCopter', output port 'LED[2]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'QuadCopter', output port 'LED[1]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'QuadCopter', output port 'LED[0]' is connected directly to 'logic 1'. (LINT-52)
-1
-# Compile the design
-compile -map_effort high
 
 Information: There are 40 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
@@ -1349,53 +1397,59 @@ Information: Updating design information... (UID-85)
 
   Beginning Mapping Optimizations  (High effort)
   -------------------------------
-  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 24)
 
                                   TOTAL                                                  
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:07   15146.4      0.46      12.5      12.0                                0.00  
-    0:00:08   15138.6      0.57      14.8      12.2                                0.00  
-    0:00:08   15118.7      0.57      15.4      12.6                                0.00  
-    0:00:08   15118.7      0.57      15.4      12.6                                0.00  
-    0:00:08   15118.9      0.54      14.6      12.5                                0.00  
-    0:00:08   15118.9      0.54      14.6      12.5                                0.00  
-    0:00:09   11489.8      0.77      26.0      10.5                                0.00  
-    0:00:10   11443.8      0.77      25.2      10.4                                0.00  
-    0:00:10   11442.4      0.73      24.8      10.3                                0.00  
-    0:00:10   11446.2      0.77      25.2      10.3                                0.00  
-    0:00:10   11445.7      0.71      24.3      10.3                                0.00  
-    0:00:11   11453.5      0.71      23.5      10.2                                0.00  
-    0:00:11   11454.4      0.70      23.1      10.2                                0.00  
-    0:00:11   11452.8      0.71      23.5      10.2                                0.00  
-    0:00:11   11454.5      0.70      23.1      10.2                                0.00  
-    0:00:11   11452.8      0.71      23.5      10.2                                0.00  
-    0:00:11   11452.8      0.71      23.5      10.2                                0.00  
-    0:00:11   11452.8      0.71      23.5      10.2                                0.00  
-    0:00:11   11452.8      0.71      23.5      10.2                                0.00  
-    0:00:11   11532.7      0.69      22.8       0.8                                0.00  
-    0:00:11   11543.8      0.70      22.9       0.2                                0.00  
-    0:00:11   11557.9      0.70      22.7       0.0                                0.00  
-    0:00:11   11560.4      0.70      22.6       0.0                                0.00  
-    0:00:11   11560.4      0.70      22.6       0.0                                0.00  
-    0:00:11   11560.4      0.70      22.6       0.0                                0.00  
-    0:00:11   11560.4      0.70      22.6       0.0                                0.00  
-    0:00:12   11595.1      0.57      21.1       0.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:12   11628.3      0.54      20.3       0.2                                0.00  
-    0:00:12   11656.0      0.50      19.5       0.2                                0.00  
-    0:00:12   11704.5      0.47      18.4       0.4                                0.00  
-    0:00:12   11736.6      0.44      17.5       0.6                                0.00  
-    0:00:12   11795.9      0.40      15.7       0.5                                0.00  
-    0:00:13   11842.8      0.38      14.2       0.6                                0.00  
-    0:00:13   11869.6      0.36      13.4       0.6                                0.00  
-    0:00:13   11922.3      0.35      12.8       0.7                                0.00  
-    0:00:13   11928.2      0.35      12.7       0.8                                0.00  
-    0:00:13   11945.1      0.34      11.9       0.8                                0.00  
-    0:00:13   11957.8      0.33      11.8       0.8                                0.00  
-    0:00:14   11998.2      0.33      11.4       0.9                                0.00  
-    0:00:14   12009.5      0.33      11.2       0.9                                0.00  
-    0:00:14   12015.5      0.33      11.1       0.9                                0.00  
+    0:00:08   15064.6      0.46      12.5      12.0                                0.00  
+    0:00:08   15056.8      0.57      14.8      12.2                                0.00  
+    0:00:08   15036.9      0.57      15.4      12.6                                0.00  
+    0:00:08   15036.9      0.57      15.4      12.6                                0.00  
+    0:00:09   15037.0      0.54      14.6      12.5                                0.00  
+    0:00:09   15037.0      0.54      14.6      12.5                                0.00  
+    0:00:10   11423.3      0.77      26.0      10.5                                0.00  
+    0:00:10   11381.0      0.77      25.2      10.4                                0.00  
+    0:00:11   11380.1      0.73      24.8      10.3                                0.00  
+    0:00:11   11384.0      0.77      25.2      10.3                                0.00  
+    0:00:11   11383.4      0.71      24.3      10.3                                0.00  
+    0:00:11   11391.2      0.71      23.5      10.2                                0.00  
+    0:00:11   11392.1      0.70      23.1      10.2                                0.00  
+    0:00:12   11390.5      0.71      23.5      10.2                                0.00  
+    0:00:12   11392.3      0.70      23.1      10.2                                0.00  
+    0:00:12   11390.5      0.71      23.5      10.2                                0.00  
+    0:00:12   11390.5      0.71      23.5      10.2                                0.00  
+    0:00:12   11390.5      0.71      23.5      10.2                                0.00  
+    0:00:12   11390.5      0.71      23.5      10.2                                0.00  
+    0:00:12   11470.4      0.69      22.8       0.8                                0.00  
+    0:00:12   11481.5      0.70      22.9       0.2                                0.00  
+    0:00:12   11495.6      0.70      22.7       0.0                                0.00  
+    0:00:12   11498.1      0.70      22.6       0.0                                0.00  
+    0:00:12   11498.1      0.70      22.6       0.0                                0.00  
+    0:00:12   11498.1      0.70      22.6       0.0                                0.00  
+    0:00:12   11498.1      0.70      22.6       0.0                                0.00  
+    0:00:13   11532.9      0.57      21.1       0.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:13   11566.0      0.54      20.3       0.2                                0.00  
+    0:00:13   11593.7      0.50      19.5       0.2                                0.00  
+    0:00:13   11642.2      0.47      18.4       0.4                                0.00  
+    0:00:13   11674.3      0.44      17.5       0.6                                0.00  
+    0:00:14   11733.6      0.40      15.7       0.5                                0.00  
+    0:00:14   11780.5      0.38      14.2       0.6                                0.00  
+    0:00:14   11807.3      0.36      13.4       0.6                                0.00  
+    0:00:14   11826.9      0.35      12.8       0.7                                0.00  
+    0:00:14   11840.0      0.35      12.7       0.7                                0.00  
+    0:00:15   11859.5      0.34      12.0       0.7                                0.00  
+    0:00:15   11873.8      0.33      11.8       0.7                                0.00  
+    0:00:15   11903.8      0.32      11.5       0.7                                0.00  
+    0:00:15   11928.3      0.31      11.0       0.8                                0.00  
+    0:00:15   11954.8      0.30      10.7       0.9                                0.00  
+    0:00:15   11968.4      0.30      10.3       0.9                                0.00  
+    0:00:15   11970.9      0.29      10.3       0.9                                0.00  
+    0:00:16   11995.2      0.29      10.0       0.9                                0.00  
+    0:00:16   12003.1      0.29       9.8       1.1                                0.00  
+    0:00:16   12028.5      0.29       9.4       1.1                                0.00  
+    0:00:16   12034.9      0.29       9.3       1.0                                0.00  
 
 
 
@@ -1406,137 +1460,136 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:14   12015.5      0.33      11.1       0.9                                0.00  
-    0:00:14   12026.2      0.30      10.9       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:14   12040.9      0.30      10.0       1.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:14   12051.5      0.29       9.8       1.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:14   12064.3      0.28       9.3       1.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:15   12068.8      0.28       9.3       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:15   12081.1      0.28       9.2       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:15   12094.9      0.27       9.0       1.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:15   12104.0      0.27       8.8       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:15   12115.0      0.26       8.7       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:15   12124.0      0.26       8.4       1.0 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:15   12136.0      0.25       8.2       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:15   12147.4      0.25       7.9       1.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:16   12155.4      0.24       7.6       1.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:16   12154.1      0.24       7.6       1.1 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:16   12165.8      0.23       7.3       1.1 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:16   12178.7      0.23       7.2       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:16   12182.4      0.22       6.9       1.1 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:16   12185.9      0.22       6.8       1.1 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:17   12192.1      0.21       6.7       1.1 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:17   12199.3      0.21       6.7       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:17   12201.9      0.21       6.6       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:17   12201.4      0.21       6.5       1.0 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:17   12196.8      0.20       6.4       1.0 ifly/lft_sum_reg[12]/D         0.00  
-    0:00:17   12203.2      0.20       6.4       1.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:17   12215.3      0.20       6.2       1.2 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:17   12230.7      0.20       6.0       1.3 ifly/rght_sum_reg[12]/D        0.00  
-    0:00:17   12237.0      0.19       5.9       1.2 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:17   12239.3      0.19       5.9       1.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:17   12241.1      0.18       5.7       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
-    0:00:18   12247.8      0.18       5.5       1.4 iNEMO/iII/roll_int_reg[25]/D      0.00  
-    0:00:18   12270.0      0.18       5.3       1.4 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:18   12277.6      0.18       5.2       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12282.9      0.17       5.2       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12288.4      0.17       5.1       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12273.0      0.17       5.0       1.4 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:18   12284.8      0.17       4.9       1.4 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:18   12292.6      0.17       4.8       1.5 ifly/bck_sum_reg[12]/D         0.00  
-    0:00:18   12294.0      0.17       4.7       1.5 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:18   12297.4      0.16       4.7       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12296.0      0.16       4.6       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12300.5      0.16       4.5       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:18   12300.7      0.15       4.2       1.5 ifly/rght_sum_reg[12]/D        0.00  
-    0:00:19   12279.2      0.15       4.1       1.4 iNEMO/iII/ptch_int_reg[21]/D      0.00  
-    0:00:19   12284.5      0.15       4.1       1.5 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:19   12287.8      0.14       4.0       1.5 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:19   12301.1      0.14       4.0       1.5 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:19   12322.4      0.14       3.9       1.6 ifly/rght_sum_reg[12]/D        0.00  
-    0:00:19   12338.7      0.13       3.8       1.6 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:19   12359.8      0.13       3.7       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:19   12365.5      0.13       3.6       1.8 iNEMO/iII/yaw_int_reg[26]/D      0.00  
-    0:00:19   12372.3      0.13       3.5       1.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:19   12375.7      0.12       3.4       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:19   12379.2      0.12       3.5       1.8 iNEMO/iII/ptch_int_reg[21]/D      0.00  
-    0:00:19   12385.0      0.12       3.4       1.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:19   12388.4      0.12       3.4       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:19   12383.8      0.12       3.3       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12387.3      0.12       3.3       1.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:20   12388.0      0.12       3.2       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12392.6      0.11       3.0       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:20   12394.7      0.11       3.0       1.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:20   12403.9      0.11       2.8       1.7 iNEMO/iII/roll_int_reg[24]/D      0.00  
-    0:00:20   12410.4      0.11       2.7       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12417.3      0.10       2.6       1.7 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:20   12430.6      0.10       2.6       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12434.8      0.09       2.5       1.7 iNEMO/iII/ptch_int_reg[21]/D      0.00  
-    0:00:20   12447.0      0.09       2.4       1.8 ifly/rght_sum_reg[12]/D        0.00  
-    0:00:20   12453.0      0.09       2.3       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12453.3      0.09       2.3       1.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
-    0:00:20   12458.4      0.09       2.3       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:20   12464.1      0.09       2.2       1.8 iNEMO/iII/ptch_int_reg[20]/D      0.00  
-    0:00:21   12461.2      0.09       2.2       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12460.4      0.09       2.1       1.7 iNEMO/iII/ptch_int_reg[18]/D      0.00  
-    0:00:21   12459.8      0.08       2.1       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12464.2      0.08       2.1       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12473.6      0.08       2.1       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12474.1      0.08       2.0       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:21   12473.6      0.08       2.0       1.7 iNEMO/iII/ptch_int_reg[24]/D      0.00  
-    0:00:21   12487.9      0.08       1.9       1.9 ifly/rght_sum_reg[12]/D        0.00  
-    0:00:21   12490.0      0.07       1.9       1.9 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12497.8      0.07       1.8       1.9 iNEMO/iII/ptch_int_reg[24]/D      0.00  
-    0:00:21   12498.3      0.07       1.8       1.9 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12507.1      0.07       1.7       1.9 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12508.3      0.07       1.7       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:21   12512.2      0.06       1.6       1.9 iNEMO/iII/ptch_int_reg[24]/D      0.00  
-    0:00:21   12507.5      0.06       1.6       1.9 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:22   12504.6      0.06       1.5       1.8 iNEMO/iII/roll_int_reg[22]/D      0.00  
-    0:00:22   12509.4      0.06       1.5       2.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:22   12513.1      0.06       1.4       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:22   12517.9      0.06       1.4       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:22   12519.5      0.06       1.3       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:22   12518.9      0.06       1.3       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:22   12520.2      0.05       1.3       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:22   12530.4      0.05       1.3       2.0 iNEMO/iII/ptch_int_reg[21]/D      0.00  
-    0:00:22   12530.8      0.05       1.3       2.0 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:22   12534.8      0.05       1.3       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:22   12537.5      0.05       1.2       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:22   12541.2      0.05       1.1       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:22   12545.4      0.04       1.0       2.1 iNEMO/iII/ptch_int_reg[21]/D      0.00  
-    0:00:23   12562.0      0.04       0.9       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12557.0      0.04       0.9       2.0 iNEMO/iII/roll_int_reg[25]/D      0.00  
-    0:00:23   12563.7      0.04       0.9       2.1 iNEMO/iII/ptch_int_reg[26]/D      0.00  
-    0:00:23   12569.7      0.04       0.9       2.1 iNEMO/iII/roll_int_reg[25]/D      0.00  
-    0:00:23   12563.2      0.04       0.8       2.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:23   12572.4      0.04       0.8       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12574.9      0.04       0.8       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12575.6      0.04       0.7       2.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:23   12577.7      0.04       0.7       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12581.6      0.04       0.7       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12579.6      0.03       0.7       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:23   12580.0      0.03       0.7       2.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:24   12583.8      0.03       0.6       2.2 iNEMO/iII/ptch_int_reg[18]/D      0.00  
-    0:00:24   12583.7      0.03       0.6       2.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:24   12584.7      0.03       0.6       2.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:24   12582.1      0.03       0.6       2.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:24   12607.1      0.03       0.5       2.2                                0.00  
-    0:00:25   12608.5      0.03       0.4       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12626.2      0.02       0.3       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12638.0      0.02       0.2       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12642.6      0.01       0.2       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12639.8      0.01       0.2       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12642.4      0.01       0.2       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:25   12645.1      0.01       0.1       2.2 iNEMO/iII/roll_int_reg[17]/D      0.00  
-    0:00:25   12650.0      0.01       0.1       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:26   12658.3      0.01       0.0       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:26   12662.7      0.00       0.0       2.2 iNEMO/iII/roll_int_reg[26]/D      0.00  
-    0:00:26   12669.9      0.00       0.0       2.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
-    0:00:26   12674.5      0.00       0.0       2.2                                0.00  
-    0:00:26   12670.6      0.00       0.0       2.2                                0.00  
-    0:00:27   12666.9      0.00       0.0       2.2                                0.00  
-    0:00:27   12662.9      0.00       0.0       2.4                                0.00  
+    0:00:16   12034.9      0.29       9.3       1.0                                0.00  
+    0:00:16   12040.4      0.28       9.2       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:16   12042.3      0.26       9.1       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:16   12052.0      0.26       8.9       1.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:17   12088.7      0.25       8.1       1.1 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:17   12093.1      0.24       8.0       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:17   12099.1      0.24       8.0       1.1 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:17   12107.4      0.23       8.0       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:17   12099.1      0.23       7.9       1.1 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:17   12103.7      0.23       7.9       1.1 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:18   12103.5      0.23       7.9       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:18   12112.3      0.22       7.7       1.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:18   12129.1      0.22       7.6       1.2 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:18   12146.0      0.22       7.5       1.2 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:18   12141.3      0.22       7.6       1.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:18   12162.3      0.21       7.3       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:18   12166.7      0.21       7.2       1.3 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:18   12166.1      0.21       7.0       1.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:18   12163.3      0.20       6.9       1.3 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:18   12167.2      0.20       6.5       1.3 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:19   12166.3      0.20       6.4       1.3 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:19   12166.0      0.19       6.3       1.3 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:19   12170.9      0.19       6.2       1.3 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:19   12163.7      0.19       6.2       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:19   12172.7      0.19       6.1       1.4 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:19   12173.9      0.19       6.1       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:19   12179.2      0.19       6.0       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:19   12180.1      0.18       5.9       1.4 iNEMO/iII/ptch_int_reg[18]/D      0.00  
+    0:00:19   12182.2      0.18       5.8       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:19   12182.5      0.18       5.7       1.4 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:19   12186.1      0.18       5.7       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:20   12189.4      0.18       5.7       1.4 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:20   12190.8      0.18       5.6       1.4 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:20   12192.1      0.17       5.5       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:20   12199.6      0.17       5.4       1.4 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:20   12207.2      0.17       5.4       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:20   12210.8      0.17       5.2       1.4 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:20   12227.7      0.16       5.2       1.4 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:20   12229.5      0.16       5.1       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:20   12234.8      0.16       5.0       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:20   12232.8      0.16       4.9       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:20   12237.8      0.15       4.7       1.4 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:20   12237.6      0.15       4.5       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12236.0      0.14       4.4       1.4 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12240.0      0.14       4.2       1.5 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:21   12245.7      0.14       4.1       1.5 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:21   12243.2      0.14       4.0       1.5 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:21   12249.7      0.13       4.0       1.5 iNEMO/iII/roll_int_reg[18]/D      0.00  
+    0:00:21   12247.6      0.13       3.9       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12247.6      0.13       3.9       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12252.6      0.13       3.9       1.5 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:21   12257.9      0.13       3.7       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12253.4      0.13       3.7       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12253.6      0.13       3.6       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:21   12261.0      0.13       3.6       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12264.9      0.12       3.5       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12267.7      0.12       3.5       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12267.7      0.12       3.4       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12271.3      0.12       3.3       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12274.1      0.12       3.3       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12281.0      0.12       3.3       1.5 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12287.8      0.12       3.2       1.5 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:22   12294.0      0.11       3.2       1.5 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:22   12309.2      0.11       3.1       1.6 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12310.3      0.11       3.0       1.6 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12312.9      0.11       3.0       1.6 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:22   12313.2      0.11       3.0       1.6 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12318.0      0.11       2.9       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12318.4      0.11       2.9       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:23   12324.9      0.11       2.9       1.8 iNEMO/iII/roll_int_reg[25]/D      0.00  
+    0:00:23   12327.0      0.11       2.9       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12327.5      0.11       2.9       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12339.7      0.11       2.8       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:23   12338.7      0.11       2.8       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12342.2      0.10       2.8       1.7 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:23   12358.6      0.10       2.7       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:23   12359.3      0.10       2.8       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12352.9      0.10       2.8       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:23   12351.2      0.10       2.7       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:23   12352.6      0.10       2.6       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12351.2      0.10       2.6       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12350.1      0.10       2.6       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12351.0      0.10       2.6       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12356.3      0.09       2.6       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:24   12358.2      0.09       2.5       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12359.6      0.09       2.5       1.8 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:24   12361.1      0.09       2.5       1.8 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:24   12361.6      0.09       2.5       1.8 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:24   12354.7      0.09       2.5       1.7 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:24   12355.2      0.09       2.5       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:25   12353.5      0.09       2.5       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:25   12355.2      0.09       2.5       1.7 iNEMO/iII/ptch_int_reg[24]/D      0.00  
+    0:00:25   12352.9      0.09       2.5       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:25   12355.1      0.09       2.4       1.7 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:25   12355.8      0.09       2.4       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:25   12354.4      0.09       2.4       1.7 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:26   12408.7      0.09       2.4       1.7                                0.00  
+    0:00:27   12425.6      0.08       2.0       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:27   12442.7      0.08       1.9       1.7 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:27   12439.4      0.07       1.8       1.7 iNEMO/iII/roll_int_reg[18]/D      0.00  
+    0:00:27   12442.9      0.07       1.7       1.7 iNEMO/iII/roll_int_reg[18]/D      0.00  
+    0:00:27   12449.3      0.07       1.6       1.8 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:28   12464.8      0.06       1.6       1.8 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:28   12475.9      0.06       1.4       1.8 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:28   12487.4      0.06       1.3       1.9 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:28   12515.1      0.05       1.2       1.9 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:28   12524.0      0.05       1.0       1.9 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:29   12530.6      0.04       0.9       1.9 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:29   12529.2      0.04       0.9       1.9 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:29   12539.9      0.04       0.8       2.0 iNEMO/iII/roll_int_reg[22]/D      0.00  
+    0:00:29   12544.9      0.04       0.7       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:29   12548.2      0.03       0.6       2.0 iNEMO/iII/roll_int_reg[22]/D      0.00  
+    0:00:29   12563.4      0.03       0.5       2.0 iNEMO/iII/roll_int_reg[25]/D      0.00  
+    0:00:29   12570.8      0.02       0.4       2.0 iNEMO/iII/roll_int_reg[24]/D      0.00  
+    0:00:30   12580.5      0.02       0.4       2.0 iNEMO/iII/roll_int_reg[23]/D      0.00  
+    0:00:30   12586.1      0.02       0.3       2.1 iNEMO/iII/roll_int_reg[16]/D      0.00  
+    0:00:30   12581.4      0.02       0.3       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:30   12581.7      0.02       0.3       2.0 iNEMO/iII/roll_int_reg[16]/D      0.00  
+    0:00:30   12583.8      0.02       0.3       2.0 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:30   12583.8      0.01       0.2       1.9 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:30   12587.6      0.01       0.2       1.9 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:30   12602.9      0.01       0.2       2.0 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:31   12616.7      0.01       0.1       2.1 iNEMO/iII/roll_int_reg[26]/D      0.00  
+    0:00:31   12622.7      0.01       0.1       2.1 iNEMO/iII/ptch_int_reg[25]/D      0.00  
+    0:00:31   12631.8      0.01       0.1       2.1 ifly/rght_sum_reg[12]/D        0.00  
+    0:00:31   12638.2      0.00       0.0       2.1 iNEMO/iII/ptch_int_reg[26]/D      0.00  
+    0:00:31   12631.8      0.00       0.0       2.1                                0.00  
+    0:00:32   12629.2      0.00       0.0       2.1                                0.00  
+    0:00:32   12627.8      0.00       0.0       2.1                                0.00  
+    0:00:32   12617.2      0.00       0.0       2.3                                0.00  
 
 
   Beginning Design Rule Fixing  (min_path)  (max_transition)
@@ -1546,12 +1599,16 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:27   12662.9      0.00       0.0       2.4                               -6.22  
-    0:00:27   12602.5      0.00       0.0       1.0 ptch[9]                       -6.22  
-    0:00:27   12574.7      0.00       0.0       0.4 ptch[13]                      -6.22  
-    0:00:28   12570.1      0.00       0.0       0.1 net48790                      -6.22  
-    0:00:28   12565.9      0.00       0.0       0.0 iNEMO/iII/roll_int_reg[23]/D     -6.22  
-    0:00:28   12564.1      0.00       0.0       0.0                               -6.22  
+    0:00:32   12617.2      0.00       0.0       2.3                               -6.22  
+    0:00:33   12575.7      0.00       0.0       1.1 net43882                      -6.22  
+    0:00:33   12536.9      0.00       0.0       0.4 net48765                      -6.22  
+    0:00:33   12512.6      0.00       0.0       0.2 roll[4]                       -6.23  
+    0:00:33   12497.6      0.00       0.0       0.1 net43988                      -6.23  
+    0:00:34   12495.8      0.01       0.0       0.0 iNEMO/iII/roll_int_reg[22]/D     -6.23  
+    0:00:34   12502.5      0.00       0.0       0.0 iNEMO/iII/roll_int_reg[24]/D     -6.23  
+    0:00:34   12502.9      0.00       0.0       0.0 iNEMO/iII/ptch_int_reg[26]/D     -6.23  
+    0:00:34   12496.5      0.00       0.0       0.0 iNEMO/iII/roll_int_reg[23]/D     -6.23  
+    0:00:34   12496.0      0.00       0.0       0.0                               -6.23  
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -1561,38 +1618,37 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:28   12564.1      0.00       0.0       0.0                               -6.22  
-    0:00:28   12564.1      0.00       0.0       0.0                               -6.22  
-    0:00:29   12364.4      0.02       0.3       0.0                               -6.22  
-    0:00:29   12321.0      0.02       0.3       0.0                               -6.22  
-    0:00:30   12303.0      0.03       0.3       0.0                               -6.22  
-    0:00:30   12302.5      0.03       0.3       0.0                               -6.22  
-    0:00:30   12302.5      0.03       0.3       0.0                               -6.22  
-    0:00:30   12302.5      0.03       0.3       0.0                               -6.22  
-    0:00:30   12304.8      0.01       0.0       0.0                               -6.22  
-    0:00:30   12313.6      0.00       0.0       0.0                               -6.22  
-    0:00:30   12313.6      0.00       0.0       0.0                               -6.22  
-    0:00:30   12052.2      0.10       2.1       0.0                               -6.19  
-    0:00:30   11989.7      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:30   11980.0      0.11       2.1       0.0                               -6.19  
-    0:00:31   12016.7      0.05       0.9       0.0 iNEMO/iII/roll_int_reg[24]/D     -6.19  
-    0:00:31   12031.9      0.03       0.5       0.0 iNEMO/iII/roll_int_reg[18]/D     -6.19  
-    0:00:31   12058.7      0.02       0.3       0.0                               -6.19  
-    0:00:31   12065.9      0.02       0.2       0.0                               -6.19  
-    0:00:31   12077.4      0.01       0.2       0.0                               -6.19  
-    0:00:31   12092.9      0.01       0.1       0.0                               -6.19  
-    0:00:32   12098.4      0.00       0.0       0.0                               -6.19  
-    0:00:32   12104.4      0.00       0.0       0.0                               -6.19  
-    0:00:32   12142.0      0.00       0.0       0.0 iNEMO/iII/ay_accum_reg[0]/D     -5.38  
-    0:00:32   12218.9      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[1][0]/D     -3.79  
-    0:00:32   12307.1      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[7][8]/D     -2.07  
-    0:00:32   12395.3      0.00       0.0       0.0 ifly/get_roll/prev_err_reg[2][2]/D     -0.26  
-    0:00:32   12412.4      0.00       0.0       0.0                                0.00  
+    0:00:34   12496.0      0.00       0.0       0.0                               -6.23  
+    0:00:34   12496.0      0.00       0.0       0.0                               -6.23  
+    0:00:35   12331.9      0.01       0.1       0.0                               -6.23  
+    0:00:35   12302.1      0.01       0.1       0.0                               -6.23  
+    0:00:36   12293.1      0.01       0.1       0.0                               -6.23  
+    0:00:36   12292.6      0.01       0.1       0.0                               -6.23  
+    0:00:36   12292.6      0.01       0.1       0.0                               -6.23  
+    0:00:36   12292.6      0.01       0.1       0.0                               -6.23  
+    0:00:36   12293.3      0.00       0.0       0.0                               -6.23  
+    0:00:36   12293.8      0.00       0.0       0.0                               -6.23  
+    0:00:36   12299.0      0.00       0.0       0.0                               -6.23  
+    0:00:37   12044.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   11975.4      0.15       2.9       0.0                               -6.17  
+    0:00:37   11967.3      0.15       2.9       0.0                               -6.17  
+    0:00:37   11963.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   11963.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   11963.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   11963.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   11963.8      0.15       2.9       0.0                               -6.17  
+    0:00:37   12003.1      0.06       1.3       0.0 iNEMO/iII/roll_int_reg[23]/D     -6.17  
+    0:00:37   12041.8      0.04       0.8       0.0 iNEMO/iII/ptch_int_reg[21]/D     -6.19  
+    0:00:37   12061.2      0.02       0.3       0.0                               -6.19  
+    0:00:38   12064.3      0.01       0.2       0.0                               -6.19  
+    0:00:38   12070.9      0.01       0.1       0.0                               -6.19  
+    0:00:38   12074.1      0.01       0.1       0.0                               -6.19  
+    0:00:38   12083.8      0.00       0.0       0.0                               -6.19  
+    0:00:38   12094.9      0.00       0.0       0.0 ifly/get_yaw/prev_err_reg[13][9]/D     -6.03  
+    0:00:39   12167.2      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[6][3]/D     -4.55  
+    0:00:39   12255.7      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[1][2]/D     -2.78  
+    0:00:39   12343.9      0.00       0.0       0.0 ifly/get_ptch/prev_err_reg[10][0]/D     -0.99  
+    0:00:39   12395.3      0.00       0.0       0.0                                0.00  
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -1601,18 +1657,12 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Optimization Complete
   ---------------------
 Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-1
-# Write out verilog netlist and area reports
-report_timing -delay min > Quad_min_delay.rpt
-report_timing -delay max > Quad_max_delay.rpt
-report_area > QuadCopter_area.txt
-report_area
  
 ****************************************
 Report : area
 Design : QuadCopter
 Version: M-2016.12
-Date   : Fri Dec  8 10:20:17 2017
+Date   : Mon Dec 11 00:04:47 2017
 ****************************************
 
 Library(s) Used:
@@ -1620,28 +1670,21 @@ Library(s) Used:
     tcbn40lpbwptc (File: /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db)
 
 Number of ports:                           25
-Number of nets:                          5973
-Number of cells:                         5468
-Number of combinational cells:           4301
-Number of sequential cells:              1167
+Number of nets:                          5960
+Number of cells:                         5474
+Number of combinational cells:           4315
+Number of sequential cells:              1159
 Number of macros/black boxes:               0
-Number of buf/inv:                       1629
-Number of references:                     266
+Number of buf/inv:                       1649
+Number of references:                     265
 
-Combinational area:               6855.080415
-Buf/Inv area:                     1258.614028
-Noncombinational area:            5557.305704
+Combinational area:               6863.018415
+Buf/Inv area:                     1264.435228
+Noncombinational area:            5532.256909
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 12412.386119
+Total cell area:                 12395.275324
 Total area:                 undefined
-1
-write -format verilog QuadCopter -output QuadCopter.vg
 Writing verilog file '/userspace/l/lafford/ece551/project/final/synthesis/QuadCopter.vg'.
 1
-1
-dc_shell> ex[K
-Information: Interrupting current command. (INT-2)
-Information: One more interrupt will exit process. (INT-3)
-Information: Process terminated by interrupt. (INT-4)

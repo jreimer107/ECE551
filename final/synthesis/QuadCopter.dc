@@ -16,6 +16,8 @@ read_file -format sverilog ../SPI/SPI_mstr16.sv
 read_file -format sverilog ../UART/UART.v
 read_file -format sverilog ../UART/UART_rx.sv
 read_file -format sverilog ../UART/UART_tx.sv
+read_file -format sverilog ../UART/UART_rx_KEY.sv
+read_file -format sverilog ../UART/UART_tx_KEY.sv
 read_file -format sverilog ../UART/UART_wrapper.sv
 
 # top_level
