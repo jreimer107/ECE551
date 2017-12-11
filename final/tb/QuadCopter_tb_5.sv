@@ -104,7 +104,7 @@ initial begin
     fork : detect_air
         begin
             // Timeout check
-            #3000000
+            #300000000
             $display("%t : timeout waiting for airborne", $time);
             $stop;
             disable detect_air;
