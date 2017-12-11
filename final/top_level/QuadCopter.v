@@ -1,5 +1,7 @@
 module QuadCopter(clk,RST_n,SS_n,SCLK,MOSI,MISO,INT,RX,TX,LED,FRNT,BCK,LFT,RGHT,
                   SS_A2D_n,SCLK_A2D,MOSI_A2D,MISO_A2D);
+                  
+parameter COUNT_WIDTH = 11;
 
   input clk;			// 50MHz clock
   input RST_n;			// Reset from push button
@@ -75,7 +77,7 @@ module QuadCopter(clk,RST_n,SS_n,SCLK,MOSI,MISO,INT,RX,TX,LED,FRNT,BCK,LFT,RGHT,
   //////////////////////////////////////////////////////////
   // Instantiate interface to inertial sensor (ST iNEMO) //
   ////////////////////////////////////////////////////////
-  inert_intf iNEMO(.clk(clk),.rst_n(rst_n),.ptch(ptch),.roll(roll),
+  inert_intf #(COUNT_WIDTH) iNEMO(.clk(clk),.rst_n(rst_n),.ptch(ptch),.roll(roll),
                    .yaw(yaw),.strt_cal(strt_cal),.cal_done(cal_done),
 					.vld(vld),.SS_n(SS_n),.SCLK(SCLK),
 				     .MOSI(MOSI),.MISO(MISO),.INT(INT));

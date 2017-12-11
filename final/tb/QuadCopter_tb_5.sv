@@ -43,7 +43,7 @@ ADC128S iA2D(.clk(clk),.rst_n(RST_n),.SS_n(SS_A2D_n),.SCLK(SCLK_A2D),
              .MISO(MISO_A2D),.MOSI(MOSI_A2D));			
 	 
 ////// Instantiate DUT ////////
-QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO),
+QuadCopter #(3) iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO),
                 .INT(INT),.RX(RX),.TX(TX),.LED(),.FRNT(frnt_ESC),.BCK(back_ESC),
 				.LFT(left_ESC),.RGHT(rght_ESC),.SS_A2D_n(SS_A2D_n),.SCLK_A2D(SCLK_A2D),
 				.MOSI_A2D(MOSI_A2D),.MISO_A2D(MISO_A2D));
@@ -58,7 +58,26 @@ initial begin
     // get stuff going
     init_task(clk,RST_n,send_cmd);
 
-    data = 16'h00FF;  
+    send_cmd_task(clk, 8'H06, send_cmd, cmd_to_copter); // calibrate
+
+    //wait for response
+    fork : cal
+        begin
+            // Timeout check
+            #300000000
+            $display("%t : timeout waiting for calibration", $time);
+            $stop;
+            disable cal;
+        end
+        begin
+            // Wait on signal
+            @(posedge resp_rdy);
+            $display("calibration done");
+            disable cal;
+        end
+    join
+    
+	data = 16'h01FF;    
     send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
 
     //wait for response
@@ -66,7 +85,7 @@ initial begin
         begin
             // Timeout check
             #3000000
-            $display("%t : timeout", $time);
+            $display("%t : timeout waiting to set thrust", $time);
             $stop;
             disable chk;
         end
@@ -80,8 +99,26 @@ initial begin
 
     check_posack_task(resp);
     check_thrust_task(iDUT.ifly.thrst,data);
-
-	#3000000 // let it get off the ground?
+    
+    // check that it eventually gets off the ground
+    fork : chk
+        begin
+            // Timeout check
+            #3000000
+            $display("%t : timeout waiting for airborne", $time);
+            $stop;
+            disable chk;
+        end
+        begin
+            // Wait on signal
+            @(posedge iQuad.airborne);
+            $display("detected airborne");
+            disable chk;
+        end
+    join
+    
+    
+    end
 
     $display("Thrust test passed");
     $stop;
