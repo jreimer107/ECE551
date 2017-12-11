@@ -71,14 +71,11 @@ initial begin
 
     //check to make sure decrementing by 1
     send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
-
-
-	repeat (300000000) @(negedge clk)
+    check_response_task(resp_rdy_f);
     check_batt_task(resp, 8'hBF);
 
     send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
-
-	repeat (300000000) @(negedge clk)
+    check_response_task(resp_rdy_f);
     check_batt_task(resp, 8'hBE);
 
 

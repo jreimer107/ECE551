@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 task automatic send_cmd_task(ref reg clk,
                    input reg [7:0] cmd_num,
                    ref reg send_cmd,
@@ -47,7 +48,7 @@ endtask
 task check_batt_task(input reg [7:0] resp, input reg [7:0] expected);
     begin
         if(resp === expected)begin
-            $display("batt Received.");
+            $display("good batt Received: %h", resp);
         end else begin
             $display("BAD BATT RECEIVED. FAILURE. %h",resp);
             $stop;
