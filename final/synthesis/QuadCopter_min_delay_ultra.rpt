@@ -1,0 +1,39 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : QuadCopter
+Version: M-2016.12
+Date   : Mon Dec 11 10:19:41 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: iUART/iUART/iTX/shift_reg_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: TX (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  QuadCopter         ZeroWireload          tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  iUART/iUART/iTX/shift_reg_reg[0]/CP (DFSNQD1BWP)        0.00 #     0.00 r
+  iUART/iUART/iTX/shift_reg_reg[0]/Q (DFSNQD1BWP)         0.09       0.09 r
+  TX (out)                                                0.00       0.09 r
+  data arrival time                                                  0.09
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

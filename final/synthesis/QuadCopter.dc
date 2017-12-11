@@ -21,9 +21,9 @@ read_file -format sverilog ../UART/UART_tx_KEY.sv
 read_file -format sverilog ../UART/UART_wrapper.sv
 
 # top_level
-#read_file -format sverilog ../top_level/PB_release.sv
+read_file -format sverilog ../top_level/PB_release.sv
 read_file -format sverilog ../top_level/QuadCopter.v
-#read_file -format sverilog ../top_level/reset_synch.v
+read_file -format sverilog ../top_level/reset_synch.v
 
 # things that were being included that don't actually need to be
 # read_file -format sverilog ../models/ADC128S.sv
@@ -71,8 +71,8 @@ check_design
 compile -map_effort high
 
 # Write out verilog netlist and area reports
-report_timing -delay min > Quad_min_delay.rpt
-report_timing -delay max > Quad_max_delay.rpt
+report_timing -delay min > QuadCopter_min_delay.rpt
+report_timing -delay max > QuadCopter_max_delay.rpt
 report_area > QuadCopter_area.txt
 report_area
 

@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : QuadCopter
+Version: M-2016.12
+Date   : Mon Dec 11 10:19:41 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: iNEMO/iSPI/state_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: SCLK (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  QuadCopter         ZeroWireload          tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  iNEMO/iSPI/state_reg[0]/CP (DFCNQD1BWP)                 0.00 #     0.00 r
+  iNEMO/iSPI/state_reg[0]/Q (DFCNQD1BWP)                  0.13       0.13 f
+  U1888/ZN (NR2D0BWP)                                     0.04       0.17 r
+  U2677/ZN (CKND0BWP)                                     0.03       0.20 f
+  U2678/ZN (CKND2D0BWP)                                   0.02       0.22 r
+  SCLK (out)                                              0.00       0.22 r
+  data arrival time                                                  0.22
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
