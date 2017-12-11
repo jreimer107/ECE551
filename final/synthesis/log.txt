@@ -1688,3 +1688,1515 @@ Total cell area:                 12395.275324
 Total area:                 undefined
 Writing verilog file '/userspace/l/lafford/ece551/project/final/synthesis/QuadCopter.vg'.
 1
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv
+
+Statistics for case statements in always block at line 85 in file
+	'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           101            |    auto/auto     |
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 56 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     d_ptch_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 61 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     d_roll_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 66 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      d_yaw_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 71 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      thrst_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 76 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  mtr_ramp_tmr_reg   | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 82 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine cmd_cfg line 183 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   motors_off_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/cmd_cfg.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'cmd_cfg'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESC_interface.sv
+
+Inferred memory devices in process
+	in routine ESC_interface line 18 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     setting_reg     | Flip-flop |  17   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ESC_interface line 31 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |  18   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ESC_interface line 39 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESC_interface.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       PWM_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'ESC_interface'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESCs.sv
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/ESCs.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'ESCs'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:89: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:98: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:107: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:117: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:121: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:125: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:129: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:133: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:134: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:135: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:136: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine flght_cntrl line 79 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    frnt_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 88 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bck_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 97 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lft_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine flght_cntrl line 106 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rght_sum_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:186: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:189: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:191: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:196: signed to unsigned assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv:200: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine get_terms line 162 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    prev_err_reg     | Flip-flop |  140  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine get_terms line 185 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     err_sat_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/flght_cntrl.db'. (DDB-24)
+Loaded 2 designs.
+Current design is 'flght_cntrl'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv
+
+Statistics for case statements in always block at line 95 in file
+	'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           111            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inert_intf line 46 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     INT_ff2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     INT_ff1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 58 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      timer_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 65 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ptch_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 70 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     roll_rt_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 75 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_rt_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 80 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ax_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 85 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ay_reg        | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inert_intf line 91 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inert_intf.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'inert_intf'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:158: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:159: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:161: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:162: The value 000000 is too large for the numeric data type being used (VER-1)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:132: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:133: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:134: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:148: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:149: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:150: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:164: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:165: signed to unsigned conversion occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:180: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:181: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:192: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:193: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:194: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:202: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:204: signed to unsigned part selection occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:212: unsigned to signed assignment occurs. (VER-318)
+Warning:  /userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv:214: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 56 in file
+	'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            66            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 47 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 109 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    smpl_cntr_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 117 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_int_reg     | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 137 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     yaw_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ptch_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    roll_off_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 156 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ay_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ax_accum_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 168 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    avg_cntr_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine inertial_integrator line 174 in file
+		'/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ay_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ax_avg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/flght_cntrl/inertial_integrator.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'inertial_integrator'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/SPI/A2D_intf.sv
+
+Statistics for case statements in always block at line 30 in file
+	'/userspace/j/jreimer2/ece551/Project/final/SPI/A2D_intf.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 25 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine A2D_intf line 59 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/A2D_intf.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnv_cmplt_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/SPI/A2D_intf.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'A2D_intf'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv
+
+Statistics for case statements in always block at line 44 in file
+	'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 19 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sclk_div_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 25 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MISO_smpl_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 27 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 33 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bitcnt_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 40 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SPI_mstr16 line 93 in file
+		'/userspace/j/jreimer2/ece551/Project/final/SPI/SPI_mstr16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 1 design.
+Current design is 'SPI_mstr16'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART.v
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv
+
+Statistics for case statements in always block at line 59 in file
+	'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            65            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rx line 23 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rx_stable_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   rx_flopped_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 35 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 42 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 51 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 55 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx line 84 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART_rx'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv
+
+Statistics for case statements in always block at line 48 in file
+	'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_tx line 20 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 27 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 35 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  tx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 42 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx line 69 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART_tx'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv
+
+Statistics for case statements in always block at line 94 in file
+	'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 26 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 35 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 46 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 60 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 67 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_rx_KEY line 79 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART_rx_KEY.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART_rx_KEY'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv
+
+Statistics for case statements in always block at line 78 in file
+	'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            87            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 24 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 34 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 45 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 56 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_tx_KEY line 67 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART_tx_KEY.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART_tx_KEY'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv
+
+Statistics for case statements in always block at line 44 in file
+	'/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 31 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cmd_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 35 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 39 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_wrapper line 82 in file
+		'/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     cmd_rdy_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/UART/UART_wrapper.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'UART_wrapper'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/top_level/PB_release.sv
+
+Inferred memory devices in process
+	in routine PB_release line 8 in file
+		'/userspace/j/jreimer2/ece551/Project/final/top_level/PB_release.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    released_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       f1_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       f2_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       f3_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/top_level/PB_release.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'PB_release'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/top_level/QuadCopter.v
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/top_level/QuadCopter.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'QuadCopter'.
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /userspace/j/jreimer2/ece551/Project/final/top_level/reset_synch.v
+
+Inferred memory devices in process
+	in routine reset_synch line 7 in file
+		'/userspace/j/jreimer2/ece551/Project/final/top_level/reset_synch.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rst_n_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    btwn_ffs_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/userspace/j/jreimer2/ece551/Project/final/top_level/reset_synch.db'. (DDB-24)
+Loaded 1 design.
+Current design is 'reset_synch'.
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+
+  Linking design 'QuadCopter'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  QuadCopter                  /userspace/j/jreimer2/ece551/Project/final/top_level/QuadCopter.db
+  tcbn40lpbwptc (library)     /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tcbn40lpbwp_120b/tcbn40lpbwptc.db
+  tpfn45gsgv18tc (library)    /cae/apps/data/tsmclibs-2013/digital/Front_End/timing_power_noise/NLDM/tpfn45gsgv18_120a/tpfn45gsgv18tc.db
+  * (33 designs)              /userspace/j/jreimer2/ece551/Project/final/synthesis/inert_intf_COUNT_WIDTH11.db, etc
+
+Warning: Unable to resolve reference 'SPI_mstr16_0' in 'inert_intf_COUNT_WIDTH11'. (LINK-5)
+Warning: Unable to resolve reference 'SPI_mstr16_0' in 'inert_intf_COUNT_WIDTH11'. (LINK-5)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'QuadCopter'. (UIO-59)
+
+Information: There are 261 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition NCCOM set on design QuadCopter has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tpfn45gsgv18tc is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'reset_synch'
+  Processing 'SPI_mstr16'
+  Processing 'A2D_intf'
+  Processing 'ESC_interface_0'
+  Processing 'ESCs'
+  Processing 'get_terms_0'
+  Processing 'flght_cntrl'
+  Processing 'inert_intf_COUNT_WIDTH11_DW01_inc_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_3'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_2'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_inc_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_8'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_5'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_2'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_1'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_0'
+  Processing 'inertial_integrator_SMPL_CNT_WIDTH11'
+  Processing 'inert_intf_COUNT_WIDTH11'
+  Processing 'cmd_cfg'
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'UART_rx_KEY'
+  Processing 'UART_tx_KEY'
+  Processing 'UART'
+  Processing 'UART_wrapper'
+  Processing 'QuadCopter'
+Warning: Unable to resolve reference 'SPI_mstr16_0' in 'inert_intf_COUNT_WIDTH11'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'QuadCopter' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'SPI_mstr16_DW01_inc_0'
+  Processing 'SPI_mstr16_DW01_inc_1'
+  Processing 'ESC_interface_1_DW01_inc_0'
+  Processing 'ESC_interface_1_DW01_cmp2_0'
+  Processing 'ESC_interface_1_DW01_add_0'
+  Processing 'ESC_interface_1_DW01_add_1'
+  Processing 'ESC_interface_2_DW01_inc_0'
+  Processing 'ESC_interface_2_DW01_cmp2_0'
+  Processing 'ESC_interface_2_DW01_add_0'
+  Processing 'ESC_interface_2_DW01_add_1'
+  Processing 'ESC_interface_3_DW01_inc_0'
+  Processing 'ESC_interface_3_DW01_cmp2_0'
+  Processing 'ESC_interface_3_DW01_add_0'
+  Processing 'ESC_interface_3_DW01_add_1'
+  Processing 'ESC_interface_0_DW01_inc_0'
+  Processing 'ESC_interface_0_DW01_cmp2_0'
+  Processing 'ESC_interface_0_DW01_add_0'
+  Processing 'ESC_interface_0_DW01_add_1'
+  Processing 'flght_cntrl_DW01_add_0'
+  Processing 'flght_cntrl_DW01_add_1'
+  Processing 'flght_cntrl_DW01_add_2'
+  Processing 'flght_cntrl_DW01_add_3'
+  Processing 'flght_cntrl_DW01_sub_0'
+  Processing 'flght_cntrl_DW01_add_4'
+  Processing 'flght_cntrl_DW01_sub_1'
+  Processing 'flght_cntrl_DW01_add_5'
+  Processing 'flght_cntrl_DW01_sub_2'
+  Processing 'flght_cntrl_DW01_add_6'
+  Processing 'flght_cntrl_DW01_sub_3'
+  Processing 'flght_cntrl_DW01_add_7'
+  Processing 'flght_cntrl_DW01_sub_4'
+  Processing 'flght_cntrl_DW01_sub_5'
+  Processing 'flght_cntrl_DW01_add_8'
+  Processing 'flght_cntrl_DW01_sub_6'
+  Processing 'flght_cntrl_DW01_add_9'
+  Processing 'get_terms_1_DW02_mult_0'
+  Processing 'get_terms_1_DW01_add_0'
+  Processing 'get_terms_1_DW01_sub_0'
+  Processing 'get_terms_1_DW01_add_1'
+  Processing 'get_terms_1_DW01_sub_1'
+  Processing 'get_terms_2_DW02_mult_0'
+  Processing 'get_terms_2_DW01_add_0'
+  Processing 'get_terms_2_DW01_sub_0'
+  Processing 'get_terms_2_DW01_add_1'
+  Processing 'get_terms_2_DW01_sub_1'
+  Processing 'get_terms_0_DW02_mult_0'
+  Processing 'get_terms_0_DW01_add_0'
+  Processing 'get_terms_0_DW01_sub_0'
+  Processing 'get_terms_0_DW01_add_1'
+  Processing 'get_terms_0_DW01_sub_1'
+  Processing 'cmd_cfg_DW01_inc_0'
+  Processing 'UART_rx_KEY_DW01_dec_0'
+  Processing 'UART_tx_KEY_DW01_dec_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'get_terms_0_DW01_sub_2'
+  Mapping 'get_terms_0_DW01_sub_2'
+  Structuring 'get_terms_2_DW01_sub_2'
+  Mapping 'get_terms_2_DW01_sub_2'
+  Structuring 'get_terms_1_DW01_sub_2'
+  Mapping 'get_terms_1_DW01_sub_2'
+  Structuring 'get_terms_2'
+  Mapping 'get_terms_2'
+  Structuring 'get_terms_1'
+  Mapping 'get_terms_1'
+  Structuring 'ESC_interface_3'
+  Mapping 'ESC_interface_3'
+  Structuring 'ESC_interface_2'
+  Mapping 'ESC_interface_2'
+  Structuring 'ESC_interface_1'
+  Mapping 'ESC_interface_1'
+  Structuring 'UART_rx_KEY'
+  Mapping 'UART_rx_KEY'
+  Structuring 'UART_tx_KEY'
+  Mapping 'UART_tx_KEY'
+  Structuring 'SPI_mstr16'
+  Mapping 'SPI_mstr16'
+  Structuring 'ESC_interface_0'
+  Mapping 'ESC_interface_0'
+  Structuring 'get_terms_0'
+  Mapping 'get_terms_0'
+  Structuring 'inertial_integrator_SMPL_CNT_WIDTH11'
+  Mapping 'inertial_integrator_SMPL_CNT_WIDTH11'
+  Structuring 'A2D_intf'
+  Mapping 'A2D_intf'
+  Structuring 'ESCs'
+  Mapping 'ESCs'
+  Structuring 'flght_cntrl'
+  Mapping 'flght_cntrl'
+  Structuring 'inert_intf_COUNT_WIDTH11'
+  Mapping 'inert_intf_COUNT_WIDTH11'
+  Structuring 'cmd_cfg'
+  Mapping 'cmd_cfg'
+  Structuring 'UART_wrapper'
+  Mapping 'UART_wrapper'
+Information: The register 'iESC/bck_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/bck_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/lft_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/rght_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'iESC/frnt_ESC/setting_reg[3]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   12189.1      0.00       0.0       3.1                          
+    0:00:05   12189.1      0.00       0.0       3.1                          
+    0:00:05   12189.1      0.00       0.0       3.1                          
+    0:00:06   12189.1      0.00       0.0       3.1                          
+    0:00:06   12189.1      0.00       0.0       3.1                          
+    0:00:07   10698.0      0.00       0.0       3.1                          
+    0:00:07   10696.9      0.00       0.0       3.1                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10696.9      0.00       0.0       0.7                          
+    0:00:08   10698.8      0.00       0.0       0.4                          
+    0:00:08   10699.5      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.1      0.00       0.0       0.4                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   10700.1      0.00       0.0       0.4                          
+    0:00:08   10700.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08   10700.6      0.00       0.0       0.0                          
+    0:00:08   10700.6      0.00       0.0       0.0                          
+    0:00:09   10687.4      0.00       0.0       0.0                          
+    0:00:09   10685.3      0.00       0.0       0.0                          
+    0:00:09   10684.7      0.00       0.0       0.0                          
+    0:00:09   10684.2      0.00       0.0       0.0                          
+    0:00:09   10684.2      0.00       0.0       0.0                          
+    0:00:09   10684.2      0.00       0.0       0.0                          
+    0:00:09   10684.2      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+    0:00:09   10678.0      0.00       0.0       0.0                          
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Unable to resolve reference 'SPI_mstr16_0' in 'inert_intf_COUNT_WIDTH11'. (LINK-5)
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12
+Date:        Mon Dec 11 10:41:54 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    266
+    Unconnected ports (LINT-28)                                   258
+    Constant outputs (LINT-52)                                      8
+
+Cells                                                              48
+    Nets connected to multiple pins on same cell (LINT-33)         48
+--------------------------------------------------------------------------------
+
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', port 'PRODUCT[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_5', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_5', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', port 'PRODUCT[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_sub_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'SUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_4', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'SUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_1_DW01_add_1', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_1_DW01_add_1', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_1_DW01_add_1', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_1_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_1_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_2_DW01_add_1', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_2_DW01_add_1', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_2_DW01_add_1', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_2_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_2_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_3_DW01_add_1', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_3_DW01_add_1', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_3_DW01_add_1', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_3_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_3_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_0_DW01_add_1', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_0_DW01_add_1', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_0_DW01_add_1', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_0_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'ESC_interface_0_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_0', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_0', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_0', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_4', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_4', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_5', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_2', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_2', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_2', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_6', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_6', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_4', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_4', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_4', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_4', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_5', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_5', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_5', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_5', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_5', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'flght_cntrl_DW01_sub_6', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW02_mult_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW02_mult_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW02_mult_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW02_mult_0', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW01_sub_1', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW01_sub_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW01_sub_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW02_mult_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW02_mult_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW02_mult_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW02_mult_0', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW01_sub_1', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW01_sub_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW01_sub_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW02_mult_0', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW02_mult_0', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW02_mult_0', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW02_mult_0', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW01_sub_1', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW01_sub_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW01_sub_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_0_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_2_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW01_sub_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'get_terms_1_DW01_sub_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'QuadCopter', the same net is connected to more than one pin on submodule 'iA2D'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'chnnl[2]', 'chnnl[1]'', 'chnnl[0]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_0_root_add_107_5'. (LINT-33)
+   Net 'N198' is connected to pins 'A[12]', 'A[11]'', 'A[10]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_1_root_add_107_5'. (LINT-33)
+   Net 'yaw_dterm[11]' is connected to pins 'A[12]', 'A[11]''.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_add_107_5'. (LINT-33)
+   Net 'net7523' is connected to pins 'A[12]', 'A[11]'', 'A[10]', 'CI'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_add_107_5'. (LINT-33)
+   Net 'roll_pterm[9]' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_0_root_add_98_3'. (LINT-33)
+   Net 'roll_dterm[11]' is connected to pins 'B[12]', 'B[11]''.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_1_root_add_98_3'. (LINT-33)
+   Net 'N146' is connected to pins 'B[12]', 'B[11]'', 'B[10]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_add_98_3'. (LINT-33)
+   Net 'net7523' is connected to pins 'A[12]', 'A[11]'', 'A[10]', 'CI'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_add_98_3'. (LINT-33)
+   Net 'yaw_pterm[9]' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_0_root_sub_89_2'. (LINT-33)
+   Net 'yaw_dterm[11]' is connected to pins 'B[12]', 'B[11]''.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_1_root_sub_89_2'. (LINT-33)
+   Net 'N94' is connected to pins 'B[12]', 'B[11]'', 'B[10]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_sub_89_2'. (LINT-33)
+   Net 'net7523' is connected to pins 'A[12]', 'A[11]'', 'A[10]', 'CI'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'add_3_root_sub_89_2'. (LINT-33)
+   Net 'ptch_pterm[9]' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_0_root_sub_80_4'. (LINT-33)
+   Net 'N42' is connected to pins 'B[12]', 'B[11]'', 'B[10]'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_1_root_sub_80_4'. (LINT-33)
+   Net 'yaw_dterm[11]' is connected to pins 'B[12]', 'B[11]''.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_3_root_sub_80_4'. (LINT-33)
+   Net 'net7523' is connected to pins 'A[12]', 'A[11]'', 'A[10]', 'CI'.
+Warning: In design 'flght_cntrl', the same net is connected to more than one pin on submodule 'sub_3_root_sub_80_4'. (LINT-33)
+   Net 'ptch_pterm[9]' is connected to pins 'B[12]', 'B[11]'', 'B[10]', 'B[9]'.
+Warning: In design 'ESCs', the same net is connected to more than one pin on submodule 'frnt_ESC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'OFF[9]', 'OFF[8]'', 'OFF[7]', 'OFF[6]', 'OFF[5]', 'OFF[4]', 'OFF[3]', 'OFF[2]', 'OFF[1]', 'OFF[0]'.
+Warning: In design 'ESCs', the same net is connected to more than one pin on submodule 'bck_ESC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'OFF[9]', 'OFF[8]'', 'OFF[7]', 'OFF[6]', 'OFF[5]', 'OFF[4]', 'OFF[3]', 'OFF[2]', 'OFF[1]', 'OFF[0]'.
+Warning: In design 'ESCs', the same net is connected to more than one pin on submodule 'lft_ESC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'OFF[9]', 'OFF[8]'', 'OFF[7]', 'OFF[6]', 'OFF[5]', 'OFF[4]', 'OFF[3]', 'OFF[2]', 'OFF[1]', 'OFF[0]'.
+Warning: In design 'ESCs', the same net is connected to more than one pin on submodule 'rght_ESC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'OFF[9]', 'OFF[8]'', 'OFF[7]', 'OFF[6]', 'OFF[5]', 'OFF[4]', 'OFF[3]', 'OFF[2]', 'OFF[1]', 'OFF[0]'.
+Warning: In design 'A2D_intf', the same net is connected to more than one pin on submodule 'iSPI'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'cmd[15]', 'cmd[14]'', 'cmd[10]', 'cmd[9]', 'cmd[8]', 'cmd[7]', 'cmd[6]', 'cmd[5]', 'cmd[4]', 'cmd[3]', 'cmd[2]', 'cmd[1]', 'cmd[0]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'add_165'. (LINT-33)
+   Net 'ay[15]' is connected to pins 'B[19]', 'B[18]'', 'B[17]', 'B[16]', 'B[15]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'add_164'. (LINT-33)
+   Net 'ax[15]' is connected to pins 'B[19]', 'B[18]'', 'B[17]', 'B[16]', 'B[15]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'add_134'. (LINT-33)
+   Net 'yaw_comp[15]' is connected to pins 'B[26]', 'B[25]'', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'mult_203'. (LINT-33)
+   Net 'n2' is connected to pins 'B[9]', 'B[7]'', 'B[5]', 'B[4]', 'B[3]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'mult_203'. (LINT-33)
+   Net 'n1' is connected to pins 'B[8]', 'B[6]'', 'B[2]', 'B[1]', 'B[0]', 'TC'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'add_1_root_add_133_2'. (LINT-33)
+   Net 'roll_comp[15]' is connected to pins 'B[26]', 'B[25]'', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'mult_201'. (LINT-33)
+   Net 'n2' is connected to pins 'B[9]', 'B[7]'', 'B[5]', 'B[4]', 'B[3]'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'mult_201'. (LINT-33)
+   Net 'n1' is connected to pins 'B[8]', 'B[6]'', 'B[2]', 'B[1]', 'B[0]', 'TC'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11', the same net is connected to more than one pin on submodule 'add_1_root_add_132_2'. (LINT-33)
+   Net 'ptch_comp[15]' is connected to pins 'B[26]', 'B[25]'', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]'.
+Warning: In design 'get_terms_0', the same net is connected to more than one pin on submodule 'mult_205'. (LINT-33)
+   Net 'n1' is connected to pins 'B[2]', 'B[1]'', 'B[0]', 'TC'.
+Warning: In design 'get_terms_0', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'actual[15]' is connected to pins 'A[16]', 'A[15]''.
+Warning: In design 'get_terms_0', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'desired[15]' is connected to pins 'B[16]', 'B[15]''.
+Warning: In design 'ESC_interface_0', the same net is connected to more than one pin on submodule 'add_16'. (LINT-33)
+   Net 'n4' is connected to pins 'A[11]', 'B[11]'', 'B[10]', 'CI'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', the same net is connected to more than one pin on submodule 'FS_1'. (LINT-33)
+   Net 'ab[16][7]' is connected to pins 'A[24]', 'A[23]''.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_0', the same net is connected to more than one pin on submodule 'FS_1'. (LINT-33)
+   Net 'n23' is connected to pins 'B[24]', 'B[23]'', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]', 'B[0]', 'CI'.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', the same net is connected to more than one pin on submodule 'FS_1'. (LINT-33)
+   Net 'ab[15][7]' is connected to pins 'A[23]', 'A[22]''.
+Warning: In design 'inertial_integrator_SMPL_CNT_WIDTH11_DW02_mult_1', the same net is connected to more than one pin on submodule 'FS_1'. (LINT-33)
+   Net 'n23' is connected to pins 'B[23]', 'B[22]'', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'B[1]', 'B[0]', 'CI'.
+Warning: In design 'ESC_interface_1', the same net is connected to more than one pin on submodule 'add_16'. (LINT-33)
+   Net 'n54' is connected to pins 'A[11]', 'B[11]'', 'B[10]', 'CI'.
+Warning: In design 'ESC_interface_2', the same net is connected to more than one pin on submodule 'add_16'. (LINT-33)
+   Net 'n54' is connected to pins 'A[11]', 'B[11]'', 'B[10]', 'CI'.
+Warning: In design 'ESC_interface_3', the same net is connected to more than one pin on submodule 'add_16'. (LINT-33)
+   Net 'n54' is connected to pins 'A[11]', 'B[11]'', 'B[10]', 'CI'.
+Warning: In design 'get_terms_1', the same net is connected to more than one pin on submodule 'mult_205'. (LINT-33)
+   Net 'n1' is connected to pins 'B[2]', 'B[1]'', 'B[0]', 'TC'.
+Warning: In design 'get_terms_1', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'actual[15]' is connected to pins 'A[16]', 'A[15]''.
+Warning: In design 'get_terms_1', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'desired[15]' is connected to pins 'B[16]', 'B[15]''.
+Warning: In design 'get_terms_2', the same net is connected to more than one pin on submodule 'mult_205'. (LINT-33)
+   Net 'n1' is connected to pins 'B[2]', 'B[1]'', 'B[0]', 'TC'.
+Warning: In design 'get_terms_2', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'actual[15]' is connected to pins 'A[16]', 'A[15]''.
+Warning: In design 'get_terms_2', the same net is connected to more than one pin on submodule 'sub_177'. (LINT-33)
+   Net 'desired[15]' is connected to pins 'B[16]', 'B[15]''.
+Warning: In design 'QuadCopter', output port 'LED[7]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[4]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[3]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'QuadCopter', output port 'LED[0]' is connected directly to 'logic 1'. (LINT-52)
+Warning: Design 'QuadCopter' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/userspace/j/jreimer2/ece551/Project/final/synthesis/QuadCopter.vg'.
+Warning: Verilog writer has added 4 nets to module QuadCopter using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
