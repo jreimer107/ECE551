@@ -9,7 +9,7 @@
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_5();
+module QuadCopter_tb_3();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
@@ -43,7 +43,7 @@ ADC128S iA2D(.clk(clk),.rst_n(RST_n),.SS_n(SS_A2D_n),.SCLK(SCLK_A2D),
              .MISO(MISO_A2D),.MOSI(MOSI_A2D));			
 	 
 ////// Instantiate DUT ////////
-QuadCopter iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO),
+QuadCopter #(3) iDUT(.clk(clk),.RST_n(RST_n),.SS_n(SS_n),.SCLK(SCLK),.MOSI(MOSI),.MISO(MISO),
                 .INT(INT),.RX(RX),.TX(TX),.LED(),.FRNT(frnt_ESC),.BCK(back_ESC),
 				.LFT(left_ESC),.RGHT(rght_ESC),.SS_A2D_n(SS_A2D_n),.SCLK_A2D(SCLK_A2D),
 				.MOSI_A2D(MOSI_A2D),.MISO_A2D(MISO_A2D));
@@ -54,38 +54,90 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
                  .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
-initial begin
-    // get stuff going
-    init_task(clk,RST_n,send_cmd);
+reg resp_rdy_f;
+always_ff @(posedge clk) resp_rdy_f <= resp_rdy;
 
-    data = 16'h0EAD;  
-    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+initial begin
+    init_task(clk,RST_n,send_cmd);
+    
+    //CALIBRATE//
+    send_cmd_task(clk, 8'h06, send_cmd, cmd_to_copter); // calibrate
+    //wait for response
+    fork : cal
+        begin
+            // Timeout check
+            #300000000
+            $display("%t : timeout waiting for calibration", $time);
+            $stop;
+            disable cal;
+        end
+        begin
+            // Wait on signal
+            @(posedge resp_rdy);
+            $display("calibration done");
+            disable cal;
+        end
+    join
+    
+    //THRUST//
+    data = 16'h01FF;    
+    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
 
     //wait for response
     fork : chk
         begin
             // Timeout check
-            #25000000
-            $display("%t : timeout", $time);
+            #3000000
+            $display("%t : timeout waiting to set thrust", $time);
             $stop;
             disable chk;
         end
         begin
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 2 resp received");
+            $display("cmd 5 resp received");
             disable chk;
         end
     join
 
     check_posack_task(resp);
-    $display("PITCH");
-    check_pry_task(iDUT.iNEMO.iII.ptch, data);
-
-
-    $display("Pitch test passed");
-    $stop;
+    check_thrust_task(iDUT.ifly.thrst,data);
+    
+    
+    //AIRBORNE//
+    // check that it eventually gets off the ground
+    fork : detect_air
+        begin
+            // Timeout check
+            #300000000
+            $display("%t : timeout waiting for airborne", $time);
+            $stop;
+            disable detect_air;
+        end
+        begin
+            // Wait on signal
+            @(posedge iQuad.airborne);
+            $display("detected airborne");
+            disable detect_air;
+        end
+    join
  
+    
+    ///////////////ROLL////////////////////////
+    data = 16'h0050;  
+    send_cmd_task(clk,3'd3,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    $display("ROLL");
+    #300000000
+    check_pry_task(iDUT.iNEMO.iII.roll, data);
+
+
+    $display("Roll test passed");
+    $stop;
 end
 
 always

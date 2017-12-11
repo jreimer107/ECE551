@@ -81,6 +81,7 @@ begin
             $display("value set correctly.");
         end else begin
             $display("BAD VALUE SET. FAILURE. %h. expected = %h",pry, expected);
+            #300000000
             $stop;
         end
     end
