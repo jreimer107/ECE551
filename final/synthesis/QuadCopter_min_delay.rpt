@@ -1,3 +1,5 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'QuadCopter' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : timing
@@ -6,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : QuadCopter
 Version: M-2016.12
-Date   : Mon Dec 11 11:24:53 2017
+Date   : Mon Dec 11 11:33:23 2017
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
