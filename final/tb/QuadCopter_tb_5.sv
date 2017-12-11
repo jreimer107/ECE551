@@ -77,7 +77,7 @@ initial begin
         end
     join
     
-	data = 16'h01FF;    
+    data = 16'h01FF;    
     send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
 
     //wait for response

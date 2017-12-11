@@ -1,6 +1,7 @@
 module ESC_interface(clk, rst_n, SPEED, OFF, PWM);
 
-localparam PERIOD_WIDTH = 20;
+//testing at 18, running at 20
+localparam PERIOD_WIDTH = 18;
 
 input clk, rst_n;
 input [10:0] SPEED;

@@ -57,9 +57,15 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
 initial begin
     // get stuff going
     init_task(clk,RST_n,send_cmd);
-
-    data = 16'h0EAD;  
-    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+    
+    data = 16'h0fff;  
+    send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
+    @(posedge resp_rdy);
+    $display("calibrated");
+    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
+    @(posedge resp_rdy);
+    $display("calibrated");
+    send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
 
     //wait for response
     fork : chk
