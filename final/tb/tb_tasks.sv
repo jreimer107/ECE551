@@ -75,6 +75,31 @@ begin
     end
 endtask
 
+task automatic check_motors_off_task(ref reg clk, input reg motors_off);
+begin
+	// check that motors are disabled
+	if(motors_off === 1) begin
+		$display("Motors correctly disabled.");
+	end
+	else begin
+		$display("Motors are not correctly disabled.");
+	end
+	
+	// check that motors stay disbled
+	repeat (10) @(posedge clk);
+	if(motors_off === 1) begin
+		$display("Motors stay disabled.");
+	end
+	else begin
+		$display("Motors do not stay disabled.");
+	end
+	
+	
+	
+	
+end
+endtask
+
 task check_pry_task(input reg [15:0] pry , input reg [15:0] expected);
 begin
         if(pry === expected)begin
