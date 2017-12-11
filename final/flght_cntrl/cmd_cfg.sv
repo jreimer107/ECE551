@@ -1,10 +1,10 @@
        /////////////////////////////////////////////////////
-	  // TEAM: vwls_n                                    //
+      // TEAM: vwls_n                                    //
      //  MEMBERS:                                       //
     //	 DVN LFFRD - Devin Lafford                     //
    //	 JSPH KRD - Joseph Kardia                     //
   //     MCKNLY SCNRS-HSN - McKinley Sconiers-Hasan  //
- //	     JHN RMR - John Reimer                      //
+ //	 JHN RMR - John Reimer                      //
 /////////////////////////////////////////////////////
 module cmd_cfg(clk, rst_n, cmd_rdy, cmd, data, clr_cmd_rdy, resp, send_resp, 
 	d_ptch, d_roll, d_yaw, thrst, batt, strt_cal, inertial_cal, cal_done, motors_off, strt_cnv, cnv_cmplt);
@@ -49,6 +49,7 @@ localparam SET_ROLL = 8'h03;
 localparam SET_YAW = 8'h04;
 localparam SET_THRST = 8'h05;
 localparam CALIBRATE = 8'h06;
+localparam EMER_LAND = 8'h07;
 localparam MTRS_OFF = 8'h08;
 
 //Pitch FF
@@ -132,16 +133,16 @@ always_comb begin
 						nxt_state = WAIT_TMR;
 					end
 					
-					MTRS_OFF: begin
-						mtrs_off = 1;
-						nxt_state = POS_ACK;
-					end
-					
 					default: begin // Emergency land if garbage command
 						wptch = 1;
 						wroll = 1;
 						wyaw = 1;
 						wthrst = 1;
+						nxt_state = POS_ACK;
+					end
+
+					MTRS_OFF: begin
+						mtrs_off = 1;
 						nxt_state = POS_ACK;
 					end
 				endcase

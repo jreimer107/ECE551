@@ -1,7 +1,7 @@
 module inert_intf(clk, rst_n, SS_n, SCLK, MOSI, MISO, INT, strt_cal, ptch, roll, yaw, cal_done, vld);
 input clk, rst_n;
 
-parameter COUNT_WIDTH = 11;
+parameter COUNT_WIDTH = 3;
 
 //SPI interface
 input MISO;

@@ -1,8 +1,7 @@
-module CommMaster(clk, rst_n, cmd, snd_cmd, data, TX, RX,
-	resp, resp_rdy, frm_snt); 
+module CommMaster(clk, rst_n, cmd, send_cmd, data, TX, RX, resp, resp_rdy, frm_snt); 
 
 input clk, rst_n;
-input snd_cmd;			//Signal to send command
+input send_cmd;			//Signal to send command
 input [7:0] cmd;		//First byte
 input [15:0] data;		//Second and third bytes
 
@@ -54,7 +53,7 @@ always_comb begin
 	case(state)
 	
 		IDLE: begin	
-			if (snd_cmd) begin
+			if (send_cmd) begin
 				next_state = CMD;
 				trmt = 1;
 				clr_done = 1;
@@ -107,7 +106,7 @@ end
 always_ff @(posedge clk, negedge rst_n) begin
 
 	if (!rst_n) data_reg <= 0;
-	else if (snd_cmd) data_reg <= data;
+	else if (send_cmd) data_reg <= data;
 
 end
 

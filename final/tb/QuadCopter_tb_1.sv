@@ -54,6 +54,9 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
                  .cmd(cmd_to_copter), .data(data), .snd_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
+reg resp_rdy_f;
+always_ff @(posedge clk) resp_rdy_f <= resp_rdy;
+
 initial begin
   // get stuff going
   init_task(clk,RST_n,send_cmd);
@@ -61,21 +64,7 @@ initial begin
   send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
 
   //wait for response
-  fork : chk
-        begin
-            // Timeout check
-            #3000000
-            $display("%t : timeout", $time);
-            $stop;
-            disable chk;
-        end
-        begin
-            // Wait on signal
-            @(posedge resp_rdy);
-            $display("cmd 1 resp received");
-            disable chk;
-        end
-    join
+  check_response_task(resp_rdy_f);
 
   check_batt_task(resp, 8'hC0);
 
@@ -90,6 +79,8 @@ initial begin
 
 
   $display("Batt Check Test Passed.");
+    
+//    test_batt(clk, send_cmd, cmd_to_copter, resp_rdy_f, resp);
   $stop;
  
 end

@@ -1,6 +1,6 @@
 module ESC_interface(clk, rst_n, SPEED, OFF, PWM);
-
-localparam PERIOD_WIDTH = 20;
+//Test at 18, run at 20
+localparam PERIOD_WIDTH = 18;
 
 input clk, rst_n;
 input [10:0] SPEED;
@@ -28,25 +28,18 @@ assign Set = &counter ? 1'b1 : 1'b0;
 
 //Counter FF
 //Accumulate counter every clock
-always_ff @(posedge clk, negedge rst_n) begin
-if (!rst_n)
-	counter <= 20'h00000;
-else
-	counter <= counter + 1'b1;
-end
+always_ff @(posedge clk, negedge rst_n)
+    if (!rst_n) counter <= 20'h00000;
+    else counter <= counter + 1'b1;
 
 //Output FF
 //If Rst is 1, PWM is 0
 //If Set is 1, PWM is 1
 //Else maintain
-always_ff @(posedge clk, negedge rst_n) begin 
-if (!rst_n) 
-	PWM <= 1'b0;
-else if (Set)
-	PWM <= 1'b1;
-else if (Rst)
-	PWM <= 1'b0;	
-end
+always_ff @(posedge clk, negedge rst_n)
+ if (!rst_n) PWM <= 1'b0;
+ else if (Set) PWM <= 1'b1;
+ else if (Rst) PWM <= 1'b0;
 	
 
 endmodule

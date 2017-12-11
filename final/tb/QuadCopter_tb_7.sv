@@ -9,7 +9,7 @@
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_3();
+module QuadCopter_tb_7();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
@@ -54,35 +54,108 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
                  .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
-initial begin
-    // get stuff going
-    init_task(clk,RST_n,send_cmd);
+reg resp_rdy_f;
+always_ff @(posedge clk) resp_rdy_f <= resp_rdy;
 
-    data = 16'hBEEF;  
-    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
+initial begin
+    init_task(clk,RST_n,send_cmd);
+    
+    //////////////////BATT TEST/////////////
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_batt_task(resp, 8'hC0);
+
+    //check to make sure decrementing by 1
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    #3000000
+    check_batt_task(resp, 8'hBF);
+
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    #3000000
+    check_batt_task(resp, 8'hBE);
+    
+    /////////////CALIBRATE///////////////////////
+    // send calibrate command
+    send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
 
     //wait for response
     fork : chk
         begin
             // Timeout check
-            #3000000
+            #25000000
             $display("%t : timeout", $time);
             $stop;
             disable chk;
         end
         begin
+            //check motor speeds
+            @(posedge iDUT.ifly.inertial_cal)
+            if(iDUT.ifly.frnt_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.frnt_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.bck_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.bck_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.lft_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.lft_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.rght_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.rght_spd );
+                $stop;
+            end
+            $display("Motor Speeds Good.");
+            
+
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 5 resp received");
+            $display("cmd 6 resp received");
             disable chk;
         end
     join
 
     check_posack_task(resp);
+    
+
+    ///////////////THRUST///////////////////////
+    data = 16'h01FF;  
+    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
     check_thrust_task(iDUT.ifly.thrst,data);
+    
 
+    ////////////////EMERLAND////////////////////
+    data = 16'h0000;
+    send_cmd_task(clk, 3'd7, send_cmd, cmd_to_copter);
+    
+    //wait for response
+    check_response_task(resp_rdy_f);
 
-    $display("Thrust test passed");
+    //Check for all zeros
+    check_posack_task(resp);
+    
+    #30000000
+    //TODO:These should be from ifly(fight control) but there is a weird error
+    $display("Checking thrust.");
+    check_thrust_task(iDUT.ifly.thrst,data);
+    $display("Checking pitch.");
+    check_pry_task(iDUT.iNEMO.ptch_rt,data);
+    $display("Checking roll.");
+    check_pry_task(iDUT.iNEMO.roll_rt,data);
+    $display("Checking yaw.");
+    check_pry_task(iDUT.iNEMO.yaw_rt,data);
+  
+
+    $display("Emergency land test passed");
     $stop;
  
 end

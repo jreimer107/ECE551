@@ -10,6 +10,7 @@ task automatic send_cmd_task(ref reg clk,
         send_cmd = 0;
     end
 endtask
+
 //not working if resp_rdy is a wire? don't use right now.
 task automatic check_response_task(ref logic resp_rdy);
     begin
@@ -34,7 +35,7 @@ endtask
 
 task check_posack_task(input reg [7:0] resp);
     begin
-        if(resp == 8'ha5)begin
+        if(resp === 8'ha5)begin
             $display("PosAck Received.");
         end else begin
             $display("BAD POSACK RECEIVED. FAILURE. %h",resp);
@@ -45,7 +46,7 @@ endtask
 
 task check_batt_task(input reg [7:0] resp, input reg [7:0] expected);
     begin
-        if(resp == expected)begin
+        if(resp === expected)begin
             $display("batt Received.");
         end else begin
             $display("BAD BATT RECEIVED. FAILURE. %h",resp);
@@ -65,7 +66,7 @@ endtask
 
 task check_thrust_task(input reg [8:0] thrust, input reg [15:0] expected);
 begin
-        if(thrust == expected[8:0])begin
+        if(thrust === expected[8:0])begin
             $display("thrust set correctly.");
         end else begin
             $display("BAD THRUST SET. FAILURE. %h",thrust);
@@ -76,7 +77,7 @@ endtask
 
 task check_pry_task(input reg [15:0] pry , input reg [15:0] expected);
 begin
-        if(pry == expected)begin
+        if(pry === expected)begin
             $display("value set correctly.");
         end else begin
             $display("BAD VALUE SET. FAILURE. %h. expected = %h",pry, expected);
@@ -84,4 +85,92 @@ begin
         end
     end
 endtask
+
+
+
+////CHECK BATT//
+//task automatic test_batt(ref reg clk,
+//                         ref reg send_cmd, 
+//                         ref reg [7:0] cmd_to_copter, 
+//                         ref reg resp_rdy, 
+//                         input reg [7:0] resp);
+//    begin
+//        send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+//       
+//        //wait for response
+//        check_response_task(resp_rdy);
+//        $display("%h", resp);
+
+//        check_batt_task(resp, 8'hC0);
+
+//        //check to make sure decrementing by 1
+//        send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+//        #3000000
+//        check_batt_task(resp, 8'hBF);
+
+//        send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+//        #3000000
+//        check_batt_task(resp, 8'hBE);
+
+//        $display("Batt Check Test Passed."); 
+//    end
+//endtask
+
+//CALIBRATE//
+//task automatic calibrate(ref reg clk,
+//                         ref reg send_cmd,
+//                         ref reg [7:0] cmd_to_copter,
+//                         ref reg resp_rdy,
+//                         ref reg [7:0] resp,
+//                         ref reg inertial_cal,
+//                         ref reg [11:0] frnt_spd,
+//                         ref reg [11:0] back_spd,
+//                         ref reg [11:0] left_spd,
+//                         ref reg [11:0] rght_spd);
+//     begin
+//         // send calibrate command
+//        send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
+
+//        //wait for response
+//         fork : chk
+//              begin
+//                 // Timeout check
+//                 #25000000
+//                   $display("%t : timeout", $time);
+//                    $stop;
+//                    disable chk;
+//                end
+//                begin
+//                  //check motor speeds
+//                  @(posedge iDUT.ifly.inertial_cal)
+//                  if(iDUT.ifly.frnt_spd != 11'h1B0) begin
+//                      $display("bad motor speed front, %h", iDUT.ifly.frnt_spd );
+//                     $stop;
+//                  end
+//                    else if(iDUT.ifly.bck_spd != 11'h1B0) begin
+//                      $display("bad motor speed front, %h", iDUT.ifly.bck_spd );
+//                      $stop;
+//                    end
+//                   else if(iDUT.ifly.lft_spd != 11'h1B0) begin
+//                      $display("bad motor speed front, %h", iDUT.ifly.lft_spd );
+//                        $stop;
+//                    end
+//                  else if(iDUT.ifly.rght_spd != 11'h1B0) begin
+//                        $display("bad motor speed front, %h", iDUT.ifly.rght_spd );
+//                     $stop;
+//                   end
+//                   $display("Motor Speeds Good.");
+//            
+
+//                   // Wait on signal
+//                   @(posedge resp_rdy);
+//                   $display("cmd 6 resp received");
+//                   disable chk;
+//                end
+//         join
+
+//        check_posack_task(resp);
+//        $display("Calibration Test Passed.");
+//    end
+//endtask
 

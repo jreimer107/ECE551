@@ -54,12 +54,32 @@ CommMaster iMSTR(.clk(clk), .rst_n(RST_n), .RX(TX), .TX(RX),
                  .cmd(cmd_to_copter), .data(data), .send_cmd(send_cmd),
 			     .frm_snt(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
 
-initial begin
-    // get stuff going
-    init_task(clk,RST_n,send_cmd);
+reg resp_rdy_f;
+always_ff @(posedge clk) resp_rdy_f <= resp_rdy;
 
-    data = 16'h0EAD;  
-    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+initial begin
+    init_task(clk,RST_n,send_cmd);
+    
+    //////////////////BATT TEST/////////////
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_batt_task(resp, 8'hC0);
+
+    //check to make sure decrementing by 1
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    #3000000
+    check_batt_task(resp, 8'hBF);
+
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    #3000000
+    check_batt_task(resp, 8'hBE);
+    
+    /////////////CALIBRATE///////////////////////
+    // send calibrate command
+    send_cmd_task(clk,3'd6,send_cmd,cmd_to_copter);
 
     //wait for response
     fork : chk
@@ -71,12 +91,53 @@ initial begin
             disable chk;
         end
         begin
+            //check motor speeds
+            @(posedge iDUT.ifly.inertial_cal)
+            if(iDUT.ifly.frnt_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.frnt_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.bck_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.bck_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.lft_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.lft_spd );
+                $stop;
+            end
+            else if(iDUT.ifly.rght_spd != 11'h1B0) begin
+                $display("bad motor speed front, %h", iDUT.ifly.rght_spd );
+                $stop;
+            end
+            $display("Motor Speeds Good.");
+            
+
             // Wait on signal
             @(posedge resp_rdy);
-            $display("cmd 2 resp received");
+            $display("cmd 6 resp received");
             disable chk;
         end
     join
+
+    check_posack_task(resp);
+    
+
+    ///////////////THRUST///////////////////////
+    data = 16'h01FF;  
+    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    check_thrust_task(iDUT.ifly.thrst,data);
+    
+    ///////////////PITCH////////////////////////
+    data = 16'h0EAD;  
+    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
 
     check_posack_task(resp);
     $display("PITCH");
