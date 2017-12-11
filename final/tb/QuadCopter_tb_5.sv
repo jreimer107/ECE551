@@ -101,22 +101,21 @@ initial begin
     check_thrust_task(iDUT.ifly.thrst,data);
     
     // check that it eventually gets off the ground
-    fork : chk
+    fork : detect_air
         begin
             // Timeout check
             #3000000
             $display("%t : timeout waiting for airborne", $time);
             $stop;
-            disable chk;
+            disable detect_air;
         end
         begin
             // Wait on signal
             @(posedge iQuad.airborne);
             $display("detected airborne");
-            disable chk;
+            disable detect_air;
         end
     join
-    
     
     end
 
