@@ -29,6 +29,9 @@ read_file -format sverilog ../top_level/reset_synch.v
 # read_file -format sverilog ../models/ADC128S.sv
 # read_file -format sverilog ../models/SPI_ADC128S.sv
 
+# Set current design to top level
+set current_design QuadCopter
+
 # create and constrain clk
 create_clock -name "clk" -period 2.5 -waveform {0 1} {clk}
 set_dont_touch_network [find port clk]
@@ -49,15 +52,15 @@ set_load 0.1 [all_outputs]
 set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
 set_max_transition 0.1 [current_design]
 
-# Set uncertainty
-set_clock_uncertainty .15 [find port clk]
-
-# Set current design to top level
-set current_design QuadCopter
 link
 
 # Initial Compile
 compile -map_effort medium
+
+check_design
+
+# Set uncertainty
+set_clock_uncertainty .15 [find port clk]
 
 # Fix hold times
 set_fix_hold clk
@@ -68,8 +71,8 @@ ungroup -all -flatten
 check_design
 
 # Compile the design
-#compile -map_effort high
 compile_ultra
+check_design
 
 
 # Write out verilog netlist and area reports
