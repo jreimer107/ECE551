@@ -59,86 +59,30 @@ reg resp_rdy_f;
 always_ff @(posedge clk) resp_rdy_f <= resp_rdy;
 
 initial begin
+    // get stuff going
     init_task(clk,RST_n,send_cmd);
-    
-    //CALIBRATE//
-    send_cmd_task(clk, 8'h06, send_cmd, cmd_to_copter); // calibrate
-    //wait for response
-    fork : cal
-        begin
-            // Timeout check
-            #300000000
-            $display("%t : timeout waiting for calibration", $time);
-            $stop;
-            disable cal;
-        end
-        begin
-            // Wait on signal
-            @(posedge resp_rdy);
-            $display("calibration done");
-            disable cal;
-        end
-    join
-    
-    //THRUST//
-    data = 16'h01FF;    
-    send_cmd_task(clk,3'd5,send_cmd,cmd_to_copter);
 
-    //wait for response
-    fork : chk
-        begin
-            // Timeout check
-            #3000000
-            $display("%t : timeout waiting to set thrust", $time);
-            $stop;
-            disable chk;
-        end
-        begin
-            // Wait on signal
-            @(posedge resp_rdy);
-            $display("cmd 5 resp received");
-            disable chk;
-        end
-    join
-
-    check_posack_task(resp);
-    check_thrust_task(iDUT.thrst,data);
-    
-    
-    //AIRBORNE//
-    // check that it eventually gets off the ground
-    fork : detect_air
-        begin
-            // Timeout check
-            #300000000
-            $display("%t : timeout waiting for airborne", $time);
-            $stop;
-            disable detect_air;
-        end
-        begin
-            // Wait on signal
-            @(posedge iQuad.airborne);
-            $display("detected airborne");
-            disable detect_air;
-        end
-    join
- 
-    
-    ///////////////PITCH////////////////////////
-    data = 16'h4000;  
-    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
 
     //wait for response
     check_response_task(resp_rdy_f);
 
-    check_posack_task(resp);
-    $display("PITCH");
-    #600000000
-    check_pry_task(iDUT.ptch, data);
+    check_batt_task(resp, 8'hC0);
+
+    //check to make sure decrementing by 1
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    check_response_task(resp_rdy_f);
+    check_batt_task(resp, 8'hBF);
+
+    send_cmd_task(clk,3'b1,send_cmd,cmd_to_copter);
+    check_response_task(resp_rdy_f);
+    check_batt_task(resp, 8'hBE);
 
 
-    $display("Pitch test passed");
-    $stop;
+    $display("Batt Check Test Passed.");
+    
+//    test_batt(clk, send_cmd, cmd_to_copter, resp_rdy_f, resp);
+  $stop;
  
 end
 
