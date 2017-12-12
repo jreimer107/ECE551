@@ -11,7 +11,7 @@
 
 `include "tb_tasks.sv"	// maybe have a separate file with tasks to help with testing
 
-module QuadCopter_tb_5();
+module QuadCopter_tb_4();
 			
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;
@@ -27,7 +27,7 @@ reg [7:0] cmd_to_copter;		// command to Copter via wireless link
 reg [15:0] data;				// data associated with command
 reg send_cmd;					// asserted to initiate sending of command (to your CommMaster)
 reg clr_resp_rdy;				// asserted to knock down resp_rdy
-
+reg [15:0] sample;
 /////// declare any localparams here /////
 
 
@@ -125,20 +125,56 @@ initial begin
     join
  
     
-    ///////////////PITCH////////////////////////
-    data = 16'h0050;  
+    ///////////////yaw////////////////////////
+    data = 16'h00ff;  
     send_cmd_task(clk,3'd4,send_cmd,cmd_to_copter);
 
     //wait for response
     check_response_task(resp_rdy_f);
 
     check_posack_task(resp);
-    $display("YAW");
-    #300000000
-    check_pry_task(iDUT.iNEMO.iII.yaw, data);
+    sample = iDUT.iNEMO.iII.yaw;
+    $display("yaw");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.yaw);
 
 
-    $display("Pitch test passed");
+    data = 16'h0000;  
+    send_cmd_task(clk,3'd4,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.yaw;
+    $display("yaw");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.yaw);
+
+    data = 16'h0055;  
+    send_cmd_task(clk,3'd4,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.yaw;
+    $display("yaw");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.yaw);
+
+    data = 16'hffff;  
+    send_cmd_task(clk,3'd4,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.yaw;
+    $display("yaw");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.yaw);
+    $display("yaw test passed");
     $stop;
  
 end

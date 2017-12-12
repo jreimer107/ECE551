@@ -18,7 +18,7 @@ reg [7:0] cmd_to_copter;		// command to Copter via wireless link
 reg [15:0] data;				// data associated with command
 reg send_cmd;					// asserted to initiate sending of command (to your CommMaster)
 reg clr_resp_rdy;				// asserted to knock down resp_rdy
-
+reg [15:0] sample;
 /////// declare any localparams here /////
 
 
@@ -116,7 +116,7 @@ initial begin
     join
  
     
-    ///////////////SET////////////////////////
+    ///////////////SET to nonzero////////////////////////
     //Set pitch
     data = 16'h0050;  
     send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
@@ -134,7 +134,9 @@ initial begin
     check_posack_task(resp);
     
     #300000000
-    
+    sample = iDUT.iNEMO.iII.yaw;
+    sample = iDUT.iNEMO.iII.roll;
+    sample = iDUT.iNEMO.iII.ptch;
     ////////////////EMERLAND////////////////////
     data = 16'h0000;
     send_cmd_task(clk, 3'd7, send_cmd, cmd_to_copter);
@@ -144,18 +146,29 @@ initial begin
 
     //Check for all zeros
     check_posack_task(resp);
+
+
     
-    #30000000
-    //TODO:These should be from ifly(fight control) but there is a weird error
-    $display("Checking thrust.");
-    check_thrust_task(iDUT.ifly.thrst,data);
-    $display("Checking pitch.");
-    check_pry_task(iDUT.iNEMO.ptch_rt,data);
-    $display("Checking roll.");
-    check_pry_task(iDUT.iNEMO.roll_rt,data);
-    $display("Checking yaw.");
-    check_pry_task(iDUT.iNEMO.yaw_rt,data);
-  
+    #400000000
+//    
+//    #30000000
+//    //TODO:These should be from ifly(fight control) but there is a weird error
+//    $display("Checking thrust.");
+//    check_thrust_task(iDUT.ifly.thrst,data);
+//    $display("Checking pitch.");
+//    check_pry_task(iDUT.iNEMO.ptch_rt,data);
+//    $display("Checking roll.");
+//    check_pry_task(iDUT.iNEMO.roll_rt,data);
+//    $display("Checking yaw.");
+//    check_pry_task(iDUT.iNEMO.yaw_rt,data);
+        
+    //check values 
+    $display("PITCH");
+    check_pry_task(sample, 16'h0000, iDUT.iNEMO.iII.ptch);
+    $display("ROLL");
+    check_pry_task(sample, 16'h0000, iDUT.iNEMO.iII.roll);
+    $display("YAW");
+    check_pry_task(sample, 16'h0000, iDUT.iNEMO.iII.yaw);
 
     $display("Emergency land test passed");
     $stop;
