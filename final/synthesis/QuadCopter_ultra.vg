@@ -1,7 +1,8 @@
+`timescale 1ns/1ps
 /////////////////////////////////////////////////////////////
-// Created by: Synopsys DC Ultra(TM) in wire load mode
+// Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : M-2016.12
-// Date      : Mon Dec 11 11:35:25 2017
+// Date      : Mon Dec 11 21:42:10 2017
 /////////////////////////////////////////////////////////////
 
 
@@ -822,7 +823,48 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
          n5395, n5396, n5397, n5398, n5399, n5400, n5401, n5402, n5403, n5404,
          n5405, n5406, n5407, n5408, n5409, n5410, n5411, n5412, n5413, n5414,
          n5415, n5416, n5417, n5418, n5419, n5420, n5421, n5422, n5423, n5424,
-         n5425, n5426, n5427;
+         n5425, n5426, n5427, n5429, n5430, n5431, n5432, n5433, n5434, n5435,
+         n5436, n5437, n5438, n5439, n5440, n5441, n5442, n5443, n5444, n5445,
+         n5446, n5447, n5448, n5449, n5450, n5451, n5452, n5453, n5454, n5455,
+         n5456, n5457, n5458, n5459, n5460, n5461, n5462, n5463, n5464, n5465,
+         n5466, n5467, n5468, n5469, n5470, n5471, n5472, n5473, n5474, n5475,
+         n5476, n5477, n5478, n5479, n5480, n5481, n5482, n5483, n5484, n5485,
+         n5486, n5487, n5488, n5489, n5490, n5491, n5492, n5493, n5494, n5495,
+         n5496, n5497, n5498, n5499, n5500, n5501, n5502, n5503, n5504, n5505,
+         n5506, n5507, n5508, n5509, n5510, n5511, n5512, n5513, n5514, n5515,
+         n5516, n5517, n5518, n5519, n5520, n5521, n5522, n5523, n5524, n5525,
+         n5526, n5527, n5528, n5529, n5530, n5531, n5532, n5533, n5534, n5535,
+         n5536, n5537, n5538, n5539, n5540, n5541, n5542, n5543, n5544, n5545,
+         n5546, n5547, n5548, n5549, n5550, n5551, n5552, n5553, n5554, n5555,
+         n5556, n5557, n5558, n5559, n5560, n5561, n5562, n5563, n5564, n5565,
+         n5566, n5567, n5568, n5569, n5570, n5571, n5572, n5573, n5574, n5575,
+         n5576, n5577, n5578, n5579, n5580, n5581, n5582, n5583, n5584, n5585,
+         n5586, n5587, n5588, n5589, n5590, n5591, n5592, n5593, n5594, n5595,
+         n5596, n5597, n5598, n5599, n5600, n5601, n5602, n5603, n5604, n5605,
+         n5606, n5607, n5608, n5609, n5610, n5611, n5612, n5613, n5614, n5615,
+         n5616, n5617, n5618, n5619, n5620, n5621, n5622, n5623, n5624, n5625,
+         n5626, n5627, n5628, n5629, n5630, n5631, n5632, n5633, n5634, n5635,
+         n5636, n5637, n5638, n5639, n5640, n5641, n5642, n5643, n5644, n5645,
+         n5646, n5647, n5648, n5649, n5650, n5651, n5652, n5653, n5654, n5655,
+         n5656, n5657, n5658, n5659, n5660, n5661, n5662, n5663, n5664, n5665,
+         n5666, n5667, n5668, n5669, n5670, n5671, n5672, n5673, n5674, n5675,
+         n5676, n5677, n5678, n5679, n5680, n5681, n5682, n5683, n5684, n5685,
+         n5686, n5687, n5688, n5689, n5690, n5691, n5692, n5693, n5694, n5695,
+         n5696, n5697, n5698, n5699, n5700, n5701, n5702, n5703, n5704, n5705,
+         n5706, n5707, n5708, n5709, n5710, n5711, n5712, n5713, n5714, n5715,
+         n5716, n5717, n5718, n5719, n5720, n5721, n5722, n5723, n5724, n5725,
+         n5726, n5727, n5728, n5729, n5730, n5731, n5732, n5733, n5734, n5735,
+         n5736, n5737, n5738, n5739, n5740, n5741, n5742, n5743, n5744, n5745,
+         n5746, n5747, n5748, n5749, n5750, n5751, n5752, n5753, n5754, n5755,
+         n5756, n5757, n5758, n5759, n5760, n5761, n5762, n5763, n5764, n5765,
+         n5766, n5767, n5768, n5769, n5770, n5771, n5772, n5773, n5774, n5775,
+         n5776, n5777, n5778, n5779, n5780, n5781, n5782, n5783, n5784, n5785,
+         n5786, n5787, n5788, n5789, n5790, n5791, n5792, n5793, n5794, n5795,
+         n5796, n5797, n5798, n5799, n5800, n5801, n5802, n5803, n5804, n5805,
+         n5806, n5807, n5808, n5809, n5810, n5811, n5812, n5813, n5814, n5815,
+         n5816, n5817, n5818, n5819, n5820, n5821, n5822, n5823, n5824, n5825,
+         n5826, n5827, n5828, n5829, n5830, n5831, n5832, n5833, n5834, n5835,
+         n5836, n5837, n5838, n5839, n5840, n5841, n5842, n5843, n5844;
   wire   [7:0] cmd;
   wire   [15:0] data;
   wire   [15:0] d_ptch;
@@ -907,8 +949,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   wire   [4:0] \iA2D/iSPI/sclk_div ;
   assign LED[1] = \ifly/N42 ;
 
-  EDFQD1BWP \iUART/cmd_reg[0]  ( .D(data[0]), .E(n1209), .CP(clk), .Q(cmd[0])
-         );
+  EDFQD1BWP \iUART/cmd_reg[0]  ( .D(n5842), .E(n1209), .CP(clk), .Q(cmd[0]) );
   EDFQD1BWP \iUART/cmd_reg[1]  ( .D(data[1]), .E(n1209), .CP(clk), .Q(cmd[1])
          );
   EDFQD1BWP \iUART/cmd_reg[2]  ( .D(data[2]), .E(n1209), .CP(clk), .Q(cmd[2])
@@ -917,13 +958,13 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
          );
   EDFQD1BWP \iUART/cmd_reg[6]  ( .D(data[6]), .E(n1209), .CP(clk), .Q(cmd[6])
          );
-  EDFQD1BWP \iUART/cmd_reg[7]  ( .D(data[7]), .E(n1209), .CP(clk), .Q(cmd[7])
-         );
+  EDFQD1BWP \iUART/cmd_reg[7]  ( .D(n5841), .E(n1209), .CP(clk), .Q(cmd[7]) );
   EDFQD1BWP \iUART/cmd_reg[5]  ( .D(data[5]), .E(n1209), .CP(clk), .Q(cmd[5])
          );
   EDFQD1BWP \iUART/cmd_reg[4]  ( .D(data[4]), .E(n1209), .CP(clk), .Q(cmd[4])
          );
-  EDFQD1BWP \iUART/data_reg[8]  ( .D(data[0]), .E(n1208), .CP(clk), .Q(data[8]) );
+  EDFQD1BWP \iUART/data_reg[8]  ( .D(n5842), .E(n1208), .CP(clk), .Q(data[8])
+         );
   DFCNQD1BWP \iUART/cmd_rdy_reg  ( .D(\iUART/n11 ), .CP(clk), .CDN(n5386), .Q(
         cmd_rdy) );
   DFCNQD1BWP \iUART/state_reg[1]  ( .D(\iUART/nxt_state [1]), .CP(clk), .CDN(
@@ -932,16 +973,16 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         n5391), .Q(\iUART/state [0]) );
   DFSNQD1BWP \iUART/iUART/iTX/shift_reg_reg[0]  ( .D(\iUART/iUART/iTX/n24 ), 
         .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iTX/n52 ) );
-  DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[5]  ( .D(\iUART/iUART/iTX/n37 ), 
-        .CP(clk), .SDN(n1476), .Q(\iUART/iUART/iTX/baud_cnt [5]) );
+  DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[5]  ( .D(n5840), .CP(clk), .SDN(
+        n1476), .Q(\iUART/iUART/iTX/baud_cnt [5]) );
   DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[11]  ( .D(\iUART/iUART/iTX/n47 ), 
         .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iTX/baud_cnt [11]) );
   DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[9]  ( .D(\iUART/iUART/iTX/n41 ), 
         .CP(clk), .SDN(n5417), .Q(\iUART/iUART/iTX/baud_cnt [9]) );
   DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[2]  ( .D(\iUART/iUART/iTX/n34 ), 
         .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iTX/baud_cnt [2]) );
-  DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[3]  ( .D(\iUART/iUART/iTX/n35 ), 
-        .CP(clk), .SDN(n1475), .Q(\iUART/iUART/iTX/baud_cnt [3]) );
+  DFSNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[3]  ( .D(n5839), .CP(clk), .SDN(
+        n1475), .Q(\iUART/iUART/iTX/baud_cnt [3]) );
   DFSNQD1BWP \iUART/iUART/iTX/shift_reg_reg[1]  ( .D(\iUART/iUART/iTX/n32 ), 
         .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iTX/shift_reg [1]) );
   DFSNQD1BWP \iUART/iUART/iTX/shift_reg_reg[2]  ( .D(\iUART/iUART/iTX/n31 ), 
@@ -968,8 +1009,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         .CP(clk), .CDN(n5390), .Q(\iUART/iUART/iTX/baud_cnt [6]) );
   DFCNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[4]  ( .D(\iUART/iUART/iTX/n36 ), 
         .CP(clk), .CDN(n5392), .Q(\iUART/iUART/iTX/baud_cnt [4]) );
-  DFCNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[1]  ( .D(\iUART/iUART/iTX/n33 ), 
-        .CP(clk), .CDN(n5393), .Q(\iUART/iUART/iTX/baud_cnt [1]) );
+  DFCNQD1BWP \iUART/iUART/iTX/baud_cnt_reg[1]  ( .D(n5838), .CP(clk), .CDN(
+        n5393), .Q(\iUART/iUART/iTX/baud_cnt [1]) );
   DFCNQD1BWP \iUART/iUART/iTX/bit_cnt_reg[3]  ( .D(\iUART/iUART/iTX/n43 ), 
         .CP(clk), .CDN(n5400), .Q(\iUART/iUART/iTX/bit_cnt [3]) );
   DFCNQD1BWP \iUART/iUART/iTX/bit_cnt_reg[2]  ( .D(\iUART/iUART/iTX/n44 ), 
@@ -984,8 +1025,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iUART/iUART/iRX/rx_ff1 ) );
   EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[8]  ( .D(\iUART/iUART/iRX/rx_ff2 ), 
         .E(n5350), .CP(clk), .Q(\iUART/iUART/iRX/shift_reg[8] ) );
-  DFSNQD1BWP \iUART/iUART/iRX/baud_cnt_reg[10]  ( .D(\iUART/iUART/iRX/n35 ), 
-        .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iRX/baud_cnt [10]) );
+  DFSNQD1BWP \iUART/iUART/iRX/baud_cnt_reg[10]  ( .D(n5836), .CP(clk), .SDN(
+        n5405), .Q(\iUART/iUART/iRX/baud_cnt [10]) );
   DFSNQD1BWP \iUART/iUART/iRX/baud_cnt_reg[4]  ( .D(\iUART/iUART/iRX/n29 ), 
         .CP(clk), .SDN(n5405), .Q(\iUART/iUART/iRX/baud_cnt [4]) );
   DFSNQD1BWP \iUART/iUART/iRX/baud_cnt_reg[2]  ( .D(\iUART/iUART/iRX/n27 ), 
@@ -1004,12 +1045,10 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         clk), .Q(data[4]) );
   EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[5]  ( .D(data[6]), .E(n5350), .CP(
         clk), .Q(data[5]) );
-  EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[6]  ( .D(data[7]), .E(n5350), .CP(
-        clk), .Q(data[6]) );
-  EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[7]  ( .D(
-        \iUART/iUART/iRX/shift_reg[8] ), .E(n5350), .CP(clk), .Q(data[7]) );
-  DFSNQD1BWP \iUART/iUART/iRX/rx_ff2_reg  ( .D(\iUART/iUART/iRX/rx_ff1 ), .CP(
-        clk), .SDN(n5405), .Q(\iUART/iUART/iRX/rx_ff2 ) );
+  EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[6]  ( .D(n5841), .E(n5350), .CP(clk), .Q(data[6]) );
+  EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[7]  ( .D(n5835), .E(n5350), .CP(clk), .Q(data[7]) );
+  DFSNQD1BWP \iUART/iUART/iRX/rx_ff2_reg  ( .D(n5834), .CP(clk), .SDN(n5405), 
+        .Q(\iUART/iUART/iRX/rx_ff2 ) );
   EDFQD1BWP \iUART/iUART/iRX/shift_reg_reg[0]  ( .D(data[1]), .E(n5350), .CP(
         clk), .Q(data[0]) );
   DFCNQD1BWP \iUART/iUART/iRX/baud_cnt_reg[9]  ( .D(\iUART/iUART/iRX/n34 ), 
@@ -1030,14 +1069,14 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         .CDN(n5415), .Q(\iUART/rdy ) );
   DFCNQD1BWP \iUART/iUART/iRX/state_reg  ( .D(\iUART/iUART/iRX/nxt_state ), 
         .CP(clk), .CDN(n5379), .Q(\iUART/iUART/iRX/state ) );
-  DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[3]  ( .D(\iUART/iUART/iRX/n37 ), 
-        .CP(clk), .CDN(n5376), .Q(\iUART/iUART/iRX/bit_cnt [3]) );
+  DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[3]  ( .D(n5833), .CP(clk), .CDN(
+        n5376), .Q(\iUART/iUART/iRX/bit_cnt [3]) );
   DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[2]  ( .D(\iUART/iUART/iRX/n38 ), 
         .CP(clk), .CDN(n5384), .Q(\iUART/iUART/iRX/bit_cnt [2]) );
   DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[1]  ( .D(\iUART/iUART/iRX/n40 ), 
         .CP(clk), .CDN(n5411), .Q(\iUART/iUART/iRX/bit_cnt [1]) );
-  DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[0]  ( .D(\iUART/iUART/iRX/n39 ), 
-        .CP(clk), .CDN(n5376), .Q(\iUART/iUART/iRX/bit_cnt [0]) );
+  DFCNQD1BWP \iUART/iUART/iRX/bit_cnt_reg[0]  ( .D(n5832), .CP(clk), .CDN(
+        n5376), .Q(\iUART/iUART/iRX/bit_cnt [0]) );
   DFSNQD1BWP \iCMD/motors_off_reg  ( .D(\iCMD/n61 ), .CP(clk), .SDN(n5405), 
         .Q(motors_off) );
   DFCNQD1BWP \iCMD/state_reg[2]  ( .D(\iCMD/nxt_state [2]), .CP(clk), .CDN(
@@ -1334,8 +1373,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iNEMO/ay [8]) );
   DFCNQD1BWP \iNEMO/state_reg[1]  ( .D(\iNEMO/nxt_state [1]), .CP(clk), .CDN(
         n5398), .Q(\iNEMO/state [1]) );
-  DFCNQD1BWP \iNEMO/INT_ff2_reg  ( .D(\iNEMO/INT_ff1 ), .CP(clk), .CDN(n5398), 
-        .Q(\iNEMO/INT_ff2 ) );
+  DFCNQD1BWP \iNEMO/INT_ff2_reg  ( .D(n5830), .CP(clk), .CDN(n5398), .Q(
+        \iNEMO/INT_ff2 ) );
   DFCNQD1BWP \iNEMO/INT_ff1_reg  ( .D(INT), .CP(clk), .CDN(n5398), .Q(
         \iNEMO/INT_ff1 ) );
   DFQD1BWP \iNEMO/iSPI/shift_reg_reg[15]  ( .D(\iNEMO/iSPI/n27 ), .CP(clk), 
@@ -1344,8 +1383,6 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iNEMO/iSPI/sclk_div [0]) );
   DFKSND1BWP \iNEMO/iSPI/sclk_div_reg[1]  ( .D(\iNEMO/iSPI/N13 ), .SN(n1465), 
         .CP(clk), .Q(\iNEMO/iSPI/sclk_div [1]) );
-  DFKSND1BWP \iNEMO/iSPI/sclk_div_reg[2]  ( .D(\iNEMO/iSPI/N14 ), .SN(n1465), 
-        .CP(clk), .Q(\iNEMO/iSPI/sclk_div [2]) );
   DFKSND1BWP \iNEMO/iSPI/sclk_div_reg[4]  ( .D(\iNEMO/iSPI/N16 ), .SN(n1465), 
         .CP(clk), .Q(\iNEMO/iSPI/sclk_div [4]), .QN(n5338) );
   DFKCNQD1BWP \iNEMO/iSPI/sclk_div_reg[3]  ( .CN(n1465), .D(\iNEMO/iSPI/N15 ), 
@@ -1526,8 +1563,6 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         .CDN(n5405), .Q(roll[5]), .QN(n5336) );
   DFCND1BWP \iNEMO/iII/roll_int_reg[22]  ( .D(\iNEMO/iII/n166 ), .CP(clk), 
         .CDN(n5417), .Q(roll[9]), .QN(\iNEMO/iII/n443 ) );
-  DFCND1BWP \iNEMO/iII/roll_int_reg[12]  ( .D(\iNEMO/iII/n156 ), .CP(clk), 
-        .CDN(n5405), .Q(\iNEMO/iII/roll_int [12]), .QN(\iNEMO/iII/n54 ) );
   DFCND1BWP \iNEMO/iII/roll_int_reg[14]  ( .D(\iNEMO/iII/n158 ), .CP(clk), 
         .CDN(n1476), .Q(roll[1]), .QN(\iNEMO/iII/n368 ) );
   DFCNQD1BWP \iNEMO/iII/ay_accum_reg[19]  ( .D(\iNEMO/iII/n97 ), .CP(clk), 
@@ -1610,8 +1645,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         .CDN(n5405), .Q(\iNEMO/iII/ax_accum [0]) );
   DFCNQD1BWP \iNEMO/iII/ax_accum_reg[1]  ( .D(\iNEMO/iII/n96 ), .CP(clk), 
         .CDN(n5378), .Q(\iNEMO/iII/ax_accum [1]) );
-  DFCNQD1BWP \iNEMO/iII/avg_cntr_reg[0]  ( .D(\iNEMO/iII/n76 ), .CP(clk), 
-        .CDN(rst_n), .Q(\iNEMO/iII/avg_cntr [0]) );
+  DFCNQD1BWP \iNEMO/iII/avg_cntr_reg[0]  ( .D(n5829), .CP(clk), .CDN(rst_n), 
+        .Q(\iNEMO/iII/avg_cntr [0]) );
   DFCNQD1BWP \iNEMO/iII/yaw_int_reg[25]  ( .D(\iNEMO/iII/n118 ), .CP(clk), 
         .CDN(n5385), .Q(yaw[12]) );
   DFCNQD1BWP \iNEMO/iII/yaw_int_reg[24]  ( .D(\iNEMO/iII/n119 ), .CP(clk), 
@@ -1874,1260 +1909,870 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \ifly/frnt_sum [9]) );
   DFQD1BWP \ifly/frnt_sum_reg[10]  ( .D(\ifly/N66 ), .CP(clk), .Q(
         \ifly/frnt_sum [10]) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][2]  ( .D(
-        \ifly/get_ptch/prev_err[8][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[9][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][2]  ( .D(
-        \ifly/get_ptch/prev_err[7][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[8][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][2]  ( .D(
-        \ifly/get_ptch/prev_err[6][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[7][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][2]  ( .D(
-        \ifly/get_ptch/prev_err[5][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[6][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][2]  ( .D(
-        \ifly/get_ptch/prev_err[4][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[5][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][2]  ( .D(
-        \ifly/get_ptch/prev_err[3][2] ), .E(n5368), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_ptch/prev_err[4][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][2]  ( .D(
-        \ifly/get_ptch/prev_err[2][2] ), .E(n5368), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[3][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][2]  ( .D(
-        \ifly/get_ptch/prev_err[1][2] ), .E(n5368), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[2][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][2]  ( .D(
-        \ifly/get_ptch/prev_err[0][2] ), .E(n5368), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[1][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][2]  ( .D(n5828), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[9][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][2]  ( .D(n5827), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[8][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][2]  ( .D(n5826), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[7][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][2]  ( .D(n5825), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[6][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][2]  ( .D(n5824), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[5][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][2]  ( .D(n5823), .E(n5368), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_ptch/prev_err[4][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][2]  ( .D(n5822), .E(n5368), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[3][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][2]  ( .D(n5821), .E(n5368), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[2][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][2]  ( .D(n5820), .E(n5368), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[1][2] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][2]  ( .D(n1458), .E(n5368), .CP(
         clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[0][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][3]  ( .D(
-        \ifly/get_ptch/prev_err[11][3] ), .E(n5357), .CP(clk), .CDN(n5421), 
-        .Q(\ifly/get_ptch/prev_err[12][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][3]  ( .D(
-        \ifly/get_ptch/prev_err[10][3] ), .E(n5357), .CP(clk), .CDN(n5420), 
-        .Q(\ifly/get_ptch/prev_err[11][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][3]  ( .D(
-        \ifly/get_ptch/prev_err[9][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[10][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][3]  ( .D(
-        \ifly/get_ptch/prev_err[8][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[9][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][3]  ( .D(
-        \ifly/get_ptch/prev_err[7][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[8][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][3]  ( .D(
-        \ifly/get_ptch/prev_err[6][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[7][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][3]  ( .D(
-        \ifly/get_ptch/prev_err[5][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[6][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][3]  ( .D(
-        \ifly/get_ptch/prev_err[4][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[5][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][3]  ( .D(
-        \ifly/get_ptch/prev_err[3][3] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[4][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][3]  ( .D(
-        \ifly/get_ptch/prev_err[2][3] ), .E(n1416), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[3][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][3]  ( .D(
-        \ifly/get_ptch/prev_err[1][3] ), .E(n1416), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_ptch/prev_err[2][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][3]  ( .D(
-        \ifly/get_ptch/prev_err[0][3] ), .E(n1416), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[1][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][3]  ( .D(n5819), .E(n5357), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[12][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][3]  ( .D(n5818), .E(n5357), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[11][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][3]  ( .D(n5817), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[10][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][3]  ( .D(n5816), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[9][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][3]  ( .D(n5815), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[8][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][3]  ( .D(n5814), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[7][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][3]  ( .D(n5813), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[6][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][3]  ( .D(n5812), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[5][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][3]  ( .D(n5811), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[4][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][3]  ( .D(n5810), .E(n1416), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[3][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][3]  ( .D(n5809), .E(n1416), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[2][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][3]  ( .D(n5808), .E(n1416), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[1][3] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][3]  ( .D(
         \ifly/get_ptch/err_sat [3]), .E(n1416), .CP(clk), .CDN(n5414), .Q(
         \ifly/get_ptch/prev_err[0][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][4]  ( .D(
-        \ifly/get_ptch/prev_err[11][4] ), .E(n5358), .CP(clk), .CDN(n5421), 
-        .Q(\ifly/get_ptch/prev_err[12][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][4]  ( .D(
-        \ifly/get_ptch/prev_err[10][4] ), .E(n5358), .CP(clk), .CDN(n5407), 
-        .Q(\ifly/get_ptch/prev_err[11][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][4]  ( .D(
-        \ifly/get_ptch/prev_err[9][4] ), .E(n1416), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[10][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][4]  ( .D(
-        \ifly/get_ptch/prev_err[8][4] ), .E(n5373), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[9][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][4]  ( .D(
-        \ifly/get_ptch/prev_err[7][4] ), .E(n5373), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[8][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][4]  ( .D(
-        \ifly/get_ptch/prev_err[6][4] ), .E(n5373), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[7][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][4]  ( .D(
-        \ifly/get_ptch/prev_err[5][4] ), .E(n5366), .CP(clk), .CDN(n5405), .Q(
-        \ifly/get_ptch/prev_err[6][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][4]  ( .D(
-        \ifly/get_ptch/prev_err[4][4] ), .E(n5372), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[5][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][4]  ( .D(
-        \ifly/get_ptch/prev_err[3][4] ), .E(n5366), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[4][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][4]  ( .D(
-        \ifly/get_ptch/prev_err[2][4] ), .E(n5372), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[3][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][4]  ( .D(
-        \ifly/get_ptch/prev_err[1][4] ), .E(n5366), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[2][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][4]  ( .D(
-        \ifly/get_ptch/prev_err[0][4] ), .E(n5372), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[1][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][4]  ( .D(n5807), .E(n5358), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[12][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][4]  ( .D(n5806), .E(n5358), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[11][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][4]  ( .D(n5805), .E(n1416), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[10][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][4]  ( .D(n5804), .E(n5373), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[9][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][4]  ( .D(n5803), .E(n5373), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[8][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][4]  ( .D(n5802), .E(n5373), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[7][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][4]  ( .D(n5801), .E(n5366), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_ptch/prev_err[6][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][4]  ( .D(n5800), .E(n5372), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[5][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][4]  ( .D(n5799), .E(n5366), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[4][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][4]  ( .D(n5798), .E(n5372), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[3][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][4]  ( .D(n5797), .E(n5366), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[2][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][4]  ( .D(n5796), .E(n5372), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[1][4] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][4]  ( .D(
         \ifly/get_ptch/err_sat [4]), .E(n5366), .CP(clk), .CDN(n5416), .Q(
         \ifly/get_ptch/prev_err[0][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][5]  ( .D(
-        \ifly/get_ptch/prev_err[11][5] ), .E(n5358), .CP(clk), .CDN(n5420), 
-        .Q(\ifly/get_ptch/prev_err[12][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][5]  ( .D(
-        \ifly/get_ptch/prev_err[10][5] ), .E(n5358), .CP(clk), .CDN(n5421), 
-        .Q(\ifly/get_ptch/prev_err[11][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][5]  ( .D(
-        \ifly/get_ptch/prev_err[9][5] ), .E(n5372), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[10][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][5]  ( .D(
-        \ifly/get_ptch/prev_err[8][5] ), .E(n5366), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[9][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][5]  ( .D(
-        \ifly/get_ptch/prev_err[7][5] ), .E(n5373), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[8][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][5]  ( .D(
-        \ifly/get_ptch/prev_err[6][5] ), .E(n5365), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[7][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][5]  ( .D(
-        \ifly/get_ptch/prev_err[5][5] ), .E(n5373), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[6][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][5]  ( .D(
-        \ifly/get_ptch/prev_err[4][5] ), .E(n5371), .CP(clk), .CDN(n5410), .Q(
-        \ifly/get_ptch/prev_err[5][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][5]  ( .D(
-        \ifly/get_ptch/prev_err[3][5] ), .E(n5373), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_ptch/prev_err[4][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][5]  ( .D(
-        \ifly/get_ptch/prev_err[2][5] ), .E(n1468), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_ptch/prev_err[3][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][5]  ( .D(
-        \ifly/get_ptch/prev_err[1][5] ), .E(n5373), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_ptch/prev_err[2][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][5]  ( .D(
-        \ifly/get_ptch/prev_err[0][5] ), .E(n1468), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_ptch/prev_err[1][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][5]  ( .D(n5795), .E(n5358), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[12][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][5]  ( .D(n5794), .E(n5358), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[11][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][5]  ( .D(n5793), .E(n5372), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[10][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][5]  ( .D(n5792), .E(n5366), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[9][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][5]  ( .D(n5791), .E(n5373), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[8][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][5]  ( .D(n5790), .E(n5365), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[7][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][5]  ( .D(n5789), .E(n5373), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[6][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][5]  ( .D(n5788), .E(n5371), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[5][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][5]  ( .D(n5787), .E(n5373), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[4][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][5]  ( .D(n5786), .E(n1468), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_ptch/prev_err[3][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][5]  ( .D(n5785), .E(n5373), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_ptch/prev_err[2][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][5]  ( .D(n5784), .E(n1468), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_ptch/prev_err[1][5] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][5]  ( .D(
         \ifly/get_ptch/err_sat [5]), .E(n5373), .CP(clk), .CDN(n5404), .Q(
         \ifly/get_ptch/prev_err[0][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][6]  ( .D(
-        \ifly/get_ptch/prev_err[11][6] ), .E(n5358), .CP(clk), .CDN(n5406), 
-        .Q(\ifly/get_ptch/prev_err[12][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][6]  ( .D(
-        \ifly/get_ptch/prev_err[10][6] ), .E(n5358), .CP(clk), .CDN(n5406), 
-        .Q(\ifly/get_ptch/prev_err[11][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][6]  ( .D(
-        \ifly/get_ptch/prev_err[9][6] ), .E(n1468), .CP(clk), .CDN(n5406), .Q(
-        \ifly/get_ptch/prev_err[10][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][6]  ( .D(
-        \ifly/get_ptch/prev_err[8][6] ), .E(n5373), .CP(clk), .CDN(n5406), .Q(
-        \ifly/get_ptch/prev_err[9][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][6]  ( .D(
-        \ifly/get_ptch/prev_err[7][6] ), .E(n1468), .CP(clk), .CDN(n5406), .Q(
-        \ifly/get_ptch/prev_err[8][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][6]  ( .D(
-        \ifly/get_ptch/prev_err[6][6] ), .E(n5370), .CP(clk), .CDN(n5406), .Q(
-        \ifly/get_ptch/prev_err[7][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][6]  ( .D(
-        \ifly/get_ptch/prev_err[5][6] ), .E(n5365), .CP(clk), .CDN(n5410), .Q(
-        \ifly/get_ptch/prev_err[6][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][6]  ( .D(
-        \ifly/get_ptch/prev_err[4][6] ), .E(n5371), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[5][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][6]  ( .D(
-        \ifly/get_ptch/prev_err[3][6] ), .E(n1468), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_ptch/prev_err[4][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][6]  ( .D(
-        \ifly/get_ptch/prev_err[2][6] ), .E(n1468), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[3][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][6]  ( .D(
-        \ifly/get_ptch/prev_err[1][6] ), .E(n1468), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[2][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][6]  ( .D(
-        \ifly/get_ptch/prev_err[0][6] ), .E(n5365), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[1][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][6]  ( .D(n5783), .E(n5358), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[12][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][6]  ( .D(n5782), .E(n5358), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[11][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][6]  ( .D(n5781), .E(n1468), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[10][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][6]  ( .D(n5780), .E(n5373), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[9][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][6]  ( .D(n5779), .E(n1468), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[8][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][6]  ( .D(n5778), .E(n5370), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_ptch/prev_err[7][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][6]  ( .D(n5777), .E(n5365), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[6][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][6]  ( .D(n5776), .E(n5371), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[5][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][6]  ( .D(n5775), .E(n1468), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[4][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][6]  ( .D(n5774), .E(n1468), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[3][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][6]  ( .D(n5773), .E(n1468), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[2][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][6]  ( .D(n5772), .E(n5365), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[1][6] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][6]  ( .D(
         \ifly/get_ptch/err_sat [6]), .E(n5371), .CP(clk), .CDN(n5412), .Q(
         \ifly/get_ptch/prev_err[0][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][7]  ( .D(
-        \ifly/get_ptch/prev_err[11][7] ), .E(n5358), .CP(clk), .CDN(n5407), 
-        .Q(\ifly/get_ptch/prev_err[12][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][7]  ( .D(
-        \ifly/get_ptch/prev_err[10][7] ), .E(n5358), .CP(clk), .CDN(n5415), 
-        .Q(\ifly/get_ptch/prev_err[11][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][7]  ( .D(
-        \ifly/get_ptch/prev_err[9][7] ), .E(n1468), .CP(clk), .CDN(n5410), .Q(
-        \ifly/get_ptch/prev_err[10][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][7]  ( .D(
-        \ifly/get_ptch/prev_err[8][7] ), .E(n1468), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[9][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][7]  ( .D(
-        \ifly/get_ptch/prev_err[7][7] ), .E(n1468), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[8][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][7]  ( .D(
-        \ifly/get_ptch/prev_err[6][7] ), .E(n5364), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[7][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][7]  ( .D(
-        \ifly/get_ptch/prev_err[5][7] ), .E(n5364), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[6][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][7]  ( .D(
-        \ifly/get_ptch/prev_err[4][7] ), .E(n5364), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[5][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][7]  ( .D(
-        \ifly/get_ptch/prev_err[3][7] ), .E(n5364), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_ptch/prev_err[4][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][7]  ( .D(
-        \ifly/get_ptch/prev_err[2][7] ), .E(n5364), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[3][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][7]  ( .D(
-        \ifly/get_ptch/prev_err[1][7] ), .E(n5364), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[2][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][7]  ( .D(
-        \ifly/get_ptch/prev_err[0][7] ), .E(n5364), .CP(clk), .CDN(n5413), .Q(
-        \ifly/get_ptch/prev_err[1][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][7]  ( .D(n5771), .E(n5358), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[12][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][7]  ( .D(n5770), .E(n5358), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[11][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][7]  ( .D(n5769), .E(n1468), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[10][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][7]  ( .D(n5768), .E(n1468), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[9][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][7]  ( .D(n5767), .E(n1468), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[8][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][7]  ( .D(n5766), .E(n5364), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[7][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][7]  ( .D(n5765), .E(n5364), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[6][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][7]  ( .D(n5764), .E(n5364), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[5][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][7]  ( .D(n5763), .E(n5364), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_ptch/prev_err[4][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][7]  ( .D(n5762), .E(n5364), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[3][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][7]  ( .D(n5761), .E(n5364), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[2][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][7]  ( .D(n5760), .E(n5364), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[1][7] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][7]  ( .D(
         \ifly/get_ptch/err_sat [7]), .E(n5364), .CP(clk), .CDN(n5416), .Q(
         \ifly/get_ptch/prev_err[0][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][8]  ( .D(
-        \ifly/get_ptch/prev_err[11][8] ), .E(n5357), .CP(clk), .CDN(n5413), 
-        .Q(\ifly/get_ptch/prev_err[12][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][8]  ( .D(
-        \ifly/get_ptch/prev_err[10][8] ), .E(n5358), .CP(clk), .CDN(n5412), 
-        .Q(\ifly/get_ptch/prev_err[11][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][8]  ( .D(
-        \ifly/get_ptch/prev_err[9][8] ), .E(n5364), .CP(clk), .CDN(n5413), .Q(
-        \ifly/get_ptch/prev_err[10][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][8]  ( .D(
-        \ifly/get_ptch/prev_err[8][8] ), .E(n5364), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[9][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][8]  ( .D(
-        \ifly/get_ptch/prev_err[7][8] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[8][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][8]  ( .D(
-        \ifly/get_ptch/prev_err[6][8] ), .E(n5364), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[7][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][8]  ( .D(
-        \ifly/get_ptch/prev_err[5][8] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[6][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][8]  ( .D(
-        \ifly/get_ptch/prev_err[4][8] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[5][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][8]  ( .D(
-        \ifly/get_ptch/prev_err[3][8] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[4][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][8]  ( .D(
-        \ifly/get_ptch/prev_err[2][8] ), .E(n5363), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[3][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][8]  ( .D(
-        \ifly/get_ptch/prev_err[1][8] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[2][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][8]  ( .D(
-        \ifly/get_ptch/prev_err[0][8] ), .E(n5363), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[1][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][8]  ( .D(n5759), .E(n5357), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[12][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][8]  ( .D(n5758), .E(n5358), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[11][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][8]  ( .D(n5757), .E(n5364), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[10][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][8]  ( .D(n5756), .E(n5364), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[9][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][8]  ( .D(n5755), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[8][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][8]  ( .D(n5754), .E(n5364), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[7][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][8]  ( .D(n5753), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[6][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][8]  ( .D(n5752), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[5][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][8]  ( .D(n5751), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[4][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][8]  ( .D(n5750), .E(n5363), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[3][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][8]  ( .D(n5749), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[2][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][8]  ( .D(n5748), .E(n5363), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[1][8] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][8]  ( .D(
         \ifly/get_ptch/err_sat [8]), .E(n5364), .CP(clk), .CDN(n5414), .Q(
         \ifly/get_ptch/prev_err[0][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][9]  ( .D(
-        \ifly/get_ptch/prev_err[11][9] ), .E(n5372), .CP(clk), .CDN(n5414), 
-        .Q(\ifly/get_ptch/prev_err[12][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][9]  ( .D(
-        \ifly/get_ptch/prev_err[10][9] ), .E(n5366), .CP(clk), .CDN(n5414), 
-        .Q(\ifly/get_ptch/prev_err[11][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][9]  ( .D(
-        \ifly/get_ptch/prev_err[9][9] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[10][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][9]  ( .D(
-        \ifly/get_ptch/prev_err[8][9] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[9][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][9]  ( .D(
-        \ifly/get_ptch/prev_err[7][9] ), .E(n5363), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[8][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][9]  ( .D(
-        \ifly/get_ptch/prev_err[6][9] ), .E(n5364), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[7][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][9]  ( .D(
-        \ifly/get_ptch/prev_err[5][9] ), .E(n5363), .CP(clk), .CDN(n5414), .Q(
-        \ifly/get_ptch/prev_err[6][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][9]  ( .D(
-        \ifly/get_ptch/prev_err[4][9] ), .E(n5363), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[5][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][9]  ( .D(
-        \ifly/get_ptch/prev_err[3][9] ), .E(n5363), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[4][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][9]  ( .D(
-        \ifly/get_ptch/prev_err[2][9] ), .E(n5363), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[3][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][9]  ( .D(
-        \ifly/get_ptch/prev_err[1][9] ), .E(n5363), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[2][9] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][9]  ( .D(
-        \ifly/get_ptch/prev_err[0][9] ), .E(n5363), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_ptch/prev_err[1][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][9]  ( .D(n5747), .E(n5372), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[12][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][9]  ( .D(n5746), .E(n5366), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[11][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][9]  ( .D(n5745), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[10][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][9]  ( .D(n5744), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[9][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][9]  ( .D(n5743), .E(n5363), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[8][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][9]  ( .D(n5742), .E(n5364), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[7][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][9]  ( .D(n5741), .E(n5363), .CP(
+        clk), .CDN(n5414), .Q(\ifly/get_ptch/prev_err[6][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][9]  ( .D(n5740), .E(n5363), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[5][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][9]  ( .D(n5739), .E(n5363), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[4][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][9]  ( .D(n5738), .E(n5363), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[3][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][9]  ( .D(n5737), .E(n5363), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[2][9] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][9]  ( .D(n5736), .E(n5363), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[1][9] ) );
   EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][9]  ( .D(\ifly/ptch_pterm[9] ), 
         .E(n5363), .CP(clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[0][9] )
          );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][0]  ( .D(
-        \ifly/get_ptch/prev_err[11][0] ), .E(n5371), .CP(clk), .CDN(n5413), 
-        .Q(\ifly/get_ptch/prev_err[12][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][0]  ( .D(
-        \ifly/get_ptch/prev_err[10][0] ), .E(n5370), .CP(clk), .CDN(n5410), 
-        .Q(\ifly/get_ptch/prev_err[11][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][0]  ( .D(
-        \ifly/get_ptch/prev_err[9][0] ), .E(n5365), .CP(clk), .CDN(n5413), .Q(
-        \ifly/get_ptch/prev_err[10][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][0]  ( .D(
-        \ifly/get_ptch/prev_err[8][0] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[9][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][0]  ( .D(
-        \ifly/get_ptch/prev_err[7][0] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[8][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][0]  ( .D(
-        \ifly/get_ptch/prev_err[6][0] ), .E(n5363), .CP(clk), .CDN(n5419), .Q(
-        \ifly/get_ptch/prev_err[7][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][0]  ( .D(
-        \ifly/get_ptch/prev_err[5][0] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[6][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][0]  ( .D(
-        \ifly/get_ptch/prev_err[4][0] ), .E(n5363), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[5][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][0]  ( .D(
-        \ifly/get_ptch/prev_err[3][0] ), .E(n5363), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[4][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][0]  ( .D(
-        \ifly/get_ptch/prev_err[2][0] ), .E(n5362), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_ptch/prev_err[3][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][0]  ( .D(
-        \ifly/get_ptch/prev_err[1][0] ), .E(n5362), .CP(clk), .CDN(n5419), .Q(
-        \ifly/get_ptch/prev_err[2][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][0]  ( .D(
-        \ifly/get_ptch/prev_err[0][0] ), .E(n5362), .CP(clk), .CDN(n5413), .Q(
-        \ifly/get_ptch/prev_err[1][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][0]  ( .D(
-        \ifly/get_ptch/err_sat [0]), .E(n5362), .CP(clk), .CDN(n5413), .Q(
-        \ifly/get_ptch/prev_err[0][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][1]  ( .D(
-        \ifly/get_ptch/prev_err[11][1] ), .E(n5357), .CP(clk), .CDN(n5412), 
-        .Q(\ifly/get_ptch/prev_err[12][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][1]  ( .D(
-        \ifly/get_ptch/prev_err[10][1] ), .E(n5357), .CP(clk), .CDN(n5418), 
-        .Q(\ifly/get_ptch/prev_err[11][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][1]  ( .D(
-        \ifly/get_ptch/prev_err[9][1] ), .E(n5357), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[10][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][1]  ( .D(
-        \ifly/get_ptch/prev_err[8][1] ), .E(n5362), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[9][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][1]  ( .D(
-        \ifly/get_ptch/prev_err[7][1] ), .E(n5362), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[8][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][1]  ( .D(
-        \ifly/get_ptch/prev_err[6][1] ), .E(n5362), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[7][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][1]  ( .D(
-        \ifly/get_ptch/prev_err[5][1] ), .E(n5362), .CP(clk), .CDN(n5418), .Q(
-        \ifly/get_ptch/prev_err[6][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][1]  ( .D(
-        \ifly/get_ptch/prev_err[4][1] ), .E(n5362), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_ptch/prev_err[5][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][1]  ( .D(
-        \ifly/get_ptch/prev_err[3][1] ), .E(n5362), .CP(clk), .CDN(n5410), .Q(
-        \ifly/get_ptch/prev_err[4][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][1]  ( .D(
-        \ifly/get_ptch/prev_err[2][1] ), .E(n5362), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[3][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][1]  ( .D(
-        \ifly/get_ptch/prev_err[1][1] ), .E(n5370), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[2][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][1]  ( .D(
-        \ifly/get_ptch/prev_err[0][1] ), .E(n5372), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_ptch/prev_err[1][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][1]  ( .D(
-        \ifly/get_ptch/err_sat [1]), .E(n5366), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_ptch/prev_err[0][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][2]  ( .D(
-        \ifly/get_ptch/prev_err[11][2] ), .E(n5357), .CP(clk), .CDN(n5413), 
-        .Q(\ifly/get_ptch/prev_err[12][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][2]  ( .D(
-        \ifly/get_ptch/prev_err[10][2] ), .E(n5357), .CP(clk), .CDN(n5410), 
-        .Q(\ifly/get_ptch/prev_err[11][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][2]  ( .D(
-        \ifly/get_ptch/prev_err[9][2] ), .E(n5357), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_ptch/prev_err[10][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][0]  ( .D(n5735), .E(n5371), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[12][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][0]  ( .D(n5734), .E(n5370), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[11][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][0]  ( .D(n5733), .E(n5365), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[10][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][0]  ( .D(n5732), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[9][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][0]  ( .D(n5731), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[8][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][0]  ( .D(n5730), .E(n5363), .CP(
+        clk), .CDN(n5419), .Q(\ifly/get_ptch/prev_err[7][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][0]  ( .D(n5729), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[6][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][0]  ( .D(n5728), .E(n5363), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[5][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][0]  ( .D(n5727), .E(n5363), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[4][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][0]  ( .D(n5726), .E(n5362), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_ptch/prev_err[3][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][0]  ( .D(n5725), .E(n5362), .CP(
+        clk), .CDN(n5419), .Q(\ifly/get_ptch/prev_err[2][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][0]  ( .D(n5724), .E(n5362), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[1][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][0]  ( .D(n5723), .E(n5362), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[0][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][1]  ( .D(n5722), .E(n5357), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[12][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][1]  ( .D(n5721), .E(n5357), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[11][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][1]  ( .D(n5720), .E(n5357), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[10][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[9][1]  ( .D(n5719), .E(n5362), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[9][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[8][1]  ( .D(n5718), .E(n5362), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[8][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[7][1]  ( .D(n5717), .E(n5362), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[7][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[6][1]  ( .D(n5716), .E(n5362), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[6][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[5][1]  ( .D(n5715), .E(n5362), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_ptch/prev_err[5][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[4][1]  ( .D(n5714), .E(n5362), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[4][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[3][1]  ( .D(n5713), .E(n5362), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[3][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[2][1]  ( .D(n5712), .E(n5370), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[2][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[1][1]  ( .D(n5711), .E(n5372), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[1][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[0][1]  ( .D(n5710), .E(n5366), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[0][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[12][2]  ( .D(n5709), .E(n5357), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[12][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[11][2]  ( .D(n5708), .E(n5357), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[11][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[10][2]  ( .D(n5707), .E(n5357), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_ptch/prev_err[10][2] ) );
   DFQD1BWP \ifly/get_ptch/err_sat_reg[5]  ( .D(\ifly/get_ptch/N14 ), .CP(clk), 
         .Q(\ifly/get_ptch/err_sat [5]) );
   DFQD1BWP \ifly/get_ptch/err_sat_reg[2]  ( .D(\ifly/get_ptch/N11 ), .CP(clk), 
         .Q(\ifly/get_ptch/err_sat [2]) );
   DFQD1BWP \ifly/get_ptch/err_sat_reg[0]  ( .D(\ifly/get_ptch/N9 ), .CP(clk), 
         .Q(\ifly/get_ptch/err_sat [0]) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][0]  ( .D(
-        \ifly/get_ptch/prev_err[12][0] ), .E(n5357), .CP(clk), .CDN(n5410), 
-        .Q(\ifly/get_ptch/prev_err[13][0] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][1]  ( .D(
-        \ifly/get_ptch/prev_err[12][1] ), .E(n5357), .CP(clk), .CDN(n5416), 
-        .Q(\ifly/get_ptch/prev_err[13][1] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][2]  ( .D(
-        \ifly/get_ptch/prev_err[12][2] ), .E(n5357), .CP(clk), .CDN(n5407), 
-        .Q(\ifly/get_ptch/prev_err[13][2] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][3]  ( .D(
-        \ifly/get_ptch/prev_err[12][3] ), .E(n5357), .CP(clk), .CDN(n5416), 
-        .Q(\ifly/get_ptch/prev_err[13][3] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][4]  ( .D(
-        \ifly/get_ptch/prev_err[12][4] ), .E(n5358), .CP(clk), .CDN(n5418), 
-        .Q(\ifly/get_ptch/prev_err[13][4] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][5]  ( .D(
-        \ifly/get_ptch/prev_err[12][5] ), .E(n5358), .CP(clk), .CDN(n5413), 
-        .Q(\ifly/get_ptch/prev_err[13][5] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][6]  ( .D(
-        \ifly/get_ptch/prev_err[12][6] ), .E(n5358), .CP(clk), .CDN(n5412), 
-        .Q(\ifly/get_ptch/prev_err[13][6] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][7]  ( .D(
-        \ifly/get_ptch/prev_err[12][7] ), .E(n5358), .CP(clk), .CDN(n5412), 
-        .Q(\ifly/get_ptch/prev_err[13][7] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][8]  ( .D(
-        \ifly/get_ptch/prev_err[12][8] ), .E(n5358), .CP(clk), .CDN(n5418), 
-        .Q(\ifly/get_ptch/prev_err[13][8] ) );
-  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][9]  ( .D(
-        \ifly/get_ptch/prev_err[12][9] ), .E(n5371), .CP(clk), .CDN(n5407), 
-        .Q(\ifly/get_ptch/prev_err[13][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][2]  ( .D(
-        \ifly/get_roll/prev_err[8][2] ), .E(n5372), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_roll/prev_err[9][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][2]  ( .D(
-        \ifly/get_roll/prev_err[7][2] ), .E(n5366), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_roll/prev_err[8][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][2]  ( .D(
-        \ifly/get_roll/prev_err[6][2] ), .E(n5372), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_roll/prev_err[7][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][2]  ( .D(
-        \ifly/get_roll/prev_err[5][2] ), .E(n5366), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_roll/prev_err[6][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][2]  ( .D(
-        \ifly/get_roll/prev_err[4][2] ), .E(n5372), .CP(clk), .CDN(n5415), .Q(
-        \ifly/get_roll/prev_err[5][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][2]  ( .D(
-        \ifly/get_roll/prev_err[3][2] ), .E(n5366), .CP(clk), .CDN(n1475), .Q(
-        \ifly/get_roll/prev_err[4][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][2]  ( .D(
-        \ifly/get_roll/prev_err[2][2] ), .E(n5372), .CP(clk), .CDN(n1476), .Q(
-        \ifly/get_roll/prev_err[3][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][2]  ( .D(
-        \ifly/get_roll/prev_err[1][2] ), .E(n5372), .CP(clk), .CDN(n1475), .Q(
-        \ifly/get_roll/prev_err[2][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][2]  ( .D(
-        \ifly/get_roll/prev_err[0][2] ), .E(n5372), .CP(clk), .CDN(n1476), .Q(
-        \ifly/get_roll/prev_err[1][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][0]  ( .D(n5706), .E(n5357), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_ptch/prev_err[13][0] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][1]  ( .D(n5705), .E(n5357), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[13][1] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][2]  ( .D(n5704), .E(n5357), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[13][2] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][3]  ( .D(n5703), .E(n5357), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_ptch/prev_err[13][3] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][4]  ( .D(n5702), .E(n5358), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[13][4] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][5]  ( .D(n5701), .E(n5358), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_ptch/prev_err[13][5] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][6]  ( .D(n5700), .E(n5358), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[13][6] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][7]  ( .D(n5699), .E(n5358), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_ptch/prev_err[13][7] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][8]  ( .D(n5698), .E(n5358), .CP(
+        clk), .CDN(n5418), .Q(\ifly/get_ptch/prev_err[13][8] ) );
+  EDFCNQD1BWP \ifly/get_ptch/prev_err_reg[13][9]  ( .D(n5697), .E(n5371), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_ptch/prev_err[13][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][2]  ( .D(n5696), .E(n5372), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_roll/prev_err[9][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][2]  ( .D(n5695), .E(n5366), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_roll/prev_err[8][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][2]  ( .D(n5694), .E(n5372), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_roll/prev_err[7][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][2]  ( .D(n5693), .E(n5366), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_roll/prev_err[6][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][2]  ( .D(n5692), .E(n5372), .CP(
+        clk), .CDN(n5415), .Q(\ifly/get_roll/prev_err[5][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][2]  ( .D(n5691), .E(n5366), .CP(
+        clk), .CDN(n1475), .Q(\ifly/get_roll/prev_err[4][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][2]  ( .D(n5690), .E(n5372), .CP(
+        clk), .CDN(n1476), .Q(\ifly/get_roll/prev_err[3][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][2]  ( .D(n5689), .E(n5372), .CP(
+        clk), .CDN(n1475), .Q(\ifly/get_roll/prev_err[2][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][2]  ( .D(n5688), .E(n5372), .CP(
+        clk), .CDN(n1476), .Q(\ifly/get_roll/prev_err[1][2] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][2]  ( .D(
         \ifly/get_roll/err_sat [2]), .E(n5366), .CP(clk), .CDN(n1475), .Q(
         \ifly/get_roll/prev_err[0][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][3]  ( .D(
-        \ifly/get_roll/prev_err[11][3] ), .E(n5359), .CP(clk), .CDN(n5406), 
-        .Q(\ifly/get_roll/prev_err[12][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][3]  ( .D(
-        \ifly/get_roll/prev_err[10][3] ), .E(n5359), .CP(clk), .CDN(n5406), 
-        .Q(\ifly/get_roll/prev_err[11][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][3]  ( .D(
-        \ifly/get_roll/prev_err[9][3] ), .E(n5366), .CP(clk), .CDN(n1476), .Q(
-        \ifly/get_roll/prev_err[10][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][3]  ( .D(
-        \ifly/get_roll/prev_err[8][3] ), .E(n5372), .CP(clk), .CDN(n5420), .Q(
-        \ifly/get_roll/prev_err[9][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][3]  ( .D(
-        \ifly/get_roll/prev_err[7][3] ), .E(n5366), .CP(clk), .CDN(n5417), .Q(
-        \ifly/get_roll/prev_err[8][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][3]  ( .D(
-        \ifly/get_roll/prev_err[6][3] ), .E(n5366), .CP(clk), .CDN(n5405), .Q(
-        \ifly/get_roll/prev_err[7][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][3]  ( .D(
-        \ifly/get_roll/prev_err[5][3] ), .E(n5372), .CP(clk), .CDN(n5416), .Q(
-        \ifly/get_roll/prev_err[6][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][3]  ( .D(
-        \ifly/get_roll/prev_err[4][3] ), .E(n5372), .CP(clk), .CDN(n1475), .Q(
-        \ifly/get_roll/prev_err[5][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][3]  ( .D(
-        \ifly/get_roll/prev_err[3][3] ), .E(n5366), .CP(clk), .CDN(n5411), .Q(
-        \ifly/get_roll/prev_err[4][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][3]  ( .D(
-        \ifly/get_roll/prev_err[2][3] ), .E(n5366), .CP(clk), .CDN(n5412), .Q(
-        \ifly/get_roll/prev_err[3][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][3]  ( .D(
-        \ifly/get_roll/prev_err[1][3] ), .E(n1471), .CP(clk), .CDN(n1475), .Q(
-        \ifly/get_roll/prev_err[2][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][3]  ( .D(
-        \ifly/get_roll/prev_err[0][3] ), .E(n1469), .CP(clk), .CDN(n1476), .Q(
-        \ifly/get_roll/prev_err[1][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][3]  ( .D(n5687), .E(n5359), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_roll/prev_err[12][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][3]  ( .D(n5686), .E(n5359), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_roll/prev_err[11][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][3]  ( .D(n5685), .E(n5366), .CP(
+        clk), .CDN(n1476), .Q(\ifly/get_roll/prev_err[10][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][3]  ( .D(n5684), .E(n5372), .CP(
+        clk), .CDN(n5420), .Q(\ifly/get_roll/prev_err[9][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][3]  ( .D(n5683), .E(n5366), .CP(
+        clk), .CDN(n5417), .Q(\ifly/get_roll/prev_err[8][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][3]  ( .D(n5682), .E(n5366), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_roll/prev_err[7][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][3]  ( .D(n5681), .E(n5372), .CP(
+        clk), .CDN(n5416), .Q(\ifly/get_roll/prev_err[6][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][3]  ( .D(n5680), .E(n5372), .CP(
+        clk), .CDN(n1475), .Q(\ifly/get_roll/prev_err[5][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][3]  ( .D(n5679), .E(n5366), .CP(
+        clk), .CDN(n5411), .Q(\ifly/get_roll/prev_err[4][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][3]  ( .D(n5678), .E(n5366), .CP(
+        clk), .CDN(n5412), .Q(\ifly/get_roll/prev_err[3][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][3]  ( .D(n5677), .E(n1471), .CP(
+        clk), .CDN(n1475), .Q(\ifly/get_roll/prev_err[2][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][3]  ( .D(n5676), .E(n1469), .CP(
+        clk), .CDN(n1476), .Q(\ifly/get_roll/prev_err[1][3] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][3]  ( .D(
         \ifly/get_roll/err_sat [3]), .E(n1470), .CP(clk), .CDN(n5404), .Q(
         \ifly/get_roll/prev_err[0][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][4]  ( .D(
-        \ifly/get_roll/prev_err[11][4] ), .E(n5354), .CP(clk), .CDN(n5411), 
-        .Q(\ifly/get_roll/prev_err[12][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][4]  ( .D(
-        \ifly/get_roll/prev_err[10][4] ), .E(n5354), .CP(clk), .CDN(n5406), 
-        .Q(\ifly/get_roll/prev_err[11][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][4]  ( .D(
-        \ifly/get_roll/prev_err[9][4] ), .E(n1471), .CP(clk), .CDN(n5404), .Q(
-        \ifly/get_roll/prev_err[10][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][4]  ( .D(
-        \ifly/get_roll/prev_err[8][4] ), .E(n1469), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_roll/prev_err[9][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][4]  ( .D(
-        \ifly/get_roll/prev_err[7][4] ), .E(n5370), .CP(clk), .CDN(n1475), .Q(
-        \ifly/get_roll/prev_err[8][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][4]  ( .D(
-        \ifly/get_roll/prev_err[6][4] ), .E(n5365), .CP(clk), .CDN(n5404), .Q(
-        \ifly/get_roll/prev_err[7][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][4]  ( .D(
-        \ifly/get_roll/prev_err[5][4] ), .E(n5371), .CP(clk), .CDN(n5404), .Q(
-        \ifly/get_roll/prev_err[6][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][4]  ( .D(
-        \ifly/get_roll/prev_err[4][4] ), .E(n1470), .CP(clk), .CDN(n1476), .Q(
-        \ifly/get_roll/prev_err[5][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][4]  ( .D(
-        \ifly/get_roll/prev_err[3][4] ), .E(n1471), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[4][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][4]  ( .D(
-        \ifly/get_roll/prev_err[2][4] ), .E(n1469), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_roll/prev_err[3][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][4]  ( .D(
-        \ifly/get_roll/prev_err[1][4] ), .E(n5370), .CP(clk), .CDN(n5408), .Q(
-        \ifly/get_roll/prev_err[2][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][4]  ( .D(
-        \ifly/get_roll/prev_err[0][4] ), .E(n1470), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[1][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][4]  ( .D(n5675), .E(n5354), .CP(
+        clk), .CDN(n5411), .Q(\ifly/get_roll/prev_err[12][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][4]  ( .D(n5674), .E(n5354), .CP(
+        clk), .CDN(n5406), .Q(\ifly/get_roll/prev_err[11][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][4]  ( .D(n5673), .E(n1471), .CP(
+        clk), .CDN(n5404), .Q(\ifly/get_roll/prev_err[10][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][4]  ( .D(n5672), .E(n1469), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_roll/prev_err[9][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][4]  ( .D(n5671), .E(n5370), .CP(
+        clk), .CDN(n1475), .Q(\ifly/get_roll/prev_err[8][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][4]  ( .D(n5670), .E(n5365), .CP(
+        clk), .CDN(n5404), .Q(\ifly/get_roll/prev_err[7][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][4]  ( .D(n5669), .E(n5371), .CP(
+        clk), .CDN(n5404), .Q(\ifly/get_roll/prev_err[6][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][4]  ( .D(n5668), .E(n1470), .CP(
+        clk), .CDN(n1476), .Q(\ifly/get_roll/prev_err[5][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][4]  ( .D(n5667), .E(n1471), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[4][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][4]  ( .D(n5666), .E(n1469), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_roll/prev_err[3][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][4]  ( .D(n5665), .E(n5370), .CP(
+        clk), .CDN(n5408), .Q(\ifly/get_roll/prev_err[2][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][4]  ( .D(n5664), .E(n1470), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[1][4] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][4]  ( .D(
         \ifly/get_roll/err_sat [4]), .E(n5365), .CP(clk), .CDN(n5403), .Q(
         \ifly/get_roll/prev_err[0][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][5]  ( .D(
-        \ifly/get_roll/prev_err[11][5] ), .E(n5360), .CP(clk), .CDN(n5408), 
-        .Q(\ifly/get_roll/prev_err[12][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][5]  ( .D(
-        \ifly/get_roll/prev_err[10][5] ), .E(n5360), .CP(clk), .CDN(n5409), 
-        .Q(\ifly/get_roll/prev_err[11][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][5]  ( .D(
-        \ifly/get_roll/prev_err[9][5] ), .E(n5365), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_roll/prev_err[10][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][5]  ( .D(
-        \ifly/get_roll/prev_err[8][5] ), .E(n5371), .CP(clk), .CDN(n5408), .Q(
-        \ifly/get_roll/prev_err[9][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][5]  ( .D(
-        \ifly/get_roll/prev_err[7][5] ), .E(n1471), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[8][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][5]  ( .D(
-        \ifly/get_roll/prev_err[6][5] ), .E(n5371), .CP(clk), .CDN(n5403), .Q(
-        \ifly/get_roll/prev_err[7][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][5]  ( .D(
-        \ifly/get_roll/prev_err[5][5] ), .E(n1469), .CP(clk), .CDN(n5408), .Q(
-        \ifly/get_roll/prev_err[6][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][5]  ( .D(
-        \ifly/get_roll/prev_err[4][5] ), .E(n1471), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[5][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][5]  ( .D(
-        \ifly/get_roll/prev_err[3][5] ), .E(n1469), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[4][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][5]  ( .D(
-        \ifly/get_roll/prev_err[2][5] ), .E(n1470), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[3][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][5]  ( .D(
-        \ifly/get_roll/prev_err[1][5] ), .E(n1470), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[2][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][5]  ( .D(
-        \ifly/get_roll/prev_err[0][5] ), .E(n1469), .CP(clk), .CDN(n5409), .Q(
-        \ifly/get_roll/prev_err[1][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][5]  ( .D(n5663), .E(n5360), .CP(
+        clk), .CDN(n5408), .Q(\ifly/get_roll/prev_err[12][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][5]  ( .D(n5662), .E(n5360), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[11][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][5]  ( .D(n5661), .E(n5365), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_roll/prev_err[10][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][5]  ( .D(n5660), .E(n5371), .CP(
+        clk), .CDN(n5408), .Q(\ifly/get_roll/prev_err[9][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][5]  ( .D(n5659), .E(n1471), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[8][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][5]  ( .D(n5658), .E(n5371), .CP(
+        clk), .CDN(n5403), .Q(\ifly/get_roll/prev_err[7][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][5]  ( .D(n5657), .E(n1469), .CP(
+        clk), .CDN(n5408), .Q(\ifly/get_roll/prev_err[6][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][5]  ( .D(n5656), .E(n1471), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[5][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][5]  ( .D(n5655), .E(n1469), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[4][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][5]  ( .D(n5654), .E(n1470), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[3][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][5]  ( .D(n5653), .E(n1470), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[2][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][5]  ( .D(n5652), .E(n1469), .CP(
+        clk), .CDN(n5409), .Q(\ifly/get_roll/prev_err[1][5] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][5]  ( .D(
         \ifly/get_roll/err_sat [5]), .E(n5371), .CP(clk), .CDN(n5409), .Q(
         \ifly/get_roll/prev_err[0][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][6]  ( .D(
-        \ifly/get_roll/prev_err[11][6] ), .E(n5360), .CP(clk), .CDN(n5413), 
-        .Q(\ifly/get_roll/prev_err[12][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][6]  ( .D(
-        \ifly/get_roll/prev_err[10][6] ), .E(n5360), .CP(clk), .CDN(n5396), 
-        .Q(\ifly/get_roll/prev_err[11][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][6]  ( .D(
-        \ifly/get_roll/prev_err[9][6] ), .E(n1470), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[10][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][6]  ( .D(
-        \ifly/get_roll/prev_err[8][6] ), .E(n1471), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[9][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][6]  ( .D(
-        \ifly/get_roll/prev_err[7][6] ), .E(n1469), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[8][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][6]  ( .D(
-        \ifly/get_roll/prev_err[6][6] ), .E(n1470), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[7][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][6]  ( .D(
-        \ifly/get_roll/prev_err[5][6] ), .E(n5370), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_roll/prev_err[6][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][6]  ( .D(
-        \ifly/get_roll/prev_err[4][6] ), .E(n5365), .CP(clk), .CDN(n5405), .Q(
-        \ifly/get_roll/prev_err[5][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][6]  ( .D(
-        \ifly/get_roll/prev_err[3][6] ), .E(n5371), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_roll/prev_err[4][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][6]  ( .D(
-        \ifly/get_roll/prev_err[2][6] ), .E(n1468), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[3][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][6]  ( .D(
-        \ifly/get_roll/prev_err[1][6] ), .E(n1468), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_roll/prev_err[2][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][6]  ( .D(
-        \ifly/get_roll/prev_err[0][6] ), .E(n5370), .CP(clk), .CDN(n5405), .Q(
-        \ifly/get_roll/prev_err[1][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][6]  ( .D(n5651), .E(n5360), .CP(
+        clk), .CDN(n5413), .Q(\ifly/get_roll/prev_err[12][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][6]  ( .D(n5650), .E(n5360), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[11][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][6]  ( .D(n5649), .E(n1470), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[10][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][6]  ( .D(n5648), .E(n1471), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[9][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][6]  ( .D(n5647), .E(n1469), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[8][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][6]  ( .D(n5646), .E(n1470), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[7][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][6]  ( .D(n5645), .E(n5370), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[6][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][6]  ( .D(n5644), .E(n5365), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_roll/prev_err[5][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][6]  ( .D(n5643), .E(n5371), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_roll/prev_err[4][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][6]  ( .D(n5642), .E(n1468), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[3][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][6]  ( .D(n5641), .E(n1468), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[2][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][6]  ( .D(n5640), .E(n5370), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_roll/prev_err[1][6] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][6]  ( .D(
         \ifly/get_roll/err_sat [6]), .E(n1470), .CP(clk), .CDN(n5421), .Q(
         \ifly/get_roll/prev_err[0][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][7]  ( .D(
-        \ifly/get_roll/prev_err[11][7] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[12][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][7]  ( .D(
-        \ifly/get_roll/prev_err[10][7] ), .E(n5360), .CP(clk), .CDN(n5405), 
-        .Q(\ifly/get_roll/prev_err[11][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][7]  ( .D(
-        \ifly/get_roll/prev_err[9][7] ), .E(n5370), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[10][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][7]  ( .D(
-        \ifly/get_roll/prev_err[8][7] ), .E(n5370), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_roll/prev_err[9][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][7]  ( .D(
-        \ifly/get_roll/prev_err[7][7] ), .E(n5370), .CP(clk), .CDN(n5405), .Q(
-        \ifly/get_roll/prev_err[8][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][7]  ( .D(
-        \ifly/get_roll/prev_err[6][7] ), .E(n5370), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[7][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][7]  ( .D(
-        \ifly/get_roll/prev_err[5][7] ), .E(n5365), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[6][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][7]  ( .D(
-        \ifly/get_roll/prev_err[4][7] ), .E(n1471), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[5][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][7]  ( .D(
-        \ifly/get_roll/prev_err[3][7] ), .E(n5365), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[4][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][7]  ( .D(
-        \ifly/get_roll/prev_err[2][7] ), .E(n5365), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[3][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][7]  ( .D(
-        \ifly/get_roll/prev_err[1][7] ), .E(n1469), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[2][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][7]  ( .D(
-        \ifly/get_roll/prev_err[0][7] ), .E(n5371), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[1][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][7]  ( .D(n5639), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[12][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][7]  ( .D(n5638), .E(n5360), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_roll/prev_err[11][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][7]  ( .D(n5637), .E(n5370), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[10][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][7]  ( .D(n5636), .E(n5370), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[9][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][7]  ( .D(n5635), .E(n5370), .CP(
+        clk), .CDN(n5405), .Q(\ifly/get_roll/prev_err[8][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][7]  ( .D(n5634), .E(n5370), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[7][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][7]  ( .D(n5633), .E(n5365), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[6][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][7]  ( .D(n5632), .E(n1471), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[5][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][7]  ( .D(n5631), .E(n5365), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[4][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][7]  ( .D(n5630), .E(n5365), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[3][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][7]  ( .D(n5629), .E(n1469), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[2][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][7]  ( .D(n5628), .E(n5371), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[1][7] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][7]  ( .D(
         \ifly/get_roll/err_sat [7]), .E(n1469), .CP(clk), .CDN(n5397), .Q(
         \ifly/get_roll/prev_err[0][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][8]  ( .D(
-        \ifly/get_roll/prev_err[11][8] ), .E(n5360), .CP(clk), .CDN(n5397), 
-        .Q(\ifly/get_roll/prev_err[12][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][8]  ( .D(
-        \ifly/get_roll/prev_err[10][8] ), .E(n5360), .CP(clk), .CDN(n5397), 
-        .Q(\ifly/get_roll/prev_err[11][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][8]  ( .D(
-        \ifly/get_roll/prev_err[9][8] ), .E(n1471), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[10][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][8]  ( .D(
-        \ifly/get_roll/prev_err[8][8] ), .E(n1470), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[9][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][8]  ( .D(
-        \ifly/get_roll/prev_err[7][8] ), .E(n5370), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[8][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][8]  ( .D(
-        \ifly/get_roll/prev_err[6][8] ), .E(n5365), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_roll/prev_err[7][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][8]  ( .D(
-        \ifly/get_roll/prev_err[5][8] ), .E(n5371), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_roll/prev_err[6][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][8]  ( .D(
-        \ifly/get_roll/prev_err[4][8] ), .E(n1469), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[5][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][8]  ( .D(
-        \ifly/get_roll/prev_err[3][8] ), .E(n1471), .CP(clk), .CDN(n5390), .Q(
-        \ifly/get_roll/prev_err[4][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][8]  ( .D(
-        \ifly/get_roll/prev_err[2][8] ), .E(n1470), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_roll/prev_err[3][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][8]  ( .D(
-        \ifly/get_roll/prev_err[1][8] ), .E(n1469), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[2][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][8]  ( .D(
-        \ifly/get_roll/prev_err[0][8] ), .E(n1471), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[1][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][8]  ( .D(n5627), .E(n5360), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[12][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][8]  ( .D(n5626), .E(n5360), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[11][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][8]  ( .D(n5625), .E(n1471), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[10][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][8]  ( .D(n5624), .E(n1470), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[9][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][8]  ( .D(n5623), .E(n5370), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[8][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][8]  ( .D(n5622), .E(n5365), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[7][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][8]  ( .D(n5621), .E(n5371), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_roll/prev_err[6][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][8]  ( .D(n5620), .E(n1469), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[5][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][8]  ( .D(n5619), .E(n1471), .CP(
+        clk), .CDN(n5390), .Q(\ifly/get_roll/prev_err[4][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][8]  ( .D(n5618), .E(n1470), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_roll/prev_err[3][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][8]  ( .D(n5617), .E(n1469), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[2][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][8]  ( .D(n5616), .E(n1471), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[1][8] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][8]  ( .D(
         \ifly/get_roll/err_sat [8]), .E(n1470), .CP(clk), .CDN(n5389), .Q(
         \ifly/get_roll/prev_err[0][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][9]  ( .D(
-        \ifly/get_roll/prev_err[11][9] ), .E(n5358), .CP(clk), .CDN(n5391), 
-        .Q(\ifly/get_roll/prev_err[12][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][9]  ( .D(
-        \ifly/get_roll/prev_err[10][9] ), .E(n5357), .CP(clk), .CDN(n5389), 
-        .Q(\ifly/get_roll/prev_err[11][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][9]  ( .D(
-        \ifly/get_roll/prev_err[9][9] ), .E(n5371), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_roll/prev_err[10][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][9]  ( .D(
-        \ifly/get_roll/prev_err[8][9] ), .E(n1471), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[9][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][9]  ( .D(
-        \ifly/get_roll/prev_err[7][9] ), .E(n1470), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[8][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][9]  ( .D(
-        \ifly/get_roll/prev_err[6][9] ), .E(n1469), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[7][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][9]  ( .D(
-        \ifly/get_roll/prev_err[5][9] ), .E(n1471), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[6][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][9]  ( .D(
-        \ifly/get_roll/prev_err[4][9] ), .E(n5370), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[5][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][9]  ( .D(
-        \ifly/get_roll/prev_err[3][9] ), .E(n5365), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[4][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][9]  ( .D(
-        \ifly/get_roll/prev_err[2][9] ), .E(n5371), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[3][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][9]  ( .D(
-        \ifly/get_roll/prev_err[1][9] ), .E(n1470), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[2][9] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][9]  ( .D(
-        \ifly/get_roll/prev_err[0][9] ), .E(n1469), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[1][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][9]  ( .D(n5615), .E(n5358), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_roll/prev_err[12][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][9]  ( .D(n5614), .E(n5357), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[11][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][9]  ( .D(n5613), .E(n5371), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_roll/prev_err[10][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][9]  ( .D(n5612), .E(n1471), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[9][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][9]  ( .D(n5611), .E(n1470), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[8][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][9]  ( .D(n5610), .E(n1469), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[7][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][9]  ( .D(n5609), .E(n1471), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[6][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][9]  ( .D(n5608), .E(n5370), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[5][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][9]  ( .D(n5607), .E(n5365), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[4][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][9]  ( .D(n5606), .E(n5371), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[3][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][9]  ( .D(n5605), .E(n1470), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[2][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][9]  ( .D(n5604), .E(n1469), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[1][9] ) );
   EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][9]  ( .D(\ifly/roll_pterm[9] ), 
         .E(n1471), .CP(clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[0][9] )
          );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][0]  ( .D(
-        \ifly/get_roll/prev_err[11][0] ), .E(n5358), .CP(clk), .CDN(n5392), 
-        .Q(\ifly/get_roll/prev_err[12][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][0]  ( .D(
-        \ifly/get_roll/prev_err[10][0] ), .E(n5357), .CP(clk), .CDN(n5396), 
-        .Q(\ifly/get_roll/prev_err[11][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][0]  ( .D(
-        \ifly/get_roll/prev_err[9][0] ), .E(n5358), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[10][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][0]  ( .D(
-        \ifly/get_roll/prev_err[8][0] ), .E(n1470), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_roll/prev_err[9][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][0]  ( .D(
-        \ifly/get_roll/prev_err[7][0] ), .E(n1469), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_roll/prev_err[8][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][0]  ( .D(
-        \ifly/get_roll/prev_err[6][0] ), .E(n5368), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[7][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][0]  ( .D(
-        \ifly/get_roll/prev_err[5][0] ), .E(n1416), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_roll/prev_err[6][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][0]  ( .D(
-        \ifly/get_roll/prev_err[4][0] ), .E(n5368), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[5][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][0]  ( .D(
-        \ifly/get_roll/prev_err[3][0] ), .E(n1416), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_roll/prev_err[4][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][0]  ( .D(
-        \ifly/get_roll/prev_err[2][0] ), .E(n5368), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_roll/prev_err[3][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][0]  ( .D(
-        \ifly/get_roll/prev_err[1][0] ), .E(n1416), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[2][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][0]  ( .D(
-        \ifly/get_roll/prev_err[0][0] ), .E(n5368), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_roll/prev_err[1][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][0]  ( .D(
-        \ifly/get_roll/err_sat [0]), .E(n1416), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_roll/prev_err[0][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][1]  ( .D(
-        \ifly/get_roll/prev_err[11][1] ), .E(n5359), .CP(clk), .CDN(n5396), 
-        .Q(\ifly/get_roll/prev_err[12][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][1]  ( .D(
-        \ifly/get_roll/prev_err[10][1] ), .E(n5357), .CP(clk), .CDN(n5396), 
-        .Q(\ifly/get_roll/prev_err[11][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][1]  ( .D(
-        \ifly/get_roll/prev_err[9][1] ), .E(n5358), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[10][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][1]  ( .D(
-        \ifly/get_roll/prev_err[8][1] ), .E(n5368), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[9][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][1]  ( .D(
-        \ifly/get_roll/prev_err[7][1] ), .E(n1416), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[8][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][1]  ( .D(
-        \ifly/get_roll/prev_err[6][1] ), .E(n5368), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[7][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][1]  ( .D(
-        \ifly/get_roll/prev_err[5][1] ), .E(n1416), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[6][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][1]  ( .D(
-        \ifly/get_roll/prev_err[4][1] ), .E(n5368), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[5][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][1]  ( .D(
-        \ifly/get_roll/prev_err[3][1] ), .E(n1468), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[4][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][1]  ( .D(
-        \ifly/get_roll/prev_err[2][1] ), .E(n5372), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[3][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][1]  ( .D(
-        \ifly/get_roll/prev_err[1][1] ), .E(n5366), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[2][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][1]  ( .D(
-        \ifly/get_roll/prev_err[0][1] ), .E(n5372), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[1][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][1]  ( .D(
-        \ifly/get_roll/err_sat [1]), .E(n5358), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_roll/prev_err[0][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][2]  ( .D(
-        \ifly/get_roll/prev_err[11][2] ), .E(n5354), .CP(clk), .CDN(n5389), 
-        .Q(\ifly/get_roll/prev_err[12][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][2]  ( .D(
-        \ifly/get_roll/prev_err[10][2] ), .E(n5354), .CP(clk), .CDN(n5393), 
-        .Q(\ifly/get_roll/prev_err[11][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][2]  ( .D(
-        \ifly/get_roll/prev_err[9][2] ), .E(n5359), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_roll/prev_err[10][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][0]  ( .D(n5603), .E(n5358), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[12][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][0]  ( .D(n5602), .E(n5357), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[11][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][0]  ( .D(n5601), .E(n5358), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[10][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][0]  ( .D(n5600), .E(n1470), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_roll/prev_err[9][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][0]  ( .D(n5599), .E(n1469), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_roll/prev_err[8][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][0]  ( .D(n5598), .E(n5368), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[7][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][0]  ( .D(n5597), .E(n1416), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_roll/prev_err[6][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][0]  ( .D(n5596), .E(n5368), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[5][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][0]  ( .D(n5595), .E(n1416), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[4][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][0]  ( .D(n5594), .E(n5368), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_roll/prev_err[3][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][0]  ( .D(n5593), .E(n1416), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[2][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][0]  ( .D(n5592), .E(n5368), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_roll/prev_err[1][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][0]  ( .D(n5591), .E(n1416), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_roll/prev_err[0][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][1]  ( .D(n5590), .E(n5359), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[12][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][1]  ( .D(n5589), .E(n5357), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[11][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][1]  ( .D(n5588), .E(n5358), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[10][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[9][1]  ( .D(n5587), .E(n5368), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[9][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[8][1]  ( .D(n5586), .E(n1416), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[8][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[7][1]  ( .D(n5585), .E(n5368), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[7][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[6][1]  ( .D(n5584), .E(n1416), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[6][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[5][1]  ( .D(n5583), .E(n5368), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[5][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[4][1]  ( .D(n5582), .E(n1468), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[4][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[3][1]  ( .D(n5581), .E(n5372), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[3][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[2][1]  ( .D(n5580), .E(n5366), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[2][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[1][1]  ( .D(n5579), .E(n5372), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[1][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[0][1]  ( .D(n5578), .E(n5358), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_roll/prev_err[0][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[12][2]  ( .D(n5577), .E(n5354), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_roll/prev_err[12][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[11][2]  ( .D(n5576), .E(n5354), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_roll/prev_err[11][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[10][2]  ( .D(n5575), .E(n5359), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[10][2] ) );
   DFQD1BWP \ifly/get_roll/err_sat_reg[0]  ( .D(\ifly/get_roll/N9 ), .CP(clk), 
         .Q(\ifly/get_roll/err_sat [0]) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][0]  ( .D(
-        \ifly/get_roll/prev_err[12][0] ), .E(n5357), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][0] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][1]  ( .D(
-        \ifly/get_roll/prev_err[12][1] ), .E(n5354), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][1] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][2]  ( .D(
-        \ifly/get_roll/prev_err[12][2] ), .E(n5359), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][2] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][3]  ( .D(
-        \ifly/get_roll/prev_err[12][3] ), .E(n5354), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][3] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][4]  ( .D(
-        \ifly/get_roll/prev_err[12][4] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][4] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][5]  ( .D(
-        \ifly/get_roll/prev_err[12][5] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][5] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][6]  ( .D(
-        \ifly/get_roll/prev_err[12][6] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][6] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][7]  ( .D(
-        \ifly/get_roll/prev_err[12][7] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][7] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][8]  ( .D(
-        \ifly/get_roll/prev_err[12][8] ), .E(n5360), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][8] ) );
-  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][9]  ( .D(
-        \ifly/get_roll/prev_err[12][9] ), .E(n5357), .CP(clk), .CDN(n5395), 
-        .Q(\ifly/get_roll/prev_err[13][9] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][0]  ( .D(n5574), .E(n5357), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][0] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][1]  ( .D(n5573), .E(n5354), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][1] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][2]  ( .D(n5572), .E(n5359), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][2] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][3]  ( .D(n5571), .E(n5354), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][3] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][4]  ( .D(n5570), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][4] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][5]  ( .D(n5569), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][5] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][6]  ( .D(n5568), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][6] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][7]  ( .D(n5567), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][7] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][8]  ( .D(n5566), .E(n5360), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][8] ) );
+  EDFCNQD1BWP \ifly/get_roll/prev_err_reg[13][9]  ( .D(n5565), .E(n5357), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_roll/prev_err[13][9] ) );
   FA1D0BWP \ifly/get_yaw/U3  ( .A(\ifly/get_yaw/err_sat [2]), .B(
         \ifly/get_yaw/err_sat [4]), .CI(\ifly/get_yaw/add_196/carry[1] ), .CO(
         \ifly/get_yaw/add_196/carry[2] ), .S(\ifly/yaw_pterm [1]) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][2]  ( .D(
-        \ifly/get_yaw/prev_err[8][2] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[9][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][2]  ( .D(
-        \ifly/get_yaw/prev_err[7][2] ), .E(n5357), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[8][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][2]  ( .D(
-        \ifly/get_yaw/prev_err[6][2] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[7][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][2]  ( .D(
-        \ifly/get_yaw/prev_err[5][2] ), .E(n5355), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[6][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][2]  ( .D(
-        \ifly/get_yaw/prev_err[4][2] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[5][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][2]  ( .D(
-        \ifly/get_yaw/prev_err[3][2] ), .E(n5369), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[4][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][2]  ( .D(
-        \ifly/get_yaw/prev_err[2][2] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[3][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][2]  ( .D(
-        \ifly/get_yaw/prev_err[1][2] ), .E(n5370), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[2][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][2]  ( .D(
-        \ifly/get_yaw/prev_err[0][2] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[1][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][2]  ( .D(\ifly/get_yaw/err_sat [2]), .E(n5365), .CP(clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[0][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][3]  ( .D(
-        \ifly/get_yaw/prev_err[11][3] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[12][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][3]  ( .D(
-        \ifly/get_yaw/prev_err[10][3] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[11][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][3]  ( .D(
-        \ifly/get_yaw/prev_err[9][3] ), .E(n5356), .CP(clk), .CDN(n5394), .Q(
-        \ifly/get_yaw/prev_err[10][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][3]  ( .D(
-        \ifly/get_yaw/prev_err[8][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[9][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][3]  ( .D(
-        \ifly/get_yaw/prev_err[7][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[8][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][3]  ( .D(
-        \ifly/get_yaw/prev_err[6][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[7][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][3]  ( .D(
-        \ifly/get_yaw/prev_err[5][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[6][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][3]  ( .D(
-        \ifly/get_yaw/prev_err[4][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[5][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][3]  ( .D(
-        \ifly/get_yaw/prev_err[3][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[4][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][3]  ( .D(
-        \ifly/get_yaw/prev_err[2][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[3][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][3]  ( .D(
-        \ifly/get_yaw/prev_err[1][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[2][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][3]  ( .D(
-        \ifly/get_yaw/prev_err[0][3] ), .E(n5356), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[1][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][2]  ( .D(n5564), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[9][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][2]  ( .D(n5563), .E(n5357), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[8][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][2]  ( .D(n5562), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[7][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][2]  ( .D(n5561), .E(n5355), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[6][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][2]  ( .D(n5560), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[5][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][2]  ( .D(n5559), .E(n5369), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[4][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][2]  ( .D(n5558), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[3][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][2]  ( .D(n5557), .E(n5370), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[2][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][2]  ( .D(n5556), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[1][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][2]  ( .D(n5555), .E(n5365), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[0][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][3]  ( .D(n5554), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[12][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][3]  ( .D(n5553), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[11][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][3]  ( .D(n5552), .E(n5356), .CP(
+        clk), .CDN(n5394), .Q(\ifly/get_yaw/prev_err[10][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][3]  ( .D(n5551), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[9][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][3]  ( .D(n5550), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[8][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][3]  ( .D(n5549), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[7][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][3]  ( .D(n5548), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[6][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][3]  ( .D(n5547), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[5][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][3]  ( .D(n5546), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[4][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][3]  ( .D(n5545), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[3][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][3]  ( .D(n5544), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[2][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][3]  ( .D(n5543), .E(n5356), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[1][3] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][3]  ( .D(\ifly/get_yaw/err_sat [3]), .E(n5356), .CP(clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[0][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][4]  ( .D(
-        \ifly/get_yaw/prev_err[11][4] ), .E(n5359), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[12][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][4]  ( .D(
-        \ifly/get_yaw/prev_err[10][4] ), .E(n5373), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[11][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][4]  ( .D(
-        \ifly/get_yaw/prev_err[9][4] ), .E(n5373), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[10][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][4]  ( .D(
-        \ifly/get_yaw/prev_err[8][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[9][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][4]  ( .D(
-        \ifly/get_yaw/prev_err[7][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[8][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][4]  ( .D(
-        \ifly/get_yaw/prev_err[6][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[7][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][4]  ( .D(
-        \ifly/get_yaw/prev_err[5][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[6][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][4]  ( .D(
-        \ifly/get_yaw/prev_err[4][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[5][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][4]  ( .D(
-        \ifly/get_yaw/prev_err[3][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[4][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][4]  ( .D(
-        \ifly/get_yaw/prev_err[2][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[3][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][4]  ( .D(
-        \ifly/get_yaw/prev_err[1][4] ), .E(n5369), .CP(clk), .CDN(n5389), .Q(
-        \ifly/get_yaw/prev_err[2][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][4]  ( .D(
-        \ifly/get_yaw/prev_err[0][4] ), .E(n5369), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[1][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][4]  ( .D(n5542), .E(n5359), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[12][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][4]  ( .D(n5541), .E(n5373), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[11][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][4]  ( .D(n5540), .E(n5373), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[10][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][4]  ( .D(n5539), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[9][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][4]  ( .D(n5538), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[8][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][4]  ( .D(n5537), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[7][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][4]  ( .D(n5536), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[6][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][4]  ( .D(n5535), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[5][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][4]  ( .D(n5534), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[4][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][4]  ( .D(n5533), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[3][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][4]  ( .D(n5532), .E(n5369), .CP(
+        clk), .CDN(n5389), .Q(\ifly/get_yaw/prev_err[2][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][4]  ( .D(n5531), .E(n5369), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[1][4] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][4]  ( .D(\ifly/get_yaw/err_sat [4]), .E(n5369), .CP(clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[0][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][5]  ( .D(
-        \ifly/get_yaw/prev_err[11][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[12][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][5]  ( .D(
-        \ifly/get_yaw/prev_err[10][5] ), .E(n5360), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[11][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][5]  ( .D(
-        \ifly/get_yaw/prev_err[9][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[10][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][5]  ( .D(
-        \ifly/get_yaw/prev_err[8][5] ), .E(n5369), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[9][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][5]  ( .D(
-        \ifly/get_yaw/prev_err[7][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[8][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][5]  ( .D(
-        \ifly/get_yaw/prev_err[6][5] ), .E(n5369), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[7][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][5]  ( .D(
-        \ifly/get_yaw/prev_err[5][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[6][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][5]  ( .D(
-        \ifly/get_yaw/prev_err[4][5] ), .E(n5369), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[5][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][5]  ( .D(
-        \ifly/get_yaw/prev_err[3][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[4][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][5]  ( .D(
-        \ifly/get_yaw/prev_err[2][5] ), .E(n5369), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[3][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][5]  ( .D(
-        \ifly/get_yaw/prev_err[1][5] ), .E(n5355), .CP(clk), .CDN(n5402), .Q(
-        \ifly/get_yaw/prev_err[2][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][5]  ( .D(
-        \ifly/get_yaw/prev_err[0][5] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[1][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][5]  ( .D(n5530), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[12][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][5]  ( .D(n5529), .E(n5360), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[11][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][5]  ( .D(n5528), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[10][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][5]  ( .D(n5527), .E(n5369), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[9][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][5]  ( .D(n5526), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[8][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][5]  ( .D(n5525), .E(n5369), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[7][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][5]  ( .D(n5524), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[6][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][5]  ( .D(n5523), .E(n5369), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[5][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][5]  ( .D(n5522), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[4][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][5]  ( .D(n5521), .E(n5369), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[3][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][5]  ( .D(n5520), .E(n5355), .CP(
+        clk), .CDN(n5402), .Q(\ifly/get_yaw/prev_err[2][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][5]  ( .D(n5519), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[1][5] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][5]  ( .D(\ifly/get_yaw/err_sat [5]), .E(n5355), .CP(clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[0][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][6]  ( .D(
-        \ifly/get_yaw/prev_err[11][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[12][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][6]  ( .D(
-        \ifly/get_yaw/prev_err[10][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[11][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][6]  ( .D(
-        \ifly/get_yaw/prev_err[9][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[10][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][6]  ( .D(
-        \ifly/get_yaw/prev_err[8][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[9][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][6]  ( .D(
-        \ifly/get_yaw/prev_err[7][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[8][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][6]  ( .D(
-        \ifly/get_yaw/prev_err[6][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[7][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][6]  ( .D(
-        \ifly/get_yaw/prev_err[5][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[6][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][6]  ( .D(
-        \ifly/get_yaw/prev_err[4][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[5][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][6]  ( .D(
-        \ifly/get_yaw/prev_err[3][6] ), .E(n5355), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[4][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][6]  ( .D(
-        \ifly/get_yaw/prev_err[2][6] ), .E(n1468), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[3][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][6]  ( .D(
-        \ifly/get_yaw/prev_err[1][6] ), .E(n5369), .CP(clk), .CDN(n5401), .Q(
-        \ifly/get_yaw/prev_err[2][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][6]  ( .D(
-        \ifly/get_yaw/prev_err[0][6] ), .E(n5369), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[1][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][6]  ( .D(n5518), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[12][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][6]  ( .D(n5517), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[11][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][6]  ( .D(n5516), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[10][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][6]  ( .D(n5515), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[9][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][6]  ( .D(n5514), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[8][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][6]  ( .D(n5513), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[7][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][6]  ( .D(n5512), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[6][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][6]  ( .D(n5511), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[5][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][6]  ( .D(n5510), .E(n5355), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[4][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][6]  ( .D(n5509), .E(n1468), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[3][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][6]  ( .D(n5508), .E(n5369), .CP(
+        clk), .CDN(n5401), .Q(\ifly/get_yaw/prev_err[2][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][6]  ( .D(n5507), .E(n5369), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[1][6] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][6]  ( .D(\ifly/get_yaw/err_sat [6]), .E(n5369), .CP(clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[0][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][7]  ( .D(
-        \ifly/get_yaw/prev_err[11][7] ), .E(n5366), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[12][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][7]  ( .D(
-        \ifly/get_yaw/prev_err[10][7] ), .E(n5363), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[11][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][7]  ( .D(
-        \ifly/get_yaw/prev_err[9][7] ), .E(n5366), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[10][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][7]  ( .D(
-        \ifly/get_yaw/prev_err[8][7] ), .E(n1416), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[9][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][7]  ( .D(
-        \ifly/get_yaw/prev_err[7][7] ), .E(n5369), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[8][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][7]  ( .D(
-        \ifly/get_yaw/prev_err[6][7] ), .E(n5369), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[7][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][7]  ( .D(
-        \ifly/get_yaw/prev_err[5][7] ), .E(n5369), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[6][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][7]  ( .D(
-        \ifly/get_yaw/prev_err[4][7] ), .E(n5369), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[5][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][7]  ( .D(
-        \ifly/get_yaw/prev_err[3][7] ), .E(n5368), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[4][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][7]  ( .D(
-        \ifly/get_yaw/prev_err[2][7] ), .E(n5359), .CP(clk), .CDN(n5421), .Q(
-        \ifly/get_yaw/prev_err[3][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][7]  ( .D(
-        \ifly/get_yaw/prev_err[1][7] ), .E(n5361), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_yaw/prev_err[2][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][7]  ( .D(
-        \ifly/get_yaw/prev_err[0][7] ), .E(n5354), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_yaw/prev_err[1][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][7]  ( .D(n5506), .E(n5366), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[12][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][7]  ( .D(n5505), .E(n5363), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[11][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][7]  ( .D(n5504), .E(n5366), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[10][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][7]  ( .D(n5503), .E(n1416), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[9][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][7]  ( .D(n5502), .E(n5369), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[8][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][7]  ( .D(n5501), .E(n5369), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[7][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][7]  ( .D(n5500), .E(n5369), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[6][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][7]  ( .D(n5499), .E(n5369), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[5][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][7]  ( .D(n5498), .E(n5368), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[4][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][7]  ( .D(n5497), .E(n5359), .CP(
+        clk), .CDN(n5421), .Q(\ifly/get_yaw/prev_err[3][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][7]  ( .D(n5496), .E(n5361), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[2][7] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][7]  ( .D(n5495), .E(n5354), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[1][7] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][7]  ( .D(\ifly/get_yaw/err_sat [7]), .E(n5362), .CP(clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[0][7] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][8]  ( .D(
-        \ifly/get_yaw/prev_err[11][8] ), .E(n5354), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_yaw/prev_err[12][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][8]  ( .D(
-        \ifly/get_yaw/prev_err[10][8] ), .E(n5372), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_yaw/prev_err[11][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][8]  ( .D(
-        \ifly/get_yaw/prev_err[9][8] ), .E(n5359), .CP(clk), .CDN(n5407), .Q(
-        \ifly/get_yaw/prev_err[10][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][8]  ( .D(
-        \ifly/get_yaw/prev_err[8][8] ), .E(n5364), .CP(clk), .CDN(n5410), .Q(
-        \ifly/get_yaw/prev_err[9][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][8]  ( .D(
-        \ifly/get_yaw/prev_err[7][8] ), .E(n5359), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[8][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][8]  ( .D(
-        \ifly/get_yaw/prev_err[6][8] ), .E(n1471), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[7][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][8]  ( .D(
-        \ifly/get_yaw/prev_err[5][8] ), .E(n5354), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_yaw/prev_err[6][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][8]  ( .D(
-        \ifly/get_yaw/prev_err[4][8] ), .E(n5359), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[5][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][8]  ( .D(
-        \ifly/get_yaw/prev_err[3][8] ), .E(n5354), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_yaw/prev_err[4][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][8]  ( .D(
-        \ifly/get_yaw/prev_err[2][8] ), .E(n5359), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_yaw/prev_err[3][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][8]  ( .D(
-        \ifly/get_yaw/prev_err[1][8] ), .E(n5354), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[2][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][8]  ( .D(
-        \ifly/get_yaw/prev_err[0][8] ), .E(n5359), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[1][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][8]  ( .D(n5494), .E(n5354), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[12][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][8]  ( .D(n5493), .E(n5372), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[11][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][8]  ( .D(n5492), .E(n5359), .CP(
+        clk), .CDN(n5407), .Q(\ifly/get_yaw/prev_err[10][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][8]  ( .D(n5491), .E(n5364), .CP(
+        clk), .CDN(n5410), .Q(\ifly/get_yaw/prev_err[9][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][8]  ( .D(n5490), .E(n5359), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[8][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][8]  ( .D(n5489), .E(n1471), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[7][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][8]  ( .D(n5488), .E(n5354), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_yaw/prev_err[6][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][8]  ( .D(n5487), .E(n5359), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[5][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][8]  ( .D(n5486), .E(n5354), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_yaw/prev_err[4][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][8]  ( .D(n5485), .E(n5359), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_yaw/prev_err[3][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][8]  ( .D(n5484), .E(n5354), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[2][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][8]  ( .D(n5483), .E(n5359), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[1][8] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][8]  ( .D(\ifly/get_yaw/err_sat [8]), .E(n5354), .CP(clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[0][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][9]  ( .D(
-        \ifly/get_yaw/prev_err[11][9] ), .E(n5359), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[12][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][9]  ( .D(
-        \ifly/get_yaw/prev_err[10][9] ), .E(n5359), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[11][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][9]  ( .D(
-        \ifly/get_yaw/prev_err[9][9] ), .E(n5354), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[10][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][9]  ( .D(
-        \ifly/get_yaw/prev_err[8][9] ), .E(n5354), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[9][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][9]  ( .D(
-        \ifly/get_yaw/prev_err[7][9] ), .E(n5359), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[8][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][9]  ( .D(
-        \ifly/get_yaw/prev_err[6][9] ), .E(n5354), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[7][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][9]  ( .D(
-        \ifly/get_yaw/prev_err[5][9] ), .E(n5359), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[6][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][9]  ( .D(
-        \ifly/get_yaw/prev_err[4][9] ), .E(n5353), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[5][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][9]  ( .D(
-        \ifly/get_yaw/prev_err[3][9] ), .E(n5353), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[4][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][9]  ( .D(
-        \ifly/get_yaw/prev_err[2][9] ), .E(n5353), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[3][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][9]  ( .D(
-        \ifly/get_yaw/prev_err[1][9] ), .E(n5353), .CP(clk), .CDN(n5396), .Q(
-        \ifly/get_yaw/prev_err[2][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][9]  ( .D(
-        \ifly/get_yaw/prev_err[0][9] ), .E(n5353), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[1][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][9]  ( .D(n5482), .E(n5359), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[12][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][9]  ( .D(n5481), .E(n5359), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[11][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][9]  ( .D(n5480), .E(n5354), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[10][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][9]  ( .D(n5479), .E(n5354), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[9][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][9]  ( .D(n5478), .E(n5359), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[8][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][9]  ( .D(n5477), .E(n5354), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[7][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][9]  ( .D(n5476), .E(n5359), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[6][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][9]  ( .D(n5475), .E(n5353), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[5][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][9]  ( .D(n5474), .E(n5353), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[4][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][9]  ( .D(n5473), .E(n5353), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[3][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][9]  ( .D(n5472), .E(n5353), .CP(
+        clk), .CDN(n5396), .Q(\ifly/get_yaw/prev_err[2][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][9]  ( .D(n5471), .E(n5353), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[1][9] ) );
   EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][9]  ( .D(\ifly/yaw_pterm [9]), .E(
         n5353), .CP(clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[0][9] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][0]  ( .D(
-        \ifly/get_yaw/prev_err[11][0] ), .E(n5355), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[12][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][0]  ( .D(
-        \ifly/get_yaw/prev_err[10][0] ), .E(n5362), .CP(clk), .CDN(n5397), .Q(
-        \ifly/get_yaw/prev_err[11][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][0]  ( .D(
-        \ifly/get_yaw/prev_err[9][0] ), .E(n5361), .CP(clk), .CDN(n5392), .Q(
-        \ifly/get_yaw/prev_err[10][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][0]  ( .D(
-        \ifly/get_yaw/prev_err[8][0] ), .E(n5362), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[9][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][0]  ( .D(
-        \ifly/get_yaw/prev_err[7][0] ), .E(n5361), .CP(clk), .CDN(n5395), .Q(
-        \ifly/get_yaw/prev_err[8][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][0]  ( .D(
-        \ifly/get_yaw/prev_err[6][0] ), .E(n5362), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[7][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][0]  ( .D(
-        \ifly/get_yaw/prev_err[5][0] ), .E(n5361), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[6][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][0]  ( .D(
-        \ifly/get_yaw/prev_err[4][0] ), .E(n5362), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[5][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][0]  ( .D(
-        \ifly/get_yaw/prev_err[3][0] ), .E(n5361), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[4][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][0]  ( .D(
-        \ifly/get_yaw/prev_err[2][0] ), .E(n5362), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[3][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][0]  ( .D(
-        \ifly/get_yaw/prev_err[1][0] ), .E(n5361), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[2][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][0]  ( .D(
-        \ifly/get_yaw/prev_err[0][0] ), .E(n5362), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[1][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][0]  ( .D(\ifly/get_yaw/err_sat [0]), .E(n5361), .CP(clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[0][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][1]  ( .D(
-        \ifly/get_yaw/prev_err[11][1] ), .E(n5361), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[12][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][1]  ( .D(
-        \ifly/get_yaw/prev_err[10][1] ), .E(n5362), .CP(clk), .CDN(n5398), .Q(
-        \ifly/get_yaw/prev_err[11][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][1]  ( .D(
-        \ifly/get_yaw/prev_err[9][1] ), .E(n5361), .CP(clk), .CDN(n5400), .Q(
-        \ifly/get_yaw/prev_err[10][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][1]  ( .D(
-        \ifly/get_yaw/prev_err[8][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[9][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][1]  ( .D(
-        \ifly/get_yaw/prev_err[7][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[8][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][1]  ( .D(
-        \ifly/get_yaw/prev_err[6][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[7][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][1]  ( .D(
-        \ifly/get_yaw/prev_err[5][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[6][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][1]  ( .D(
-        \ifly/get_yaw/prev_err[4][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[5][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][1]  ( .D(
-        \ifly/get_yaw/prev_err[3][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[4][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][1]  ( .D(
-        \ifly/get_yaw/prev_err[2][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[3][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][1]  ( .D(
-        \ifly/get_yaw/prev_err[1][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[2][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][1]  ( .D(
-        \ifly/get_yaw/prev_err[0][1] ), .E(n5361), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[1][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][1]  ( .D(\ifly/get_yaw/err_sat [1]), .E(n5361), .CP(clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[0][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][2]  ( .D(
-        \ifly/get_yaw/prev_err[11][2] ), .E(n5354), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[12][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][2]  ( .D(
-        \ifly/get_yaw/prev_err[10][2] ), .E(n5360), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[11][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][2]  ( .D(
-        \ifly/get_yaw/prev_err[9][2] ), .E(n5359), .CP(clk), .CDN(n5399), .Q(
-        \ifly/get_yaw/prev_err[10][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][0]  ( .D(n5470), .E(n5355), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[12][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][0]  ( .D(n5469), .E(n5362), .CP(
+        clk), .CDN(n5397), .Q(\ifly/get_yaw/prev_err[11][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][0]  ( .D(n5468), .E(n5361), .CP(
+        clk), .CDN(n5392), .Q(\ifly/get_yaw/prev_err[10][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][0]  ( .D(n5467), .E(n5362), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[9][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][0]  ( .D(n5466), .E(n5361), .CP(
+        clk), .CDN(n5395), .Q(\ifly/get_yaw/prev_err[8][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][0]  ( .D(n5465), .E(n5362), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[7][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][0]  ( .D(n5464), .E(n5361), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[6][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][0]  ( .D(n5463), .E(n5362), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[5][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][0]  ( .D(n5462), .E(n5361), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[4][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][0]  ( .D(n5461), .E(n5362), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[3][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][0]  ( .D(n5460), .E(n5361), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[2][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][0]  ( .D(n5459), .E(n5362), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[1][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][0]  ( .D(n5458), .E(n5361), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[0][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][1]  ( .D(n5457), .E(n5361), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[12][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][1]  ( .D(n5456), .E(n5362), .CP(
+        clk), .CDN(n5398), .Q(\ifly/get_yaw/prev_err[11][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][1]  ( .D(n5455), .E(n5361), .CP(
+        clk), .CDN(n5400), .Q(\ifly/get_yaw/prev_err[10][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[9][1]  ( .D(n5454), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[9][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[8][1]  ( .D(n5453), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[8][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[7][1]  ( .D(n5452), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[7][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[6][1]  ( .D(n5451), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[6][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[5][1]  ( .D(n5450), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[5][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[4][1]  ( .D(n5449), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[4][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[3][1]  ( .D(n5448), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[3][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[2][1]  ( .D(n5447), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[2][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[1][1]  ( .D(n5446), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[1][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[0][1]  ( .D(n5445), .E(n5361), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[0][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[12][2]  ( .D(n5444), .E(n5354), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[12][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[11][2]  ( .D(n5443), .E(n5360), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[11][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[10][2]  ( .D(n5442), .E(n5359), .CP(
+        clk), .CDN(n5399), .Q(\ifly/get_yaw/prev_err[10][2] ) );
   DFQD1BWP \ifly/get_yaw/err_sat_reg[8]  ( .D(\ifly/get_yaw/N17 ), .CP(clk), 
         .Q(\ifly/get_yaw/err_sat [8]) );
   DFQD1BWP \ifly/get_yaw/err_sat_reg[2]  ( .D(\ifly/get_yaw/N11 ), .CP(clk), 
         .Q(\ifly/get_yaw/err_sat [2]) );
   DFQD1BWP \ifly/get_yaw/err_sat_reg[0]  ( .D(\ifly/get_yaw/N9 ), .CP(clk), 
         .Q(\ifly/get_yaw/err_sat [0]) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][0]  ( .D(
-        \ifly/get_yaw/prev_err[12][0] ), .E(n5360), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[13][0] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][1]  ( .D(
-        \ifly/get_yaw/prev_err[12][1] ), .E(n5359), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][1] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][2]  ( .D(
-        \ifly/get_yaw/prev_err[12][2] ), .E(n5360), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[13][2] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][3]  ( .D(
-        \ifly/get_yaw/prev_err[12][3] ), .E(n5354), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][3] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][4]  ( .D(
-        \ifly/get_yaw/prev_err[12][4] ), .E(n5360), .CP(clk), .CDN(n5393), .Q(
-        \ifly/get_yaw/prev_err[13][4] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][5]  ( .D(
-        \ifly/get_yaw/prev_err[12][5] ), .E(n5359), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][5] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][6]  ( .D(
-        \ifly/get_yaw/prev_err[12][6] ), .E(n5360), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][6] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][8]  ( .D(
-        \ifly/get_yaw/prev_err[12][8] ), .E(n5356), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][8] ) );
-  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][9]  ( .D(
-        \ifly/get_yaw/prev_err[12][9] ), .E(n5369), .CP(clk), .CDN(n5391), .Q(
-        \ifly/get_yaw/prev_err[13][9] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][0]  ( .D(n5441), .E(n5360), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[13][0] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][1]  ( .D(n5440), .E(n5359), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][1] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][2]  ( .D(n5439), .E(n5360), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[13][2] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][3]  ( .D(n5438), .E(n5354), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][3] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][4]  ( .D(n5437), .E(n5360), .CP(
+        clk), .CDN(n5393), .Q(\ifly/get_yaw/prev_err[13][4] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][5]  ( .D(n5436), .E(n5359), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][5] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][6]  ( .D(n5435), .E(n5360), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][6] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][8]  ( .D(n5434), .E(n5356), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][8] ) );
+  EDFCNQD1BWP \ifly/get_yaw/prev_err_reg[13][9]  ( .D(n5433), .E(n5369), .CP(
+        clk), .CDN(n5391), .Q(\ifly/get_yaw/prev_err[13][9] ) );
   FA1D0BWP \ifly/get_yaw/sub_177/U2_1  ( .A(n1461), .B(n1232), .CI(
         \ifly/get_yaw/sub_177/n1 ), .CO(\ifly/get_yaw/sub_177/carry [2]), .S(
         \ifly/get_yaw/error [1]) );
@@ -3396,8 +3041,6 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iA2D/iSPI/sclk_div [0]) );
   DFKSND1BWP \iA2D/iSPI/sclk_div_reg[1]  ( .D(\iA2D/iSPI/N13 ), .SN(
         \iA2D/iSPI/n83 ), .CP(clk), .Q(\iA2D/iSPI/sclk_div [1]) );
-  DFKSND1BWP \iA2D/iSPI/sclk_div_reg[2]  ( .D(\iA2D/iSPI/N14 ), .SN(
-        \iA2D/iSPI/n83 ), .CP(clk), .Q(\iA2D/iSPI/sclk_div [2]) );
   DFKSND1BWP \iA2D/iSPI/sclk_div_reg[4]  ( .D(\iA2D/iSPI/N16 ), .SN(
         \iA2D/iSPI/n83 ), .CP(clk), .Q(\iA2D/iSPI/sclk_div [4]), .QN(n5339) );
   DFKCNQD1BWP \iA2D/iSPI/sclk_div_reg[3]  ( .CN(\iA2D/iSPI/n83 ), .D(
@@ -3446,14 +3089,13 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         n5392), .Q(\iA2D/iSPI/bitcnt [0]) );
   DFCNQD1BWP \iA2D/iSPI/bitcnt_reg[1]  ( .D(\iA2D/iSPI/n55 ), .CP(clk), .CDN(
         n5396), .Q(\iA2D/iSPI/bitcnt [1]) );
-  DFCNQD1BWP \iRST/rst_n_reg  ( .D(\iRST/btwn_ffs ), .CP(clk), .CDN(RST_n), 
-        .Q(rst_n) );
+  DFCNQD1BWP \iRST/rst_n_reg  ( .D(n5432), .CP(clk), .CDN(RST_n), .Q(rst_n) );
   DFCNQD1BWP \iRST/btwn_ffs_reg  ( .D(\iRST/*Logic1* ), .CP(clk), .CDN(RST_n), 
         .Q(\iRST/btwn_ffs ) );
   DFCNQD1BWP \iA2D/iSPI/state_reg[0]  ( .D(\iA2D/iSPI/nxt_state [0]), .CP(clk), 
         .CDN(n5413), .Q(\iA2D/iSPI/state [0]) );
-  DFCNQD1BWP \iA2D/iSPI/state_reg[1]  ( .D(\iA2D/iSPI/nxt_state [1]), .CP(clk), 
-        .CDN(n5397), .Q(\iA2D/iSPI/state [1]) );
+  DFCNQD1BWP \iA2D/iSPI/state_reg[1]  ( .D(n5431), .CP(clk), .CDN(n5397), .Q(
+        \iA2D/iSPI/state [1]) );
   DFCND1BWP \iNEMO/iII/roll_int_reg[17]  ( .D(\iNEMO/iII/n828 ), .CP(clk), 
         .CDN(n5376), .Q(roll[4]), .QN(n5340) );
   DFCNQD1BWP \iNEMO/roll_rt_reg[1]  ( .D(\iNEMO/n148 ), .CP(clk), .CDN(n5379), 
@@ -3488,9 +3130,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         n5352), .CP(clk), .CDN(n5376), .Q(\iNEMO/iII/ax_avg [1]) );
   EDFQD1BWP \iUART/data_reg[15]  ( .D(n5427), .E(n1208), .CP(clk), .Q(n5426)
          );
-  EDFCND1BWP \ifly/get_yaw/prev_err_reg[13][7]  ( .D(
-        \ifly/get_yaw/prev_err[12][7] ), .E(n5354), .CP(clk), .CDN(n5391), .Q(
-        n1506), .QN(n1400) );
+  EDFCND1BWP \ifly/get_yaw/prev_err_reg[13][7]  ( .D(n5430), .E(n5354), .CP(
+        clk), .CDN(n5391), .Q(n1506), .QN(n1400) );
   DFCND1BWP \iNEMO/iII/roll_int_reg[19]  ( .D(\iNEMO/iII/n163 ), .CP(clk), 
         .CDN(n5417), .Q(roll[6]), .QN(n5422) );
   DFQD2BWP \ifly/get_ptch/err_sat_reg[1]  ( .D(\ifly/get_ptch/N10 ), .CP(clk), 
@@ -3542,8 +3183,6 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         .CDN(n5406), .Q(roll[2]), .QN(n5337) );
   DFQD2BWP \ifly/get_ptch/err_sat_reg[3]  ( .D(\ifly/get_ptch/N12 ), .CP(clk), 
         .Q(\ifly/get_ptch/err_sat [3]) );
-  DFQD2BWP \ifly/get_roll/err_sat_reg[2]  ( .D(\ifly/get_roll/N11 ), .CP(clk), 
-        .Q(\ifly/get_roll/err_sat [2]) );
   DFCND2BWP \iNEMO/iII/roll_int_reg[16]  ( .D(\iNEMO/iII/n160 ), .CP(clk), 
         .CDN(n5406), .Q(roll[3]), .QN(n5341) );
   DFCNQD2BWP \iCMD/thrst_reg[8]  ( .D(\iCMD/n101 ), .CP(clk), .CDN(n5387), .Q(
@@ -3618,8 +3257,8 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \ifly/frnt_sum [12]) );
   EDFCNQD1BWP \iNEMO/iII/ax_avg_reg[3]  ( .D(\iNEMO/iII/ax_accum [7]), .E(
         n5352), .CP(clk), .CDN(n5408), .Q(\iNEMO/iII/ax_avg [3]) );
-  DFCNQD1BWP \iNEMO/iSPI/state_reg[1]  ( .D(\iNEMO/iSPI/nxt_state [1]), .CP(
-        clk), .CDN(n5398), .Q(\iNEMO/iSPI/state [1]) );
+  DFCNQD1BWP \iNEMO/iSPI/state_reg[1]  ( .D(n5429), .CP(clk), .CDN(n5398), .Q(
+        \iNEMO/iSPI/state [1]) );
   DFCNQD2BWP \iNEMO/iII/state_reg[1]  ( .D(\iNEMO/iII/nstate [1]), .CP(clk), 
         .CDN(n5381), .Q(\iNEMO/iII/state [1]) );
   DFCNQD2BWP \iNEMO/ay_reg[15]  ( .D(\iNEMO/n98 ), .CP(clk), .CDN(n5391), .Q(
@@ -6426,7 +6065,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iCMD/n74 ) );
   AOI22D0BWP U4118 ( .A1(n4292), .A2(n4287), .B1(n4310), .B2(n4279), .ZN(
         \iCMD/n75 ) );
-  AOI22D0BWP U4119 ( .A1(n4292), .A2(n4282), .B1(n5426), .B2(n4279), .ZN(
+  AOI22D0BWP U4119 ( .A1(n4292), .A2(n4282), .B1(n5831), .B2(n4279), .ZN(
         \iCMD/n76 ) );
   AOI22D0BWP U4120 ( .A1(n4292), .A2(n4470), .B1(n4324), .B2(n4279), .ZN(
         \iCMD/n77 ) );
@@ -6458,7 +6097,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iCMD/n90 ) );
   AOI22D0BWP U4134 ( .A1(n4321), .A2(n4311), .B1(n4310), .B2(n4295), .ZN(
         \iCMD/n91 ) );
-  AOI22D0BWP U4135 ( .A1(n4321), .A2(n4307), .B1(n5426), .B2(n4295), .ZN(
+  AOI22D0BWP U4135 ( .A1(n4321), .A2(n4307), .B1(n5831), .B2(n4295), .ZN(
         \iCMD/n92 ) );
   AOI22D0BWP U4136 ( .A1(n4321), .A2(n4306), .B1(n4324), .B2(n4295), .ZN(
         \iCMD/n93 ) );
@@ -6490,7 +6129,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iCMD/n115 ) );
   AOI22D0BWP U4150 ( .A1(n4333), .A2(n4304), .B1(n4310), .B2(n4303), .ZN(
         \iCMD/n116 ) );
-  AOI22D0BWP U4151 ( .A1(n4333), .A2(n4319), .B1(n5426), .B2(n4303), .ZN(
+  AOI22D0BWP U4151 ( .A1(n4333), .A2(n4319), .B1(n5831), .B2(n4303), .ZN(
         \iCMD/n117 ) );
   AOI22D0BWP U4152 ( .A1(n4333), .A2(n4752), .B1(n4324), .B2(n4303), .ZN(
         \iCMD/n118 ) );
@@ -8959,8 +8598,7 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
         \iUART/iUART/iTX/bit_cnt [1]), .ZN(n4503) );
   OAI31D1BWP U6116 ( .A1(n4508), .A2(n4504), .A3(n4503), .B(n4502), .ZN(n4506)
          );
-  OAI32D1BWP U6117 ( .A1(\iUART/iUART/iTX/bit_cnt [3]), .A2(n4508), .A3(n4507), 
-        .B1(n4506), .B2(n4505), .ZN(\iUART/iUART/iTX/n43 ) );
+  OAI32D1BWP U6117 ( .A1(n5837), .A2(n4508), .A3(n4507), .B1(n4506), .B2(n4505), .ZN(\iUART/iUART/iTX/n43 ) );
   AO22D0BWP U6118 ( .A1(n4539), .A2(\iNEMO/iSPI/rd_data[14] ), .B1(n4538), 
         .B2(\iNEMO/iSPI/rd_data[13] ), .Z(\iNEMO/iSPI/n28 ) );
   CKND2D0BWP U6119 ( .A1(n4570), .A2(n4509), .ZN(n4533) );
@@ -9562,5 +9200,431 @@ module QuadCopter ( clk, RST_n, SS_n, SCLK, MOSI, MISO, INT, RX, TX, LED, FRNT,
   NR2D0BWP U6539 ( .A1(n5332), .A2(n5331), .ZN(n5333) );
   MUX2ND0BWP U6540 ( .I0(n5334), .I1(\iA2D/iSPI/sclk_div [4]), .S(n5333), .ZN(
         \iA2D/iSPI/nxt_state [1]) );
+  IND2D0BWP \iA2D/iSPI/sclk_div_reg[2]/U2  ( .A1(\iA2D/iSPI/N14 ), .B1(
+        \iA2D/iSPI/n83 ), .ZN(n5844) );
+  DFQD1BWP \iA2D/iSPI/sclk_div_reg[2]  ( .D(n5844), .CP(clk), .Q(
+        \iA2D/iSPI/sclk_div [2]) );
+  IND2D0BWP \iNEMO/iSPI/sclk_div_reg[2]/U2  ( .A1(\iNEMO/iSPI/N14 ), .B1(n1465), .ZN(n5843) );
+  DFQD1BWP \iNEMO/iSPI/sclk_div_reg[2]  ( .D(n5843), .CP(clk), .Q(
+        \iNEMO/iSPI/sclk_div [2]) );
+  DFQD1BWP \ifly/get_roll/err_sat_reg[2]  ( .D(\ifly/get_roll/N11 ), .CP(clk), 
+        .Q(\ifly/get_roll/err_sat [2]) );
+  DFCNQD1BWP \iNEMO/iII/roll_int_reg[12]  ( .D(\iNEMO/iII/n156 ), .CP(clk), 
+        .CDN(n5405), .Q(\iNEMO/iII/roll_int [12]) );
+  CKBD1BWP U6541 ( .I(\iNEMO/iSPI/nxt_state [1]), .Z(n5429) );
+  CKBD1BWP U6542 ( .I(\ifly/get_yaw/prev_err[12][7] ), .Z(n5430) );
+  CKBD1BWP U6543 ( .I(\iA2D/iSPI/nxt_state [1]), .Z(n5431) );
+  DEL050D1BWP U6544 ( .I(\iRST/btwn_ffs ), .Z(n5432) );
+  CKBD1BWP U6545 ( .I(\ifly/get_yaw/prev_err[12][9] ), .Z(n5433) );
+  CKBD1BWP U6546 ( .I(\ifly/get_yaw/prev_err[12][8] ), .Z(n5434) );
+  CKBD1BWP U6547 ( .I(\ifly/get_yaw/prev_err[12][6] ), .Z(n5435) );
+  CKBD1BWP U6548 ( .I(\ifly/get_yaw/prev_err[12][5] ), .Z(n5436) );
+  CKBD1BWP U6549 ( .I(\ifly/get_yaw/prev_err[12][4] ), .Z(n5437) );
+  CKBD1BWP U6550 ( .I(\ifly/get_yaw/prev_err[12][3] ), .Z(n5438) );
+  CKBD1BWP U6551 ( .I(\ifly/get_yaw/prev_err[12][2] ), .Z(n5439) );
+  CKBD1BWP U6552 ( .I(\ifly/get_yaw/prev_err[12][1] ), .Z(n5440) );
+  CKBD1BWP U6553 ( .I(\ifly/get_yaw/prev_err[12][0] ), .Z(n5441) );
+  CKBD1BWP U6554 ( .I(\ifly/get_yaw/prev_err[9][2] ), .Z(n5442) );
+  CKBD1BWP U6555 ( .I(\ifly/get_yaw/prev_err[10][2] ), .Z(n5443) );
+  CKBD1BWP U6556 ( .I(\ifly/get_yaw/prev_err[11][2] ), .Z(n5444) );
+  CKBD1BWP U6557 ( .I(\ifly/get_yaw/err_sat [1]), .Z(n5445) );
+  CKBD1BWP U6558 ( .I(\ifly/get_yaw/prev_err[0][1] ), .Z(n5446) );
+  CKBD1BWP U6559 ( .I(\ifly/get_yaw/prev_err[1][1] ), .Z(n5447) );
+  CKBD1BWP U6560 ( .I(\ifly/get_yaw/prev_err[2][1] ), .Z(n5448) );
+  CKBD1BWP U6561 ( .I(\ifly/get_yaw/prev_err[3][1] ), .Z(n5449) );
+  CKBD1BWP U6562 ( .I(\ifly/get_yaw/prev_err[4][1] ), .Z(n5450) );
+  CKBD1BWP U6563 ( .I(\ifly/get_yaw/prev_err[5][1] ), .Z(n5451) );
+  CKBD1BWP U6564 ( .I(\ifly/get_yaw/prev_err[6][1] ), .Z(n5452) );
+  CKBD1BWP U6565 ( .I(\ifly/get_yaw/prev_err[7][1] ), .Z(n5453) );
+  CKBD1BWP U6566 ( .I(\ifly/get_yaw/prev_err[8][1] ), .Z(n5454) );
+  CKBD1BWP U6567 ( .I(\ifly/get_yaw/prev_err[9][1] ), .Z(n5455) );
+  CKBD1BWP U6568 ( .I(\ifly/get_yaw/prev_err[10][1] ), .Z(n5456) );
+  CKBD1BWP U6569 ( .I(\ifly/get_yaw/prev_err[11][1] ), .Z(n5457) );
+  CKBD1BWP U6570 ( .I(\ifly/get_yaw/err_sat [0]), .Z(n5458) );
+  CKBD1BWP U6571 ( .I(\ifly/get_yaw/prev_err[0][0] ), .Z(n5459) );
+  CKBD1BWP U6572 ( .I(\ifly/get_yaw/prev_err[1][0] ), .Z(n5460) );
+  CKBD1BWP U6573 ( .I(\ifly/get_yaw/prev_err[2][0] ), .Z(n5461) );
+  CKBD1BWP U6574 ( .I(\ifly/get_yaw/prev_err[3][0] ), .Z(n5462) );
+  CKBD1BWP U6575 ( .I(\ifly/get_yaw/prev_err[4][0] ), .Z(n5463) );
+  CKBD1BWP U6576 ( .I(\ifly/get_yaw/prev_err[5][0] ), .Z(n5464) );
+  CKBD1BWP U6577 ( .I(\ifly/get_yaw/prev_err[6][0] ), .Z(n5465) );
+  CKBD1BWP U6578 ( .I(\ifly/get_yaw/prev_err[7][0] ), .Z(n5466) );
+  CKBD1BWP U6579 ( .I(\ifly/get_yaw/prev_err[8][0] ), .Z(n5467) );
+  CKBD1BWP U6580 ( .I(\ifly/get_yaw/prev_err[9][0] ), .Z(n5468) );
+  CKBD1BWP U6581 ( .I(\ifly/get_yaw/prev_err[10][0] ), .Z(n5469) );
+  CKBD1BWP U6582 ( .I(\ifly/get_yaw/prev_err[11][0] ), .Z(n5470) );
+  CKBD1BWP U6583 ( .I(\ifly/get_yaw/prev_err[0][9] ), .Z(n5471) );
+  CKBD1BWP U6584 ( .I(\ifly/get_yaw/prev_err[1][9] ), .Z(n5472) );
+  CKBD1BWP U6585 ( .I(\ifly/get_yaw/prev_err[2][9] ), .Z(n5473) );
+  CKBD1BWP U6586 ( .I(\ifly/get_yaw/prev_err[3][9] ), .Z(n5474) );
+  CKBD1BWP U6587 ( .I(\ifly/get_yaw/prev_err[4][9] ), .Z(n5475) );
+  CKBD1BWP U6588 ( .I(\ifly/get_yaw/prev_err[5][9] ), .Z(n5476) );
+  CKBD1BWP U6589 ( .I(\ifly/get_yaw/prev_err[6][9] ), .Z(n5477) );
+  CKBD1BWP U6590 ( .I(\ifly/get_yaw/prev_err[7][9] ), .Z(n5478) );
+  CKBD1BWP U6591 ( .I(\ifly/get_yaw/prev_err[8][9] ), .Z(n5479) );
+  CKBD1BWP U6592 ( .I(\ifly/get_yaw/prev_err[9][9] ), .Z(n5480) );
+  CKBD1BWP U6593 ( .I(\ifly/get_yaw/prev_err[10][9] ), .Z(n5481) );
+  CKBD1BWP U6594 ( .I(\ifly/get_yaw/prev_err[11][9] ), .Z(n5482) );
+  CKBD1BWP U6595 ( .I(\ifly/get_yaw/prev_err[0][8] ), .Z(n5483) );
+  CKBD1BWP U6596 ( .I(\ifly/get_yaw/prev_err[1][8] ), .Z(n5484) );
+  CKBD1BWP U6597 ( .I(\ifly/get_yaw/prev_err[2][8] ), .Z(n5485) );
+  CKBD1BWP U6598 ( .I(\ifly/get_yaw/prev_err[3][8] ), .Z(n5486) );
+  CKBD1BWP U6599 ( .I(\ifly/get_yaw/prev_err[4][8] ), .Z(n5487) );
+  CKBD1BWP U6600 ( .I(\ifly/get_yaw/prev_err[5][8] ), .Z(n5488) );
+  CKBD1BWP U6601 ( .I(\ifly/get_yaw/prev_err[6][8] ), .Z(n5489) );
+  CKBD1BWP U6602 ( .I(\ifly/get_yaw/prev_err[7][8] ), .Z(n5490) );
+  CKBD1BWP U6603 ( .I(\ifly/get_yaw/prev_err[8][8] ), .Z(n5491) );
+  CKBD1BWP U6604 ( .I(\ifly/get_yaw/prev_err[9][8] ), .Z(n5492) );
+  CKBD1BWP U6605 ( .I(\ifly/get_yaw/prev_err[10][8] ), .Z(n5493) );
+  CKBD1BWP U6606 ( .I(\ifly/get_yaw/prev_err[11][8] ), .Z(n5494) );
+  CKBD1BWP U6607 ( .I(\ifly/get_yaw/prev_err[0][7] ), .Z(n5495) );
+  CKBD1BWP U6608 ( .I(\ifly/get_yaw/prev_err[1][7] ), .Z(n5496) );
+  CKBD1BWP U6609 ( .I(\ifly/get_yaw/prev_err[2][7] ), .Z(n5497) );
+  CKBD1BWP U6610 ( .I(\ifly/get_yaw/prev_err[3][7] ), .Z(n5498) );
+  CKBD1BWP U6611 ( .I(\ifly/get_yaw/prev_err[4][7] ), .Z(n5499) );
+  CKBD1BWP U6612 ( .I(\ifly/get_yaw/prev_err[5][7] ), .Z(n5500) );
+  CKBD1BWP U6613 ( .I(\ifly/get_yaw/prev_err[6][7] ), .Z(n5501) );
+  CKBD1BWP U6614 ( .I(\ifly/get_yaw/prev_err[7][7] ), .Z(n5502) );
+  CKBD1BWP U6615 ( .I(\ifly/get_yaw/prev_err[8][7] ), .Z(n5503) );
+  CKBD1BWP U6616 ( .I(\ifly/get_yaw/prev_err[9][7] ), .Z(n5504) );
+  CKBD1BWP U6617 ( .I(\ifly/get_yaw/prev_err[10][7] ), .Z(n5505) );
+  CKBD1BWP U6618 ( .I(\ifly/get_yaw/prev_err[11][7] ), .Z(n5506) );
+  CKBD1BWP U6619 ( .I(\ifly/get_yaw/prev_err[0][6] ), .Z(n5507) );
+  CKBD1BWP U6620 ( .I(\ifly/get_yaw/prev_err[1][6] ), .Z(n5508) );
+  CKBD1BWP U6621 ( .I(\ifly/get_yaw/prev_err[2][6] ), .Z(n5509) );
+  CKBD1BWP U6622 ( .I(\ifly/get_yaw/prev_err[3][6] ), .Z(n5510) );
+  CKBD1BWP U6623 ( .I(\ifly/get_yaw/prev_err[4][6] ), .Z(n5511) );
+  CKBD1BWP U6624 ( .I(\ifly/get_yaw/prev_err[5][6] ), .Z(n5512) );
+  CKBD1BWP U6625 ( .I(\ifly/get_yaw/prev_err[6][6] ), .Z(n5513) );
+  CKBD1BWP U6626 ( .I(\ifly/get_yaw/prev_err[7][6] ), .Z(n5514) );
+  CKBD1BWP U6627 ( .I(\ifly/get_yaw/prev_err[8][6] ), .Z(n5515) );
+  CKBD1BWP U6628 ( .I(\ifly/get_yaw/prev_err[9][6] ), .Z(n5516) );
+  CKBD1BWP U6629 ( .I(\ifly/get_yaw/prev_err[10][6] ), .Z(n5517) );
+  CKBD1BWP U6630 ( .I(\ifly/get_yaw/prev_err[11][6] ), .Z(n5518) );
+  CKBD1BWP U6631 ( .I(\ifly/get_yaw/prev_err[0][5] ), .Z(n5519) );
+  CKBD1BWP U6632 ( .I(\ifly/get_yaw/prev_err[1][5] ), .Z(n5520) );
+  CKBD1BWP U6633 ( .I(\ifly/get_yaw/prev_err[2][5] ), .Z(n5521) );
+  CKBD1BWP U6634 ( .I(\ifly/get_yaw/prev_err[3][5] ), .Z(n5522) );
+  CKBD1BWP U6635 ( .I(\ifly/get_yaw/prev_err[4][5] ), .Z(n5523) );
+  CKBD1BWP U6636 ( .I(\ifly/get_yaw/prev_err[5][5] ), .Z(n5524) );
+  CKBD1BWP U6637 ( .I(\ifly/get_yaw/prev_err[6][5] ), .Z(n5525) );
+  CKBD1BWP U6638 ( .I(\ifly/get_yaw/prev_err[7][5] ), .Z(n5526) );
+  CKBD1BWP U6639 ( .I(\ifly/get_yaw/prev_err[8][5] ), .Z(n5527) );
+  CKBD1BWP U6640 ( .I(\ifly/get_yaw/prev_err[9][5] ), .Z(n5528) );
+  CKBD1BWP U6641 ( .I(\ifly/get_yaw/prev_err[10][5] ), .Z(n5529) );
+  CKBD1BWP U6642 ( .I(\ifly/get_yaw/prev_err[11][5] ), .Z(n5530) );
+  CKBD1BWP U6643 ( .I(\ifly/get_yaw/prev_err[0][4] ), .Z(n5531) );
+  CKBD1BWP U6644 ( .I(\ifly/get_yaw/prev_err[1][4] ), .Z(n5532) );
+  CKBD1BWP U6645 ( .I(\ifly/get_yaw/prev_err[2][4] ), .Z(n5533) );
+  CKBD1BWP U6646 ( .I(\ifly/get_yaw/prev_err[3][4] ), .Z(n5534) );
+  CKBD1BWP U6647 ( .I(\ifly/get_yaw/prev_err[4][4] ), .Z(n5535) );
+  CKBD1BWP U6648 ( .I(\ifly/get_yaw/prev_err[5][4] ), .Z(n5536) );
+  CKBD1BWP U6649 ( .I(\ifly/get_yaw/prev_err[6][4] ), .Z(n5537) );
+  CKBD1BWP U6650 ( .I(\ifly/get_yaw/prev_err[7][4] ), .Z(n5538) );
+  CKBD1BWP U6651 ( .I(\ifly/get_yaw/prev_err[8][4] ), .Z(n5539) );
+  CKBD1BWP U6652 ( .I(\ifly/get_yaw/prev_err[9][4] ), .Z(n5540) );
+  CKBD1BWP U6653 ( .I(\ifly/get_yaw/prev_err[10][4] ), .Z(n5541) );
+  CKBD1BWP U6654 ( .I(\ifly/get_yaw/prev_err[11][4] ), .Z(n5542) );
+  CKBD1BWP U6655 ( .I(\ifly/get_yaw/prev_err[0][3] ), .Z(n5543) );
+  CKBD1BWP U6656 ( .I(\ifly/get_yaw/prev_err[1][3] ), .Z(n5544) );
+  CKBD1BWP U6657 ( .I(\ifly/get_yaw/prev_err[2][3] ), .Z(n5545) );
+  CKBD1BWP U6658 ( .I(\ifly/get_yaw/prev_err[3][3] ), .Z(n5546) );
+  CKBD1BWP U6659 ( .I(\ifly/get_yaw/prev_err[4][3] ), .Z(n5547) );
+  CKBD1BWP U6660 ( .I(\ifly/get_yaw/prev_err[5][3] ), .Z(n5548) );
+  CKBD1BWP U6661 ( .I(\ifly/get_yaw/prev_err[6][3] ), .Z(n5549) );
+  CKBD1BWP U6662 ( .I(\ifly/get_yaw/prev_err[7][3] ), .Z(n5550) );
+  CKBD1BWP U6663 ( .I(\ifly/get_yaw/prev_err[8][3] ), .Z(n5551) );
+  CKBD1BWP U6664 ( .I(\ifly/get_yaw/prev_err[9][3] ), .Z(n5552) );
+  CKBD1BWP U6665 ( .I(\ifly/get_yaw/prev_err[10][3] ), .Z(n5553) );
+  CKBD1BWP U6666 ( .I(\ifly/get_yaw/prev_err[11][3] ), .Z(n5554) );
+  CKBD1BWP U6667 ( .I(\ifly/get_yaw/err_sat [2]), .Z(n5555) );
+  CKBD1BWP U6668 ( .I(\ifly/get_yaw/prev_err[0][2] ), .Z(n5556) );
+  CKBD1BWP U6669 ( .I(\ifly/get_yaw/prev_err[1][2] ), .Z(n5557) );
+  CKBD1BWP U6670 ( .I(\ifly/get_yaw/prev_err[2][2] ), .Z(n5558) );
+  CKBD1BWP U6671 ( .I(\ifly/get_yaw/prev_err[3][2] ), .Z(n5559) );
+  CKBD1BWP U6672 ( .I(\ifly/get_yaw/prev_err[4][2] ), .Z(n5560) );
+  CKBD1BWP U6673 ( .I(\ifly/get_yaw/prev_err[5][2] ), .Z(n5561) );
+  CKBD1BWP U6674 ( .I(\ifly/get_yaw/prev_err[6][2] ), .Z(n5562) );
+  CKBD1BWP U6675 ( .I(\ifly/get_yaw/prev_err[7][2] ), .Z(n5563) );
+  CKBD1BWP U6676 ( .I(\ifly/get_yaw/prev_err[8][2] ), .Z(n5564) );
+  CKBD1BWP U6677 ( .I(\ifly/get_roll/prev_err[12][9] ), .Z(n5565) );
+  CKBD1BWP U6678 ( .I(\ifly/get_roll/prev_err[12][8] ), .Z(n5566) );
+  CKBD1BWP U6679 ( .I(\ifly/get_roll/prev_err[12][7] ), .Z(n5567) );
+  CKBD1BWP U6680 ( .I(\ifly/get_roll/prev_err[12][6] ), .Z(n5568) );
+  CKBD1BWP U6681 ( .I(\ifly/get_roll/prev_err[12][5] ), .Z(n5569) );
+  CKBD1BWP U6682 ( .I(\ifly/get_roll/prev_err[12][4] ), .Z(n5570) );
+  CKBD1BWP U6683 ( .I(\ifly/get_roll/prev_err[12][3] ), .Z(n5571) );
+  CKBD1BWP U6684 ( .I(\ifly/get_roll/prev_err[12][2] ), .Z(n5572) );
+  CKBD1BWP U6685 ( .I(\ifly/get_roll/prev_err[12][1] ), .Z(n5573) );
+  CKBD1BWP U6686 ( .I(\ifly/get_roll/prev_err[12][0] ), .Z(n5574) );
+  CKBD1BWP U6687 ( .I(\ifly/get_roll/prev_err[9][2] ), .Z(n5575) );
+  CKBD1BWP U6688 ( .I(\ifly/get_roll/prev_err[10][2] ), .Z(n5576) );
+  CKBD1BWP U6689 ( .I(\ifly/get_roll/prev_err[11][2] ), .Z(n5577) );
+  BUFFD0BWP U6690 ( .I(\ifly/get_roll/err_sat [1]), .Z(n5578) );
+  CKBD1BWP U6691 ( .I(\ifly/get_roll/prev_err[0][1] ), .Z(n5579) );
+  CKBD1BWP U6692 ( .I(\ifly/get_roll/prev_err[1][1] ), .Z(n5580) );
+  CKBD1BWP U6693 ( .I(\ifly/get_roll/prev_err[2][1] ), .Z(n5581) );
+  CKBD1BWP U6694 ( .I(\ifly/get_roll/prev_err[3][1] ), .Z(n5582) );
+  CKBD1BWP U6695 ( .I(\ifly/get_roll/prev_err[4][1] ), .Z(n5583) );
+  CKBD1BWP U6696 ( .I(\ifly/get_roll/prev_err[5][1] ), .Z(n5584) );
+  CKBD1BWP U6697 ( .I(\ifly/get_roll/prev_err[6][1] ), .Z(n5585) );
+  CKBD1BWP U6698 ( .I(\ifly/get_roll/prev_err[7][1] ), .Z(n5586) );
+  CKBD1BWP U6699 ( .I(\ifly/get_roll/prev_err[8][1] ), .Z(n5587) );
+  CKBD1BWP U6700 ( .I(\ifly/get_roll/prev_err[9][1] ), .Z(n5588) );
+  CKBD1BWP U6701 ( .I(\ifly/get_roll/prev_err[10][1] ), .Z(n5589) );
+  CKBD1BWP U6702 ( .I(\ifly/get_roll/prev_err[11][1] ), .Z(n5590) );
+  CKBD1BWP U6703 ( .I(\ifly/get_roll/err_sat [0]), .Z(n5591) );
+  CKBD1BWP U6704 ( .I(\ifly/get_roll/prev_err[0][0] ), .Z(n5592) );
+  CKBD1BWP U6705 ( .I(\ifly/get_roll/prev_err[1][0] ), .Z(n5593) );
+  CKBD1BWP U6706 ( .I(\ifly/get_roll/prev_err[2][0] ), .Z(n5594) );
+  CKBD1BWP U6707 ( .I(\ifly/get_roll/prev_err[3][0] ), .Z(n5595) );
+  CKBD1BWP U6708 ( .I(\ifly/get_roll/prev_err[4][0] ), .Z(n5596) );
+  CKBD1BWP U6709 ( .I(\ifly/get_roll/prev_err[5][0] ), .Z(n5597) );
+  CKBD1BWP U6710 ( .I(\ifly/get_roll/prev_err[6][0] ), .Z(n5598) );
+  CKBD1BWP U6711 ( .I(\ifly/get_roll/prev_err[7][0] ), .Z(n5599) );
+  CKBD1BWP U6712 ( .I(\ifly/get_roll/prev_err[8][0] ), .Z(n5600) );
+  CKBD1BWP U6713 ( .I(\ifly/get_roll/prev_err[9][0] ), .Z(n5601) );
+  CKBD1BWP U6714 ( .I(\ifly/get_roll/prev_err[10][0] ), .Z(n5602) );
+  CKBD1BWP U6715 ( .I(\ifly/get_roll/prev_err[11][0] ), .Z(n5603) );
+  CKBD1BWP U6716 ( .I(\ifly/get_roll/prev_err[0][9] ), .Z(n5604) );
+  CKBD1BWP U6717 ( .I(\ifly/get_roll/prev_err[1][9] ), .Z(n5605) );
+  CKBD1BWP U6718 ( .I(\ifly/get_roll/prev_err[2][9] ), .Z(n5606) );
+  CKBD1BWP U6719 ( .I(\ifly/get_roll/prev_err[3][9] ), .Z(n5607) );
+  CKBD1BWP U6720 ( .I(\ifly/get_roll/prev_err[4][9] ), .Z(n5608) );
+  CKBD1BWP U6721 ( .I(\ifly/get_roll/prev_err[5][9] ), .Z(n5609) );
+  CKBD1BWP U6722 ( .I(\ifly/get_roll/prev_err[6][9] ), .Z(n5610) );
+  CKBD1BWP U6723 ( .I(\ifly/get_roll/prev_err[7][9] ), .Z(n5611) );
+  CKBD1BWP U6724 ( .I(\ifly/get_roll/prev_err[8][9] ), .Z(n5612) );
+  CKBD1BWP U6725 ( .I(\ifly/get_roll/prev_err[9][9] ), .Z(n5613) );
+  CKBD1BWP U6726 ( .I(\ifly/get_roll/prev_err[10][9] ), .Z(n5614) );
+  CKBD1BWP U6727 ( .I(\ifly/get_roll/prev_err[11][9] ), .Z(n5615) );
+  CKBD1BWP U6728 ( .I(\ifly/get_roll/prev_err[0][8] ), .Z(n5616) );
+  CKBD1BWP U6729 ( .I(\ifly/get_roll/prev_err[1][8] ), .Z(n5617) );
+  CKBD1BWP U6730 ( .I(\ifly/get_roll/prev_err[2][8] ), .Z(n5618) );
+  CKBD1BWP U6731 ( .I(\ifly/get_roll/prev_err[3][8] ), .Z(n5619) );
+  CKBD1BWP U6732 ( .I(\ifly/get_roll/prev_err[4][8] ), .Z(n5620) );
+  CKBD1BWP U6733 ( .I(\ifly/get_roll/prev_err[5][8] ), .Z(n5621) );
+  CKBD1BWP U6734 ( .I(\ifly/get_roll/prev_err[6][8] ), .Z(n5622) );
+  CKBD1BWP U6735 ( .I(\ifly/get_roll/prev_err[7][8] ), .Z(n5623) );
+  CKBD1BWP U6736 ( .I(\ifly/get_roll/prev_err[8][8] ), .Z(n5624) );
+  CKBD1BWP U6737 ( .I(\ifly/get_roll/prev_err[9][8] ), .Z(n5625) );
+  CKBD1BWP U6738 ( .I(\ifly/get_roll/prev_err[10][8] ), .Z(n5626) );
+  CKBD1BWP U6739 ( .I(\ifly/get_roll/prev_err[11][8] ), .Z(n5627) );
+  CKBD1BWP U6740 ( .I(\ifly/get_roll/prev_err[0][7] ), .Z(n5628) );
+  CKBD1BWP U6741 ( .I(\ifly/get_roll/prev_err[1][7] ), .Z(n5629) );
+  CKBD1BWP U6742 ( .I(\ifly/get_roll/prev_err[2][7] ), .Z(n5630) );
+  CKBD1BWP U6743 ( .I(\ifly/get_roll/prev_err[3][7] ), .Z(n5631) );
+  CKBD1BWP U6744 ( .I(\ifly/get_roll/prev_err[4][7] ), .Z(n5632) );
+  CKBD1BWP U6745 ( .I(\ifly/get_roll/prev_err[5][7] ), .Z(n5633) );
+  CKBD1BWP U6746 ( .I(\ifly/get_roll/prev_err[6][7] ), .Z(n5634) );
+  CKBD1BWP U6747 ( .I(\ifly/get_roll/prev_err[7][7] ), .Z(n5635) );
+  CKBD1BWP U6748 ( .I(\ifly/get_roll/prev_err[8][7] ), .Z(n5636) );
+  CKBD1BWP U6749 ( .I(\ifly/get_roll/prev_err[9][7] ), .Z(n5637) );
+  CKBD1BWP U6750 ( .I(\ifly/get_roll/prev_err[10][7] ), .Z(n5638) );
+  CKBD1BWP U6751 ( .I(\ifly/get_roll/prev_err[11][7] ), .Z(n5639) );
+  CKBD1BWP U6752 ( .I(\ifly/get_roll/prev_err[0][6] ), .Z(n5640) );
+  CKBD1BWP U6753 ( .I(\ifly/get_roll/prev_err[1][6] ), .Z(n5641) );
+  CKBD1BWP U6754 ( .I(\ifly/get_roll/prev_err[2][6] ), .Z(n5642) );
+  CKBD1BWP U6755 ( .I(\ifly/get_roll/prev_err[3][6] ), .Z(n5643) );
+  CKBD1BWP U6756 ( .I(\ifly/get_roll/prev_err[4][6] ), .Z(n5644) );
+  CKBD1BWP U6757 ( .I(\ifly/get_roll/prev_err[5][6] ), .Z(n5645) );
+  CKBD1BWP U6758 ( .I(\ifly/get_roll/prev_err[6][6] ), .Z(n5646) );
+  CKBD1BWP U6759 ( .I(\ifly/get_roll/prev_err[7][6] ), .Z(n5647) );
+  CKBD1BWP U6760 ( .I(\ifly/get_roll/prev_err[8][6] ), .Z(n5648) );
+  CKBD1BWP U6761 ( .I(\ifly/get_roll/prev_err[9][6] ), .Z(n5649) );
+  CKBD1BWP U6762 ( .I(\ifly/get_roll/prev_err[10][6] ), .Z(n5650) );
+  CKBD1BWP U6763 ( .I(\ifly/get_roll/prev_err[11][6] ), .Z(n5651) );
+  CKBD1BWP U6764 ( .I(\ifly/get_roll/prev_err[0][5] ), .Z(n5652) );
+  CKBD1BWP U6765 ( .I(\ifly/get_roll/prev_err[1][5] ), .Z(n5653) );
+  CKBD1BWP U6766 ( .I(\ifly/get_roll/prev_err[2][5] ), .Z(n5654) );
+  CKBD1BWP U6767 ( .I(\ifly/get_roll/prev_err[3][5] ), .Z(n5655) );
+  CKBD1BWP U6768 ( .I(\ifly/get_roll/prev_err[4][5] ), .Z(n5656) );
+  CKBD1BWP U6769 ( .I(\ifly/get_roll/prev_err[5][5] ), .Z(n5657) );
+  CKBD1BWP U6770 ( .I(\ifly/get_roll/prev_err[6][5] ), .Z(n5658) );
+  CKBD1BWP U6771 ( .I(\ifly/get_roll/prev_err[7][5] ), .Z(n5659) );
+  CKBD1BWP U6772 ( .I(\ifly/get_roll/prev_err[8][5] ), .Z(n5660) );
+  CKBD1BWP U6773 ( .I(\ifly/get_roll/prev_err[9][5] ), .Z(n5661) );
+  CKBD1BWP U6774 ( .I(\ifly/get_roll/prev_err[10][5] ), .Z(n5662) );
+  CKBD1BWP U6775 ( .I(\ifly/get_roll/prev_err[11][5] ), .Z(n5663) );
+  CKBD1BWP U6776 ( .I(\ifly/get_roll/prev_err[0][4] ), .Z(n5664) );
+  CKBD1BWP U6777 ( .I(\ifly/get_roll/prev_err[1][4] ), .Z(n5665) );
+  CKBD1BWP U6778 ( .I(\ifly/get_roll/prev_err[2][4] ), .Z(n5666) );
+  CKBD1BWP U6779 ( .I(\ifly/get_roll/prev_err[3][4] ), .Z(n5667) );
+  CKBD1BWP U6780 ( .I(\ifly/get_roll/prev_err[4][4] ), .Z(n5668) );
+  CKBD1BWP U6781 ( .I(\ifly/get_roll/prev_err[5][4] ), .Z(n5669) );
+  CKBD1BWP U6782 ( .I(\ifly/get_roll/prev_err[6][4] ), .Z(n5670) );
+  CKBD1BWP U6783 ( .I(\ifly/get_roll/prev_err[7][4] ), .Z(n5671) );
+  CKBD1BWP U6784 ( .I(\ifly/get_roll/prev_err[8][4] ), .Z(n5672) );
+  CKBD1BWP U6785 ( .I(\ifly/get_roll/prev_err[9][4] ), .Z(n5673) );
+  CKBD1BWP U6786 ( .I(\ifly/get_roll/prev_err[10][4] ), .Z(n5674) );
+  CKBD1BWP U6787 ( .I(\ifly/get_roll/prev_err[11][4] ), .Z(n5675) );
+  CKBD1BWP U6788 ( .I(\ifly/get_roll/prev_err[0][3] ), .Z(n5676) );
+  CKBD1BWP U6789 ( .I(\ifly/get_roll/prev_err[1][3] ), .Z(n5677) );
+  CKBD1BWP U6790 ( .I(\ifly/get_roll/prev_err[2][3] ), .Z(n5678) );
+  CKBD1BWP U6791 ( .I(\ifly/get_roll/prev_err[3][3] ), .Z(n5679) );
+  CKBD1BWP U6792 ( .I(\ifly/get_roll/prev_err[4][3] ), .Z(n5680) );
+  CKBD1BWP U6793 ( .I(\ifly/get_roll/prev_err[5][3] ), .Z(n5681) );
+  CKBD1BWP U6794 ( .I(\ifly/get_roll/prev_err[6][3] ), .Z(n5682) );
+  CKBD1BWP U6795 ( .I(\ifly/get_roll/prev_err[7][3] ), .Z(n5683) );
+  CKBD1BWP U6796 ( .I(\ifly/get_roll/prev_err[8][3] ), .Z(n5684) );
+  CKBD1BWP U6797 ( .I(\ifly/get_roll/prev_err[9][3] ), .Z(n5685) );
+  CKBD1BWP U6798 ( .I(\ifly/get_roll/prev_err[10][3] ), .Z(n5686) );
+  CKBD1BWP U6799 ( .I(\ifly/get_roll/prev_err[11][3] ), .Z(n5687) );
+  CKBD1BWP U6800 ( .I(\ifly/get_roll/prev_err[0][2] ), .Z(n5688) );
+  CKBD1BWP U6801 ( .I(\ifly/get_roll/prev_err[1][2] ), .Z(n5689) );
+  CKBD1BWP U6802 ( .I(\ifly/get_roll/prev_err[2][2] ), .Z(n5690) );
+  CKBD1BWP U6803 ( .I(\ifly/get_roll/prev_err[3][2] ), .Z(n5691) );
+  CKBD1BWP U6804 ( .I(\ifly/get_roll/prev_err[4][2] ), .Z(n5692) );
+  CKBD1BWP U6805 ( .I(\ifly/get_roll/prev_err[5][2] ), .Z(n5693) );
+  CKBD1BWP U6806 ( .I(\ifly/get_roll/prev_err[6][2] ), .Z(n5694) );
+  CKBD1BWP U6807 ( .I(\ifly/get_roll/prev_err[7][2] ), .Z(n5695) );
+  CKBD1BWP U6808 ( .I(\ifly/get_roll/prev_err[8][2] ), .Z(n5696) );
+  CKBD1BWP U6809 ( .I(\ifly/get_ptch/prev_err[12][9] ), .Z(n5697) );
+  CKBD1BWP U6810 ( .I(\ifly/get_ptch/prev_err[12][8] ), .Z(n5698) );
+  CKBD1BWP U6811 ( .I(\ifly/get_ptch/prev_err[12][7] ), .Z(n5699) );
+  CKBD1BWP U6812 ( .I(\ifly/get_ptch/prev_err[12][6] ), .Z(n5700) );
+  CKBD1BWP U6813 ( .I(\ifly/get_ptch/prev_err[12][5] ), .Z(n5701) );
+  CKBD1BWP U6814 ( .I(\ifly/get_ptch/prev_err[12][4] ), .Z(n5702) );
+  CKBD1BWP U6815 ( .I(\ifly/get_ptch/prev_err[12][3] ), .Z(n5703) );
+  CKBD1BWP U6816 ( .I(\ifly/get_ptch/prev_err[12][2] ), .Z(n5704) );
+  CKBD1BWP U6817 ( .I(\ifly/get_ptch/prev_err[12][1] ), .Z(n5705) );
+  CKBD1BWP U6818 ( .I(\ifly/get_ptch/prev_err[12][0] ), .Z(n5706) );
+  CKBD1BWP U6819 ( .I(\ifly/get_ptch/prev_err[9][2] ), .Z(n5707) );
+  CKBD1BWP U6820 ( .I(\ifly/get_ptch/prev_err[10][2] ), .Z(n5708) );
+  CKBD1BWP U6821 ( .I(\ifly/get_ptch/prev_err[11][2] ), .Z(n5709) );
+  CKBD1BWP U6822 ( .I(\ifly/get_ptch/err_sat [1]), .Z(n5710) );
+  CKBD1BWP U6823 ( .I(\ifly/get_ptch/prev_err[0][1] ), .Z(n5711) );
+  CKBD1BWP U6824 ( .I(\ifly/get_ptch/prev_err[1][1] ), .Z(n5712) );
+  CKBD1BWP U6825 ( .I(\ifly/get_ptch/prev_err[2][1] ), .Z(n5713) );
+  CKBD1BWP U6826 ( .I(\ifly/get_ptch/prev_err[3][1] ), .Z(n5714) );
+  CKBD1BWP U6827 ( .I(\ifly/get_ptch/prev_err[4][1] ), .Z(n5715) );
+  CKBD1BWP U6828 ( .I(\ifly/get_ptch/prev_err[5][1] ), .Z(n5716) );
+  CKBD1BWP U6829 ( .I(\ifly/get_ptch/prev_err[6][1] ), .Z(n5717) );
+  CKBD1BWP U6830 ( .I(\ifly/get_ptch/prev_err[7][1] ), .Z(n5718) );
+  CKBD1BWP U6831 ( .I(\ifly/get_ptch/prev_err[8][1] ), .Z(n5719) );
+  CKBD1BWP U6832 ( .I(\ifly/get_ptch/prev_err[9][1] ), .Z(n5720) );
+  CKBD1BWP U6833 ( .I(\ifly/get_ptch/prev_err[10][1] ), .Z(n5721) );
+  CKBD1BWP U6834 ( .I(\ifly/get_ptch/prev_err[11][1] ), .Z(n5722) );
+  CKBD1BWP U6835 ( .I(\ifly/get_ptch/err_sat [0]), .Z(n5723) );
+  CKBD1BWP U6836 ( .I(\ifly/get_ptch/prev_err[0][0] ), .Z(n5724) );
+  CKBD1BWP U6837 ( .I(\ifly/get_ptch/prev_err[1][0] ), .Z(n5725) );
+  CKBD1BWP U6838 ( .I(\ifly/get_ptch/prev_err[2][0] ), .Z(n5726) );
+  CKBD1BWP U6839 ( .I(\ifly/get_ptch/prev_err[3][0] ), .Z(n5727) );
+  CKBD1BWP U6840 ( .I(\ifly/get_ptch/prev_err[4][0] ), .Z(n5728) );
+  CKBD1BWP U6841 ( .I(\ifly/get_ptch/prev_err[5][0] ), .Z(n5729) );
+  CKBD1BWP U6842 ( .I(\ifly/get_ptch/prev_err[6][0] ), .Z(n5730) );
+  CKBD1BWP U6843 ( .I(\ifly/get_ptch/prev_err[7][0] ), .Z(n5731) );
+  CKBD1BWP U6844 ( .I(\ifly/get_ptch/prev_err[8][0] ), .Z(n5732) );
+  CKBD1BWP U6845 ( .I(\ifly/get_ptch/prev_err[9][0] ), .Z(n5733) );
+  CKBD1BWP U6846 ( .I(\ifly/get_ptch/prev_err[10][0] ), .Z(n5734) );
+  CKBD1BWP U6847 ( .I(\ifly/get_ptch/prev_err[11][0] ), .Z(n5735) );
+  CKBD1BWP U6848 ( .I(\ifly/get_ptch/prev_err[0][9] ), .Z(n5736) );
+  CKBD1BWP U6849 ( .I(\ifly/get_ptch/prev_err[1][9] ), .Z(n5737) );
+  CKBD1BWP U6850 ( .I(\ifly/get_ptch/prev_err[2][9] ), .Z(n5738) );
+  CKBD1BWP U6851 ( .I(\ifly/get_ptch/prev_err[3][9] ), .Z(n5739) );
+  CKBD1BWP U6852 ( .I(\ifly/get_ptch/prev_err[4][9] ), .Z(n5740) );
+  CKBD1BWP U6853 ( .I(\ifly/get_ptch/prev_err[5][9] ), .Z(n5741) );
+  CKBD1BWP U6854 ( .I(\ifly/get_ptch/prev_err[6][9] ), .Z(n5742) );
+  CKBD1BWP U6855 ( .I(\ifly/get_ptch/prev_err[7][9] ), .Z(n5743) );
+  CKBD1BWP U6856 ( .I(\ifly/get_ptch/prev_err[8][9] ), .Z(n5744) );
+  CKBD1BWP U6857 ( .I(\ifly/get_ptch/prev_err[9][9] ), .Z(n5745) );
+  CKBD1BWP U6858 ( .I(\ifly/get_ptch/prev_err[10][9] ), .Z(n5746) );
+  CKBD1BWP U6859 ( .I(\ifly/get_ptch/prev_err[11][9] ), .Z(n5747) );
+  CKBD1BWP U6860 ( .I(\ifly/get_ptch/prev_err[0][8] ), .Z(n5748) );
+  CKBD1BWP U6861 ( .I(\ifly/get_ptch/prev_err[1][8] ), .Z(n5749) );
+  CKBD1BWP U6862 ( .I(\ifly/get_ptch/prev_err[2][8] ), .Z(n5750) );
+  CKBD1BWP U6863 ( .I(\ifly/get_ptch/prev_err[3][8] ), .Z(n5751) );
+  CKBD1BWP U6864 ( .I(\ifly/get_ptch/prev_err[4][8] ), .Z(n5752) );
+  CKBD1BWP U6865 ( .I(\ifly/get_ptch/prev_err[5][8] ), .Z(n5753) );
+  CKBD1BWP U6866 ( .I(\ifly/get_ptch/prev_err[6][8] ), .Z(n5754) );
+  CKBD1BWP U6867 ( .I(\ifly/get_ptch/prev_err[7][8] ), .Z(n5755) );
+  CKBD1BWP U6868 ( .I(\ifly/get_ptch/prev_err[8][8] ), .Z(n5756) );
+  CKBD1BWP U6869 ( .I(\ifly/get_ptch/prev_err[9][8] ), .Z(n5757) );
+  CKBD1BWP U6870 ( .I(\ifly/get_ptch/prev_err[10][8] ), .Z(n5758) );
+  CKBD1BWP U6871 ( .I(\ifly/get_ptch/prev_err[11][8] ), .Z(n5759) );
+  CKBD1BWP U6872 ( .I(\ifly/get_ptch/prev_err[0][7] ), .Z(n5760) );
+  CKBD1BWP U6873 ( .I(\ifly/get_ptch/prev_err[1][7] ), .Z(n5761) );
+  CKBD1BWP U6874 ( .I(\ifly/get_ptch/prev_err[2][7] ), .Z(n5762) );
+  CKBD1BWP U6875 ( .I(\ifly/get_ptch/prev_err[3][7] ), .Z(n5763) );
+  CKBD1BWP U6876 ( .I(\ifly/get_ptch/prev_err[4][7] ), .Z(n5764) );
+  CKBD1BWP U6877 ( .I(\ifly/get_ptch/prev_err[5][7] ), .Z(n5765) );
+  CKBD1BWP U6878 ( .I(\ifly/get_ptch/prev_err[6][7] ), .Z(n5766) );
+  CKBD1BWP U6879 ( .I(\ifly/get_ptch/prev_err[7][7] ), .Z(n5767) );
+  CKBD1BWP U6880 ( .I(\ifly/get_ptch/prev_err[8][7] ), .Z(n5768) );
+  CKBD1BWP U6881 ( .I(\ifly/get_ptch/prev_err[9][7] ), .Z(n5769) );
+  CKBD1BWP U6882 ( .I(\ifly/get_ptch/prev_err[10][7] ), .Z(n5770) );
+  CKBD1BWP U6883 ( .I(\ifly/get_ptch/prev_err[11][7] ), .Z(n5771) );
+  CKBD1BWP U6884 ( .I(\ifly/get_ptch/prev_err[0][6] ), .Z(n5772) );
+  CKBD1BWP U6885 ( .I(\ifly/get_ptch/prev_err[1][6] ), .Z(n5773) );
+  CKBD1BWP U6886 ( .I(\ifly/get_ptch/prev_err[2][6] ), .Z(n5774) );
+  CKBD1BWP U6887 ( .I(\ifly/get_ptch/prev_err[3][6] ), .Z(n5775) );
+  CKBD1BWP U6888 ( .I(\ifly/get_ptch/prev_err[4][6] ), .Z(n5776) );
+  CKBD1BWP U6889 ( .I(\ifly/get_ptch/prev_err[5][6] ), .Z(n5777) );
+  CKBD1BWP U6890 ( .I(\ifly/get_ptch/prev_err[6][6] ), .Z(n5778) );
+  CKBD1BWP U6891 ( .I(\ifly/get_ptch/prev_err[7][6] ), .Z(n5779) );
+  CKBD1BWP U6892 ( .I(\ifly/get_ptch/prev_err[8][6] ), .Z(n5780) );
+  CKBD1BWP U6893 ( .I(\ifly/get_ptch/prev_err[9][6] ), .Z(n5781) );
+  CKBD1BWP U6894 ( .I(\ifly/get_ptch/prev_err[10][6] ), .Z(n5782) );
+  CKBD1BWP U6895 ( .I(\ifly/get_ptch/prev_err[11][6] ), .Z(n5783) );
+  CKBD1BWP U6896 ( .I(\ifly/get_ptch/prev_err[0][5] ), .Z(n5784) );
+  CKBD1BWP U6897 ( .I(\ifly/get_ptch/prev_err[1][5] ), .Z(n5785) );
+  CKBD1BWP U6898 ( .I(\ifly/get_ptch/prev_err[2][5] ), .Z(n5786) );
+  CKBD1BWP U6899 ( .I(\ifly/get_ptch/prev_err[3][5] ), .Z(n5787) );
+  CKBD1BWP U6900 ( .I(\ifly/get_ptch/prev_err[4][5] ), .Z(n5788) );
+  CKBD1BWP U6901 ( .I(\ifly/get_ptch/prev_err[5][5] ), .Z(n5789) );
+  CKBD1BWP U6902 ( .I(\ifly/get_ptch/prev_err[6][5] ), .Z(n5790) );
+  CKBD1BWP U6903 ( .I(\ifly/get_ptch/prev_err[7][5] ), .Z(n5791) );
+  CKBD1BWP U6904 ( .I(\ifly/get_ptch/prev_err[8][5] ), .Z(n5792) );
+  CKBD1BWP U6905 ( .I(\ifly/get_ptch/prev_err[9][5] ), .Z(n5793) );
+  CKBD1BWP U6906 ( .I(\ifly/get_ptch/prev_err[10][5] ), .Z(n5794) );
+  CKBD1BWP U6907 ( .I(\ifly/get_ptch/prev_err[11][5] ), .Z(n5795) );
+  CKBD1BWP U6908 ( .I(\ifly/get_ptch/prev_err[0][4] ), .Z(n5796) );
+  CKBD1BWP U6909 ( .I(\ifly/get_ptch/prev_err[1][4] ), .Z(n5797) );
+  CKBD1BWP U6910 ( .I(\ifly/get_ptch/prev_err[2][4] ), .Z(n5798) );
+  CKBD1BWP U6911 ( .I(\ifly/get_ptch/prev_err[3][4] ), .Z(n5799) );
+  CKBD1BWP U6912 ( .I(\ifly/get_ptch/prev_err[4][4] ), .Z(n5800) );
+  CKBD1BWP U6913 ( .I(\ifly/get_ptch/prev_err[5][4] ), .Z(n5801) );
+  CKBD1BWP U6914 ( .I(\ifly/get_ptch/prev_err[6][4] ), .Z(n5802) );
+  CKBD1BWP U6915 ( .I(\ifly/get_ptch/prev_err[7][4] ), .Z(n5803) );
+  CKBD1BWP U6916 ( .I(\ifly/get_ptch/prev_err[8][4] ), .Z(n5804) );
+  CKBD1BWP U6917 ( .I(\ifly/get_ptch/prev_err[9][4] ), .Z(n5805) );
+  CKBD1BWP U6918 ( .I(\ifly/get_ptch/prev_err[10][4] ), .Z(n5806) );
+  CKBD1BWP U6919 ( .I(\ifly/get_ptch/prev_err[11][4] ), .Z(n5807) );
+  CKBD1BWP U6920 ( .I(\ifly/get_ptch/prev_err[0][3] ), .Z(n5808) );
+  CKBD1BWP U6921 ( .I(\ifly/get_ptch/prev_err[1][3] ), .Z(n5809) );
+  CKBD1BWP U6922 ( .I(\ifly/get_ptch/prev_err[2][3] ), .Z(n5810) );
+  CKBD1BWP U6923 ( .I(\ifly/get_ptch/prev_err[3][3] ), .Z(n5811) );
+  CKBD1BWP U6924 ( .I(\ifly/get_ptch/prev_err[4][3] ), .Z(n5812) );
+  CKBD1BWP U6925 ( .I(\ifly/get_ptch/prev_err[5][3] ), .Z(n5813) );
+  CKBD1BWP U6926 ( .I(\ifly/get_ptch/prev_err[6][3] ), .Z(n5814) );
+  CKBD1BWP U6927 ( .I(\ifly/get_ptch/prev_err[7][3] ), .Z(n5815) );
+  CKBD1BWP U6928 ( .I(\ifly/get_ptch/prev_err[8][3] ), .Z(n5816) );
+  CKBD1BWP U6929 ( .I(\ifly/get_ptch/prev_err[9][3] ), .Z(n5817) );
+  CKBD1BWP U6930 ( .I(\ifly/get_ptch/prev_err[10][3] ), .Z(n5818) );
+  CKBD1BWP U6931 ( .I(\ifly/get_ptch/prev_err[11][3] ), .Z(n5819) );
+  CKBD1BWP U6932 ( .I(\ifly/get_ptch/prev_err[0][2] ), .Z(n5820) );
+  CKBD1BWP U6933 ( .I(\ifly/get_ptch/prev_err[1][2] ), .Z(n5821) );
+  CKBD1BWP U6934 ( .I(\ifly/get_ptch/prev_err[2][2] ), .Z(n5822) );
+  CKBD1BWP U6935 ( .I(\ifly/get_ptch/prev_err[3][2] ), .Z(n5823) );
+  CKBD1BWP U6936 ( .I(\ifly/get_ptch/prev_err[4][2] ), .Z(n5824) );
+  CKBD1BWP U6937 ( .I(\ifly/get_ptch/prev_err[5][2] ), .Z(n5825) );
+  CKBD1BWP U6938 ( .I(\ifly/get_ptch/prev_err[6][2] ), .Z(n5826) );
+  CKBD1BWP U6939 ( .I(\ifly/get_ptch/prev_err[7][2] ), .Z(n5827) );
+  CKBD1BWP U6940 ( .I(\ifly/get_ptch/prev_err[8][2] ), .Z(n5828) );
+  CKBD1BWP U6941 ( .I(\iNEMO/iII/n76 ), .Z(n5829) );
+  DEL050D1BWP U6942 ( .I(\iNEMO/INT_ff1 ), .Z(n5830) );
+  CKBD1BWP U6943 ( .I(n5426), .Z(n5831) );
+  CKBD1BWP U6944 ( .I(\iUART/iUART/iRX/n39 ), .Z(n5832) );
+  CKBD1BWP U6945 ( .I(\iUART/iUART/iRX/n37 ), .Z(n5833) );
+  DEL050D1BWP U6946 ( .I(\iUART/iUART/iRX/rx_ff1 ), .Z(n5834) );
+  CKBD1BWP U6947 ( .I(\iUART/iUART/iRX/shift_reg[8] ), .Z(n5835) );
+  CKBD1BWP U6948 ( .I(\iUART/iUART/iRX/n35 ), .Z(n5836) );
+  CKBD1BWP U6949 ( .I(\iUART/iUART/iTX/bit_cnt [3]), .Z(n5837) );
+  CKBD1BWP U6950 ( .I(\iUART/iUART/iTX/n33 ), .Z(n5838) );
+  CKBD1BWP U6951 ( .I(\iUART/iUART/iTX/n35 ), .Z(n5839) );
+  CKBD1BWP U6952 ( .I(\iUART/iUART/iTX/n37 ), .Z(n5840) );
+  CKBD1BWP U6953 ( .I(data[7]), .Z(n5841) );
+  CKBD1BWP U6954 ( .I(data[0]), .Z(n5842) );
+  CKND0BWP U6955 ( .I(\iNEMO/iII/roll_int [12]), .ZN(\iNEMO/iII/n54 ) );
 endmodule
 
