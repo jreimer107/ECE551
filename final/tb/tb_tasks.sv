@@ -20,7 +20,7 @@ task automatic check_response_task(ref logic resp_rdy);
             begin
                 // Timeout check
                 #3000000
-                $display("%t : timeout", $time);
+                $display("%t : timeout waiting for response", $time);
                 $stop;
                 disable chk;
             end
@@ -101,16 +101,32 @@ begin
 end
 endtask
 
-task check_pry_task(input reg [15:0] pry , input reg [15:0] expected);
+task check_pry_task(input reg signed [15:0] pry_start, input reg signed [15:0] expected, input reg signed [15:0] pry_curr);
 begin
-        if(pry === expected)begin
-            $display("value set correctly.");
-        end else begin
-            $display("BAD VALUE SET. FAILURE. %h. expected = %h",pry, expected);
-            #300000000
-            $stop;
+        if(pry_start <= expected)
+        begin
+            if (pry_curr > pry_start) 
+            begin
+                $display("value aymptotically moving towards value set.");
+            end else 
+            begin 
+		$display("BAD VALUE FAILURE. from: %h \t to: %h \t where we were: %h", pry_start, expected, pry_curr);
+                $stop;
+	    end
+        end 
+	else 
+	begin
+	    if (pry_curr < pry_start) 
+	    begin
+                $display("value aymptotically moving towards value set.");
+            end 
+	    else 
+	    begin 
+		$display("BAD VALUE FAILURE. from: %h \t to: %h \t where we were: %h", pry_start, expected, pry_curr);
+                $stop;
+	    end
         end
-    end
+end  
 endtask
 
 

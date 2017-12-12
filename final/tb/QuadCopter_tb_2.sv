@@ -25,7 +25,7 @@ reg [7:0] cmd_to_copter;		// command to Copter via wireless link
 reg [15:0] data;				// data associated with command
 reg send_cmd;					// asserted to initiate sending of command (to your CommMaster)
 reg clr_resp_rdy;				// asserted to knock down resp_rdy
-
+reg [15:0] sample;
 /////// declare any localparams here /////
 
 
@@ -124,20 +124,58 @@ initial begin
  
     
     ///////////////PITCH////////////////////////
-    data = 16'h4000;  
+    data = 16'h00ff;  
     send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
 
     //wait for response
     check_response_task(resp_rdy_f);
 
     check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.ptch;
     $display("PITCH");
-    #600000000
-    check_pry_task(iDUT.iNEMO.iII.ptch, data);
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.ptch);
 
 
+    data = 16'h0000;  
+    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.ptch;
+    $display("PITCH");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.ptch);
+
+    data = 16'h0055;  
+    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.ptch;
+    $display("PITCH");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.ptch);
+
+    data = 16'hffff;  
+    send_cmd_task(clk,3'd2,send_cmd,cmd_to_copter);
+
+    //wait for response
+    check_response_task(resp_rdy_f);
+
+    check_posack_task(resp);
+    sample = iDUT.iNEMO.iII.ptch;
+    $display("PITCH");
+    #400000000
+    check_pry_task(sample, data,iDUT.iNEMO.iII.ptch);
     $display("Pitch test passed");
     $stop;
+
+
  
 end
 
